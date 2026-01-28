@@ -1,0 +1,8 @@
+{
+  "name": "SynkOps - Landscape Operations Pro",
+  "description": "A comprehensive operations management platform for landscape and hardscape contractors, covering leads, estimates, job site tracking, and invoicing.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ]
+}
