@@ -1,91 +1,38 @@
-import { neon } from '@neondatabase/serverless';
-
-const sql = neon(process.env.NETLIFY_DATABASE_URL);
-
-const ensureTable = async () => {
-  await sql`
-    CREATE TABLE IF NOT EXISTS presets (
-      id uuid DEFAULT gen_random_uuid() PRIMARY KEY,
-      name text UNIQUE NOT NULL,
-      config jsonb NOT NULL,
-      created_at timestamptz DEFAULT now(),
-      updated_at timestamptz DEFAULT now()
-    );
-  `;
-};
-
-export async function handler(event) {
+export default async function handler(req, context) {
   try {
-    await ensureTable();
-
-    if (event.httpMethod === 'GET') {
-      const presets = await sql`
-        SELECT id, name, config, created_at, updated_at
-        FROM presets
-        ORDER BY updated_at DESC
-      `;
-      return {
-        statusCode: 200,
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ presets }),
-      };
+    // TEMP: no database yet — return safe empty response
+    if (req.method === "GET") {
+      return new Response(
+        JSON.stringify({ presets: [] }),
+        {
+          status: 200,
+          headers: { "Content-Type": "application/json" }
+        }
+      );
     }
 
-    if (event.httpMethod === 'POST') {
-      let body;
-      try {
-        body = JSON.parse(event.body || '{}');
-      } catch {
-        return {
-          statusCode: 400,
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ error: 'Invalid JSON body' }),
-        };
-      }
-
-      const name = body?.name;
-      const config = body?.config;
-
-      if (!name || typeof name !== 'string') {
-        return {
-          statusCode: 400,
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ error: 'Preset name is required' }),
-        };
-      }
-
-      if (config === undefined) {
-        return {
-          statusCode: 400,
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ error: 'Preset config is required' }),
-        };
-      }
-
-      await sql`
-        INSERT INTO presets (name, config)
-        VALUES (${name}, ${config})
-        ON CONFLICT (name)
-        DO UPDATE SET config = EXCLUDED.config, updated_at = now()
-      `;
-
-      return {
-        statusCode: 200,
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ success: true }),
-      };
+    if (req.method === "POST") {
+      const body = await req.json();
+      return new Response(
+        JSON.stringify({ success: true }),
+        {
+          status: 200,
+          headers: { "Content-Type": "application/json" }
+        }
+      );
     }
 
-    return {
-      statusCode: 405,
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ error: 'Method Not Allowed' }),
-    };
-  } catch {
-    return {
-      statusCode: 500,
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ error: 'Internal server error' }),
-    };
+    return new Response(
+      JSON.stringify({ error: "Method not allowed" }),
+      { status: 405 }
+    );
+  } catch (err) {
+    return new Response(
+      JSON.stringify({ error: err.message || "Internal error" }),
+      {
+        status: 500,
+        headers: { "Content-Type": "application/json" }
+      }
+    );
   }
 }
