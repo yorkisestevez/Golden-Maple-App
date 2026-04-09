@@ -31,13 +31,17 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#0F0E0A] px-4">
-      <div className="w-full max-w-md">
+    <div className="min-h-screen flex items-center justify-center bg-[#0A0A0A] px-4 relative">
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[400px] h-[300px] bg-[#D4AF63]/5 rounded-full blur-[120px] pointer-events-none" />
+
+      <div className="w-full max-w-md relative">
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-[#D4AF63]" style={{ fontFamily: 'Georgia, serif' }}>
-            EstimateAI
-          </h1>
-          <p className="text-[#A89F91] mt-2">Sign in to your dashboard</p>
+          <Link href="/">
+            <h1 className="text-3xl font-bold text-gradient tracking-tight">
+              EstimateAI
+            </h1>
+          </Link>
+          <p className="text-white/40 mt-2 font-light">Sign in to your dashboard</p>
         </div>
 
         <Card variant="bordered">
@@ -68,7 +72,7 @@ export default function LoginPage() {
             </Button>
           </form>
 
-          <p className="text-center text-sm text-[#A89F91] mt-4">
+          <p className="text-center text-sm text-white/30 mt-4 font-light">
             Don&apos;t have an account?{' '}
             <Link href="/signup" className="text-[#D4AF63] hover:underline">
               Start your free trial

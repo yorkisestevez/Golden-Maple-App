@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card } from '@/components/ui/card';
 import Link from 'next/link';
-import { Loader2 } from 'lucide-react';
+import { Loader2, CheckCircle } from 'lucide-react';
 
 export default function SignupPage() {
   const [email, setEmail] = useState('');
@@ -29,7 +29,6 @@ export default function SignupPage() {
 
     const supabase = createClient();
 
-    // Sign up with Supabase Auth
     const { data: authData, error: authError } = await supabase.auth.signUp({
       email,
       password,
@@ -47,7 +46,6 @@ export default function SignupPage() {
     }
 
     if (authData.user) {
-      // Create contractor record
       const slug = generateSlug(companyName);
       const { error: insertError } = await supabase.from('contractors').insert({
         id: authData.user.id,
@@ -64,7 +62,6 @@ export default function SignupPage() {
         return;
       }
 
-      // Seed default services and pricing config
       try {
         await fetch('/api/seed', {
           method: 'POST',
@@ -72,7 +69,7 @@ export default function SignupPage() {
           body: JSON.stringify({ contractor_id: authData.user.id }),
         });
       } catch {
-        // Non-critical - can be set up later
+        // Non-critical
       }
 
       setSuccess(true);
@@ -83,11 +80,15 @@ export default function SignupPage() {
 
   if (success) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-[#0F0E0A] px-4">
-        <Card variant="bordered" className="max-w-md w-full text-center">
-          <h2 className="text-2xl font-bold text-[#D4AF63] mb-4">Check Your Email</h2>
-          <p className="text-[#A89F91]">
-            We&apos;ve sent a confirmation link to <strong className="text-[#F2EEE7]">{email}</strong>.
+      <div className="min-h-screen flex items-center justify-center bg-[#0A0A0A] px-4 relative">
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[400px] h-[300px] bg-[#D4AF63]/5 rounded-full blur-[120px] pointer-events-none" />
+        <div className="max-w-md w-full text-center glass-strong rounded-2xl p-10 relative">
+          <div className="w-14 h-14 rounded-2xl bg-emerald-500/10 flex items-center justify-center mx-auto mb-5">
+            <CheckCircle className="w-7 h-7 text-emerald-400" />
+          </div>
+          <h2 className="text-2xl font-bold text-gradient mb-4">Check Your Email</h2>
+          <p className="text-white/40 font-light">
+            We&apos;ve sent a confirmation link to <strong className="text-white/70">{email}</strong>.
             Click it to activate your account and start your 14-day free trial.
           </p>
           <Link href="/login">
@@ -95,20 +96,24 @@ export default function SignupPage() {
               Go to Login
             </Button>
           </Link>
-        </Card>
+        </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#0F0E0A] px-4">
-      <div className="w-full max-w-md">
+    <div className="min-h-screen flex items-center justify-center bg-[#0A0A0A] px-4 relative">
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[400px] h-[300px] bg-[#D4AF63]/5 rounded-full blur-[120px] pointer-events-none" />
+
+      <div className="w-full max-w-md relative">
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-[#D4AF63]" style={{ fontFamily: 'Georgia, serif' }}>
-            EstimateAI
-          </h1>
-          <p className="text-[#A89F91] mt-2">Start your 14-day free trial</p>
-          <p className="text-[#A89F91]/60 text-sm">No credit card required</p>
+          <Link href="/">
+            <h1 className="text-3xl font-bold text-gradient tracking-tight">
+              EstimateAI
+            </h1>
+          </Link>
+          <p className="text-white/40 mt-2 font-light">Start your 14-day free trial</p>
+          <p className="text-white/20 text-sm font-light">No credit card required</p>
         </div>
 
         <Card variant="bordered">
@@ -148,7 +153,7 @@ export default function SignupPage() {
             </Button>
           </form>
 
-          <p className="text-center text-sm text-[#A89F91] mt-4">
+          <p className="text-center text-sm text-white/30 mt-4 font-light">
             Already have an account?{' '}
             <Link href="/login" className="text-[#D4AF63] hover:underline">
               Sign in

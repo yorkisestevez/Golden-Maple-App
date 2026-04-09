@@ -1,17 +1,19 @@
-import { Loader2 } from 'lucide-react';
-
 export default function LeadsLoading() {
   return (
-    <div className="space-y-6">
+    <div className="p-6 space-y-6 animate-pulse">
       <div className="flex items-center justify-between">
-        <div>
-          <div className="h-7 w-32 bg-white/10 rounded animate-pulse mb-2" />
-          <div className="h-4 w-20 bg-white/10 rounded animate-pulse" />
-        </div>
+        <div className="h-7 w-24 bg-white/5 rounded" />
+        <div className="h-9 w-28 bg-white/5 rounded-lg" />
       </div>
-      <div className="bg-[#1A1814] rounded-xl border border-white/10">
-        <div className="flex items-center justify-center h-64">
-          <Loader2 className="w-8 h-8 animate-spin text-[#D4AF63]" />
+      <div className="flex gap-3">
+        <div className="h-9 w-48 bg-white/5 rounded-lg" />
+        <div className="h-9 w-32 bg-white/5 rounded-lg" />
+      </div>
+      <div className="bg-white/[0.03] rounded-xl border border-white/5 p-5">
+        <div className="space-y-3">
+          {[1, 2, 3, 4, 5, 6, 7].map((i) => (
+            <div key={i} className="h-12 bg-white/[0.02] rounded" />
+          ))}
         </div>
       </div>
     </div>
