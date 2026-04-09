@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Check, ArrowLeft, ArrowRight, Shield, HelpCircle, CheckCircle, Zap } from 'lucide-react';
+import { Check, ArrowLeft, ArrowRight, Shield, HelpCircle, CheckCircle, Zap, Sparkles } from 'lucide-react';
 
 const PLANS = [
   {
@@ -80,24 +80,24 @@ const FAQ = [
   },
   {
     q: 'What are AI design insights?',
-    a: 'On Pro and Agency plans, Claude AI analyzes each homeowner\'s specific project combination and generates personalized design tips. It\'s like having a senior consultant review every estimate.',
+    a: 'On Pro and Agency plans, our AI analyzes each homeowner\'s specific project combination and generates personalized design tips. It\'s like having a senior consultant review every estimate.',
   },
 ];
 
 export default function PricingPage() {
   return (
-    <div className="min-h-screen bg-[#0F0E0A] text-[#F2EEE7]">
+    <div className="min-h-screen bg-[#0A0A0A] text-[#FAFAF9] noise">
       {/* Nav */}
-      <nav className="border-b border-white/10 sticky top-0 bg-[#0F0E0A]/95 backdrop-blur-md z-50">
-        <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="text-xl font-bold text-[#D4AF63]" style={{ fontFamily: 'Georgia, serif' }}>
+      <nav className="fixed top-0 left-0 right-0 z-50 glass-strong">
+        <div className="max-w-6xl mx-auto px-4 py-3.5 flex items-center justify-between">
+          <Link href="/" className="text-xl font-bold text-gradient tracking-tight">
             EstimateAI
           </Link>
           <div className="flex items-center gap-4">
-            <Link href="/login" className="text-sm text-[#A89F91] hover:text-[#F2EEE7]">Login</Link>
+            <Link href="/login" className="text-sm text-white/50 hover:text-white transition-colors">Login</Link>
             <Link
               href="/signup"
-              className="px-4 py-2 bg-[#D4AF63] text-[#0F0E0A] rounded-lg text-sm font-medium hover:brightness-110"
+              className="px-4 py-2 bg-gradient-to-r from-[#D4AF63] to-[#C49B4A] text-[#0A0A0A] rounded-lg text-sm font-semibold hover:brightness-110 transition-all shadow-lg shadow-[#D4AF63]/10"
             >
               Start Free Trial
             </Link>
@@ -105,60 +105,65 @@ export default function PricingPage() {
         </div>
       </nav>
 
-      <div className="max-w-5xl mx-auto px-4 py-16 sm:py-24">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-green-500/10 border border-green-500/20 rounded-full text-xs text-green-400 mb-4">
-            <CheckCircle className="w-3.5 h-3.5" />
-            14-day free trial on every plan
+      <div className="max-w-5xl mx-auto px-4 pt-28 pb-16 sm:pt-36 sm:pb-24">
+        {/* Header */}
+        <div className="text-center mb-16 relative">
+          <div className="absolute top-[-100px] left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-[#D4AF63]/5 rounded-full blur-[120px] pointer-events-none" />
+          <div className="relative">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 glass rounded-full text-sm mb-6">
+              <CheckCircle className="w-3.5 h-3.5 text-emerald-400" />
+              <span className="text-white/50 font-light">14-day free trial on every plan</span>
+            </div>
+            <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight">
+              One Lead Pays for a{' '}
+              <span className="text-gradient">Full Year</span>
+            </h1>
+            <p className="mt-5 text-lg text-white/40 max-w-xl mx-auto font-light">
+              Average outdoor living project: $15K–$45K. You do the math.
+            </p>
           </div>
-          <h1 className="text-4xl sm:text-5xl font-bold" style={{ fontFamily: 'Georgia, serif' }}>
-            One Lead Pays for a <span className="text-[#D4AF63]">Full Year</span>
-          </h1>
-          <p className="mt-4 text-lg text-[#A89F91] max-w-xl mx-auto">
-            Average outdoor living project: $15K–$45K. You do the math.
-          </p>
         </div>
 
         {/* Plan cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-20">
           {PLANS.map((plan) => (
             <div
               key={plan.name}
-              className={`relative rounded-2xl p-8 flex flex-col ${
+              className={`relative rounded-2xl p-8 flex flex-col transition-all duration-300 hover-lift ${
                 plan.popular
-                  ? 'bg-[#1A1814] border-2 border-[#D4AF63] shadow-xl shadow-[#D4AF63]/10'
-                  : 'bg-[#1A1814] border border-white/10'
+                  ? 'glass-strong border border-[#D4AF63]/30 glow-gold'
+                  : 'glass'
               }`}
             >
               {plan.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-[#D4AF63] text-[#0F0E0A] text-sm font-bold rounded-full whitespace-nowrap">
-                  MOST POPULAR
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-[#D4AF63] to-[#C49B4A] text-[#0A0A0A] text-xs font-bold rounded-full whitespace-nowrap uppercase tracking-wider">
+                  Most Popular
                 </div>
               )}
 
               <h3 className="text-xl font-bold">{plan.name}</h3>
-              <p className="text-sm text-[#A89F91] mt-1">{plan.desc}</p>
+              <p className="text-sm text-white/30 mt-1 font-light">{plan.desc}</p>
 
               <div className="mt-6 mb-6">
-                <span className="text-4xl font-bold text-[#D4AF63]">${plan.price}</span>
-                <span className="text-[#A89F91]">/month</span>
+                <span className="text-4xl font-bold text-gradient">${plan.price}</span>
+                <span className="text-white/30 font-light">/month</span>
               </div>
 
               <ul className="space-y-3 mb-8 flex-1">
                 {plan.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-3 text-sm">
-                    <Check className="w-4 h-4 text-[#D4AF63] mt-0.5 flex-shrink-0" />
-                    <span className="text-[#A89F91]">{feature}</span>
+                    <Check className="w-4 h-4 text-[#D4AF63]/70 mt-0.5 flex-shrink-0" />
+                    <span className="text-white/40 font-light">{feature}</span>
                   </li>
                 ))}
               </ul>
 
               <Link
                 href="/signup"
-                className={`group block w-full text-center py-3.5 rounded-xl font-medium transition-all ${
+                className={`group block w-full text-center py-3.5 rounded-xl font-semibold transition-all ${
                   plan.popular
-                    ? 'bg-[#D4AF63] text-[#0F0E0A] hover:brightness-110 shadow-lg shadow-[#D4AF63]/20'
-                    : 'border-2 border-[#D4AF63] text-[#D4AF63] hover:bg-[#D4AF63] hover:text-[#0F0E0A]'
+                    ? 'bg-gradient-to-r from-[#D4AF63] to-[#C49B4A] text-[#0A0A0A] hover:brightness-110 shadow-lg shadow-[#D4AF63]/20'
+                    : 'border border-white/10 text-white/60 hover:border-[#D4AF63]/40 hover:text-[#D4AF63] hover:bg-[#D4AF63]/5'
                 }`}
               >
                 <span className="inline-flex items-center gap-2">
@@ -171,60 +176,69 @@ export default function PricingPage() {
         </div>
 
         {/* Guarantee */}
-        <div className="bg-gradient-to-r from-[#D4AF63]/5 via-[#1A1814] to-[#D4AF63]/5 rounded-2xl border border-[#D4AF63]/20 p-8 sm:p-10 text-center mb-16">
-          <Shield className="w-12 h-12 text-[#D4AF63] mx-auto mb-4" />
-          <h3 className="text-2xl font-bold mb-2" style={{ fontFamily: 'Georgia, serif' }}>
-            Risk-Free Guarantee
-          </h3>
-          <p className="text-[#A89F91] max-w-lg mx-auto leading-relaxed">
-            Try EstimateAI free for 14 days. No credit card, no commitment. If it doesn&apos;t generate leads, you pay nothing.
-            If it does? You&apos;ll wonder how you ever lived without it.
-          </p>
+        <div className="relative rounded-3xl overflow-hidden p-8 sm:p-12 text-center mb-20">
+          <div className="absolute inset-0 glass-strong rounded-3xl" />
+          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#D4AF63]/30 to-transparent" />
+          <div className="absolute inset-0 rounded-3xl border border-[#D4AF63]/10" />
+          <div className="relative">
+            <div className="w-14 h-14 rounded-2xl bg-[#D4AF63]/10 flex items-center justify-center mx-auto mb-5">
+              <Shield className="w-7 h-7 text-[#D4AF63]" />
+            </div>
+            <h3 className="text-2xl sm:text-3xl font-bold mb-3 tracking-tight">
+              Risk-Free <span className="text-gradient">Guarantee</span>
+            </h3>
+            <p className="text-white/35 max-w-lg mx-auto leading-relaxed font-light">
+              Try EstimateAI free for 14 days. No credit card, no commitment. If it doesn&apos;t generate leads, you pay nothing.
+              If it does? You&apos;ll wonder how you ever lived without it.
+            </p>
+          </div>
         </div>
 
         {/* ROI Breakdown */}
-        <div className="bg-[#1A1814] rounded-2xl border border-white/10 p-8 sm:p-10 mb-16">
-          <div className="flex items-center gap-2 justify-center mb-6">
-            <Zap className="w-5 h-5 text-[#D4AF63]" />
-            <h3 className="text-xl font-bold">Quick ROI Math</h3>
+        <div className="glass rounded-2xl p-8 sm:p-10 mb-20">
+          <div className="flex items-center gap-2.5 justify-center mb-8">
+            <div className="w-8 h-8 rounded-lg bg-[#D4AF63]/10 flex items-center justify-center">
+              <Zap className="w-4 h-4 text-[#D4AF63]" />
+            </div>
+            <h3 className="text-xl font-bold tracking-tight">Quick ROI Math</h3>
           </div>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-white/10">
-                  <th className="text-left p-3 text-[#A89F91] font-medium" />
-                  <th className="text-center p-3 text-[#A89F91] font-medium">Standard</th>
+                  <th className="text-left p-3 text-white/30 font-light" />
+                  <th className="text-center p-3 text-white/40 font-medium">Standard</th>
                   <th className="text-center p-3 text-[#D4AF63] font-bold">Pro</th>
-                  <th className="text-center p-3 text-[#A89F91] font-medium">Agency</th>
+                  <th className="text-center p-3 text-white/40 font-medium">Agency</th>
                 </tr>
               </thead>
               <tbody>
                 <tr className="border-b border-white/5">
-                  <td className="p-3 text-[#A89F91]">Monthly cost</td>
-                  <td className="p-3 text-center text-[#F2EEE7]">$97</td>
-                  <td className="p-3 text-center text-[#F2EEE7] font-semibold">$197</td>
-                  <td className="p-3 text-center text-[#F2EEE7]">$497</td>
+                  <td className="p-3 text-white/30 font-light">Monthly cost</td>
+                  <td className="p-3 text-center text-white/60">$97</td>
+                  <td className="p-3 text-center text-white/80 font-semibold">$197</td>
+                  <td className="p-3 text-center text-white/60">$497</td>
                 </tr>
                 <tr className="border-b border-white/5">
-                  <td className="p-3 text-[#A89F91]">Avg. project value</td>
-                  <td className="p-3 text-center text-[#F2EEE7]">$25K</td>
-                  <td className="p-3 text-center text-[#F2EEE7]">$25K</td>
-                  <td className="p-3 text-center text-[#F2EEE7]">$25K</td>
+                  <td className="p-3 text-white/30 font-light">Avg. project value</td>
+                  <td className="p-3 text-center text-white/60">$25K</td>
+                  <td className="p-3 text-center text-white/60">$25K</td>
+                  <td className="p-3 text-center text-white/60">$25K</td>
                 </tr>
                 <tr className="border-b border-white/5">
-                  <td className="p-3 text-[#A89F91]">Extra leads closed/month</td>
-                  <td className="p-3 text-center text-[#F2EEE7]">1</td>
-                  <td className="p-3 text-center text-[#F2EEE7]">2</td>
-                  <td className="p-3 text-center text-[#F2EEE7]">3</td>
+                  <td className="p-3 text-white/30 font-light">Extra leads closed/month</td>
+                  <td className="p-3 text-center text-white/60">1</td>
+                  <td className="p-3 text-center text-white/60">2</td>
+                  <td className="p-3 text-center text-white/60">3</td>
                 </tr>
                 <tr className="border-b border-white/5">
-                  <td className="p-3 text-[#A89F91] font-semibold">New monthly revenue</td>
-                  <td className="p-3 text-center text-green-400 font-bold">$25,000</td>
-                  <td className="p-3 text-center text-green-400 font-bold">$50,000</td>
-                  <td className="p-3 text-center text-green-400 font-bold">$75,000</td>
+                  <td className="p-3 text-white/40 font-medium">New monthly revenue</td>
+                  <td className="p-3 text-center text-emerald-400 font-bold">$25,000</td>
+                  <td className="p-3 text-center text-emerald-400 font-bold">$50,000</td>
+                  <td className="p-3 text-center text-emerald-400 font-bold">$75,000</td>
                 </tr>
                 <tr>
-                  <td className="p-3 text-[#D4AF63] font-bold">ROI</td>
+                  <td className="p-3 text-gradient font-bold">ROI</td>
                   <td className="p-3 text-center text-[#D4AF63] font-bold">257x</td>
                   <td className="p-3 text-center text-[#D4AF63] font-bold text-lg">253x</td>
                   <td className="p-3 text-center text-[#D4AF63] font-bold">150x</td>
@@ -235,23 +249,47 @@ export default function PricingPage() {
         </div>
 
         {/* FAQ */}
-        <div className="mb-16">
-          <div className="flex items-center gap-2 justify-center mb-8">
-            <HelpCircle className="w-5 h-5 text-[#D4AF63]" />
-            <h3 className="text-2xl font-bold" style={{ fontFamily: 'Georgia, serif' }}>Frequently Asked Questions</h3>
+        <div className="mb-20">
+          <div className="flex items-center gap-2.5 justify-center mb-10">
+            <div className="w-8 h-8 rounded-lg bg-[#D4AF63]/10 flex items-center justify-center">
+              <HelpCircle className="w-4 h-4 text-[#D4AF63]" />
+            </div>
+            <h3 className="text-2xl sm:text-3xl font-bold tracking-tight">Frequently Asked Questions</h3>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {FAQ.map((item) => (
-              <div key={item.q} className="bg-[#1A1814] rounded-xl p-5 border border-white/5">
-                <h4 className="font-semibold text-sm text-[#F2EEE7] mb-2">{item.q}</h4>
-                <p className="text-sm text-[#A89F91] leading-relaxed">{item.a}</p>
+              <div key={item.q} className="glass rounded-2xl p-6 hover:bg-white/[0.04] transition-all">
+                <h4 className="font-semibold text-sm mb-2.5">{item.q}</h4>
+                <p className="text-sm text-white/35 leading-relaxed font-light">{item.a}</p>
               </div>
             ))}
           </div>
         </div>
 
+        {/* CTA */}
+        <div className="text-center mb-12 relative">
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[400px] h-[200px] bg-[#D4AF63]/5 rounded-full blur-[100px] pointer-events-none" />
+          <div className="relative">
+            <h3 className="text-2xl sm:text-4xl font-extrabold mb-4 tracking-tight">
+              Ready to <span className="text-gradient">Close More Leads</span>?
+            </h3>
+            <p className="text-white/30 mb-8 font-light">Start free. Be live before your next coffee break.</p>
+            <Link
+              href="/signup"
+              className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#D4AF63] to-[#C49B4A] text-[#0A0A0A] rounded-xl text-lg font-bold hover:brightness-110 transition-all shadow-xl shadow-[#D4AF63]/20 pulse-ring"
+            >
+              Start Your 14-Day Free Trial
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <div className="mt-6 flex items-center justify-center gap-5 text-sm text-white/25 font-light">
+              <span className="flex items-center gap-1.5"><CheckCircle className="w-3.5 h-3.5 text-emerald-500/50" /> No credit card</span>
+              <span className="flex items-center gap-1.5"><CheckCircle className="w-3.5 h-3.5 text-emerald-500/50" /> Cancel anytime</span>
+            </div>
+          </div>
+        </div>
+
         <div className="text-center">
-          <Link href="/" className="inline-flex items-center text-sm text-[#A89F91] hover:text-[#F2EEE7]">
+          <Link href="/" className="inline-flex items-center text-sm text-white/25 hover:text-white/50 transition-colors font-light">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to home
           </Link>
