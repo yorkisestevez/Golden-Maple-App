@@ -1,8 +1,9 @@
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { LayoutDashboard, Users, Settings, DollarSign, Code2, CreditCard, LogOut } from 'lucide-react';
+import { LayoutDashboard, Users, Settings, DollarSign, Code2, CreditCard, LogOut, Menu, X } from 'lucide-react';
 import { createClient } from '@/lib/supabase/client';
 
 const NAV_ITEMS = [
@@ -16,6 +17,7 @@ const NAV_ITEMS = [
 
 export function Sidebar() {
   const pathname = usePathname();
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleLogout = async () => {
     const supabase = createClient();
@@ -23,12 +25,18 @@ export function Sidebar() {
     window.location.href = '/login';
   };
 
-  return (
-    <aside className="w-64 bg-[#1A1814] border-r border-white/10 min-h-screen flex flex-col">
-      <div className="p-6">
+  const navContent = (
+    <>
+      <div className="p-6 flex items-center justify-between">
         <h1 className="text-xl font-bold text-[#D4AF63]" style={{ fontFamily: 'Georgia, serif' }}>
           EstimateAI
         </h1>
+        <button
+          onClick={() => setMobileOpen(false)}
+          className="lg:hidden text-[#A89F91] hover:text-[#F2EEE7]"
+        >
+          <X className="w-5 h-5" />
+        </button>
       </div>
 
       <nav className="flex-1 px-3">
@@ -38,6 +46,7 @@ export function Sidebar() {
             <Link
               key={item.href}
               href={item.href}
+              onClick={() => setMobileOpen(false)}
               className={`flex items-center gap-3 px-3 py-2.5 rounded-lg mb-1 transition-colors ${
                 isActive
                   ? 'bg-[#D4AF63]/10 text-[#D4AF63]'
@@ -60,6 +69,40 @@ export function Sidebar() {
           <span className="text-sm font-medium">Log Out</span>
         </button>
       </div>
-    </aside>
+    </>
+  );
+
+  return (
+    <>
+      {/* Mobile hamburger button */}
+      <button
+        onClick={() => setMobileOpen(true)}
+        className="lg:hidden fixed top-4 left-4 z-40 p-2 bg-[#1A1814] border border-white/10 rounded-lg text-[#A89F91] hover:text-[#F2EEE7]"
+      >
+        <Menu className="w-5 h-5" />
+      </button>
+
+      {/* Mobile overlay */}
+      {mobileOpen && (
+        <div
+          className="lg:hidden fixed inset-0 bg-black/60 z-40"
+          onClick={() => setMobileOpen(false)}
+        />
+      )}
+
+      {/* Mobile sidebar */}
+      <aside
+        className={`lg:hidden fixed inset-y-0 left-0 z-50 w-64 bg-[#1A1814] border-r border-white/10 flex flex-col transform transition-transform duration-200 ${
+          mobileOpen ? 'translate-x-0' : '-translate-x-full'
+        }`}
+      >
+        {navContent}
+      </aside>
+
+      {/* Desktop sidebar */}
+      <aside className="hidden lg:flex w-64 bg-[#1A1814] border-r border-white/10 min-h-screen flex-col shrink-0">
+        {navContent}
+      </aside>
+    </>
   );
 }

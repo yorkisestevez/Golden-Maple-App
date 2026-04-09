@@ -22,8 +22,28 @@ export async function POST(request: NextRequest) {
       source = 'website',
     } = body;
 
-    if (!contractor_id || !name || !phone) {
-      return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
+    if (!contractor_id || !name?.trim() || !phone?.trim()) {
+      return NextResponse.json({ error: 'Missing required fields: contractor_id, name, phone' }, { status: 400 });
+    }
+
+    if (typeof contractor_id !== 'string' || typeof name !== 'string' || typeof phone !== 'string') {
+      return NextResponse.json({ error: 'Invalid field types' }, { status: 400 });
+    }
+
+    if (email && typeof email !== 'string') {
+      return NextResponse.json({ error: 'Invalid email format' }, { status: 400 });
+    }
+
+    if (!selected_features || !Array.isArray(selected_features) || selected_features.length === 0) {
+      return NextResponse.json({ error: 'At least one feature must be selected' }, { status: 400 });
+    }
+
+    if (!tier || !['good', 'better', 'best'].includes(tier)) {
+      return NextResponse.json({ error: 'Invalid tier' }, { status: 400 });
+    }
+
+    if (!site_condition || !['standard', 'moderate', 'complex'].includes(site_condition)) {
+      return NextResponse.json({ error: 'Invalid site condition' }, { status: 400 });
     }
 
     const supabase = await createServiceClient();

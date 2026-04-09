@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Lead } from '@/lib/types';
+import { createClient } from '@/lib/supabase/client';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Download, Search } from 'lucide-react';
@@ -10,7 +11,18 @@ interface LeadsPageClientProps {
   leads: Lead[];
 }
 
-export function LeadsPageClient({ leads }: LeadsPageClientProps) {
+const STATUS_OPTIONS = ['new', 'contacted', 'quoted', 'won', 'lost'] as const;
+
+const STATUS_STYLES: Record<string, string> = {
+  new: 'bg-blue-500/10 text-blue-400',
+  contacted: 'bg-yellow-500/10 text-yellow-400',
+  quoted: 'bg-purple-500/10 text-purple-400',
+  won: 'bg-green-500/10 text-green-400',
+  lost: 'bg-red-500/10 text-red-400',
+};
+
+export function LeadsPageClient({ leads: initialLeads }: LeadsPageClientProps) {
+  const [leads, setLeads] = useState(initialLeads);
   const [search, setSearch] = useState('');
   const [statusFilter, setStatusFilter] = useState<string>('all');
 
@@ -23,6 +35,29 @@ export function LeadsPageClient({ leads }: LeadsPageClientProps) {
     const matchesStatus = statusFilter === 'all' || lead.status === statusFilter;
     return matchesSearch && matchesStatus;
   });
+
+  const updateLeadStatus = async (leadId: string, newStatus: string) => {
+    const supabase = createClient();
+    const updateData: Record<string, string> = { status: newStatus };
+    if (newStatus === 'contacted') {
+      updateData.contacted_at = new Date().toISOString();
+    }
+
+    const { error } = await supabase
+      .from('leads')
+      .update(updateData)
+      .eq('id', leadId);
+
+    if (!error) {
+      setLeads((prev) =>
+        prev.map((l) =>
+          l.id === leadId
+            ? { ...l, status: newStatus as Lead['status'], ...(newStatus === 'contacted' ? { contacted_at: new Date().toISOString() } : {}) }
+            : l
+        )
+      );
+    }
+  };
 
   const exportCSV = () => {
     const headers = ['Name', 'Email', 'Phone', 'Estimate', 'Tier', 'Status', 'Date'];
@@ -90,11 +125,11 @@ export function LeadsPageClient({ leads }: LeadsPageClientProps) {
             <tr className="border-b border-white/10">
               <th className="text-left p-4 text-[#A89F91] font-medium">Name</th>
               <th className="text-left p-4 text-[#A89F91] font-medium">Contact</th>
-              <th className="text-left p-4 text-[#A89F91] font-medium">Features</th>
+              <th className="text-left p-4 text-[#A89F91] font-medium hidden lg:table-cell">Features</th>
               <th className="text-left p-4 text-[#A89F91] font-medium">Estimate</th>
-              <th className="text-left p-4 text-[#A89F91] font-medium">Tier</th>
+              <th className="text-left p-4 text-[#A89F91] font-medium hidden sm:table-cell">Tier</th>
               <th className="text-left p-4 text-[#A89F91] font-medium">Status</th>
-              <th className="text-left p-4 text-[#A89F91] font-medium">Date</th>
+              <th className="text-left p-4 text-[#A89F91] font-medium hidden sm:table-cell">Date</th>
             </tr>
           </thead>
           <tbody>
@@ -112,7 +147,7 @@ export function LeadsPageClient({ leads }: LeadsPageClientProps) {
                     <div className="text-[#A89F91]">{lead.phone}</div>
                     {lead.email && <div className="text-[#A89F91]/60 text-xs">{lead.email}</div>}
                   </td>
-                  <td className="p-4 text-[#A89F91] text-xs">
+                  <td className="p-4 text-[#A89F91] text-xs hidden lg:table-cell">
                     {(lead.selected_features as { label: string }[]).map((f) => f.label).join(', ')}
                   </td>
                   <td className="p-4">
@@ -121,19 +156,21 @@ export function LeadsPageClient({ leads }: LeadsPageClientProps) {
                       ${Number(lead.estimate_low).toLocaleString()} – ${Number(lead.estimate_high).toLocaleString()}
                     </div>
                   </td>
-                  <td className="p-4 text-[#A89F91] capitalize">{lead.tier}</td>
+                  <td className="p-4 text-[#A89F91] capitalize hidden sm:table-cell">{lead.tier}</td>
                   <td className="p-4">
-                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                      lead.status === 'new' ? 'bg-blue-500/10 text-blue-400' :
-                      lead.status === 'contacted' ? 'bg-yellow-500/10 text-yellow-400' :
-                      lead.status === 'won' ? 'bg-green-500/10 text-green-400' :
-                      lead.status === 'lost' ? 'bg-red-500/10 text-red-400' :
-                      'bg-gray-500/10 text-gray-400'
-                    }`}>
-                      {lead.status}
-                    </span>
+                    <select
+                      value={lead.status}
+                      onChange={(e) => updateLeadStatus(lead.id, e.target.value)}
+                      className={`px-2 py-1 rounded-full text-xs font-medium border-0 cursor-pointer ${STATUS_STYLES[lead.status] || 'bg-gray-500/10 text-gray-400'}`}
+                    >
+                      {STATUS_OPTIONS.map((s) => (
+                        <option key={s} value={s} className="bg-[#1A1814] text-[#F2EEE7]">
+                          {s}
+                        </option>
+                      ))}
+                    </select>
                   </td>
-                  <td className="p-4 text-[#A89F91] whitespace-nowrap">
+                  <td className="p-4 text-[#A89F91] whitespace-nowrap hidden sm:table-cell">
                     {new Date(lead.created_at).toLocaleDateString()}
                   </td>
                 </tr>

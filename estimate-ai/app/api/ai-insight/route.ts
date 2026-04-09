@@ -11,6 +11,14 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
     }
 
+    if (typeof contractor_id !== 'string') {
+      return NextResponse.json({ error: 'Invalid contractor_id' }, { status: 400 });
+    }
+
+    if (!Array.isArray(features) || features.length === 0) {
+      return NextResponse.json({ error: 'Features must be a non-empty array' }, { status: 400 });
+    }
+
     const supabase = await createServiceClient();
 
     // Check contractor plan

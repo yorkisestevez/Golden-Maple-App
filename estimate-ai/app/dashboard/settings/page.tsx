@@ -6,13 +6,14 @@ import { Contractor } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card } from '@/components/ui/card';
-import { Save, Loader2, Upload } from 'lucide-react';
+import { Save, Loader2, Upload, Image } from 'lucide-react';
 
 export default function SettingsPage() {
   const [contractor, setContractor] = useState<Contractor | null>(null);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState('');
+  const [uploading, setUploading] = useState(false);
 
   useEffect(() => {
     async function load() {
@@ -66,6 +67,34 @@ export default function SettingsPage() {
     }
     setSaving(false);
     setTimeout(() => setMessage(''), 3000);
+  };
+
+  const handleLogoUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file || !contractor) return;
+
+    setUploading(true);
+    try {
+      const supabase = createClient();
+      const ext = file.name.split('.').pop();
+      const path = `logos/${contractor.id}.${ext}`;
+
+      const { error: uploadError } = await supabase.storage
+        .from('assets')
+        .upload(path, file, { upsert: true });
+
+      if (uploadError) throw uploadError;
+
+      const { data: { publicUrl } } = supabase.storage
+        .from('assets')
+        .getPublicUrl(path);
+
+      setContractor({ ...contractor, logo_url: publicUrl });
+    } catch {
+      setMessage('Failed to upload logo');
+    } finally {
+      setUploading(false);
+    }
   };
 
   const updateField = (field: keyof Contractor, value: string) => {
@@ -136,13 +165,31 @@ export default function SettingsPage() {
       {/* Branding */}
       <Card variant="bordered" className="space-y-4">
         <h2 className="text-lg font-semibold text-[#F2EEE7]">Branding</h2>
-        <Input
-          id="logo_url"
-          label="Logo URL"
-          placeholder="https://example.com/logo.png"
-          value={contractor.logo_url || ''}
-          onChange={(e) => updateField('logo_url', e.target.value)}
-        />
+        <div>
+          <label className="block text-sm font-medium text-[#A89F91] mb-1.5">Logo</label>
+          <div className="flex items-center gap-4">
+            {contractor.logo_url ? (
+              <img src={contractor.logo_url} alt="Logo" className="h-12 w-auto object-contain rounded bg-white/5 p-1" />
+            ) : (
+              <div className="h-12 w-12 rounded bg-white/5 flex items-center justify-center">
+                <Image className="w-6 h-6 text-[#A89F91]" />
+              </div>
+            )}
+            <label className="cursor-pointer inline-flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg text-sm text-[#F2EEE7] transition-colors">
+              {uploading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Upload className="w-4 h-4" />}
+              {uploading ? 'Uploading...' : 'Upload Logo'}
+              <input type="file" accept="image/*" onChange={handleLogoUpload} className="hidden" />
+            </label>
+          </div>
+          <Input
+            id="logo_url"
+            label="Or paste a URL"
+            placeholder="https://example.com/logo.png"
+            value={contractor.logo_url || ''}
+            onChange={(e) => updateField('logo_url', e.target.value)}
+            className="mt-3"
+          />
+        </div>
         <div className="grid grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-medium text-[#A89F91] mb-1.5">Primary Color</label>
