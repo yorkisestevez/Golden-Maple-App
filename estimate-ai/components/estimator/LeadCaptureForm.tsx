@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Send, Loader2, CheckCircle } from 'lucide-react';
+import { Send, Loader2, CheckCircle, Shield, Clock } from 'lucide-react';
 
 interface LeadCaptureFormProps {
   contractorId: string;
@@ -57,45 +57,57 @@ export function LeadCaptureForm({ contractorId, estimateData, source }: LeadCapt
 
   if (submitted) {
     return (
-      <div className="rounded-xl border border-green-500/30 bg-green-500/10 p-8 text-center">
-        <CheckCircle className="w-12 h-12 text-green-400 mx-auto mb-4" />
+      <div className="rounded-2xl border border-green-500/30 bg-gradient-to-br from-green-500/10 to-transparent p-8 text-center">
+        <div className="w-16 h-16 rounded-full bg-green-500/20 flex items-center justify-center mx-auto mb-4">
+          <CheckCircle className="w-8 h-8 text-green-400" />
+        </div>
         <h3 className="text-xl font-bold text-[var(--brand-text,#F2EEE7)] mb-2">
-          Request Sent!
+          You&apos;re All Set!
         </h3>
-        <p className="text-[var(--brand-muted,#A89F91)]">
-          We&apos;ll be in touch shortly to discuss your project. Thank you!
+        <p className="text-[var(--brand-muted,#A89F91)] max-w-sm mx-auto">
+          We&apos;ve received your project details and will be in touch shortly to schedule your free consultation.
         </p>
+        <div className="mt-4 flex items-center justify-center gap-2 text-xs text-[var(--brand-muted,#A89F91)]">
+          <Clock className="w-3.5 h-3.5" />
+          Most clients hear back within 2 hours during business hours
+        </div>
       </div>
     );
   }
 
   return (
-    <div className="rounded-xl border border-white/10 bg-[var(--brand-card,#1A1814)] p-6">
-      <h3 className="text-lg font-semibold text-[var(--brand-text,#F2EEE7)] mb-1">
-        Ready to bring this to life?
-      </h3>
-      <p className="text-sm text-[var(--brand-muted,#A89F91)] mb-4">
-        Share your contact info and we&apos;ll reach out to schedule a free consultation.
-      </p>
+    <div className="rounded-2xl border border-[var(--brand-accent,#D4AF63)]/20 bg-gradient-to-br from-[var(--brand-accent,#D4AF63)]/5 via-[var(--brand-card,#1A1814)] to-[var(--brand-card,#1A1814)] p-6 sm:p-8">
+      <div className="text-center mb-6">
+        <h3 className="text-xl font-bold text-[var(--brand-text,#F2EEE7)] mb-1"
+          style={{ fontFamily: 'var(--brand-headline-font)' }}
+        >
+          Like What You See?
+        </h3>
+        <p className="text-sm text-[var(--brand-muted,#A89F91)]">
+          Lock in your free consultation and get a detailed, on-site quote.
+        </p>
+      </div>
 
       <form onSubmit={handleSubmit} className="space-y-4">
-        <Input
-          id="lead-name"
-          label="Name *"
-          placeholder="Your full name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-        />
-        <Input
-          id="lead-phone"
-          label="Phone *"
-          type="tel"
-          placeholder="(555) 123-4567"
-          value={phone}
-          onChange={(e) => setPhone(e.target.value)}
-          required
-        />
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <Input
+            id="lead-name"
+            label="Name *"
+            placeholder="Your full name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+          />
+          <Input
+            id="lead-phone"
+            label="Phone *"
+            type="tel"
+            placeholder="(555) 123-4567"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            required
+          />
+        </div>
         <Input
           id="lead-email"
           label="Email (optional)"
@@ -128,6 +140,17 @@ export function LeadCaptureForm({ contractorId, estimateData, source }: LeadCapt
             </>
           )}
         </Button>
+
+        <div className="flex items-center justify-center gap-4 text-xs text-[var(--brand-muted,#A89F91)]/60 pt-1">
+          <span className="flex items-center gap-1">
+            <Shield className="w-3 h-3" />
+            No obligation
+          </span>
+          <span>&bull;</span>
+          <span>Free site visit</span>
+          <span>&bull;</span>
+          <span>Detailed quote</span>
+        </div>
       </form>
     </div>
   );

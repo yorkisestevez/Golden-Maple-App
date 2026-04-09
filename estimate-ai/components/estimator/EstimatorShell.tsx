@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useRef, useCallback } from 'react';
 import { Service, PricingConfig, Contractor, TierKey, SiteKey } from '@/lib/types';
 import { StepFeatureSelect } from './StepFeatureSelect';
 import { StepDimensions } from './StepDimensions';
@@ -24,6 +24,19 @@ export function EstimatorShell({ contractor, services, config, source = 'website
   const [quantities, setQuantities] = useState<Record<string, number>>({});
   const [tier, setTier] = useState<TierKey>('better');
   const [site, setSite] = useState<SiteKey>('standard');
+  const [transitioning, setTransitioning] = useState(false);
+  const [direction, setDirection] = useState<'forward' | 'back'>('forward');
+  const stepRef = useRef<HTMLDivElement>(null);
+
+  const animateStep = useCallback((newStep: number) => {
+    setDirection(newStep > step ? 'forward' : 'back');
+    setTransitioning(true);
+    setTimeout(() => {
+      setStep(newStep);
+      setTransitioning(false);
+      stepRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 200);
+  }, [step]);
 
   // Initialize quantities for newly selected services
   const handleToggle = (key: string) => {
@@ -50,11 +63,11 @@ export function EstimatorShell({ contractor, services, config, source = 'website
   }, [step, selectedKeys]);
 
   const next = () => {
-    if (canProceed && step < 3) setStep(step + 1);
+    if (canProceed && step < 3) animateStep(step + 1);
   };
 
   const prev = () => {
-    if (step > 0) setStep(step - 1);
+    if (step > 0) animateStep(step - 1);
   };
 
   return (
@@ -103,7 +116,7 @@ export function EstimatorShell({ contractor, services, config, source = 'website
                 key={label}
                 type="button"
                 onClick={() => {
-                  if (i < step || (i <= step && canProceed)) setStep(i);
+                  if (i < step || (i <= step && canProceed)) animateStep(i);
                 }}
                 className={`text-xs sm:text-sm font-medium transition-colors ${
                   i <= step
@@ -124,7 +137,16 @@ export function EstimatorShell({ contractor, services, config, source = 'website
         </div>
 
         {/* Steps */}
-        <div className="min-h-[400px]">
+        <div
+          ref={stepRef}
+          className="min-h-[400px] transition-all duration-200 ease-out"
+          style={{
+            opacity: transitioning ? 0 : 1,
+            transform: transitioning
+              ? `translateX(${direction === 'forward' ? '30px' : '-30px'})`
+              : 'translateX(0)',
+          }}
+        >
           {step === 0 && (
             <StepFeatureSelect
               services={services}
@@ -186,7 +208,7 @@ export function EstimatorShell({ contractor, services, config, source = 'website
 
         {step === 3 && (
           <div className="mt-8 pt-6 border-t border-white/10">
-            <Button variant="ghost" onClick={() => setStep(0)} className="mx-auto block">
+            <Button variant="ghost" onClick={() => animateStep(0)} className="mx-auto block">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Start Over
             </Button>
@@ -196,9 +218,14 @@ export function EstimatorShell({ contractor, services, config, source = 'website
         {/* Powered by */}
         {contractor.plan !== 'agency' && (
           <div className="text-center mt-8 pt-4">
-            <p className="text-xs text-[var(--brand-muted)]/40">
+            <a
+              href="https://estimateai.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-[var(--brand-muted)]/40 hover:text-[var(--brand-muted)]/60 transition-colors"
+            >
               Powered by <span className="font-semibold">EstimateAI</span>
-            </p>
+            </a>
           </div>
         )}
       </div>
