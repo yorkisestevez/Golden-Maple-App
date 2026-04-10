@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { ExpensiveButton } from '@/components/ui/ExpensiveButton';
 import { PerformanceGraph } from '@/components/ui/PerformanceGraph';
 import { SpotlightCard } from '@/components/ui/SpotlightCard';
-import { ArrowRight, Zap, Palette, Users, BarChart3, Code2, Shield, Star, TrendingUp, Clock, DollarSign, CheckCircle, Sparkles, LayoutDashboard } from 'lucide-react';
+import { ArrowRight, Zap, Palette, Users, BarChart3, Code2, Shield, Star, CheckCircle, Sparkles, LayoutDashboard } from 'lucide-react';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -124,25 +124,23 @@ export default function HomePage() {
         </motion.div>
       </section>
 
-      {/* Social proof bar */}
+      {/* Private Beta band */}
       <section className="bg-white border-y border-slate-100">
-        <div className="max-w-6xl mx-auto px-4 py-12">
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
-            {[
-              { value: '$4.2M+', label: 'Estimates Generated', icon: DollarSign },
-              { value: '6,800+', label: 'Leads Captured', icon: Users },
-              { value: '< 60s', label: 'Average Estimate Time', icon: Clock },
-              { value: '340%', label: 'Avg Lead Increase', icon: TrendingUp },
-            ].map((stat) => (
-              <div key={stat.label}>
-                <div className="flex items-center justify-center gap-2 mb-1.5">
-                  <stat.icon className="w-4 h-4 text-blue-600/60" />
-                  <span className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900">{stat.value}</span>
-                </div>
-                <p className="text-xs sm:text-sm text-slate-500 font-medium">{stat.label}</p>
-              </div>
-            ))}
+        <div className="max-w-4xl mx-auto px-4 py-10 text-center">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-50 border border-blue-100 rounded-full text-[11px] font-black tracking-[0.2em] uppercase text-blue-700 mb-4">
+            <CheckCircle className="w-3.5 h-3.5 text-blue-600" />
+            Private Beta — Launching 2026
           </div>
+          <p className="text-lg sm:text-xl text-slate-700 font-medium max-w-2xl mx-auto leading-relaxed">
+            Building the AI estimator purpose-built for outdoor living contractors.
+          </p>
+          <Link
+            href="/signup"
+            className="inline-flex items-center gap-1.5 mt-4 text-sm font-bold text-blue-600 hover:text-blue-700 transition-colors"
+          >
+            Join the waitlist
+            <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
       </section>
       {/* Neural Velocity Visualization */}
@@ -388,28 +386,21 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Final CTA */}
+      {/* Live Demo Showcase */}
       <section className="py-32 sm:py-48 relative overflow-hidden bg-white">
-        <motion.div 
+        <motion.div
           className="max-w-4xl mx-auto px-4 text-center relative"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
           <h3 className="text-5xl sm:text-8xl font-black mb-10 leading-[0.85] tracking-tighter text-slate-900">
-            Dominate Your <br />
-            <span className="text-blue-600">Local Market.</span>
+            See It Run <br />
+            <span className="text-blue-600">Right Now.</span>
           </h3>
           <p className="text-xl text-slate-500 mb-16 max-w-xl mx-auto font-medium leading-relaxed">
-            Stop losing leads to the person who answers their phone first. 
-            Automate your pricing today.
+            This is the actual estimator your customers will use. No signup, no gimmicks — try it in the browser below.
           </p>
-          <Link
-            href="/signup"
-            className="inline-flex items-center gap-2 px-10 py-5 bg-blue-600 text-white text-lg font-bold rounded-2xl hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/25 hover:shadow-xl hover:shadow-blue-600/30 hover:-translate-y-0.5 mb-24"
-          >
-            Start Free Trial
-          </Link>
 
           <div className="max-w-4xl mx-auto rounded-3xl overflow-hidden border border-slate-200 shadow-2xl">
             <div className="bg-slate-50 px-4 py-3 flex items-center gap-3 border-b border-slate-200">
@@ -433,101 +424,6 @@ export default function HomePage() {
             </div>
           </div>
         </motion.div>
-      </section>
-
-      {/* ROI */}
-      <section className="py-24 sm:py-32 bg-white">
-        <div className="max-w-5xl mx-auto px-4">
-          <div className="bg-white rounded-[3rem] p-12 sm:p-20 shadow-xl border border-slate-100 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-blue-50 rounded-full -mr-32 -mt-32 blur-3xl opacity-50" />
-            
-            <div className="relative">
-              <h3 className="text-3xl sm:text-5xl font-black text-center mb-14 tracking-tight text-slate-900">
-                It's Not a Cost. <br />
-                <span className="text-blue-600 italic">It's a Profit Engine.</span>
-              </h3>
-
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 text-center">
-                <div className="space-y-4">
-                  <div className="text-5xl font-black tracking-tighter text-slate-900">$197<span className="text-lg text-slate-400 font-normal">/mo</span></div>
-                  <p className="text-sm text-slate-500 font-bold uppercase tracking-widest">Fixed Investment</p>
-                </div>
-                <div className="space-y-4 border-y sm:border-y-0 sm:border-x border-slate-100 py-8 sm:py-0">
-                  <div className="text-5xl font-black text-blue-600 tracking-tighter">1 Lead</div>
-                  <p className="text-sm text-slate-500 font-bold uppercase tracking-widest">To Break Even</p>
-                </div>
-                <div className="space-y-4">
-                  <div className="text-5xl font-black text-emerald-500 tracking-tighter">120x</div>
-                  <p className="text-sm text-slate-500 font-bold uppercase tracking-widest">Average Annual ROI</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features */}
-      <section className="py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-24">
-            <h3 className="text-4xl sm:text-7xl font-black tracking-tighter mb-8 text-slate-900">
-              Built for <span className="text-blue-600">Growth.</span>
-            </h3>
-            <p className="mt-4 text-slate-500 max-w-2xl mx-auto text-xl">
-              Professional tools for contractors who don't have time for manual spreadsheets.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Zap,
-                title: 'Neural Estimation',
-                desc: 'Highly accurate project algorithms based on real-world labor and material rates.',
-                color: 'blue'
-              },
-              {
-                icon: Shield,
-                title: 'Verified Pricing',
-                desc: 'Update your rates in seconds. Your math, mapped to a beautiful client interface.',
-                color: 'emerald'
-              },
-              {
-                icon: Users,
-                title: 'Lead Enrichment',
-                desc: 'Captures full project scope, dimensions, and tier preferences with every contact.',
-                color: 'blue'
-              },
-              {
-                icon: BarChart3,
-                title: 'Market Insights',
-                desc: 'AI analyzes local project trends to help you optimize your service margins.',
-                color: 'blue'
-              },
-              {
-                icon: Code2,
-                title: 'Universal Embed',
-                desc: 'Works on any website platform. One line of code to future-proof your sales funnel.',
-                color: 'blue'
-              },
-              {
-                icon: LayoutDashboard,
-                title: 'Contractor CRM',
-                desc: 'A dedicated control center to manage every project request and lead flow.',
-                color: 'emerald'
-              },
-            ].map((feature) => (
-              <SpotlightCard key={feature.title} className="hover:-translate-y-2 transition-transform duration-500">
-                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-8 shadow-xl transition-all ${
-                  feature.color === 'blue' ? 'bg-blue-600 text-white shadow-blue-500/20' : 'bg-emerald-600 text-white shadow-emerald-500/20'
-                }`}>
-                  <feature.icon className="w-7 h-7" />
-                </div>
-                <h4 className="text-2xl font-black mb-4 tracking-tight text-slate-900">{feature.title}</h4>
-                <p className="text-slate-500 leading-relaxed font-medium">{feature.desc}</p>
-              </SpotlightCard>
-            ))}
-          </div>
-        </div>
       </section>
 
       {/* Proof of Performance Gallery */}
