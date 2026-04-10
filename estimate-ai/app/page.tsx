@@ -404,8 +404,12 @@ export default function HomePage() {
             Stop losing leads to the person who answers their phone first. 
             Automate your pricing today.
           </p>
-          <Link href="/signup">
-          </div>
+          <Link
+            href="/signup"
+            className="inline-flex items-center gap-2 px-10 py-5 bg-blue-600 text-white text-lg font-bold rounded-2xl hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/25 hover:shadow-xl hover:shadow-blue-600/30 hover:-translate-y-0.5 mb-24"
+          >
+            Start Free Trial
+          </Link>
 
           <div className="max-w-4xl mx-auto rounded-3xl overflow-hidden border border-slate-200 shadow-2xl">
             <div className="bg-slate-50 px-4 py-3 flex items-center gap-3 border-b border-slate-200">
@@ -428,7 +432,7 @@ export default function HomePage() {
               />
             </div>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* ROI */}
