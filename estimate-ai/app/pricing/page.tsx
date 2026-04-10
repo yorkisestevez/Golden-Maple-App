@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Check, ArrowLeft, ArrowRight, Shield, HelpCircle, CheckCircle, Zap, Sparkles } from 'lucide-react';
+import { Check, ArrowLeft, ArrowRight, Shield, HelpCircle, CheckCircle, Zap } from 'lucide-react';
 
 const PLANS = [
   {
@@ -86,18 +86,18 @@ const FAQ = [
 
 export default function PricingPage() {
   return (
-    <div className="min-h-screen bg-[#0A0A0A] text-[#FAFAF9] noise">
+    <div className="min-h-screen bg-slate-50 text-slate-900 noise">
       {/* Nav */}
-      <nav className="fixed top-0 left-0 right-0 z-50 glass-strong">
+      <nav className="fixed top-0 left-0 right-0 z-50 glass-strong border-b border-slate-100">
         <div className="max-w-6xl mx-auto px-4 py-3.5 flex items-center justify-between">
           <Link href="/" className="text-xl font-bold text-gradient tracking-tight">
             EstimateAI
           </Link>
           <div className="flex items-center gap-4">
-            <Link href="/login" className="text-sm text-white/50 hover:text-white transition-colors">Login</Link>
+            <Link href="/login" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">Login</Link>
             <Link
               href="/signup"
-              className="px-4 py-2 bg-gradient-to-r from-[#D4AF63] to-[#C49B4A] text-[#0A0A0A] rounded-lg text-sm font-semibold hover:brightness-110 transition-all shadow-lg shadow-[#D4AF63]/10"
+              className="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-semibold hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/20"
             >
               Start Free Trial
             </Link>
@@ -108,17 +108,17 @@ export default function PricingPage() {
       <div className="max-w-5xl mx-auto px-4 pt-28 pb-16 sm:pt-36 sm:pb-24">
         {/* Header */}
         <div className="text-center mb-16 relative">
-          <div className="absolute top-[-100px] left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-[#D4AF63]/5 rounded-full blur-[120px] pointer-events-none" />
+          <div className="absolute top-[-100px] left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-blue-500/5 rounded-full blur-[120px] pointer-events-none" />
           <div className="relative">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 glass rounded-full text-sm mb-6">
-              <CheckCircle className="w-3.5 h-3.5 text-emerald-400" />
-              <span className="text-white/50 font-light">14-day free trial on every plan</span>
+              <CheckCircle className="w-3.5 h-3.5 text-emerald-500" />
+              <span className="text-slate-600 font-medium">14-day free trial on every plan</span>
             </div>
-            <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight">
+            <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-slate-900">
               One Lead Pays for a{' '}
               <span className="text-gradient">Full Year</span>
             </h1>
-            <p className="mt-5 text-lg text-white/40 max-w-xl mx-auto font-light">
+            <p className="mt-5 text-lg text-slate-500 max-w-xl mx-auto">
               Average outdoor living project: $15K–$45K. You do the math.
             </p>
           </div>
@@ -131,29 +131,29 @@ export default function PricingPage() {
               key={plan.name}
               className={`relative rounded-2xl p-8 flex flex-col transition-all duration-300 hover-lift ${
                 plan.popular
-                  ? 'glass-strong border border-[#D4AF63]/30 glow-gold'
-                  : 'glass'
+                  ? 'bg-white border-2 border-blue-500 shadow-xl shadow-blue-600/15 glow-blue'
+                  : 'bg-white border border-slate-200 shadow-sm'
               }`}
             >
               {plan.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-[#D4AF63] to-[#C49B4A] text-[#0A0A0A] text-xs font-bold rounded-full whitespace-nowrap uppercase tracking-wider">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-blue-600 text-white text-xs font-bold rounded-full whitespace-nowrap uppercase tracking-wider shadow-lg shadow-blue-600/25">
                   Most Popular
                 </div>
               )}
 
-              <h3 className="text-xl font-bold">{plan.name}</h3>
-              <p className="text-sm text-white/30 mt-1 font-light">{plan.desc}</p>
+              <h3 className="text-xl font-bold text-slate-900">{plan.name}</h3>
+              <p className="text-sm text-slate-500 mt-1">{plan.desc}</p>
 
               <div className="mt-6 mb-6">
-                <span className="text-4xl font-bold text-gradient">${plan.price}</span>
-                <span className="text-white/30 font-light">/month</span>
+                <span className="text-4xl font-bold text-slate-900">${plan.price}</span>
+                <span className="text-slate-500">/month</span>
               </div>
 
               <ul className="space-y-3 mb-8 flex-1">
                 {plan.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-3 text-sm">
-                    <Check className="w-4 h-4 text-[#D4AF63]/70 mt-0.5 flex-shrink-0" />
-                    <span className="text-white/40 font-light">{feature}</span>
+                    <Check className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
+                    <span className="text-slate-700">{feature}</span>
                   </li>
                 ))}
               </ul>
@@ -162,8 +162,8 @@ export default function PricingPage() {
                 href="/signup"
                 className={`group block w-full text-center py-3.5 rounded-xl font-semibold transition-all ${
                   plan.popular
-                    ? 'bg-gradient-to-r from-[#D4AF63] to-[#C49B4A] text-[#0A0A0A] hover:brightness-110 shadow-lg shadow-[#D4AF63]/20'
-                    : 'border border-white/10 text-white/60 hover:border-[#D4AF63]/40 hover:text-[#D4AF63] hover:bg-[#D4AF63]/5'
+                    ? 'bg-blue-600 text-white hover:bg-blue-700 shadow-lg shadow-blue-600/25'
+                    : 'border border-slate-200 text-slate-900 hover:border-blue-300 hover:text-blue-700 hover:bg-blue-50'
                 }`}
               >
                 <span className="inline-flex items-center gap-2">
@@ -176,18 +176,16 @@ export default function PricingPage() {
         </div>
 
         {/* Guarantee */}
-        <div className="relative rounded-3xl overflow-hidden p-8 sm:p-12 text-center mb-20">
-          <div className="absolute inset-0 glass-strong rounded-3xl" />
-          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#D4AF63]/30 to-transparent" />
-          <div className="absolute inset-0 rounded-3xl border border-[#D4AF63]/10" />
+        <div className="relative rounded-3xl overflow-hidden p-8 sm:p-12 text-center mb-20 bg-white border border-slate-200 shadow-sm">
+          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/40 to-transparent" />
           <div className="relative">
-            <div className="w-14 h-14 rounded-2xl bg-[#D4AF63]/10 flex items-center justify-center mx-auto mb-5">
-              <Shield className="w-7 h-7 text-[#D4AF63]" />
+            <div className="w-14 h-14 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center mx-auto mb-5">
+              <Shield className="w-7 h-7 text-blue-600" />
             </div>
-            <h3 className="text-2xl sm:text-3xl font-bold mb-3 tracking-tight">
+            <h3 className="text-2xl sm:text-3xl font-bold mb-3 tracking-tight text-slate-900">
               Risk-Free <span className="text-gradient">Guarantee</span>
             </h3>
-            <p className="text-white/35 max-w-lg mx-auto leading-relaxed font-light">
+            <p className="text-slate-600 max-w-lg mx-auto leading-relaxed">
               Try EstimateAI free for 14 days. No credit card, no commitment. If it doesn&apos;t generate leads, you pay nothing.
               If it does? You&apos;ll wonder how you ever lived without it.
             </p>
@@ -195,53 +193,53 @@ export default function PricingPage() {
         </div>
 
         {/* ROI Breakdown */}
-        <div className="glass rounded-2xl p-8 sm:p-10 mb-20">
+        <div className="bg-white border border-slate-200 rounded-2xl p-8 sm:p-10 mb-20 shadow-sm">
           <div className="flex items-center gap-2.5 justify-center mb-8">
-            <div className="w-8 h-8 rounded-lg bg-[#D4AF63]/10 flex items-center justify-center">
-              <Zap className="w-4 h-4 text-[#D4AF63]" />
+            <div className="w-8 h-8 rounded-lg bg-blue-50 border border-blue-100 flex items-center justify-center">
+              <Zap className="w-4 h-4 text-blue-600" />
             </div>
-            <h3 className="text-xl font-bold tracking-tight">Quick ROI Math</h3>
+            <h3 className="text-xl font-bold tracking-tight text-slate-900">Quick ROI Math</h3>
           </div>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-white/10">
-                  <th className="text-left p-3 text-white/30 font-light" />
-                  <th className="text-center p-3 text-white/40 font-medium">Standard</th>
-                  <th className="text-center p-3 text-[#D4AF63] font-bold">Pro</th>
-                  <th className="text-center p-3 text-white/40 font-medium">Agency</th>
+                <tr className="border-b border-slate-200">
+                  <th className="text-left p-3 text-slate-500 font-medium" />
+                  <th className="text-center p-3 text-slate-600 font-semibold">Standard</th>
+                  <th className="text-center p-3 text-blue-600 font-bold">Pro</th>
+                  <th className="text-center p-3 text-slate-600 font-semibold">Agency</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="border-b border-white/5">
-                  <td className="p-3 text-white/30 font-light">Monthly cost</td>
-                  <td className="p-3 text-center text-white/60">$97</td>
-                  <td className="p-3 text-center text-white/80 font-semibold">$197</td>
-                  <td className="p-3 text-center text-white/60">$497</td>
+                <tr className="border-b border-slate-100">
+                  <td className="p-3 text-slate-600">Monthly cost</td>
+                  <td className="p-3 text-center text-slate-800">$97</td>
+                  <td className="p-3 text-center text-slate-900 font-semibold">$197</td>
+                  <td className="p-3 text-center text-slate-800">$497</td>
                 </tr>
-                <tr className="border-b border-white/5">
-                  <td className="p-3 text-white/30 font-light">Avg. project value</td>
-                  <td className="p-3 text-center text-white/60">$25K</td>
-                  <td className="p-3 text-center text-white/60">$25K</td>
-                  <td className="p-3 text-center text-white/60">$25K</td>
+                <tr className="border-b border-slate-100">
+                  <td className="p-3 text-slate-600">Avg. project value</td>
+                  <td className="p-3 text-center text-slate-800">$25K</td>
+                  <td className="p-3 text-center text-slate-800">$25K</td>
+                  <td className="p-3 text-center text-slate-800">$25K</td>
                 </tr>
-                <tr className="border-b border-white/5">
-                  <td className="p-3 text-white/30 font-light">Extra leads closed/month</td>
-                  <td className="p-3 text-center text-white/60">1</td>
-                  <td className="p-3 text-center text-white/60">2</td>
-                  <td className="p-3 text-center text-white/60">3</td>
+                <tr className="border-b border-slate-100">
+                  <td className="p-3 text-slate-600">Extra leads closed/month</td>
+                  <td className="p-3 text-center text-slate-800">1</td>
+                  <td className="p-3 text-center text-slate-800">2</td>
+                  <td className="p-3 text-center text-slate-800">3</td>
                 </tr>
-                <tr className="border-b border-white/5">
-                  <td className="p-3 text-white/40 font-medium">New monthly revenue</td>
-                  <td className="p-3 text-center text-emerald-400 font-bold">$25,000</td>
-                  <td className="p-3 text-center text-emerald-400 font-bold">$50,000</td>
-                  <td className="p-3 text-center text-emerald-400 font-bold">$75,000</td>
+                <tr className="border-b border-slate-100">
+                  <td className="p-3 text-slate-700 font-medium">New monthly revenue</td>
+                  <td className="p-3 text-center text-emerald-600 font-bold">$25,000</td>
+                  <td className="p-3 text-center text-emerald-600 font-bold">$50,000</td>
+                  <td className="p-3 text-center text-emerald-600 font-bold">$75,000</td>
                 </tr>
                 <tr>
                   <td className="p-3 text-gradient font-bold">ROI</td>
-                  <td className="p-3 text-center text-[#D4AF63] font-bold">257x</td>
-                  <td className="p-3 text-center text-[#D4AF63] font-bold text-lg">253x</td>
-                  <td className="p-3 text-center text-[#D4AF63] font-bold">150x</td>
+                  <td className="p-3 text-center text-blue-600 font-bold">257x</td>
+                  <td className="p-3 text-center text-blue-600 font-bold text-lg">253x</td>
+                  <td className="p-3 text-center text-blue-600 font-bold">150x</td>
                 </tr>
               </tbody>
             </table>
@@ -251,16 +249,16 @@ export default function PricingPage() {
         {/* FAQ */}
         <div className="mb-20">
           <div className="flex items-center gap-2.5 justify-center mb-10">
-            <div className="w-8 h-8 rounded-lg bg-[#D4AF63]/10 flex items-center justify-center">
-              <HelpCircle className="w-4 h-4 text-[#D4AF63]" />
+            <div className="w-8 h-8 rounded-lg bg-blue-50 border border-blue-100 flex items-center justify-center">
+              <HelpCircle className="w-4 h-4 text-blue-600" />
             </div>
-            <h3 className="text-2xl sm:text-3xl font-bold tracking-tight">Frequently Asked Questions</h3>
+            <h3 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900">Frequently Asked Questions</h3>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {FAQ.map((item) => (
-              <div key={item.q} className="glass rounded-2xl p-6 hover:bg-white/[0.04] transition-all">
-                <h4 className="font-semibold text-sm mb-2.5">{item.q}</h4>
-                <p className="text-sm text-white/35 leading-relaxed font-light">{item.a}</p>
+              <div key={item.q} className="bg-white border border-slate-200 rounded-2xl p-6 hover:border-blue-200 hover:shadow-md transition-all">
+                <h4 className="font-semibold text-sm mb-2.5 text-slate-900">{item.q}</h4>
+                <p className="text-sm text-slate-600 leading-relaxed">{item.a}</p>
               </div>
             ))}
           </div>
@@ -268,28 +266,28 @@ export default function PricingPage() {
 
         {/* CTA */}
         <div className="text-center mb-12 relative">
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[400px] h-[200px] bg-[#D4AF63]/5 rounded-full blur-[100px] pointer-events-none" />
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[400px] h-[200px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none" />
           <div className="relative">
-            <h3 className="text-2xl sm:text-4xl font-extrabold mb-4 tracking-tight">
+            <h3 className="text-2xl sm:text-4xl font-extrabold mb-4 tracking-tight text-slate-900">
               Ready to <span className="text-gradient">Close More Leads</span>?
             </h3>
-            <p className="text-white/30 mb-8 font-light">Start free. Be live before your next coffee break.</p>
+            <p className="text-slate-600 mb-8">Start free. Be live before your next coffee break.</p>
             <Link
               href="/signup"
-              className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#D4AF63] to-[#C49B4A] text-[#0A0A0A] rounded-xl text-lg font-bold hover:brightness-110 transition-all shadow-xl shadow-[#D4AF63]/20 pulse-ring"
+              className="group inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-xl text-lg font-bold hover:bg-blue-700 transition-all shadow-xl shadow-blue-600/25 pulse-ring"
             >
               Start Your 14-Day Free Trial
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <div className="mt-6 flex items-center justify-center gap-5 text-sm text-white/25 font-light">
-              <span className="flex items-center gap-1.5"><CheckCircle className="w-3.5 h-3.5 text-emerald-500/50" /> No credit card</span>
-              <span className="flex items-center gap-1.5"><CheckCircle className="w-3.5 h-3.5 text-emerald-500/50" /> Cancel anytime</span>
+            <div className="mt-6 flex items-center justify-center gap-5 text-sm text-slate-500">
+              <span className="flex items-center gap-1.5"><CheckCircle className="w-3.5 h-3.5 text-emerald-500" /> No credit card</span>
+              <span className="flex items-center gap-1.5"><CheckCircle className="w-3.5 h-3.5 text-emerald-500" /> Cancel anytime</span>
             </div>
           </div>
         </div>
 
         <div className="text-center">
-          <Link href="/" className="inline-flex items-center text-sm text-white/25 hover:text-white/50 transition-colors font-light">
+          <Link href="/" className="inline-flex items-center text-sm text-slate-500 hover:text-slate-900 transition-colors">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to home
           </Link>
