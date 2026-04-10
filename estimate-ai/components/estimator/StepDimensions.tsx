@@ -17,20 +17,20 @@ export function StepDimensions({ services, selectedKeys, quantities, onQuantityC
     .sort((a, b) => a.display_order - b.display_order);
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-8">
       <div className="text-center">
-        <h2 className="text-2xl sm:text-3xl font-bold text-[var(--brand-text,#F2EEE7)]" style={{ fontFamily: 'var(--brand-headline-font)' }}>
-          How big is your vision?
+        <h2 className="text-2xl sm:text-4xl font-black text-slate-900 tracking-tighter">
+          Define Your Scope
         </h2>
-        <p className="mt-2 text-[var(--brand-muted,#A89F91)]">
-          Adjust the approximate size for each feature
+        <p className="mt-2 text-slate-500 font-medium uppercase tracking-widest text-[10px]">
+          Neural Margin Scaling &bull; Exacting Precision
         </p>
       </div>
 
       <div className="space-y-4">
         {selectedServices.map((service) => (
-          <Card key={service.key} variant="bordered" className="space-y-4">
-            <h3 className="text-lg font-semibold text-[var(--brand-text,#F2EEE7)]">
+          <div key={service.key} className="p-8 rounded-[2rem] bg-white border border-slate-100 shadow-xl shadow-blue-500/5 space-y-6">
+            <h3 className="text-xl font-black text-slate-900 tracking-tight">
               {service.label}
             </h3>
             {service.is_slider ? (
@@ -41,19 +41,19 @@ export function StepDimensions({ services, selectedKeys, quantities, onQuantityC
                 value={quantities[service.key] ?? service.default_qty}
                 onChange={(val) => onQuantityChange(service.key, val)}
                 unit={service.unit}
-                label={`Approximate ${service.unit}`}
+                label={`Computational ${service.unit}`}
               />
             ) : (
-              <div className="flex items-center gap-3 py-2">
-                <div className="w-10 h-10 rounded-lg bg-[var(--brand-accent,#D4AF63)]/10 flex items-center justify-center">
-                  <span className="text-[var(--brand-accent,#D4AF63)] text-lg">✓</span>
+              <div className="flex items-center gap-4 py-4 px-6 bg-slate-50 rounded-2xl border border-slate-100">
+                <div className="w-12 h-12 rounded-xl bg-blue-600 flex items-center justify-center shadow-lg shadow-blue-600/20">
+                  <span className="text-white text-xl">✓</span>
                 </div>
-                <p className="text-[var(--brand-muted,#A89F91)]">
-                  Scope determined during consultation — included in estimate
+                <p className="text-sm font-medium text-slate-500 leading-relaxed">
+                  Scope determined during consultation — using historical averages for baseline computation.
                 </p>
               </div>
             )}
-          </Card>
+          </div>
         ))}
       </div>
     </div>

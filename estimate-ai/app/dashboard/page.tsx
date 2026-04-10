@@ -1,6 +1,4 @@
-import { createClient } from '@/lib/supabase/server';
-import { StatsCards } from '@/components/dashboard/StatsCards';
-import { redirect } from 'next/navigation';
+import { DashboardCharts } from '@/components/dashboard/DashboardCharts';
 
 export default async function DashboardPage() {
   const supabase = await createClient();
@@ -62,12 +60,24 @@ export default async function DashboardPage() {
     .limit(5);
 
   return (
-    <div className="space-y-8">
-      <div>
-        <h1 className="text-2xl font-bold text-[#F2EEE7]">
-          Welcome back{contractor?.company_name ? `, ${contractor.company_name}` : ''}
-        </h1>
-        <p className="text-[#A89F91] mt-1">Here&apos;s your lead activity overview</p>
+    <div className="space-y-12 pb-20">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+        <div>
+          <h1 className="text-4xl font-black text-slate-900 tracking-tighter">
+            Control Center
+          </h1>
+          <p className="text-slate-500 mt-2 font-black tracking-[0.2em] uppercase text-[10px]">
+            {contractor?.company_name || 'TradeFlow AI'} &middot; Neural Operational Overview
+          </p>
+        </div>
+        
+        <div className="flex items-center gap-3 px-5 py-2.5 bg-white rounded-2xl border border-slate-100 shadow-sm self-start sm:self-auto">
+          <div className="relative w-2 h-2">
+            <div className="absolute inset-0 bg-emerald-500 rounded-full heartbeat" />
+            <div className="absolute inset-0 bg-emerald-500 rounded-full animate-pulse opacity-40" />
+          </div>
+          <span className="text-[10px] font-black text-slate-900 uppercase tracking-[0.2em]">Neural Engine Live</span>
+        </div>
       </div>
 
       <StatsCards
@@ -77,41 +87,43 @@ export default async function DashboardPage() {
         avgEstimate={avgEstimate}
       />
 
+      <DashboardCharts />
+
       {/* Recent leads */}
-      <div>
-        <h2 className="text-lg font-semibold text-[#F2EEE7] mb-4">Recent Leads</h2>
+      <div className="space-y-6">
+        <h2 className="text-sm font-black text-slate-900 uppercase tracking-widest">Recent Activity</h2>
         {latestLeads && latestLeads.length > 0 ? (
-          <div className="bg-[#1A1814] rounded-xl border border-white/10 overflow-hidden">
+          <div className="bg-white rounded-3xl border border-slate-100 shadow-xl shadow-blue-500/5 overflow-hidden">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-white/10">
-                  <th className="text-left p-4 text-[#A89F91] font-medium">Name</th>
-                  <th className="text-left p-4 text-[#A89F91] font-medium">Phone</th>
-                  <th className="text-left p-4 text-[#A89F91] font-medium">Estimate</th>
-                  <th className="text-left p-4 text-[#A89F91] font-medium">Status</th>
-                  <th className="text-left p-4 text-[#A89F91] font-medium">Date</th>
+                <tr className="border-b border-slate-50">
+                  <th className="text-left p-6 text-slate-400 font-black uppercase tracking-widest text-[10px]">Name</th>
+                  <th className="text-left p-6 text-slate-400 font-black uppercase tracking-widest text-[10px]">Phone</th>
+                  <th className="text-left p-6 text-slate-400 font-black uppercase tracking-widest text-[10px]">Allocation</th>
+                  <th className="text-left p-6 text-slate-400 font-black uppercase tracking-widest text-[10px]">Status</th>
+                  <th className="text-left p-6 text-slate-400 font-black uppercase tracking-widest text-[10px]">Timestamp</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody className="divide-y divide-slate-50">
                 {latestLeads.map((lead) => (
-                  <tr key={lead.id} className="border-b border-white/5 hover:bg-white/5">
-                    <td className="p-4 text-[#F2EEE7]">{lead.name}</td>
-                    <td className="p-4 text-[#A89F91]">{lead.phone}</td>
-                    <td className="p-4 text-[#D4AF63] font-medium">
+                  <tr key={lead.id} className="hover:bg-slate-50 transition-colors">
+                    <td className="p-6 text-slate-900 font-bold tracking-tight">{lead.name}</td>
+                    <td className="p-6 text-slate-500 font-medium">{lead.phone}</td>
+                    <td className="p-6 text-blue-600 font-black tracking-tighter italic">
                       ${Number(lead.estimate_mid).toLocaleString()}
                     </td>
-                    <td className="p-4">
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                        lead.status === 'new' ? 'bg-blue-500/10 text-blue-400' :
-                        lead.status === 'contacted' ? 'bg-yellow-500/10 text-yellow-400' :
-                        lead.status === 'won' ? 'bg-green-500/10 text-green-400' :
-                        lead.status === 'lost' ? 'bg-red-500/10 text-red-400' :
-                        'bg-gray-500/10 text-gray-400'
+                    <td className="p-6">
+                      <span className={`px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest ${
+                        lead.status === 'new' ? 'bg-blue-50 text-blue-600 border border-blue-100' :
+                        lead.status === 'contacted' ? 'bg-amber-50 text-amber-600 border border-amber-100' :
+                        lead.status === 'won' ? 'bg-emerald-50 text-emerald-600 border border-emerald-100' :
+                        lead.status === 'lost' ? 'bg-rose-50 text-rose-600 border border-rose-100' :
+                        'bg-slate-50 text-slate-500'
                       }`}>
                         {lead.status}
                       </span>
                     </td>
-                    <td className="p-4 text-[#A89F91]">
+                    <td className="p-6 text-slate-400 font-medium">
                       {new Date(lead.created_at).toLocaleDateString()}
                     </td>
                   </tr>
@@ -120,8 +132,8 @@ export default async function DashboardPage() {
             </table>
           </div>
         ) : (
-          <div className="bg-[#1A1814] rounded-xl border border-white/10 p-12 text-center">
-            <p className="text-[#A89F91]">No leads yet. Share your estimator to start capturing leads!</p>
+          <div className="bg-white rounded-3xl border border-slate-100 p-16 text-center shadow-xl shadow-blue-500/5">
+            <p className="text-slate-400 font-bold italic">Awaiting initial leads. Propagate your estimator to initiate neural capture.</p>
           </div>
         )}
       </div>

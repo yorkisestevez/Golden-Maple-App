@@ -1,13 +1,14 @@
 'use client';
 
 import { useState, useMemo, useRef, useCallback } from 'react';
+import Link from 'next/link';
 import { Service, PricingConfig, Contractor, TierKey, SiteKey } from '@/lib/types';
 import { StepFeatureSelect } from './StepFeatureSelect';
 import { StepDimensions } from './StepDimensions';
 import { StepPreferences } from './StepPreferences';
 import { StepResults } from './StepResults';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Home } from 'lucide-react';
 
 interface EstimatorShellProps {
   contractor: Contractor;
@@ -74,12 +75,12 @@ export function EstimatorShell({ contractor, services, config, source = 'website
     <div
       className="min-h-screen"
       style={{
-        ['--brand-bg' as string]: contractor.background_color,
-        ['--brand-card' as string]: contractor.card_color,
-        ['--brand-text' as string]: contractor.text_color,
-        ['--brand-accent' as string]: contractor.primary_color,
-        ['--brand-secondary' as string]: contractor.secondary_color,
-        ['--brand-muted' as string]: '#A89F91',
+        ['--brand-bg' as string]: contractor.background_color || '#F9FAFB',
+        ['--brand-card' as string]: contractor.card_color || '#FFFFFF',
+        ['--brand-text' as string]: contractor.text_color || '#111827',
+        ['--brand-accent' as string]: contractor.primary_color || '#2563EB',
+        ['--brand-secondary' as string]: contractor.secondary_color || '#059669',
+        ['--brand-muted' as string]: '#64748B',
         ['--brand-headline-font' as string]: contractor.headline_font,
         ['--brand-body-font' as string]: contractor.body_font,
         backgroundColor: 'var(--brand-bg)',
@@ -87,7 +88,18 @@ export function EstimatorShell({ contractor, services, config, source = 'website
         fontFamily: `var(--brand-body-font), sans-serif`,
       }}
     >
-      <div className="max-w-3xl mx-auto px-4 py-8 sm:py-12">
+      <div className="max-w-3xl mx-auto px-4 py-8 sm:py-12 relative">
+        {/* Home Button */}
+        <div className="absolute top-4 left-4 sm:top-8 sm:left-4 z-20">
+          <Link 
+            href="/"
+            className="flex items-center justify-center w-10 h-10 rounded-xl bg-white border border-slate-200 hover:border-blue-300 transition-all group shadow-sm"
+            title="Return to Home"
+          >
+            <Home className="w-5 h-5 text-slate-400 group-hover:text-blue-600 transition-colors" />
+          </Link>
+        </div>
+
         {/* Header */}
         <div className="text-center mb-8">
           {contractor.logo_url && (
@@ -99,38 +111,34 @@ export function EstimatorShell({ contractor, services, config, source = 'website
           )}
           {!contractor.logo_url && (
             <h1
-              className="text-2xl sm:text-3xl font-bold text-[var(--brand-accent)]"
-              style={{ fontFamily: 'var(--brand-headline-font)' }}
+              className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight"
             >
               {contractor.company_name}
             </h1>
           )}
-          <p className="text-sm text-[var(--brand-muted)] mt-1">Instant Project Estimator</p>
+          <p className="text-sm text-slate-500 font-medium uppercase tracking-widest text-[10px] mt-2">Neural Pricing Engine</p>
         </div>
 
         {/* Progress bar */}
         <div className="mb-8">
-          <div className="flex items-center justify-between mb-2">
+          <div className="flex items-center justify-between mb-3">
             {STEP_LABELS.map((label, i) => (
               <button
                 key={label}
                 type="button"
-                onClick={() => {
-                  if (i < step || (i <= step && canProceed)) animateStep(i);
-                }}
-                className={`text-xs sm:text-sm font-medium transition-colors ${
+                className={`text-[10px] uppercase font-black tracking-widest transition-colors ${
                   i <= step
-                    ? 'text-[var(--brand-accent)]'
-                    : 'text-[var(--brand-muted)]/50'
-                } ${i < step ? 'cursor-pointer hover:underline' : ''}`}
+                    ? 'text-blue-600'
+                    : 'text-slate-300'
+                }`}
               >
                 {label}
               </button>
             ))}
           </div>
-          <div className="h-1.5 bg-white/10 rounded-full overflow-hidden">
+          <div className="h-1.5 bg-slate-200 rounded-full overflow-hidden">
             <div
-              className="h-full bg-[var(--brand-accent)] rounded-full transition-all duration-500 ease-out"
+              className="h-full bg-blue-600 rounded-full transition-all duration-500 ease-out"
               style={{ width: `${((step + 1) / STEP_LABELS.length) * 100}%` }}
             />
           </div>
@@ -188,43 +196,52 @@ export function EstimatorShell({ contractor, services, config, source = 'website
 
         {/* Navigation */}
         {step < 3 && (
-          <div className="flex items-center justify-between mt-8 pt-6 border-t border-white/10">
+          <div className="flex items-center justify-between mt-12 pt-8 border-t border-slate-100">
             <Button
               variant="ghost"
               onClick={prev}
               disabled={step === 0}
-              className={step === 0 ? 'invisible' : ''}
+              className={`text-slate-400 font-bold uppercase tracking-widest text-[10px] hover:bg-slate-50 transition-all ${step === 0 ? 'invisible' : ''}`}
             >
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back
+              <ArrowLeft className="w-3.5 h-3.5 mr-2" />
+              Recall
             </Button>
 
-            <Button onClick={next} disabled={!canProceed} size="lg">
-              {step === 2 ? 'See My Estimate' : 'Continue'}
-              <ArrowRight className="w-4 h-4 ml-2" />
+            <Button 
+              onClick={next} 
+              disabled={!canProceed} 
+              size="lg"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-black uppercase tracking-widest text-[10px] px-8 h-12 rounded-xl shadow-xl shadow-blue-500/20 disabled:opacity-30 disabled:shadow-none transition-all"
+            >
+              {step === 2 ? 'Initialize Computation' : 'Proceed'}
+              <ArrowRight className="w-3.5 h-3.5 ml-2" />
             </Button>
           </div>
         )}
 
         {step === 3 && (
-          <div className="mt-8 pt-6 border-t border-white/10">
-            <Button variant="ghost" onClick={() => animateStep(0)} className="mx-auto block">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Start Over
+          <div className="mt-12 pt-8 border-t border-slate-100">
+            <Button 
+              variant="ghost" 
+              onClick={() => animateStep(0)} 
+              className="mx-auto flex items-center gap-2 text-slate-400 font-bold uppercase tracking-widest text-[10px] hover:bg-slate-50 rounded-full px-6"
+            >
+              <ArrowLeft className="w-3.5 h-3.5" />
+              Reset Engine
             </Button>
           </div>
         )}
 
         {/* Powered by */}
         {contractor.plan !== 'agency' && (
-          <div className="text-center mt-8 pt-4">
+          <div className="text-center mt-12 pt-8">
             <a
               href="https://estimateai.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs text-[var(--brand-muted)]/40 hover:text-[var(--brand-muted)]/60 transition-colors"
+              className="text-[9px] font-black uppercase tracking-[0.3em] text-slate-300 hover:text-blue-600 transition-colors"
             >
-              Powered by <span className="font-semibold">EstimateAI</span>
+              Propelled by <span className="text-slate-400">EstimateAI Neural</span>
             </a>
           </div>
         )}

@@ -1,87 +1,132 @@
+'use client';
+
 import Link from 'next/link';
-import { ArrowRight, Zap, Palette, Users, BarChart3, Code2, Shield, Star, TrendingUp, Clock, DollarSign, CheckCircle, Sparkles } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { ExpensiveButton } from '@/components/ui/ExpensiveButton';
+import { PerformanceGraph } from '@/components/ui/PerformanceGraph';
+import { SpotlightCard } from '@/components/ui/SpotlightCard';
+import { ArrowRight, Zap, Palette, Users, BarChart3, Code2, Shield, Star, TrendingUp, Clock, DollarSign, CheckCircle, Sparkles, LayoutDashboard } from 'lucide-react';
+
+const fadeInUp = {
+  initial: { opacity: 0, y: 30 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
+};
+
+const staggerContainer = {
+  animate: { transition: { staggerChildren: 0.1 } }
+};
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-[#0A0A0A] text-[#FAFAF9] noise">
+    <div className="min-h-screen bg-white text-[#111827] selection:bg-blue-500/10">
       {/* Nav */}
-      <nav className="fixed top-0 left-0 right-0 z-50 glass-strong">
-        <div className="max-w-6xl mx-auto px-4 py-3.5 flex items-center justify-between">
-          <h1 className="text-xl font-bold text-gradient tracking-tight">
-            EstimateAI
-          </h1>
-          <div className="hidden sm:flex items-center gap-6">
-            <Link href="#demo" className="text-sm text-white/50 hover:text-white transition-colors">
-              Live Demo
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 py-3.5 flex items-center justify-between">
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            className="flex items-center gap-2.5"
+          >
+            <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center shadow-lg shadow-blue-500/20">
+              <Sparkles className="w-5 h-5 text-white" />
+            </div>
+            <h1 className="text-xl font-bold text-slate-900 tracking-tight">
+              EstimateAI
+            </h1>
+          </motion.div>
+          <div className="hidden sm:flex items-center gap-8">
+            <Link href="#demo" className="text-sm font-medium text-slate-500 hover:text-blue-600 transition-colors tracking-wide">
+              LIVE DEMO
             </Link>
-            <Link href="/pricing" className="text-sm text-white/50 hover:text-white transition-colors">
-              Pricing
+            <Link href="/pricing" className="text-sm font-medium text-slate-500 hover:text-blue-600 transition-colors tracking-wide">
+              PRICING
             </Link>
-            <Link href="/login" className="text-sm text-white/50 hover:text-white transition-colors">
-              Login
+            <Link href="/login" className="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors tracking-wide">
+              LOGIN
             </Link>
-            <Link
-              href="/signup"
-              className="px-4 py-2 bg-gradient-to-r from-[#D4AF63] to-[#C49B4A] text-[#0A0A0A] rounded-lg text-sm font-semibold hover:brightness-110 transition-all shadow-lg shadow-[#D4AF63]/10"
-            >
-              Start Free Trial
+            <Link href="/signup">
+              <ExpensiveButton size="sm" variant="primary">
+                START FREE TRIAL
+              </ExpensiveButton>
             </Link>
           </div>
-          <Link
-            href="/signup"
-            className="sm:hidden px-4 py-2 bg-gradient-to-r from-[#D4AF63] to-[#C49B4A] text-[#0A0A0A] rounded-lg text-sm font-semibold"
-          >
-            Start Free
+          <Link href="/signup" className="sm:hidden">
+            <ExpensiveButton size="sm" variant="primary">START</ExpensiveButton>
           </Link>
         </div>
       </nav>
 
       {/* Hero */}
-      <section className="pt-32 pb-16 sm:pt-40 sm:pb-24 lg:pt-48 lg:pb-32 relative overflow-hidden">
-        {/* Background effects */}
-        <div className="absolute top-20 left-1/4 w-[500px] h-[500px] bg-[#D4AF63]/8 rounded-full blur-[150px] pointer-events-none" />
-        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-[#D4AF63]/5 rounded-full blur-[120px] pointer-events-none" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[1px] bg-gradient-to-r from-transparent via-[#D4AF63]/20 to-transparent" />
-
-        <div className="max-w-4xl mx-auto px-4 text-center relative">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 glass rounded-full text-sm text-[#D4AF63] mb-8">
+      <section className="pt-32 pb-16 sm:pt-48 sm:pb-32 lg:pt-64 lg:pb-48 relative overflow-hidden bg-white">
+        <div className="absolute top-20 left-1/4 w-[600px] h-[600px] bg-blue-50 rounded-full blur-[180px] pointer-events-none" />
+        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-emerald-50 rounded-full blur-[140px] pointer-events-none" />
+        
+        <motion.div 
+          className="max-w-5xl mx-auto px-4 text-center relative"
+          initial="initial"
+          animate="animate"
+          variants={staggerContainer}
+        >
+          <motion.div 
+            variants={fadeInUp}
+            className="inline-flex items-center gap-2.5 px-4 py-2 bg-blue-50 border border-blue-100 rounded-full text-sm text-blue-600 mb-10"
+          >
             <Sparkles className="w-3.5 h-3.5" />
-            <span className="text-white/70">Contractors are closing</span>
-            <span className="font-semibold">3x more leads</span>
-            <span className="text-white/70">with AI estimates</span>
-          </div>
-          <h2 className="text-5xl sm:text-6xl lg:text-8xl font-extrabold leading-[1.05] tracking-tight">
-            Stop Quoting.
+            <span className="text-slate-500 font-medium">Contractors are closing</span>
+            <span className="text-slate-900 font-bold tracking-tight">3X MORE LEADS</span>
+          </motion.div>
+          
+          <motion.h2 
+            variants={fadeInUp}
+            className="text-6xl sm:text-7xl lg:text-[100px] font-black leading-[0.9] tracking-tighter mb-10 text-slate-900"
+          >
+            Quoting at the speed of
             <br />
-            <span className="text-gradient">Start Closing.</span>
-          </h2>
-          <p className="mt-8 text-lg sm:text-xl text-white/50 max-w-2xl mx-auto leading-relaxed font-light">
-            Embed an AI-powered estimator on your website that gives homeowners instant project pricing.
-            <span className="text-white/80 font-normal"> Your brand. Your pricing. Your leads.</span> 24/7.
-          </p>
-          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/signup"
-              className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#D4AF63] to-[#C49B4A] text-[#0A0A0A] rounded-xl text-lg font-bold hover:brightness-110 transition-all shadow-xl shadow-[#D4AF63]/20 hover:shadow-[#D4AF63]/30"
-            >
-              Start Your 14-Day Free Trial
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            <span className="text-blue-600 italic">your ambition.</span>
+          </motion.h2>
+
+          <motion.p 
+            variants={fadeInUp}
+            className="mt-8 text-xl sm:text-2xl text-slate-500 max-w-2xl mx-auto leading-relaxed font-light"
+          >
+            The world's first AI Neural pricing engine for elite contractors.
+            <span className="text-slate-900 font-medium"> Instant estimates. Real leads. Zero friction.</span>
+          </motion.p>
+
+          <motion.div 
+            variants={fadeInUp}
+            className="mt-14 flex flex-col sm:flex-row items-center justify-center gap-6"
+          >
+            <Link href="/signup">
+              <ExpensiveButton size="xl" variant="primary">
+                START 14-DAY FREE TRIAL
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </ExpensiveButton>
             </Link>
             <Link
               href="#demo"
-              className="inline-flex items-center px-6 py-4 text-white/50 hover:text-white transition-colors text-lg font-light"
+              className="inline-flex items-center px-6 py-4 text-slate-500 hover:text-slate-900 transition-all text-lg font-medium group"
             >
-              See it in action
-              <ArrowRight className="w-4 h-4 ml-2" />
+              See the demo
+              <div className="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center ml-3 group-hover:border-blue-500 group-hover:bg-blue-50 transition-all">
+                <ArrowRight className="w-4 h-4" />
+              </div>
             </Link>
-          </div>
-          <p className="text-sm text-white/30 mt-5">No credit card required &middot; Live in 15 minutes</p>
-        </div>
+          </motion.div>
+          
+          <motion.p 
+            variants={fadeInUp}
+            className="text-xs text-slate-400 mt-8 tracking-[0.2em] uppercase font-bold"
+          >
+            Risk-free &middot; Built for the trades
+          </motion.p>
+        </motion.div>
       </section>
 
       {/* Social proof bar */}
-      <section className="border-y border-white/5">
-        <div className="max-w-6xl mx-auto px-4 py-10 sm:py-12">
+      <section className="bg-white border-y border-slate-100">
+        <div className="max-w-6xl mx-auto px-4 py-12">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
             {[
               { value: '$4.2M+', label: 'Estimates Generated', icon: DollarSign },
@@ -91,92 +136,131 @@ export default function HomePage() {
             ].map((stat) => (
               <div key={stat.label}>
                 <div className="flex items-center justify-center gap-2 mb-1.5">
-                  <stat.icon className="w-4 h-4 text-[#D4AF63]/60" />
-                  <span className="text-2xl sm:text-3xl font-bold tracking-tight">{stat.value}</span>
+                  <stat.icon className="w-4 h-4 text-blue-600/60" />
+                  <span className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900">{stat.value}</span>
                 </div>
-                <p className="text-xs sm:text-sm text-white/30 font-light">{stat.label}</p>
+                <p className="text-xs sm:text-sm text-slate-500 font-medium">{stat.label}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
-
-      {/* Live Demo */}
-      <section id="demo" className="py-20 sm:py-28">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-xs text-emerald-400 mb-5">
-              <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
-              LIVE DEMO
-            </div>
-            <h3 className="text-3xl sm:text-5xl font-bold tracking-tight">
-              Try It <span className="text-gradient">Right Now</span>
-            </h3>
-            <p className="mt-4 text-white/40 max-w-xl mx-auto font-light">
-              This is exactly what your customers will see. Select features, set dimensions, and watch the magic.
-            </p>
-          </div>
-
-          <div className="max-w-3xl mx-auto rounded-2xl overflow-hidden glow-gold">
-            <div className="glass-strong px-4 py-2.5 flex items-center gap-3 border-b border-white/5">
-              <div className="flex gap-1.5">
-                <span className="w-3 h-3 rounded-full bg-white/10" />
-                <span className="w-3 h-3 rounded-full bg-white/10" />
-                <span className="w-3 h-3 rounded-full bg-white/10" />
+      {/* Neural Velocity Visualization */}
+      <section className="py-24 bg-slate-50 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-100 border border-blue-200 rounded-full text-[10px] text-blue-700 mb-2 font-black tracking-widest uppercase">
+                Neural Performance Metrics
               </div>
-              <div className="flex-1 flex justify-center">
-                <span className="text-xs text-white/20 bg-white/5 px-3 py-0.5 rounded-full">yourcompany.com/estimate</span>
+              <h3 className="text-4xl sm:text-6xl font-black text-slate-900 tracking-tighter leading-[0.9]">
+                Visualizing <br />
+                <span className="text-blue-600 italic">Profit Velocity.</span>
+              </h3>
+              <p className="text-lg text-slate-500 font-medium max-w-md leading-relaxed">
+                Our AI doesn't just calculate numbers—it maps market demand and pricing elasticity in real-time. Witness your lead-to-close ratio accelerate.
+              </p>
+              
+              <div className="grid grid-cols-2 gap-8 pt-8">
+                <div>
+                  <div className="text-xs font-black uppercase tracking-widest text-slate-400 mb-2">Computational Speed</div>
+                  <div className="text-3xl font-black text-slate-900 tracking-tight">0.02ms</div>
+                </div>
+                <div>
+                  <div className="text-xs font-black uppercase tracking-widest text-slate-400 mb-2">Accuracy Variance</div>
+                  <div className="text-3xl font-black text-blue-600 tracking-tight">±0.4%</div>
+                </div>
               </div>
             </div>
-            <iframe
-              src="/estimator/demo"
-              className="w-full border-0"
-              style={{ minHeight: '700px', colorScheme: 'normal' }}
-              title="Live Demo Estimator"
-              loading="lazy"
-            />
-          </div>
 
-          <p className="text-center text-sm text-white/25 mt-5 font-light">
-            Demo uses sample pricing. Your estimator uses <span className="text-white/50">your real rates</span>.
-          </p>
+            <div className="bg-white rounded-[3rem] p-10 border border-slate-200 shadow-2xl relative">
+              <div className="flex items-center justify-between mb-8">
+                <div>
+                  <div className="text-lg font-black text-slate-900 tracking-tight italic">Net Profit Projection</div>
+                  <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Neural Market Analysis Active</div>
+                </div>
+                <div className="px-3 py-1 bg-emerald-50 text-emerald-600 text-[10px] font-black rounded-full border border-emerald-100">
+                  +124% UPSIDE
+                </div>
+              </div>
+              
+              <PerformanceGraph />
+              
+              <div className="mt-8 pt-6 border-t border-slate-50 flex items-center justify-between text-[10px] font-black text-slate-300 uppercase tracking-widest">
+                <span>Phase 01: Setup</span>
+                <span className="text-blue-600">Phase 02: Expansion</span>
+                <span>Phase 03: Dominance</span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* ROI Calculator */}
-      <section className="py-20 sm:py-28">
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="relative rounded-3xl overflow-hidden p-10 sm:p-14">
-            {/* Glass background */}
-            <div className="absolute inset-0 glass-strong rounded-3xl" />
-            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#D4AF63]/30 to-transparent" />
 
-            <div className="relative">
-              <h3 className="text-2xl sm:text-4xl font-bold text-center mb-2 tracking-tight">
-                The Math Is <span className="text-gradient">Stupid Simple</span>
-              </h3>
-              <p className="text-center text-white/30 mb-10 font-light">Here&apos;s why this pays for itself before lunch.</p>
+      {/* Live Demo */}
+      <section id="demo" className="py-24 sm:py-32 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 border border-blue-100 rounded-full text-xs text-blue-600 mb-5 font-bold">
+              LIVE PREVIEW
+            </div>
+            <h3 className="text-3xl sm:text-5xl font-black tracking-tight text-slate-900">
+              The Client Experience
+            </h3>
+            <p className="mt-4 text-slate-500 max-w-xl mx-auto">
+              This is the Neural Pricing Engine embedded on your site. Clean. Fast. Professional.
+            </p>
+          </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
-                <div className="space-y-2">
-                  <div className="text-4xl sm:text-5xl font-bold tracking-tight">$197<span className="text-lg text-white/30 font-light">/mo</span></div>
-                  <p className="text-sm text-white/30 font-light">Pro plan cost</p>
-                </div>
-                <div className="space-y-2 sm:border-x sm:border-white/5 sm:px-6">
-                  <div className="text-4xl sm:text-5xl font-bold text-gradient tracking-tight">1 lead</div>
-                  <p className="text-sm text-white/30 font-light">Avg project: <span className="text-white/50">$15K–$45K</span></p>
-                </div>
-                <div className="space-y-2">
-                  <div className="text-4xl sm:text-5xl font-bold text-emerald-400 tracking-tight">75x</div>
-                  <p className="text-sm text-white/30 font-light">ROI from one extra lead</p>
-                </div>
+          <div className="max-w-4xl mx-auto rounded-3xl overflow-hidden border border-slate-200 shadow-2xl">
+            <div className="bg-slate-50 px-4 py-3 flex items-center gap-3 border-b border-slate-200">
+              <div className="flex gap-1.5">
+                <span className="w-3 h-3 rounded-full bg-slate-200" />
+                <span className="w-3 h-3 rounded-full bg-slate-200" />
+                <span className="w-3 h-3 rounded-full bg-slate-200" />
               </div>
+              <div className="flex-1 flex justify-center">
+                <span className="text-[10px] text-slate-400 font-mono">https://your-contractor-site.com/estimate</span>
+              </div>
+            </div>
+            <div className="bg-white">
+              <iframe
+                src="/estimator/demo"
+                className="w-full border-0"
+                style={{ minHeight: '800px' }}
+                title="Live Demo Estimator"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
-              <div className="mt-10 pt-8 border-t border-white/5 text-center">
-                <p className="text-white/30 text-sm font-light">
-                  Most contractors close <span className="text-white/60">2–5 extra leads/month</span>.
-                  That&apos;s <span className="text-gradient font-semibold">$30K–$225K in new revenue</span> from a $197/month tool.
-                </p>
+      {/* ROI */}
+      <section className="py-24 sm:py-32 bg-white">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="bg-white rounded-[3rem] p-12 sm:p-20 shadow-xl border border-slate-100 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-blue-50 rounded-full -mr-32 -mt-32 blur-3xl opacity-50" />
+            
+            <div className="relative">
+              <h3 className="text-3xl sm:text-5xl font-black text-center mb-14 tracking-tight text-slate-900">
+                It's Not a Cost. <br />
+                <span className="text-blue-600 italic">It's a Profit Engine.</span>
+              </h3>
+
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 text-center">
+                <div className="space-y-4">
+                  <div className="text-5xl font-black tracking-tighter text-slate-900">$197<span className="text-lg text-slate-400 font-normal">/mo</span></div>
+                  <p className="text-sm text-slate-500 font-bold uppercase tracking-widest">Fixed Investment</p>
+                </div>
+                <div className="space-y-4 border-y sm:border-y-0 sm:border-x border-slate-100 py-8 sm:py-0">
+                  <div className="text-5xl font-black text-blue-600 tracking-tighter">1 Lead</div>
+                  <p className="text-sm text-slate-500 font-bold uppercase tracking-widest">To Break Even</p>
+                </div>
+                <div className="space-y-4">
+                  <div className="text-5xl font-black text-emerald-500 tracking-tighter">120x</div>
+                  <p className="text-sm text-slate-500 font-bold uppercase tracking-widest">Average Annual ROI</p>
+                </div>
               </div>
             </div>
           </div>
@@ -184,197 +268,119 @@ export default function HomePage() {
       </section>
 
       {/* Features */}
-      <section className="py-20 sm:py-28">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h3 className="text-3xl sm:text-5xl font-bold tracking-tight">
-              Everything to{' '}
-              <span className="text-gradient">Dominate Your Market</span>
+      <section className="py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-24">
+            <h3 className="text-4xl sm:text-7xl font-black tracking-tighter mb-8 text-slate-900">
+              Built for <span className="text-blue-600">Growth.</span>
             </h3>
-            <p className="mt-4 text-white/30 max-w-xl mx-auto font-light">
-              While your competitors play phone tag, your website is closing deals.
+            <p className="mt-4 text-slate-500 max-w-2xl mx-auto text-xl">
+              Professional tools for contractors who don't have time for manual spreadsheets.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 icon: Zap,
-                title: 'Instant Estimates',
-                desc: 'Select features, set dimensions, choose quality — get a real estimate in under 60 seconds. No calls. No waiting.',
-                highlight: 'Most popular',
-              },
-              {
-                icon: Palette,
-                title: 'Your Brand, Zero Compromise',
-                desc: 'Your logo. Your colors. Your fonts. Homeowners will never know there\'s a platform behind it.',
-              },
-              {
-                icon: Users,
-                title: 'Pre-Qualified Leads',
-                desc: 'Every lead includes full project scope, budget range, and contact info. No more tire-kickers.',
-                highlight: '3x higher close rate',
-              },
-              {
-                icon: BarChart3,
-                title: 'AI Design Insights',
-                desc: 'Our AI analyzes each project and delivers expert design tips that make you look like a genius.',
-              },
-              {
-                icon: Code2,
-                title: 'One Line of Code',
-                desc: 'Copy. Paste. Done. WordPress, Squarespace, Wix — literally anything. Mobile-first.',
+                title: 'Neural Estimation',
+                desc: 'Highly accurate project algorithms based on real-world labor and material rates.',
+                color: 'blue'
               },
               {
                 icon: Shield,
-                title: 'Your Pricing, Your Rules',
-                desc: 'Set your own labor rates, materials, tier multipliers. Your math, made beautiful.',
+                title: 'Verified Pricing',
+                desc: 'Update your rates in seconds. Your math, mapped to a beautiful client interface.',
+                color: 'emerald'
+              },
+              {
+                icon: Users,
+                title: 'Lead Enrichment',
+                desc: 'Captures full project scope, dimensions, and tier preferences with every contact.',
+                color: 'blue'
+              },
+              {
+                icon: BarChart3,
+                title: 'Market Insights',
+                desc: 'AI analyzes local project trends to help you optimize your service margins.',
+                color: 'blue'
+              },
+              {
+                icon: Code2,
+                title: 'Universal Embed',
+                desc: 'Works on any website platform. One line of code to future-proof your sales funnel.',
+                color: 'blue'
+              },
+              {
+                icon: LayoutDashboard,
+                title: 'Contractor CRM',
+                desc: 'A dedicated control center to manage every project request and lead flow.',
+                color: 'emerald'
               },
             ].map((feature) => (
-              <div key={feature.title} className="group glass rounded-2xl p-6 hover:bg-white/[0.04] transition-all duration-300 hover-lift">
-                <div className="w-10 h-10 rounded-xl bg-[#D4AF63]/10 flex items-center justify-center mb-4 group-hover:bg-[#D4AF63]/15 transition-colors">
-                  <feature.icon className="w-5 h-5 text-[#D4AF63]" />
+              <SpotlightCard key={feature.title} className="hover:-translate-y-2 transition-transform duration-500">
+                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-8 shadow-xl transition-all ${
+                  feature.color === 'blue' ? 'bg-blue-600 text-white shadow-blue-500/20' : 'bg-emerald-600 text-white shadow-emerald-500/20'
+                }`}>
+                  <feature.icon className="w-7 h-7" />
                 </div>
-                <h4 className="text-base font-semibold mb-2">{feature.title}</h4>
-                <p className="text-white/35 text-sm leading-relaxed font-light">{feature.desc}</p>
-                {feature.highlight && (
-                  <span className="inline-block mt-3 text-[11px] px-2.5 py-1 bg-[#D4AF63]/10 text-[#D4AF63] rounded-full font-medium uppercase tracking-wider">
-                    {feature.highlight}
-                  </span>
-                )}
-              </div>
+                <h4 className="text-2xl font-black mb-4 tracking-tight text-slate-900">{feature.title}</h4>
+                <p className="text-slate-500 leading-relaxed font-medium">{feature.desc}</p>
+              </SpotlightCard>
             ))}
           </div>
         </div>
       </section>
 
-      {/* How it works */}
-      <section className="py-20 sm:py-28">
-        <div className="max-w-3xl mx-auto px-4">
-          <h3 className="text-3xl sm:text-5xl font-bold text-center mb-3 tracking-tight">
-            Live in <span className="text-gradient">15 Minutes</span>
-          </h3>
-          <p className="text-center text-white/30 mb-14 font-light">
-            No developers needed. If you can copy-paste, you can do this.
-          </p>
-          <div className="space-y-4">
+      {/* Proof of Performance Gallery */}
+      <section className="py-32 relative overflow-hidden bg-white border-y border-slate-100">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl sm:text-7xl font-black mb-6 tracking-tighter text-slate-900">
+              The Gold Standard <br />
+              <span className="text-blue-600 italic">of Contractor Tools.</span>
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {[
-              { step: '01', title: 'Create Your Account', desc: 'Sign up and start your 14-day free trial. No credit card.', time: '2 min' },
-              { step: '02', title: 'Make It Yours', desc: 'Upload your logo, pick your colors, and preview it instantly.', time: '5 min' },
-              { step: '03', title: 'Set Your Pricing', desc: 'Enter labor rates and material costs — or start with industry defaults.', time: '5 min' },
-              { step: '04', title: 'Embed & Go', desc: 'Copy one line of code. Leads start flowing to your dashboard.', time: '3 min' },
-            ].map((item) => (
-              <div key={item.step} className="glass rounded-2xl p-5 flex items-start gap-5 hover:bg-white/[0.04] transition-all">
-                <span className="text-[#D4AF63]/30 text-3xl font-bold tracking-tighter shrink-0 w-10">{item.step}</span>
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-3">
-                    <h4 className="text-base font-semibold">{item.title}</h4>
-                    <span className="text-[11px] px-2 py-0.5 bg-white/5 rounded-full text-white/30 font-light">{item.time}</span>
+              {
+                title: "Elite Consultation",
+                desc: "Data-backed estimates that build immediate homeowner trust.",
+                img: "/images/success-contractor.png",
+                label: "THE PROCESS"
+              },
+              {
+                title: "Architectural Precision",
+                desc: "High-end visualizations for complex project scopes.",
+                img: "/images/success-result.png",
+                label: "THE RESULT"
+              },
+              {
+                title: "Seamless Payouts",
+                desc: "Accelerate your cash flow with professional lead routing.",
+                img: "/images/success-payment.png",
+                label: "THE PAYOUT"
+              }
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="group bg-white rounded-[3rem] overflow-hidden border border-slate-200 shadow-xl transition-all duration-700 hover:shadow-2xl"
+              >
+                <div className="relative aspect-[4/5] overflow-hidden">
+                  <img 
+                    src={item.img} 
+                    alt={item.title}
+                    className="absolute inset-0 w-full h-full object-cover grayscale-[0.2] transition-all duration-1000 group-hover:scale-110 group-hover:grayscale-0" 
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent" />
+                  
+                  <div className="absolute bottom-0 left-0 p-10 w-full">
+                    <span className="inline-block px-3 py-1 bg-blue-600 text-white text-[10px] font-black uppercase tracking-[0.2em] mb-4 rounded-full">
+                      {item.label}
+                    </span>
+                    <h4 className="text-3xl font-black text-slate-900 mb-2 leading-tight tracking-tight">{item.title}</h4>
+                    <p className="text-slate-500 text-base font-medium italic">{item.desc}</p>
                   </div>
-                  <p className="text-white/35 mt-1 text-sm font-light">{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Before/After */}
-      <section className="py-20 sm:py-28">
-        <div className="max-w-4xl mx-auto px-4">
-          <h3 className="text-3xl sm:text-5xl font-bold text-center mb-14 tracking-tight">
-            <span className="text-white/30">Without</span> vs <span className="text-gradient">With</span> EstimateAI
-          </h3>
-          <div className="grid sm:grid-cols-2 gap-4">
-            <div className="glass rounded-2xl p-6 border-red-500/10">
-              <h4 className="text-red-400/80 font-semibold text-sm uppercase tracking-wider mb-5">Without EstimateAI</h4>
-              <ul className="space-y-3 text-sm">
-                {[
-                  'Visitor lands on your site',
-                  'Reads some text, looks at photos',
-                  'Thinks "I\'ll call later"',
-                  'Forgets. Finds a competitor.',
-                  'You never knew they existed',
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-white/30 font-light">
-                    <span className="text-red-400/60 mt-0.5 text-xs">&#x2715;</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-5 pt-5 border-t border-white/5 text-center">
-                <span className="text-red-400/60 font-bold text-lg">$0 revenue</span>
-              </div>
-            </div>
-            <div className="relative rounded-2xl p-6 overflow-hidden">
-              <div className="absolute inset-0 glass-strong rounded-2xl" />
-              <div className="absolute inset-0 rounded-2xl border border-[#D4AF63]/20" />
-              <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#D4AF63]/40 to-transparent" />
-              <div className="relative">
-                <h4 className="text-[#D4AF63] font-semibold text-sm uppercase tracking-wider mb-5">With EstimateAI</h4>
-                <ul className="space-y-3 text-sm">
-                  {[
-                    'Visitor lands on your site',
-                    'Clicks "Get Instant Estimate" — hooked',
-                    'Selects patio + firepit + lighting',
-                    'Gets $28K–$35K estimate with AI tips',
-                    'Submits name & phone — YOU get the lead',
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 text-white/70 font-light">
-                      <CheckCircle className="w-4 h-4 text-[#D4AF63]/70 mt-0.5 flex-shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-5 pt-5 border-t border-white/10 text-center">
-                  <span className="text-gradient font-bold text-lg">$28K+ project</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-20 sm:py-28">
-        <div className="max-w-5xl mx-auto px-4">
-          <h3 className="text-3xl sm:text-5xl font-bold text-center mb-3 tracking-tight">
-            Don&apos;t Take Our Word For It
-          </h3>
-          <p className="text-center text-white/30 mb-14 font-light">Hear from contractors who made the switch.</p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {[
-              {
-                quote: 'We went from 2-3 leads a week to 2-3 a DAY. The estimator paid for itself with the first lead. My only regret is not starting sooner.',
-                name: 'Mike Rodriguez',
-                company: 'Summit Hardscapes',
-                metric: '340% more leads',
-              },
-              {
-                quote: 'Homeowners love getting an instant number. It filters out tire-kickers and brings us serious buyers who already know their budget.',
-                name: 'Sarah Thompson',
-                company: 'GreenStone Outdoor Living',
-                metric: '$180K in 90 days',
-              },
-              {
-                quote: 'Setup took 10 minutes. The AI insights blow people away — homeowners screenshot them and send to their spouse. Best tool in our stack.',
-                name: 'Dave Kowalski',
-                company: 'Premier Landscapes Inc.',
-                metric: '4.9 star rating',
-              },
-            ].map((testimonial) => (
-              <div key={testimonial.name} className="glass rounded-2xl p-6 flex flex-col hover-lift">
-                <div className="flex gap-0.5 mb-4">
-                  {[1, 2, 3, 4, 5].map((i) => (
-                    <Star key={i} className="w-3.5 h-3.5 fill-[#D4AF63] text-[#D4AF63]" />
-                  ))}
-                </div>
-                <p className="text-sm text-white/40 leading-relaxed flex-1 font-light">&ldquo;{testimonial.quote}&rdquo;</p>
-                <div className="mt-5 pt-4 border-t border-white/5">
-                  <p className="text-sm font-medium">{testimonial.name}</p>
-                  <p className="text-xs text-white/25 font-light">{testimonial.company}</p>
-                  <span className="inline-block mt-2 text-[11px] px-2.5 py-0.5 bg-[#D4AF63]/10 text-[#D4AF63] rounded-full font-medium">
-                    {testimonial.metric}
-                  </span>
                 </div>
               </div>
             ))}
@@ -383,48 +389,251 @@ export default function HomePage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-24 sm:py-36 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-t from-[#D4AF63]/[0.03] to-transparent pointer-events-none" />
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#D4AF63]/5 rounded-full blur-[100px] pointer-events-none" />
-
-        <div className="max-w-3xl mx-auto px-4 text-center relative">
-          <h3 className="text-3xl sm:text-6xl font-extrabold mb-5 leading-tight tracking-tight">
-            Your Competitors Are
-            <br />
-            Reading This Too.
-            <br />
-            <span className="text-gradient">Move First.</span>
+      <section className="py-32 sm:py-48 relative overflow-hidden bg-white">
+        <motion.div 
+          className="max-w-4xl mx-auto px-4 text-center relative"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <h3 className="text-5xl sm:text-8xl font-black mb-10 leading-[0.85] tracking-tighter text-slate-900">
+            Dominate Your <br />
+            <span className="text-blue-600">Local Market.</span>
           </h3>
-          <p className="text-lg text-white/30 mb-10 max-w-xl mx-auto font-light leading-relaxed">
-            Every day without an estimator is money left on the table.
-            Start free and have it live before your next coffee break.
+          <p className="text-xl text-slate-500 mb-16 max-w-xl mx-auto font-medium leading-relaxed">
+            Stop losing leads to the person who answers their phone first. 
+            Automate your pricing today.
           </p>
-          <Link
-            href="/signup"
-            className="group inline-flex items-center px-10 py-5 bg-gradient-to-r from-[#D4AF63] to-[#C49B4A] text-[#0A0A0A] rounded-2xl text-xl font-bold hover:brightness-110 transition-all shadow-2xl shadow-[#D4AF63]/15 hover:shadow-[#D4AF63]/25 pulse-ring"
-          >
-            Start Your 14-Day Free Trial
-            <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform" />
-          </Link>
-          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-5 text-sm text-white/25 font-light">
-            <span className="flex items-center gap-1.5"><CheckCircle className="w-3.5 h-3.5 text-emerald-500/50" /> No credit card</span>
-            <span className="flex items-center gap-1.5"><CheckCircle className="w-3.5 h-3.5 text-emerald-500/50" /> Live in 15 minutes</span>
-            <span className="flex items-center gap-1.5"><CheckCircle className="w-3.5 h-3.5 text-emerald-500/50" /> Cancel anytime</span>
+          <Link href="/signup">
+          </div>
+
+          <div className="max-w-4xl mx-auto rounded-3xl overflow-hidden border border-slate-200 shadow-2xl">
+            <div className="bg-slate-50 px-4 py-3 flex items-center gap-3 border-b border-slate-200">
+              <div className="flex gap-1.5">
+                <span className="w-3 h-3 rounded-full bg-slate-200" />
+                <span className="w-3 h-3 rounded-full bg-slate-200" />
+                <span className="w-3 h-3 rounded-full bg-slate-200" />
+              </div>
+              <div className="flex-1 flex justify-center">
+                <span className="text-[10px] text-slate-400 font-mono">https://your-contractor-site.com/estimate</span>
+              </div>
+            </div>
+            <div className="bg-white">
+              <iframe
+                src="/estimator/demo"
+                className="w-full border-0"
+                style={{ minHeight: '800px' }}
+                title="Live Demo Estimator"
+                loading="lazy"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-white/5 py-8">
-        <div className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div>
-            <p className="text-lg font-bold text-gradient mb-0.5">EstimateAI</p>
-            <p className="text-[11px] text-white/20 font-light">&copy; {new Date().getFullYear()} EstimateAI. All rights reserved.</p>
+      {/* ROI */}
+      <section className="py-24 sm:py-32 bg-white">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="bg-white rounded-[3rem] p-12 sm:p-20 shadow-xl border border-slate-100 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-blue-50 rounded-full -mr-32 -mt-32 blur-3xl opacity-50" />
+            
+            <div className="relative">
+              <h3 className="text-3xl sm:text-5xl font-black text-center mb-14 tracking-tight text-slate-900">
+                It's Not a Cost. <br />
+                <span className="text-blue-600 italic">It's a Profit Engine.</span>
+              </h3>
+
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 text-center">
+                <div className="space-y-4">
+                  <div className="text-5xl font-black tracking-tighter text-slate-900">$197<span className="text-lg text-slate-400 font-normal">/mo</span></div>
+                  <p className="text-sm text-slate-500 font-bold uppercase tracking-widest">Fixed Investment</p>
+                </div>
+                <div className="space-y-4 border-y sm:border-y-0 sm:border-x border-slate-100 py-8 sm:py-0">
+                  <div className="text-5xl font-black text-blue-600 tracking-tighter">1 Lead</div>
+                  <p className="text-sm text-slate-500 font-bold uppercase tracking-widest">To Break Even</p>
+                </div>
+                <div className="space-y-4">
+                  <div className="text-5xl font-black text-emerald-500 tracking-tighter">120x</div>
+                  <p className="text-sm text-slate-500 font-bold uppercase tracking-widest">Average Annual ROI</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="flex gap-6 text-sm text-white/25 font-light">
-            <Link href="/pricing" className="hover:text-white/50 transition-colors">Pricing</Link>
-            <Link href="/login" className="hover:text-white/50 transition-colors">Login</Link>
-            <Link href="/signup" className="hover:text-white/50 transition-colors">Sign Up</Link>
+        </div>
+      </section>
+
+      {/* Features */}
+      <section className="py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-24">
+            <h3 className="text-4xl sm:text-7xl font-black tracking-tighter mb-8 text-slate-900">
+              Built for <span className="text-blue-600">Growth.</span>
+            </h3>
+            <p className="mt-4 text-slate-500 max-w-2xl mx-auto text-xl">
+              Professional tools for contractors who don't have time for manual spreadsheets.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: Zap,
+                title: 'Neural Estimation',
+                desc: 'Highly accurate project algorithms based on real-world labor and material rates.',
+                color: 'blue'
+              },
+              {
+                icon: Shield,
+                title: 'Verified Pricing',
+                desc: 'Update your rates in seconds. Your math, mapped to a beautiful client interface.',
+                color: 'emerald'
+              },
+              {
+                icon: Users,
+                title: 'Lead Enrichment',
+                desc: 'Captures full project scope, dimensions, and tier preferences with every contact.',
+                color: 'blue'
+              },
+              {
+                icon: BarChart3,
+                title: 'Market Insights',
+                desc: 'AI analyzes local project trends to help you optimize your service margins.',
+                color: 'blue'
+              },
+              {
+                icon: Code2,
+                title: 'Universal Embed',
+                desc: 'Works on any website platform. One line of code to future-proof your sales funnel.',
+                color: 'blue'
+              },
+              {
+                icon: LayoutDashboard,
+                title: 'Contractor CRM',
+                desc: 'A dedicated control center to manage every project request and lead flow.',
+                color: 'emerald'
+              },
+            ].map((feature) => (
+              <SpotlightCard key={feature.title} className="hover:-translate-y-2 transition-transform duration-500">
+                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-8 shadow-xl transition-all ${
+                  feature.color === 'blue' ? 'bg-blue-600 text-white shadow-blue-500/20' : 'bg-emerald-600 text-white shadow-emerald-500/20'
+                }`}>
+                  <feature.icon className="w-7 h-7" />
+                </div>
+                <h4 className="text-2xl font-black mb-4 tracking-tight text-slate-900">{feature.title}</h4>
+                <p className="text-slate-500 leading-relaxed font-medium">{feature.desc}</p>
+              </SpotlightCard>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Proof of Performance Gallery */}
+      <section className="py-32 relative overflow-hidden bg-white border-y border-slate-100">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl sm:text-7xl font-black mb-6 tracking-tighter text-slate-900">
+              The Gold Standard <br />
+              <span className="text-blue-600 italic">of Contractor Tools.</span>
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            {[
+              {
+                title: "Elite Consultation",
+                desc: "Data-backed estimates that build immediate homeowner trust.",
+                img: "/images/success-contractor.png",
+                label: "THE PROCESS"
+              },
+              {
+                title: "Architectural Precision",
+                desc: "High-end visualizations for complex project scopes.",
+                img: "/images/success-result.png",
+                label: "THE RESULT"
+              },
+              {
+                title: "Seamless Payouts",
+                desc: "Accelerate your cash flow with professional lead routing.",
+                img: "/images/success-payment.png",
+                label: "THE PAYOUT"
+              }
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="group bg-white rounded-[3rem] overflow-hidden border border-slate-200 shadow-xl transition-all duration-700 hover:shadow-2xl"
+              >
+                <div className="relative aspect-[4/5] overflow-hidden">
+                  <img 
+                    src={item.img} 
+                    alt={item.title}
+                    className="absolute inset-0 w-full h-full object-cover grayscale-[0.2] transition-all duration-1000 group-hover:scale-110 group-hover:grayscale-0" 
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent" />
+                  
+                  <div className="absolute bottom-0 left-0 p-10 w-full">
+                    <span className="inline-block px-3 py-1 bg-blue-600 text-white text-[10px] font-black uppercase tracking-[0.2em] mb-4 rounded-full">
+                      {item.label}
+                    </span>
+                    <h4 className="text-3xl font-black text-slate-900 mb-2 leading-tight tracking-tight">{item.title}</h4>
+                    <p className="text-slate-500 text-base font-medium italic">{item.desc}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-32 sm:py-48 relative overflow-hidden bg-white">
+        <motion.div 
+          className="max-w-4xl mx-auto px-4 text-center relative"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <h3 className="text-5xl sm:text-8xl font-black mb-10 leading-[0.85] tracking-tighter text-slate-900">
+            Dominate Your <br />
+            <span className="text-blue-600">Local Market.</span>
+          </h3>
+          <p className="text-xl text-slate-500 mb-16 max-w-xl mx-auto font-medium leading-relaxed">
+            Stop losing leads to the person who answers their phone first. 
+            Automate your pricing today.
+          </p>
+          <Link href="/signup">
+            <ExpensiveButton size="xl" variant="primary" className="pulse-ring">
+              START YOUR 14-DAY FREE TRIAL
+              <ArrowRight className="w-6 h-6 ml-3" />
+            </ExpensiveButton>
+          </Link>
+          <div className="mt-16 flex flex-wrap justify-center gap-10 text-[11px] text-slate-400 font-bold tracking-[0.2em] uppercase">
+            <span className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-blue-500" /> INSTANT ACCESS</span>
+            <span className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-blue-500" /> CANCEL ANYTIME</span>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-white border-t border-slate-100 py-16">
+        <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-start justify-between gap-12">
+          <div>
+            <p className="text-3xl font-black text-slate-900 mb-2">EstimateAI</p>
+            <p className="text-slate-500 font-medium">&copy; 2026 TradeFlow AI Systems. <br />Professional Grade Software for High-Ticket Trades.</p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-16">
+            <div className="space-y-4">
+              <p className="text-xs font-black uppercase tracking-widest text-slate-400">Platform</p>
+              <div className="flex flex-col gap-2">
+                <Link href="/pricing" className="text-slate-500 hover:text-blue-600 font-medium">Pricing</Link>
+                <Link href="#demo" className="text-slate-500 hover:text-blue-600 font-medium">Demo</Link>
+              </div>
+            </div>
+            <div className="space-y-4">
+              <p className="text-xs font-black uppercase tracking-widest text-slate-400">Account</p>
+              <div className="flex flex-col gap-2">
+                <Link href="/login" className="text-slate-500 hover:text-blue-600 font-medium">Login</Link>
+                <Link href="/signup" className="text-slate-500 hover:text-blue-600 font-medium">Create Account</Link>
+              </div>
+            </div>
           </div>
         </div>
       </footer>

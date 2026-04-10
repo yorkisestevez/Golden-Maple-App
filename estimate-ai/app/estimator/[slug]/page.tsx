@@ -56,10 +56,10 @@ export default async function EstimatorPage({ params }: Props) {
 
   if (!services?.length || !config) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-[#0F0E0A] text-[#F2EEE7]">
+      <div className="min-h-screen flex items-center justify-center bg-[#F9FAFB] text-slate-900">
         <div className="text-center">
-          <h1 className="text-2xl font-bold mb-2">Estimator Not Ready</h1>
-          <p className="text-gray-400">This estimator is being set up. Please check back soon.</p>
+          <h1 className="text-2xl font-black tracking-tight mb-2">Neural Link Pending</h1>
+          <p className="text-slate-500 font-medium">This estimator is initializing. Computational margin mapping in progress.</p>
         </div>
       </div>
     );

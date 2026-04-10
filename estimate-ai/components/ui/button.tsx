@@ -7,19 +7,19 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className = '', variant = 'primary', size = 'md', children, disabled, ...props }, ref) => {
-    const base = 'inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
+    const base = 'inline-flex items-center justify-center font-bold rounded-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-600/10 disabled:opacity-30 disabled:cursor-not-allowed uppercase tracking-widest text-[10px]';
 
     const variants = {
-      primary: 'bg-[var(--brand-accent,#D4AF63)] text-[var(--brand-bg,#0F0E0A)] hover:brightness-110 focus:ring-[var(--brand-accent,#D4AF63)]',
-      secondary: 'bg-[var(--brand-secondary,#6B1E2E)] text-white hover:brightness-110 focus:ring-[var(--brand-secondary,#6B1E2E)]',
-      outline: 'border-2 border-[var(--brand-accent,#D4AF63)] text-[var(--brand-accent,#D4AF63)] hover:bg-[var(--brand-accent,#D4AF63)] hover:text-[var(--brand-bg,#0F0E0A)]',
-      ghost: 'text-[var(--brand-muted,#A89F91)] hover:text-[var(--brand-text,#F2EEE7)] hover:bg-white/5',
+      primary: 'bg-blue-600 text-white hover:bg-blue-700 shadow-lg shadow-blue-500/20 active:scale-95',
+      secondary: 'bg-emerald-600 text-white hover:bg-emerald-700 shadow-lg shadow-emerald-500/20',
+      outline: 'border-2 border-blue-600 text-blue-600 hover:bg-blue-50',
+      ghost: 'text-slate-400 hover:text-slate-900 hover:bg-slate-50',
     };
 
     const sizes = {
-      sm: 'px-3 py-1.5 text-sm',
-      md: 'px-5 py-2.5 text-base',
-      lg: 'px-8 py-3.5 text-lg',
+      sm: 'px-4 py-2',
+      md: 'px-6 py-3',
+      lg: 'px-10 py-4',
     };
 
     return (

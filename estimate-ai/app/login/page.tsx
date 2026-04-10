@@ -31,24 +31,24 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#0A0A0A] px-4 relative">
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[400px] h-[300px] bg-[#D4AF63]/5 rounded-full blur-[120px] pointer-events-none" />
+    <div className="min-h-screen flex items-center justify-center bg-[#F9FAFB] px-4 relative">
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[500px] h-[400px] bg-blue-500/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="w-full max-w-md relative">
-        <div className="text-center mb-8">
+        <div className="text-center mb-10">
           <Link href="/">
-            <h1 className="text-3xl font-bold text-gradient tracking-tight">
-              EstimateAI
+            <h1 className="text-4xl font-black text-slate-900 tracking-tighter">
+              EstimateAI<span className="text-blue-600">.</span>
             </h1>
           </Link>
-          <p className="text-white/40 mt-2 font-light">Sign in to your dashboard</p>
+          <p className="text-slate-500 mt-2 font-medium uppercase tracking-widest text-[10px]">Neural Control Center</p>
         </div>
 
-        <Card variant="bordered">
-          <form onSubmit={handleLogin} className="space-y-4">
+        <div className="bg-white rounded-[2.5rem] border border-slate-100 p-8 sm:p-10 shadow-2xl shadow-blue-500/5">
+          <form onSubmit={handleLogin} className="space-y-6">
             <Input
               id="email"
-              label="Email"
+              label="Email Address"
               type="email"
               placeholder="you@company.com"
               value={email}
@@ -65,20 +65,20 @@ export default function LoginPage() {
               required
             />
 
-            {error && <p className="text-sm text-red-400">{error}</p>}
+            {error && <p className="text-sm text-red-500 font-bold">{error}</p>}
 
-            <Button type="submit" className="w-full" disabled={loading}>
-              {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : 'Sign In'}
+            <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-black h-14 rounded-xl shadow-xl shadow-blue-500/10" disabled={loading}>
+              {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : 'AUTHENTICATE'}
             </Button>
           </form>
 
-          <p className="text-center text-sm text-white/30 mt-4 font-light">
-            Don&apos;t have an account?{' '}
-            <Link href="/signup" className="text-[#D4AF63] hover:underline">
-              Start your free trial
+          <p className="text-center text-xs text-slate-400 mt-8 font-medium">
+            New contractor?{' '}
+            <Link href="/signup" className="text-blue-600 font-black hover:underline uppercase tracking-widest text-[10px]">
+              Initialize Account
             </Link>
           </p>
-        </Card>
+        </div>
       </div>
     </div>
   );

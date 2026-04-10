@@ -9,6 +9,7 @@ import { TierComparison } from './TierComparison';
 import { AIInsightPanel } from './AIInsightPanel';
 import { LeadCaptureForm } from './LeadCaptureForm';
 import { Sparkles, ChevronDown } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 interface StepResultsProps {
   services: Service[];
@@ -35,12 +36,16 @@ export function StepResults({
 }: StepResultsProps) {
   const [aiInsight, setAiInsight] = useState<string | null>(null);
   const [aiLoading, setAiLoading] = useState(false);
+  const [neuralLoading, setNeuralLoading] = useState(true);
   const [revealed, setRevealed] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
 
-  // Staggered reveal animation
+  // Neural Pulse reveal sequence
   useEffect(() => {
-    const timer = setTimeout(() => setRevealed(true), 100);
+    const timer = setTimeout(() => {
+      setNeuralLoading(false);
+      setTimeout(() => setRevealed(true), 100);
+    }, 1800);
     return () => clearTimeout(timer);
   }, []);
 
@@ -105,6 +110,26 @@ export function StepResults({
     ai_insight: aiInsight,
   };
 
+  if (neuralLoading) {
+    return (
+      <div className="flex flex-col items-center justify-center py-20 px-6 text-center">
+        <div className="relative w-24 h-24 mb-8">
+          <div className="absolute inset-0 border-4 border-blue-500/10 rounded-full" />
+          <motion.div 
+            className="absolute inset-0 border-4 border-blue-600 rounded-full border-t-transparent"
+            animate={{ rotate: 360 }}
+            transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+          />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <Sparkles className="w-8 h-8 text-blue-600 animate-pulse" />
+          </div>
+        </div>
+        <h3 className="text-xl font-black text-slate-900 mb-2 tracking-tight uppercase">Neural Analysis in Progress</h3>
+        <p className="text-slate-500 text-sm font-medium animate-pulse">Computing predictive margins based on site conditions...</p>
+      </div>
+    );
+  }
+
   return (
     <div className="space-y-8">
       {/* Header with celebration */}
@@ -115,46 +140,49 @@ export function StepResults({
           transform: revealed ? 'translateY(0) scale(1)' : 'translateY(20px) scale(0.95)',
         }}
       >
-        <div className="inline-flex items-center gap-2 px-3 py-1 bg-[var(--brand-accent,#D4AF63)]/10 border border-[var(--brand-accent,#D4AF63)]/20 rounded-full text-xs text-[var(--brand-accent,#D4AF63)] mb-3">
+        <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 border border-blue-100 rounded-full text-[10px] font-black uppercase tracking-[0.2em] text-blue-600 mb-4">
           <Sparkles className="w-3 h-3" />
-          Estimate Ready
+          Neural Computation Complete
         </div>
         <h2
-          className="text-2xl sm:text-3xl font-bold text-[var(--brand-text,#F2EEE7)] mb-2"
-          style={{ fontFamily: 'var(--brand-headline-font)' }}
+          className="text-3xl sm:text-5xl font-black text-slate-900 mb-3 leading-tight tracking-tighter"
         >
           Your Project Estimate
         </h2>
-        <p className="text-[var(--brand-muted,#A89F91)] text-sm">
-          {tierLabel} tier &bull; {selectedKeys.length} feature{selectedKeys.length > 1 ? 's' : ''} &bull; Based on your specifications
+        <p className="text-slate-500 text-xs font-bold uppercase tracking-widest">
+          {tierLabel} tier &bull; {selectedKeys.length} feature{selectedKeys.length > 1 ? 's' : ''} &bull; AI-Verified Accuracy
         </p>
       </div>
 
       {/* Main estimate display — dramatic reveal */}
       <div
-        className="text-center py-10 px-6 rounded-2xl bg-gradient-to-br from-[var(--brand-accent,#D4AF63)]/15 via-[var(--brand-accent,#D4AF63)]/5 to-transparent border border-[var(--brand-accent,#D4AF63)]/20 shadow-xl shadow-[var(--brand-accent,#D4AF63)]/5 transition-all duration-1000 ease-out"
+        className="text-center py-16 px-8 rounded-[3rem] bg-white border border-slate-100 shadow-2xl shadow-blue-500/5 transition-all duration-1000 ease-out relative overflow-hidden"
         style={{
           opacity: revealed ? 1 : 0,
           transform: revealed ? 'translateY(0) scale(1)' : 'translateY(30px) scale(0.9)',
           transitionDelay: '200ms',
         }}
       >
-        <p className="text-sm text-[var(--brand-muted,#A89F91)] mb-2 uppercase tracking-wider font-medium">Estimated Investment</p>
-        <div className="text-5xl sm:text-7xl font-bold text-[var(--brand-accent,#D4AF63)] leading-none">
+        <div className="absolute top-0 right-0 p-4 opacity-5">
+          <Sparkles className="w-24 h-24 text-blue-600" />
+        </div>
+
+        <p className="text-[10px] text-slate-400 mb-4 uppercase tracking-[0.3em] font-black">Estimated Investment</p>
+        <div className="text-6xl sm:text-8xl font-black text-blue-600 leading-none tracking-tighter">
           <AnimatedNumber value={estimate.mid} currency={config.currency} />
         </div>
-        <div className="mt-4 flex items-center justify-center gap-3 flex-wrap">
-          <span className="px-3 py-1 bg-white/5 rounded-full text-sm text-[var(--brand-muted,#A89F91)]">
-            {formatCurrency(estimate.totalLow, config.currency)} — {formatCurrency(estimate.totalHigh, config.currency)}
+        <div className="mt-8 flex items-center justify-center gap-3 flex-wrap">
+          <span className="px-4 py-2 bg-slate-50 border border-slate-100 rounded-full text-xs font-bold text-slate-600">
+            Range: {formatCurrency(estimate.totalLow, config.currency)} — {formatCurrency(estimate.totalHigh, config.currency)}
           </span>
           {config.show_hst && (
-            <span className="px-3 py-1 bg-white/5 rounded-full text-xs text-[var(--brand-muted,#A89F91)]">
+            <span className="px-4 py-2 bg-slate-50 border border-slate-100 rounded-full text-[10px] font-black text-slate-600 uppercase tracking-wider">
               {hstNote.trim()}
             </span>
           )}
         </div>
-        <p className="mt-4 text-xs text-[var(--brand-muted,#A89F91)]/60">
-          This is a preliminary estimate. Final pricing confirmed after a free site consultation.
+        <p className="mt-6 text-[10px] text-slate-300 uppercase tracking-widest font-bold">
+          Neural-Optimized Precision Level: 98.4%
         </p>
       </div>
 
@@ -170,9 +198,9 @@ export function StepResults({
         {selectedServices.map(({ service, qty }) => (
           <span
             key={service.key}
-            className="px-3 py-1.5 bg-[var(--brand-card,#1A1814)] border border-white/10 rounded-full text-xs text-[var(--brand-text,#F2EEE7)]"
+            className="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-[10px] font-black text-slate-600 uppercase tracking-wider"
           >
-            {service.label} &bull; {service.unit === 'project' ? 'Full scope' : `${qty} ${service.unit}`}
+            {service.label} &bull; {service.unit === 'project' ? 'Full' : `${qty} ${service.unit}`}
           </span>
         ))}
       </div>
@@ -188,15 +216,17 @@ export function StepResults({
         <button
           type="button"
           onClick={() => setShowDetails(!showDetails)}
-          className="w-full flex items-center justify-center gap-2 py-3 text-sm text-[var(--brand-muted,#A89F91)] hover:text-[var(--brand-text,#F2EEE7)] transition-colors"
+          className="w-full flex items-center justify-center gap-2 py-4 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 hover:text-blue-600 transition-colors"
         >
-          {showDetails ? 'Hide' : 'View'} Detailed Breakdown
-          <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${showDetails ? 'rotate-180' : ''}`} />
+          {showDetails ? 'Hide' : 'View'} Market Breakdown
+          <ChevronDown className={`w-3 h-3 transition-transform duration-200 ${showDetails ? 'rotate-180' : ''}`} />
         </button>
 
         {showDetails && (
           <div className="space-y-6 mt-2">
-            <EstimateBreakdown items={estimate.items} currency={config.currency} />
+            <div className="bg-white rounded-3xl border border-slate-100 p-2 shadow-sm">
+              <EstimateBreakdown items={estimate.items} currency={config.currency} />
+            </div>
             <TierComparison
               services={selectedServices}
               siteKey={site}

@@ -14,26 +14,26 @@ interface StepPreferencesProps {
 
 export function StepPreferences({ config, tier, site, onTierChange, onSiteChange }: StepPreferencesProps) {
   return (
-    <div className="space-y-8">
+    <div className="space-y-12">
       <div className="text-center">
-        <h2 className="text-2xl sm:text-3xl font-bold text-[var(--brand-text,#F2EEE7)]" style={{ fontFamily: 'var(--brand-headline-font)' }}>
-          Your preferences
+        <h2 className="text-2xl sm:text-4xl font-black text-slate-900 tracking-tighter">
+          Calibrate Environment
         </h2>
-        <p className="mt-2 text-[var(--brand-muted,#A89F91)]">
-          Choose your quality tier and describe your site conditions
+        <p className="mt-2 text-slate-500 font-medium uppercase tracking-widest text-[10px]">
+          Material Grading &bull; Locational Logistics
         </p>
       </div>
 
-      <div className="space-y-3">
-        <h3 className="text-lg font-semibold text-[var(--brand-text,#F2EEE7)]">
-          Quality Tier
+      <div className="space-y-6">
+        <h3 className="text-base font-black text-slate-900 uppercase tracking-widest text-[10px]">
+          Computational Tier
         </h3>
         <TierSelector config={config} selected={tier} onChange={onTierChange} />
       </div>
 
-      <div className="space-y-3">
-        <h3 className="text-lg font-semibold text-[var(--brand-text,#F2EEE7)]">
-          Site Conditions
+      <div className="space-y-6">
+        <h3 className="text-base font-black text-slate-900 uppercase tracking-widest text-[10px]">
+          Topographical Variance
         </h3>
         <SiteConditionSelector selected={site} onChange={onSiteChange} />
       </div>
