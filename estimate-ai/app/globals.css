@@ -214,3 +214,87 @@ input[type='range']::-webkit-slider-thumb:hover {
   border: 1px solid rgba(0, 0, 0, 0.05);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
 }
+
+/* ── DeckCraft Pro Estimator Classes ── */
+/* These map to dynamic --brand-* CSS vars set by DeckingEstimatorShell */
+
+.card-slate {
+  background: var(--brand-card, #ffffff);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.btn-primary {
+  background: var(--brand-accent, #2563EB);
+  color: #ffffff;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  font-size: 0.625rem;
+  letter-spacing: 0.15em;
+  transition: opacity 0.2s;
+}
+.btn-primary:hover { opacity: 0.9; }
+
+.btn-secondary {
+  background: var(--brand-card, #ffffff);
+  color: var(--brand-text, #111827);
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 9999px;
+  text-transform: uppercase;
+  font-size: 0.625rem;
+  letter-spacing: 0.15em;
+  transition: background 0.2s;
+}
+.btn-secondary:hover { background: rgba(0, 0, 0, 0.03); }
+
+.input-field {
+  width: 100%;
+  padding: 0.75rem 1.25rem;
+  border: 2px solid rgba(0, 0, 0, 0.05);
+  border-radius: 1rem;
+  background: rgba(0, 0, 0, 0.02);
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+  font-size: 0.875rem;
+}
+.input-field:focus {
+  border-color: var(--brand-accent, #2563EB);
+  background: #ffffff;
+}
+
+.number-font {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* DeckCraft brand color utilities — driven by CSS custom properties */
+.bg-brand-gold { background-color: var(--brand-accent, #2563EB); }
+.text-brand-gold { color: var(--brand-accent, #2563EB); }
+.border-brand-gold { border-color: var(--brand-accent, #2563EB); }
+.text-brand-gold-hover:hover { color: var(--brand-accent, #2563EB); }
+.shadow-brand-gold\/10 { --tw-shadow-color: color-mix(in srgb, var(--brand-accent, #2563EB) 10%, transparent); }
+.shadow-brand-gold\/20 { --tw-shadow-color: color-mix(in srgb, var(--brand-accent, #2563EB) 20%, transparent); }
+
+.bg-brand-gold\/5  { background-color: color-mix(in srgb, var(--brand-accent, #2563EB) 5%, transparent); }
+.bg-brand-gold\/10 { background-color: color-mix(in srgb, var(--brand-accent, #2563EB) 10%, transparent); }
+.bg-brand-gold\/20 { background-color: color-mix(in srgb, var(--brand-accent, #2563EB) 20%, transparent); }
+.border-brand-gold\/20 { border-color: color-mix(in srgb, var(--brand-accent, #2563EB) 20%, transparent); }
+.border-brand-gold\/30 { border-color: color-mix(in srgb, var(--brand-accent, #2563EB) 30%, transparent); }
+.hover\:border-brand-gold\/30:hover { border-color: color-mix(in srgb, var(--brand-accent, #2563EB) 30%, transparent); }
+.text-brand-gold\/30 { color: color-mix(in srgb, var(--brand-accent, #2563EB) 30%, transparent); }
+
+.bg-brand-text-primary { background-color: var(--brand-text, #111827); }
+.text-brand-text-primary { color: var(--brand-text, #111827); }
+
+.text-brand-text-secondary { color: color-mix(in srgb, var(--brand-text, #111827) 60%, transparent); }
+
+.bg-brand-accent { background-color: color-mix(in srgb, var(--brand-accent, #2563EB) 8%, var(--brand-bg, #f9fafb)); }
+
+@media print {
+  .no-print { display: none !important; }
+}

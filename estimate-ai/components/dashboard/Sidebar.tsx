@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { LayoutDashboard, Users, Settings, DollarSign, Code2, CreditCard, LogOut, Menu, X } from 'lucide-react';
+import { LayoutDashboard, Users, Settings, DollarSign, Code2, CreditCard, LogOut, Menu, X, Hammer } from 'lucide-react';
 import { createClient } from '@/lib/supabase/client';
 
 const NAV_ITEMS = [
@@ -12,6 +12,7 @@ const NAV_ITEMS = [
   { href: '/dashboard/settings', label: 'Brand Settings', icon: Settings },
   { href: '/dashboard/pricing-engine', label: 'Pricing Engine', icon: DollarSign },
   { href: '/dashboard/embed', label: 'Embed Code', icon: Code2 },
+  { href: '/dashboard/decking-settings', label: 'Decking Estimator', icon: Hammer },
   { href: '/dashboard/billing', label: 'Billing', icon: CreditCard },
 ];
 

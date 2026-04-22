@@ -7,20 +7,20 @@
 -- opening up signups to other contractors.
 --
 -- ──────────────────────────────────────────────────────────────────────────
--- BEFORE RUNNING — edit these placeholder values
+-- Pilot configuration (2026-04-11)
 -- ──────────────────────────────────────────────────────────────────────────
---   1. REPLACE_WITH_NOTIFICATION_EMAIL
---      Email that receives lead notifications via Resend. Usually Adam
---      (Golden Maple owner) or yorkis@openclaw.local during testing.
+--   Contractor email + notification email both set to
+--   Yorkis@goldenmaplelandscaping.ca — managed pilot, single inbox, Yorkis
+--   monitors leads directly. Email delivery is DISABLED for the pilot
+--   (RESEND_API_KEY intentionally unset in .env.local), so leads save to
+--   Supabase and the email send silently no-ops at lead/route.ts:115.
+--   Switch to real email by setting RESEND_API_KEY once estimateai.com
+--   is a verified Resend sending domain.
 --
---   2. REPLACE_WITH_CONTRACTOR_EMAIL
---      Primary contact email stored on the contractor row. NOT NULL, unique.
---      Use a real inbox you control (fallback for notifications).
---
---   3. Service cost ranges (mat_cost_*, prod_rate_*)
+--   Service cost ranges (mat_cost_*, prod_rate_*)
 --      These are mirrored from lib/seed-data.ts DEFAULT_SERVICES — the same
 --      values /api/seed inserts for any new contractor. They are a generic
---      Ontario outdoor-living baseline. Tune them to Adam's real price book
+--      Ontario outdoor-living baseline. Tune them to Golden Maple's real price book
 --      before Golden Maple goes live, OR accept the baseline for the pilot
 --      and refine after the first 2-3 real leads come in.
 --
@@ -72,7 +72,7 @@ INSERT INTO contractors (
   ai_insights_enabled
 ) VALUES (
   'a0000000-0000-0000-0000-000000000001',
-  'REPLACE_WITH_CONTRACTOR_EMAIL',                -- TODO: real inbox
+  'Yorkis@goldenmaplelandscaping.ca',             -- managed pilot: Yorkis inbox
   'Golden Maple Landscaping',
   'golden-maple',
   NULL,                                            -- TODO: phone if desired
@@ -87,7 +87,7 @@ INSERT INTO contractors (
   'pro',                                           -- full feature tier for pilot
   'trialing',
   NOW() + INTERVAL '1 year',
-  'REPLACE_WITH_NOTIFICATION_EMAIL',              -- TODO: Adam or Yorkis
+  'Yorkis@goldenmaplelandscaping.ca',             -- managed pilot: Yorkis inbox
   TRUE                                             -- AI insights on (Pro feature)
 )
 ON CONFLICT (id) DO NOTHING;

@@ -2,7 +2,7 @@
 
 > **Goal:** Go from a cold repo to Golden Maple Landscaping running a live EstimateAI estimator on goldenmaplelandscaping.ca in under 30 minutes.
 
-Golden Maple is EstimateAI's customer zero — the pilot used to validate the end-to-end flow (embed form → estimate → lead capture → Resend notification → dashboard) before opening signups to other contractors. The pilot is **managed**: Adam (owner) doesn't log into the dashboard; Yorkis monitors leads via email and direct Supabase queries.
+Golden Maple is EstimateAI's customer zero — the pilot used to validate the end-to-end flow (embed form → estimate → lead capture → Resend notification → dashboard) before opening signups to other contractors. The pilot is **managed**: Yorkis monitors leads via email and direct Supabase queries. No dashboard login needed.
 
 ---
 
@@ -16,8 +16,8 @@ Before you start, make sure you have:
 - [ ] **Stripe webhook secret** for `/api/webhook/stripe` endpoint
 - [ ] **Resend API key** — with a verified sending domain (or use the default onboarding domain for testing)
 - [ ] **Anthropic API key** — only if Pro-tier AI insights should be live on day one. Skippable for pilot.
-- [ ] **Adam's email address** for `notification_email` (or use your own for the first few days of testing)
-- [ ] **Access to Golden Maple's Duda site** (goldenmaplelandscaping.ca) to paste the embed snippet
+- [ ] **Notification email address** for `notification_email` (currently `Yorkis@goldenmaplelandscaping.ca`)
+- [ ] **Access to Golden Maple's Netlify site** (goldenmaplelandscaping.ca) to paste the embed snippet
 - [ ] **30 minutes** of uninterrupted time
 
 ---
@@ -60,8 +60,8 @@ Three migration files under `supabase/migrations/`:
 
 **Before running 003**, edit the file and replace:
 
-- `REPLACE_WITH_CONTRACTOR_EMAIL` → a real inbox you control (e.g., `adam@goldenmaplelandscaping.ca` or `yorkis+goldenmaple@openclaw.local`)
-- `REPLACE_WITH_NOTIFICATION_EMAIL` → who should receive lead notifications (Adam for production, you for testing)
+- `REPLACE_WITH_CONTRACTOR_EMAIL` → a real inbox you control (currently `Yorkis@goldenmaplelandscaping.ca`)
+- `REPLACE_WITH_NOTIFICATION_EMAIL` → who should receive lead notifications (currently `Yorkis@goldenmaplelandscaping.ca`)
 
 ### Option A — Supabase SQL Editor (easiest, 3 minutes)
 
@@ -109,9 +109,9 @@ WHERE contractor_id = 'a0000000-0000-0000-0000-000000000001';
 
 ## Step 3 — Tune Golden Maple's pricing (optional for pilot, required before production)
 
-The seed uses the same baseline cost ranges as `lib/seed-data.ts` — a generic Ontario outdoor-living model. Before Adam starts sending real estimates to homeowners, either:
+The seed uses the same baseline cost ranges as `lib/seed-data.ts` — a generic Ontario outdoor-living model. Before sending real estimates to homeowners, either:
 
-**Quick path (pilot):** Accept the baseline for the first 2–3 real leads. See if estimates look roughly right. Refine based on Adam's feedback.
+**Quick path (pilot):** Accept the baseline for the first 2–3 real leads. See if estimates look roughly right. Refine based on feedback.
 
 **Thorough path (production):** Edit `supabase/migrations/003_golden_maple_seed.sql` or run UPDATE statements directly against the `services` table. For each service, adjust:
 
@@ -122,8 +122,8 @@ The seed uses the same baseline cost ranges as `lib/seed-data.ts` — a generic 
 Also check `pricing_config`:
 
 - `crew_rate_per_day` (currently $3000 CAD)
-- `tier_best_multiplier` (currently 1.35 — adjust if Adam wants a different premium bump)
-- `minimum_estimate` (currently $5000 — raise if Golden Maple doesn't take small jobs)
+- `tier_best_multiplier` (currently 1.35 — adjust if you want a different premium bump)
+- `minimum_estimate` (currently $5000 — raise if you don't take small jobs)
 
 Once updated, re-run the UPDATE statements in the SQL Editor.
 
@@ -186,37 +186,28 @@ Once the local smoke test passes end-to-end:
 
 ---
 
-## Step 6 — Adam's side: the Duda embed
+## Step 6 — Embed on goldenmaplelandscaping.ca (Netlify)
 
-Paste one of these two snippets into Golden Maple's Duda site (Services page, or a new `/get-estimate` page).
+Paste the iframe snippet into the Golden Maple Netlify site (Services page, or a new `/get-estimate` page).
 
-### Option A — iframe (recommended, works everywhere)
+### iframe embed (recommended)
 
 ```html
 <iframe
-  src="https://<your-netlify-url>/embed/golden-maple"
+  src="https://<your-estimateai-netlify-url>/embed/golden-maple"
   style="width:100%; border:0; min-height:900px; display:block;"
   title="Get an instant project estimate"
   loading="lazy">
 </iframe>
 ```
 
-**Why iframe:** isolated CSS, no JS conflicts with Duda's own scripts, auto-resizes via the `postMessage` listener baked into `app/embed/[slug]/page.tsx`. Works on every hosting platform.
-
-### Option B — `<script>` tag (for platforms that strip iframes)
-
-Duda allows iframes, so Option A is preferred. This is documented for completeness only:
-
-```html
-<div id="estimateai-golden-maple"></div>
-<script src="https://<your-netlify-url>/api/embed/golden-maple" async></script>
-```
+**Why iframe:** isolated CSS, no JS conflicts, auto-resizes via the `postMessage` listener baked into `app/embed/[slug]/page.tsx`. Works on every hosting platform.
 
 ### Where to place it
 
 Recommended locations, in order of impact:
 
-1. **Dedicated page** — create `/get-an-estimate` in Duda, paste the iframe as the only content. Add a banner link from the homepage. Best conversion.
+1. **Dedicated page** — create `/get-an-estimate`, paste the iframe as the only content. Add a banner link from the homepage. Best conversion.
 2. **Services page, above the fold** — right under the hero headline. Second-best.
 3. **Homepage hero CTA** — button that scrolls to an iframe embedded lower on the page. OK for low-traffic sites.
 
@@ -226,9 +217,9 @@ Avoid: sidebars, popups, or anything that requires hover to reveal. The estimato
 
 ## Step 7 — End-to-end verification from the public internet
 
-Once the Duda site is live with the embed:
+Once the Netlify site is live with the embed:
 
-1. **Open the Duda page on your phone** (not localhost, not the Netlify URL — the actual goldenmaplelandscaping.ca page)
+1. **Open goldenmaplelandscaping.ca on your phone** (not localhost — the actual production page)
 2. **Submit a real-feeling estimate**
    - Realistic name / phone / notes
    - A combination you'd actually build (e.g., 400 sqft patio + firepit)
@@ -247,13 +238,9 @@ If all 5 pass, Golden Maple is live.
 
 ---
 
-## Step 8 — Tell Adam
+## Step 8 — Go live
 
-Short message template:
-
-> Hey Adam — the new estimator is live on your site at [URL]. Homeowners can get an instant estimate in under a minute, and you'll get an email with their contact info the moment they submit. No login needed on your end — everything lands in your inbox. I'm watching it for the first week to catch any issues, so if anything looks off just forward me the email. Let's see what the first weekend brings.
-
-Then monitor:
+Once the embed is verified on production, monitor:
 
 - Resend dashboard for delivery/open rates
 - Supabase `leads` table for row count over time
@@ -397,15 +384,15 @@ The contractors table has RLS policies `contractors_own_data FOR ALL USING (auth
 - Yorkis monitors leads via:
   - Resend email notifications (pushed)
   - Direct Supabase queries via the service_role key (pulled)
-- Adam never logs into the EstimateAI dashboard
+- No one logs into the EstimateAI dashboard for this pilot
 
-This is Option A from the plan. If Adam later wants dashboard access:
-1. Create an auth.users row for Adam via Supabase Auth (Invite User → email magic link)
+If dashboard access is ever needed:
+1. Create an auth.users row via Supabase Auth (Invite User → email magic link)
 2. Copy the new `auth.users.id` UUID
 3. Either UPDATE the existing contractor row's `id` to match (breaks FK references — don't do this) OR create a second contractor row keyed to the new auth ID and migrate services/pricing/leads across
 
-Simpler: leave Golden Maple as managed and create a second contractor record if Adam ever needs self-serve access.
+Simpler: leave Golden Maple as managed and create a separate contractor record if self-serve access is ever needed.
 
 ---
 
-*Last updated: 2026-04-11. When you change the onboarding flow, update this file or it will rot.*
+*Last updated: 2026-04-12. Cleaned up hallucinated "Adam" and "Duda" references from original generation. When you change the onboarding flow, update this file or it will rot.*
