@@ -23,9 +23,36 @@ const PRODUCT_TYPES = {
 };
 
 const STATUS_META = {
-  'Scheduled':   { bg: 'bg-cft-warning/20',  border: 'border-cft-warning/60',  text: 'text-cft-warning',  dot: 'bg-cft-warning'  },
-  'In Progress': { bg: 'bg-cft-orange/20',   border: 'border-cft-orange/70',   text: 'text-cft-orange',   dot: 'bg-cft-orange'   },
-  'Complete':    { bg: 'bg-cft-success/15',  border: 'border-cft-success/60',  text: 'text-cft-success',  dot: 'bg-cft-success'  },
+  'Scheduled':   { bar: 'bg-cft-warning', text: 'text-cft-warning', dot: 'bg-cft-warning', ring: 'ring-cft-warning/30' },
+  'In Progress': { bar: 'bg-cft-orange',  text: 'text-cft-orange',  dot: 'bg-cft-orange',  ring: 'ring-cft-orange/30'  },
+  'Complete':    { bar: 'bg-cft-success', text: 'text-cft-success', dot: 'bg-cft-success', ring: 'ring-cft-success/30' },
+};
+
+// Inline SVG icon set
+const Icon = ({ name, className = 'w-4 h-4' }) => {
+  const paths = {
+    grid:     <><rect x="3"  y="3" width="7"  height="7" rx="1.5"/><rect x="14" y="3" width="7"  height="7" rx="1.5"/><rect x="3"  y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></>,
+    dollar:   <><path d="M12 3v18"/><path d="M16 7H10a2.5 2.5 0 0 0 0 5h4a2.5 2.5 0 0 1 0 5H8"/></>,
+    plus:     <><path d="M12 5v14"/><path d="M5 12h14"/></>,
+    settings: <><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></>,
+    chevronL: <path d="M15 18l-6-6 6-6"/>,
+    chevronR: <path d="M9 18l6-6-6-6"/>,
+    close:    <><path d="M18 6L6 18"/><path d="M6 6l12 12"/></>,
+    sparkle:  <><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M5.6 18.4l2.8-2.8M15.6 8.4l2.8-2.8"/></>,
+    calendar: <><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></>,
+    book:     <><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></>,
+    send:     <><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></>,
+    map:      <><path d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4-7 4z"/><path d="M8 2v16M16 6v16"/></>,
+    check:    <path d="M20 6L9 17l-5-5"/>,
+    arrows:   <><path d="M8 7l-5 5 5 5"/><path d="M3 12h18"/><path d="M16 17l5-5-5-5"/></>,
+    bolt:     <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>,
+    bell:     <><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></>,
+  };
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+      {paths[name]}
+    </svg>
+  );
 };
 
 // =====================================================================
@@ -143,7 +170,7 @@ function App() {
   const selectedJob = jobs.find((j) => j.id === selectedJobId) || null;
 
   return (
-    <div className="h-full flex flex-col bg-cft-bg text-cft-text">
+    <div className="h-full flex flex-col text-cft-text">
       <Topbar
         onOpenSettings={() => setShowSettings(true)}
         weekStart={weekStart}
@@ -225,7 +252,8 @@ function App() {
 
       <Toaster toasts={toasts} />
 
-      <div className="fixed bottom-3 right-3 z-10 px-2.5 py-1 rounded-full bg-cft-orange/15 border border-cft-orange/40 text-cft-orange text-[10px] font-display font-bold tracking-widest uppercase">
+      <div className="fixed bottom-4 left-4 z-10 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-cft-orange/10 border border-cft-orange/30 text-cft-orange text-[10px] font-display font-bold tracking-[0.25em] uppercase backdrop-blur">
+        <span className="w-1.5 h-1.5 rounded-full bg-cft-orange pulse-dot" />
         Demo Mode
       </div>
     </div>
@@ -238,29 +266,43 @@ function App() {
 
 function Topbar({ onOpenSettings, weekStart, weekOffset, view }) {
   return (
-    <header className="h-14 shrink-0 flex items-center justify-between px-5 border-b border-cft-line bg-cft-surface/70 backdrop-blur">
+    <header className="h-16 shrink-0 flex items-center justify-between px-6 glass border-b hairline relative z-20">
       <div className="flex items-center gap-5">
-        <div className="flex items-baseline gap-2">
-          <div className="font-display font-black text-2xl tracking-wider text-cft-orange">CFT</div>
-          <div className="font-display font-semibold text-xs tracking-[0.25em] uppercase text-cft-muted">Operations Hub</div>
+        <div className="flex items-center gap-3">
+          <div className="relative w-9 h-9 rounded-lg bg-gradient-to-br from-cft-orange to-cft-orange2 grid place-items-center shadow-glow-orange">
+            <div className="font-display font-black text-white text-base tracking-tighter leading-none">CFT</div>
+            <div className="absolute -bottom-0.5 -right-0.5 w-2 h-2 rounded-full bg-cft-success ring-2 ring-cft-bg" />
+          </div>
+          <div className="leading-tight">
+            <div className="font-display font-bold text-[15px] tracking-wide uppercase text-cft-text">Operations Hub</div>
+            <div className="text-[10px] font-display tracking-[0.25em] uppercase text-cft-muted">Concrete Floor Tek</div>
+          </div>
         </div>
-        <div className="hidden md:block h-6 w-px bg-cft-line" />
-        <div className="hidden md:flex items-center gap-2 text-[11px] uppercase tracking-widest text-cft-muted font-display font-semibold">
-          <span>{view === 'board' ? `Week of ${fmtShort(weekStart)}` : 'Financials'}</span>
-          {weekOffset !== 0 && view === 'board' && (
-            <span className="text-cft-orange">• {weekOffset > 0 ? `+${weekOffset}w` : `${weekOffset}w`}</span>
-          )}
+
+        <div className="hidden md:block h-7 w-px bg-white/10" />
+
+        <div className="hidden md:flex items-center gap-3">
+          <div className="flex items-center gap-2 px-3 py-1.5 rounded-md bg-white/5 border hairline">
+            <Icon name={view === 'board' ? 'calendar' : 'dollar'} className="w-3.5 h-3.5 text-cft-orange" />
+            <span className="text-[11px] font-display font-semibold tracking-widest uppercase text-cft-text">
+              {view === 'board' ? `Week of ${fmtShort(weekStart)}` : 'Financials'}
+            </span>
+            {weekOffset !== 0 && view === 'board' && (
+              <span className="text-[10px] font-display font-bold text-cft-orange">{weekOffset > 0 ? `+${weekOffset}W` : `${weekOffset}W`}</span>
+            )}
+          </div>
         </div>
       </div>
 
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-2">
         <ConnectionPill label="Google Calendar" />
         <ConnectionPill label="QuickBooks Online" />
         <button
           onClick={onOpenSettings}
-          className="text-[11px] font-display font-semibold tracking-widest uppercase text-cft-muted hover:text-cft-text px-2 py-1 rounded border border-cft-line"
+          className="lift flex items-center gap-1.5 text-[11px] font-display font-semibold tracking-widest uppercase text-cft-muted hover:text-cft-text px-2.5 py-1.5 rounded-md border hairline hover:border-white/20 bg-white/5"
+          title="Settings"
         >
-          Settings
+          <Icon name="settings" className="w-3.5 h-3.5" />
         </button>
       </div>
     </header>
@@ -269,9 +311,12 @@ function Topbar({ onOpenSettings, weekStart, weekOffset, view }) {
 
 function ConnectionPill({ label }) {
   return (
-    <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-cft-bg border border-cft-line">
-      <span className="w-2 h-2 rounded-full bg-cft-success pulse-dot" />
-      <span className="text-[10px] font-display font-semibold tracking-widest uppercase text-cft-muted">{label}</span>
+    <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border hairline">
+      <span className="relative flex w-2 h-2">
+        <span className="absolute inset-0 rounded-full bg-cft-success opacity-60 pulse-dot" />
+        <span className="relative w-2 h-2 rounded-full bg-cft-success" />
+      </span>
+      <span className="text-[10px] font-display font-semibold tracking-widest uppercase text-cft-muted2">{label}</span>
     </div>
   );
 }
@@ -281,40 +326,69 @@ function ConnectionPill({ label }) {
 // =====================================================================
 
 function Sidebar({ view, setView, onAddJob }) {
-  const NavItem = ({ id, label, icon }) => (
-    <button
-      onClick={() => setView(id)}
-      className={
-        'w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-left transition ' +
-        (view === id
-          ? 'bg-cft-orange/15 text-cft-orange border border-cft-orange/40'
-          : 'text-cft-muted hover:text-cft-text hover:bg-cft-surface border border-transparent')
-      }
-    >
-      <span className="text-base">{icon}</span>
-      <span className="font-display font-semibold text-sm tracking-wider uppercase">{label}</span>
-    </button>
-  );
+  const NavItem = ({ id, label, icon }) => {
+    const active = view === id;
+    return (
+      <button
+        onClick={() => setView(id)}
+        className={
+          'relative w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left lift group ' +
+          (active
+            ? 'bg-gradient-to-r from-cft-orange/20 to-transparent text-cft-text'
+            : 'text-cft-muted hover:text-cft-text hover:bg-white/5')
+        }
+      >
+        {active && <span className="absolute left-0 top-2 bottom-2 w-[3px] rounded-r-full bg-cft-orange shadow-glow-orange" />}
+        <Icon name={icon} className={'w-4 h-4 ' + (active ? 'text-cft-orange' : 'text-cft-muted group-hover:text-cft-text')} />
+        <span className="font-display font-semibold text-[13px] tracking-wider uppercase">{label}</span>
+      </button>
+    );
+  };
 
   return (
-    <aside className="w-52 shrink-0 border-r border-cft-line bg-cft-surface/40 p-3 flex flex-col gap-1">
-      <NavItem id="board"      label="Crew Board" icon="▦" />
-      <NavItem id="financials" label="Financials" icon="$" />
+    <aside className="w-56 shrink-0 border-r hairline bg-cft-surface/30 p-3 flex flex-col gap-1 relative z-10">
+      <div className="px-2 pt-1 pb-2 text-[10px] font-display font-bold tracking-[0.25em] uppercase text-cft-muted">Workspace</div>
+      <NavItem id="board"      label="Crew Board" icon="grid" />
+      <NavItem id="financials" label="Financials" icon="dollar" />
 
-      <div className="mt-3 pt-3 border-t border-cft-line">
+      <div className="mt-4 pt-4 border-t hairline">
         <button
           onClick={onAddJob}
-          className="w-full px-3 py-2.5 rounded-md bg-cft-orange text-white font-display font-bold text-sm tracking-wider uppercase hover:brightness-110 transition shadow-lg shadow-cft-orange/20"
+          className="ai-button w-full px-3 py-2.5 rounded-lg text-white font-display font-bold text-[13px] tracking-wider uppercase lift flex items-center justify-center gap-2"
         >
-          + Add Job
+          <Icon name="plus" className="w-4 h-4" />
+          <span>Add Job</span>
         </button>
       </div>
 
-      <div className="mt-auto pt-4 border-t border-cft-line text-[10px] text-cft-muted font-display tracking-widest uppercase leading-relaxed">
-        <div>Concrete Floor Tek</div>
-        <div className="text-cft-muted/70">Bolton, Ontario</div>
+      <div className="mt-4 px-2">
+        <div className="text-[10px] font-display font-bold tracking-[0.25em] uppercase text-cft-muted mb-2">Connected</div>
+        <div className="space-y-1.5">
+          <SourcePill icon="calendar" label="Google Calendar" />
+          <SourcePill icon="book"     label="QuickBooks" />
+        </div>
+      </div>
+
+      <div className="mt-auto pt-4 border-t hairline px-2">
+        <div className="flex items-center gap-2">
+          <div className="w-7 h-7 rounded-md bg-gradient-to-br from-cft-orange to-cft-orange2 grid place-items-center text-white font-display font-black text-[10px]">RS</div>
+          <div className="leading-tight">
+            <div className="text-[11px] font-display font-semibold text-cft-text">Randy Simpson</div>
+            <div className="text-[9px] font-display tracking-widest uppercase text-cft-muted">Project Manager</div>
+          </div>
+        </div>
       </div>
     </aside>
+  );
+}
+
+function SourcePill({ icon, label }) {
+  return (
+    <div className="flex items-center gap-2 px-2 py-1.5 rounded-md bg-white/5 border hairline">
+      <Icon name={icon} className="w-3.5 h-3.5 text-cft-muted" />
+      <span className="text-[10px] font-display font-semibold tracking-widest uppercase text-cft-muted2 flex-1">{label}</span>
+      <span className="w-1.5 h-1.5 rounded-full bg-cft-success pulse-dot" />
+    </div>
   );
 }
 
@@ -325,73 +399,110 @@ function Sidebar({ view, setView, onAddJob }) {
 function BoardView({ jobs, crews, weekDays, scale, setScale, weekOffset, setWeekOffset, onSelect, onMove, onAddJob }) {
   const [dayIndex, setDayIndex] = useState(0);
   const visibleDays = scale === 'day' ? [weekDays[dayIndex]] : weekDays;
+  const todayIso = isoDay(TODAY);
+
+  const weekJobs = jobs.filter((j) => new Date(j.date) >= weekDays[0] && new Date(j.date) <= weekDays[5]);
+  const weekSf   = weekJobs.reduce((a, j) => a + j.sqft, 0);
+  const weekVal  = weekJobs.reduce((a, j) => a + j.quotedPrice, 0);
 
   return (
-    <div className="p-5">
-      <div className="flex items-center justify-between mb-4">
+    <div className="p-6 max-w-[1600px] mx-auto">
+      {/* Header */}
+      <div className="flex items-end justify-between mb-5">
         <div>
-          <div className="font-display font-bold text-3xl tracking-wide uppercase">Crew Board</div>
-          <div className="text-sm text-cft-muted">{fmtLong(weekDays[0])} → {fmtLong(weekDays[weekDays.length - 1])}</div>
+          <div className="flex items-center gap-2 text-[10px] font-display font-bold tracking-[0.3em] uppercase text-cft-orange mb-1">
+            <span className="w-6 h-px bg-cft-orange" />
+            <span>Scheduling</span>
+          </div>
+          <div className="font-display font-black text-[2.6rem] leading-none tracking-tight">Crew Board</div>
+          <div className="text-sm text-cft-muted2 mt-1.5">{fmtLong(weekDays[0])} → {fmtLong(weekDays[5])}</div>
         </div>
 
         <div className="flex items-center gap-2">
-          <div className="flex rounded-md border border-cft-line overflow-hidden">
-            <button onClick={() => setScale('week')} className={`px-3 py-1.5 text-[11px] font-display font-bold tracking-widest uppercase ${scale === 'week' ? 'bg-cft-orange text-white' : 'text-cft-muted hover:text-cft-text'}`}>Week</button>
-            <button onClick={() => setScale('day')}  className={`px-3 py-1.5 text-[11px] font-display font-bold tracking-widest uppercase ${scale === 'day'  ? 'bg-cft-orange text-white' : 'text-cft-muted hover:text-cft-text'}`}>Day</button>
-          </div>
-
-          {scale === 'day' && (
-            <div className="flex items-center gap-1 text-cft-muted">
-              <button onClick={() => setDayIndex(Math.max(0, dayIndex - 1))} className="px-2 py-1 hover:text-cft-text">◀</button>
-              <div className="font-display font-semibold uppercase tracking-widest text-xs text-cft-text px-2">
-                {DAY_LABELS[dayIndex]} • {fmtShort(weekDays[dayIndex])}
-              </div>
-              <button onClick={() => setDayIndex(Math.min(5, dayIndex + 1))} className="px-2 py-1 hover:text-cft-text">▶</button>
-            </div>
-          )}
-
-          <div className="flex items-center gap-1 ml-2 text-cft-muted">
-            <button onClick={() => setWeekOffset(weekOffset - 1)} className="px-2 py-1 hover:text-cft-text">◀</button>
-            <button onClick={() => setWeekOffset(0)} className="px-3 py-1 text-[11px] font-display font-bold tracking-widest uppercase border border-cft-line rounded hover:text-cft-text">This Week</button>
-            <button onClick={() => setWeekOffset(weekOffset + 1)} className="px-2 py-1 hover:text-cft-text">▶</button>
-          </div>
+          <MiniStat label="Jobs"     value={weekJobs.length} />
+          <MiniStat label="Sq Ft"    value={weekSf.toLocaleString()} />
+          <MiniStat label="Pipeline" value={'$' + (weekVal / 1000).toFixed(0) + 'k'} accent />
         </div>
       </div>
 
-      <div className="rounded-lg border border-cft-line bg-cft-surface/40 overflow-hidden">
-        <div className="grid" style={{ gridTemplateColumns: `220px repeat(${visibleDays.length}, minmax(0, 1fr))` }}>
-          <div className="px-4 py-3 border-b border-r border-cft-line bg-cft-surface/60">
-            <div className="font-display font-bold text-xs tracking-widest uppercase text-cft-muted">Crew</div>
+      {/* Controls bar */}
+      <div className="flex items-center justify-between mb-4 px-1">
+        <div className="flex items-center gap-2">
+          <div className="flex rounded-lg border hairline bg-white/5 overflow-hidden p-0.5">
+            <SegBtn active={scale === 'week'} onClick={() => setScale('week')}>Week</SegBtn>
+            <SegBtn active={scale === 'day'}  onClick={() => setScale('day')}>Day</SegBtn>
           </div>
-          {visibleDays.map((d, i) => (
-            <div key={i} className="px-3 py-3 border-b border-cft-line bg-cft-surface/60">
-              <div className="font-display font-bold text-xs tracking-widest uppercase text-cft-muted">
-                {DAY_LABELS[scale === 'day' ? dayIndex : i]}
-              </div>
-              <div className="text-cft-text text-sm">{fmtShort(d)}</div>
-            </div>
-          ))}
 
-          {crews.map((crew) => (
+          {scale === 'day' && (
+            <div className="flex items-center gap-1 text-cft-muted bg-white/5 rounded-lg border hairline px-1">
+              <IconBtn onClick={() => setDayIndex(Math.max(0, dayIndex - 1))} icon="chevronL" />
+              <div className="font-display font-bold uppercase tracking-widest text-[11px] text-cft-text px-2">
+                {DAY_LABELS[dayIndex]} · {fmtShort(weekDays[dayIndex])}
+              </div>
+              <IconBtn onClick={() => setDayIndex(Math.min(5, dayIndex + 1))} icon="chevronR" />
+            </div>
+          )}
+        </div>
+
+        <div className="flex items-center gap-1 bg-white/5 rounded-lg border hairline px-1">
+          <IconBtn onClick={() => setWeekOffset(weekOffset - 1)} icon="chevronL" />
+          <button onClick={() => setWeekOffset(0)} className="px-3 py-1.5 text-[11px] font-display font-bold tracking-widest uppercase hover:text-cft-orange text-cft-muted2">This Week</button>
+          <IconBtn onClick={() => setWeekOffset(weekOffset + 1)} icon="chevronR" />
+        </div>
+      </div>
+
+      {/* Board */}
+      <div className="rounded-2xl glass overflow-hidden card">
+        <div className="grid" style={{ gridTemplateColumns: `240px repeat(${visibleDays.length}, minmax(0, 1fr))` }}>
+          {/* Corner */}
+          <div className="px-4 py-3.5 border-b border-r hairline bg-white/5">
+            <div className="font-display font-bold text-[10px] tracking-[0.25em] uppercase text-cft-muted">Crew</div>
+          </div>
+          {/* Day headers */}
+          {visibleDays.map((d, i) => {
+            const isToday = isoDay(d) === todayIso;
+            return (
+              <div key={i} className={'px-3 py-3.5 border-b hairline ' + (isToday ? 'bg-cft-orange/10' : 'bg-white/5')}>
+                <div className={'flex items-center justify-between'}>
+                  <div className="font-display font-bold text-[10px] tracking-[0.25em] uppercase text-cft-muted">
+                    {DAY_LABELS[scale === 'day' ? dayIndex : i]}
+                  </div>
+                  {isToday && <span className="text-[9px] font-display font-bold tracking-widest uppercase text-cft-orange px-1.5 py-0.5 rounded bg-cft-orange/20">Today</span>}
+                </div>
+                <div className={'text-[15px] mt-0.5 font-display font-semibold ' + (isToday ? 'text-cft-orange' : 'text-cft-text')}>{fmtShort(d)}</div>
+              </div>
+            );
+          })}
+
+          {/* Rows */}
+          {crews.map((crew, ci) => (
             <React.Fragment key={crew.id}>
-              <div className="px-4 py-3 border-r border-cft-line border-b border-cft-line bg-cft-surface/30">
-                <div className="font-display font-bold text-base text-cft-text tracking-wide">{crew.name}</div>
-                <div className="text-xs text-cft-muted">{crew.members}</div>
-                <div className="text-[10px] text-cft-orange/80 font-display tracking-widest uppercase mt-0.5">{crew.specialty}</div>
+              <div className={'px-4 py-3.5 border-r hairline ' + (ci < crews.length - 1 ? 'border-b' : '')}>
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 rounded-md bg-gradient-to-br from-white/10 to-white/5 border hairline grid place-items-center font-display font-black text-cft-orange text-sm">{crew.name.slice(-1)}</div>
+                  <div className="min-w-0">
+                    <div className="font-display font-bold text-[14px] text-cft-text tracking-wide leading-tight">{crew.name}</div>
+                    <div className="text-[11px] text-cft-muted2 truncate">{crew.members}</div>
+                  </div>
+                </div>
+                <div className="text-[9px] text-cft-orange/80 font-display tracking-[0.2em] uppercase mt-1.5 truncate">{crew.specialty}</div>
               </div>
 
               {visibleDays.map((d, i) => {
                 const dayIso = isoDay(d);
                 const cellJobs = jobs.filter((j) => j.crewId === crew.id && j.date === dayIso);
+                const isToday = dayIso === todayIso;
                 return (
                   <DropCell
                     key={crew.id + '-' + i}
                     crewId={crew.id}
                     date={dayIso}
+                    isToday={isToday}
+                    isLast={ci === crews.length - 1}
                     onDropJob={onMove}
                   >
                     {cellJobs.length === 0 ? (
-                      <div className="h-full min-h-[88px] flex items-center justify-center text-cft-muted/40 text-xs italic">— available —</div>
+                      <div className="h-full min-h-[96px] flex items-center justify-center text-cft-muted/30 text-[11px] uppercase tracking-widest font-display">— available —</div>
                     ) : (
                       cellJobs.map((job) => (
                         <JobCard key={job.id} job={job} onClick={() => onSelect(job.id)} />
@@ -405,24 +516,56 @@ function BoardView({ jobs, crews, weekDays, scale, setScale, weekOffset, setWeek
         </div>
       </div>
 
-      <div className="mt-4 flex items-center gap-4 text-[11px] font-display tracking-widest uppercase text-cft-muted">
-        {Object.entries(STATUS_META).map(([k, m]) => (
-          <div key={k} className="flex items-center gap-1.5">
-            <span className={`w-2 h-2 rounded-full ${m.dot}`} />
-            <span>{k}</span>
-          </div>
-        ))}
+      {/* Legend */}
+      <div className="mt-4 flex items-center justify-between text-[11px] font-display tracking-[0.2em] uppercase text-cft-muted px-1">
+        <div className="flex items-center gap-5">
+          {Object.entries(STATUS_META).map(([k, m]) => (
+            <div key={k} className="flex items-center gap-1.5">
+              <span className={`w-2 h-2 rounded-full ${m.dot}`} />
+              <span>{k}</span>
+            </div>
+          ))}
+        </div>
+        <div className="flex items-center gap-1.5 text-cft-muted">
+          <Icon name="arrows" className="w-3.5 h-3.5 text-cft-orange" />
+          <span>Drag any job card to reschedule</span>
+        </div>
       </div>
     </div>
   );
 }
 
-function DropCell({ crewId, date, children, onDropJob }) {
+function SegBtn({ active, onClick, children }) {
+  return (
+    <button
+      onClick={onClick}
+      className={'px-3 py-1.5 text-[11px] font-display font-bold tracking-widest uppercase rounded-md transition ' +
+        (active ? 'bg-cft-orange text-white shadow-glow-orange' : 'text-cft-muted hover:text-cft-text')}
+    >{children}</button>
+  );
+}
+function IconBtn({ onClick, icon }) {
+  return (
+    <button onClick={onClick} className="px-1.5 py-1.5 rounded-md hover:bg-white/5 text-cft-muted hover:text-cft-text">
+      <Icon name={icon} className="w-3.5 h-3.5" />
+    </button>
+  );
+}
+function MiniStat({ label, value, accent }) {
+  return (
+    <div className="px-3.5 py-2 rounded-lg bg-white/5 border hairline">
+      <div className="text-[9px] font-display font-bold tracking-[0.25em] uppercase text-cft-muted">{label}</div>
+      <div className={'font-display font-bold text-base num ' + (accent ? 'text-cft-orange' : 'text-cft-text')}>{value}</div>
+    </div>
+  );
+}
+
+function DropCell({ crewId, date, isToday, isLast, children, onDropJob }) {
   const ref = useRef(null);
   return (
     <div
       ref={ref}
-      className="min-h-[100px] p-2 border-r border-b border-cft-line space-y-2 transition"
+      className={'min-h-[112px] p-2 border-r hairline space-y-2 transition ' + (isLast ? '' : 'border-b ') + (isToday ? 'bg-cft-orange/[0.025]' : '')}
       onDragOver={(e) => { e.preventDefault(); ref.current?.classList.add('drag-over'); }}
       onDragLeave={() => ref.current?.classList.remove('drag-over')}
       onDrop={(e) => {
@@ -449,19 +592,23 @@ function JobCard({ job, onClick }) {
       }}
       onDragEnd={(e) => e.currentTarget.classList.remove('dragging')}
       onClick={onClick}
-      className={`fade-in cursor-grab active:cursor-grabbing rounded-md border ${meta.border} ${meta.bg} hover:brightness-125 transition px-2.5 py-2 group`}
+      className="job-card fade-in relative cursor-grab active:cursor-grabbing rounded-lg bg-cft-surface2/80 hover:bg-cft-surface2 border hairline hover:border-white/20 hover:shadow-card pl-3 pr-2.5 py-2 overflow-hidden"
       title="Drag to reschedule"
     >
+      <span className={'accent-bar ' + meta.bar} />
       <div className="flex items-center justify-between gap-2">
-        <span className={`text-[9px] font-display font-bold tracking-widest uppercase ${meta.text}`}>
-          <span className={`inline-block w-1.5 h-1.5 rounded-full ${meta.dot} mr-1`} />
+        <div className={'flex items-center gap-1.5 text-[9px] font-display font-bold tracking-[0.2em] uppercase ' + meta.text}>
+          <span className={'w-1.5 h-1.5 rounded-full ' + meta.dot} />
           {job.status}
-        </span>
-        <span className="text-[10px] text-cft-muted font-mono">{job.sqft.toLocaleString()} sf</span>
+        </div>
+        <span className="text-[10px] text-cft-muted font-mono num">{job.sqft.toLocaleString()} sf</span>
       </div>
-      <div className="font-display font-bold text-sm leading-tight mt-1 text-cft-text">{job.name}</div>
-      <div className="text-[11px] text-cft-muted truncate">{job.address}</div>
-      <div className="text-[10px] text-cft-orange/80 mt-1 truncate">{job.productType}</div>
+      <div className="font-display font-bold text-[13px] leading-tight mt-1 text-cft-text truncate">{job.name}</div>
+      <div className="text-[11px] text-cft-muted2 truncate">{job.address}</div>
+      <div className="flex items-center justify-between mt-1.5">
+        <div className="text-[9px] text-cft-orange/90 font-display tracking-[0.15em] uppercase truncate">{job.productType}</div>
+        <div className="text-[10px] text-cft-muted font-mono num">${(job.quotedPrice / 1000).toFixed(1)}k</div>
+      </div>
     </div>
   );
 }
@@ -472,40 +619,65 @@ function JobCard({ job, onClick }) {
 
 function CalendarPanel({ jobs }) {
   const sorted = [...jobs].sort((a, b) => a.date.localeCompare(b.date));
+  const grouped = sorted.reduce((acc, j) => { (acc[j.date] = acc[j.date] || []).push(j); return acc; }, {});
   return (
-    <aside className="hidden lg:flex flex-col w-72 shrink-0 border-l border-cft-line bg-cft-surface/30">
-      <div className="px-4 py-3 border-b border-cft-line flex items-center justify-between">
-        <div>
-          <div className="font-display font-bold text-sm tracking-widest uppercase text-cft-text">Google Calendar</div>
-          <div className="text-[10px] text-cft-muted font-display tracking-widest uppercase">Live mirror</div>
+    <aside className="hidden lg:flex flex-col w-80 shrink-0 border-l hairline bg-cft-surface/20 relative">
+      <div className="px-4 py-3.5 border-b hairline flex items-center justify-between">
+        <div className="flex items-center gap-2.5">
+          <div className="w-8 h-8 rounded-md bg-gradient-to-br from-cft-orange/20 to-cft-orange/0 border border-cft-orange/30 grid place-items-center text-cft-orange">
+            <Icon name="calendar" className="w-4 h-4" />
+          </div>
+          <div>
+            <div className="font-display font-bold text-[13px] tracking-widest uppercase text-cft-text">Google Calendar</div>
+            <div className="text-[9px] text-cft-muted font-display tracking-[0.2em] uppercase">Live mirror · this week</div>
+          </div>
         </div>
-        <div className="flex items-center gap-1.5">
-          <span className="w-2 h-2 rounded-full bg-cft-success pulse-dot" />
-          <span className="text-[10px] font-display font-bold tracking-widest uppercase text-cft-success">Synced</span>
+        <div className="flex items-center gap-1.5 px-2 py-1 rounded-full bg-cft-success/10 border border-cft-success/30">
+          <span className="w-1.5 h-1.5 rounded-full bg-cft-success pulse-dot" />
+          <span className="text-[9px] font-display font-bold tracking-widest uppercase text-cft-success">Synced</span>
         </div>
       </div>
 
-      <div className="flex-1 overflow-auto scrollbar-thin p-3 space-y-2">
-        {sorted.length === 0 && <div className="text-cft-muted text-xs italic">No events this week.</div>}
-        {sorted.map((job) => {
-          const crew = CREWS.find((c) => c.id === job.crewId);
-          return (
-            <div key={job.id} className="rounded-md border border-cft-line bg-cft-bg/70 p-2.5 fade-in">
-              <div className="flex items-center justify-between">
-                <div className="text-[10px] font-display tracking-widest uppercase text-cft-orange">{dayName(job.date)} · {fmtShort(job.date)}</div>
-                <div className="text-[10px] text-cft-success font-display tracking-widest uppercase">✓ Synced</div>
-              </div>
-              <div className="font-display font-bold text-sm mt-0.5 leading-tight">{job.name}</div>
-              <div className="text-[11px] text-cft-muted">{crew?.name} • {crew?.members}</div>
-              <div className="text-[11px] text-cft-muted truncate">{job.address}</div>
-              <div className="text-[10px] text-cft-muted/70 mt-1 font-mono">07:00 – 16:30 • All-day block</div>
+      <div className="flex-1 overflow-auto scrollbar-thin p-3 space-y-3">
+        {sorted.length === 0 && <div className="text-cft-muted text-xs italic px-1 mt-2">No events this week.</div>}
+        {Object.keys(grouped).sort().map((d) => (
+          <div key={d}>
+            <div className="flex items-center gap-2 mb-1.5 px-1">
+              <div className="text-[10px] font-display font-bold tracking-[0.25em] uppercase text-cft-orange">{dayName(d)}</div>
+              <div className="text-[10px] text-cft-muted font-mono num">{fmtShort(d)}</div>
+              <div className="flex-1 h-px bg-white/5" />
+              <div className="text-[9px] text-cft-muted font-mono num">{grouped[d].length} event{grouped[d].length > 1 ? 's' : ''}</div>
             </div>
-          );
-        })}
+            <div className="space-y-1.5">
+              {grouped[d].map((job) => {
+                const crew = CREWS.find((c) => c.id === job.crewId);
+                const meta = STATUS_META[job.status];
+                return (
+                  <div key={job.id} className="lift relative rounded-lg bg-white/5 border hairline hover:border-white/20 px-3 py-2.5 fade-in overflow-hidden">
+                    <span className={'accent-bar ' + meta.bar} />
+                    <div className="flex items-center justify-between gap-2 mb-0.5">
+                      <div className="font-display font-bold text-[13px] leading-tight text-cft-text truncate">{job.name}</div>
+                      <Icon name="check" className="w-3 h-3 text-cft-success shrink-0" />
+                    </div>
+                    <div className="text-[11px] text-cft-muted2 truncate">{crew?.name} · {crew?.members}</div>
+                    <div className="text-[10px] text-cft-muted truncate">{job.address}</div>
+                    <div className="flex items-center justify-between mt-1.5 pt-1.5 border-t border-white/5">
+                      <div className="text-[9px] text-cft-muted font-mono num">07:00 – 16:30</div>
+                      <div className="text-[9px] text-cft-muted2 font-display tracking-widest uppercase">All-day block</div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        ))}
       </div>
 
-      <div className="px-3 py-2.5 border-t border-cft-line text-[10px] text-cft-muted font-mono">
-        POST /calendar/v3/events → 200 OK
+      <div className="px-3 py-2.5 border-t hairline">
+        <div className="text-[9px] text-cft-muted/70 font-mono flex items-center gap-1.5">
+          <span className="w-1.5 h-1.5 rounded-full bg-cft-success" />
+          <span>POST /calendar/v3/events → 200 OK</span>
+        </div>
       </div>
     </aside>
   );
@@ -526,27 +698,36 @@ function FinancialsView({ jobs, weekStart, onSelect, pushToast }) {
   const completedCount = allCompleted.length;
 
   return (
-    <div className="p-5">
-      <div className="flex items-center justify-between mb-4">
+    <div className="p-6 max-w-[1600px] mx-auto">
+      <div className="flex items-end justify-between mb-5">
         <div>
-          <div className="font-display font-bold text-3xl tracking-wide uppercase">Financials</div>
-          <div className="text-sm text-cft-muted">Job costing • week of {fmtShort(weekStart)}</div>
+          <div className="flex items-center gap-2 text-[10px] font-display font-bold tracking-[0.3em] uppercase text-cft-orange mb-1">
+            <span className="w-6 h-px bg-cft-orange" />
+            <span>Financials</span>
+          </div>
+          <div className="font-display font-black text-[2.6rem] leading-none tracking-tight">Job Costing</div>
+          <div className="text-sm text-cft-muted2 mt-1.5">Week of {fmtShort(weekStart)} · pulled from QuickBooks</div>
         </div>
-        <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-cft-bg border border-cft-line">
-          <span className="w-2 h-2 rounded-full bg-cft-success pulse-dot" />
-          <span className="text-[10px] font-display font-bold tracking-widest uppercase text-cft-muted">Connected to QuickBooks Online</span>
+        <div className="flex items-center gap-2 px-3.5 py-2 rounded-lg bg-white/5 border hairline">
+          <Icon name="book" className="w-4 h-4 text-cft-success" />
+          <div>
+            <div className="text-[9px] font-display font-bold tracking-[0.25em] uppercase text-cft-muted">QuickBooks Online</div>
+            <div className="text-[11px] text-cft-success font-display font-semibold flex items-center gap-1">
+              <span className="w-1.5 h-1.5 rounded-full bg-cft-success pulse-dot" /> Connected
+            </div>
+          </div>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-3 mb-5">
-        <StatCard label="Total Revenue" value={money(sumRevenue)} accent="text-cft-text" sub="This week" />
-        <StatCard label="Total Costs"   value={money(sumCost)}    accent="text-cft-warning" sub="Materials + labor + equip" />
-        <StatCard label="Gross Margin"  value={pct(margin)}       accent="text-cft-success" sub={money(sumRevenue - sumCost) + ' profit'} />
-        <StatCard label="Jobs Completed" value={completedCount}   accent="text-cft-orange" sub="Lifetime in system" />
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-3 mb-6">
+        <StatCard label="Revenue"      value={money(sumRevenue)} accent="text-cft-text"    sub="Quoted this week"        glow="from-cft-orange/10" />
+        <StatCard label="Total Costs"  value={money(sumCost)}    accent="text-cft-warning" sub="Materials + labor + equip" glow="from-cft-warning/10" />
+        <StatCard label="Gross Margin" value={pct(margin)}       accent="text-cft-success" sub={money(sumRevenue - sumCost) + ' profit'} glow="from-cft-success/10" badge={pct(margin)} />
+        <StatCard label="Completed"    value={completedCount}    accent="text-cft-orange"  sub="Lifetime in system"      glow="from-cft-orange/10" />
       </div>
 
-      <div className="rounded-lg border border-cft-line bg-cft-surface/40 overflow-hidden">
-        <div className="grid grid-cols-12 px-4 py-3 bg-cft-surface/60 border-b border-cft-line text-[11px] font-display font-bold tracking-widest uppercase text-cft-muted">
+      <div className="rounded-2xl glass overflow-hidden card">
+        <div className="grid grid-cols-12 px-5 py-3 bg-white/5 border-b hairline text-[10px] font-display font-bold tracking-[0.25em] uppercase text-cft-muted">
           <div className="col-span-4">Job</div>
           <div className="col-span-1 text-right">SF</div>
           <div className="col-span-2 text-right">Materials</div>
@@ -557,27 +738,31 @@ function FinancialsView({ jobs, weekStart, onSelect, pushToast }) {
           <div className="col-span-1 text-right">Action</div>
         </div>
 
-        {jobs.map((j) => {
+        {jobs.map((j, idx) => {
           const c = jobCosts(j);
           const marginColor = c.margin >= 0.30 ? 'text-cft-success' : c.margin >= 0.20 ? 'text-cft-warning' : 'text-cft-danger';
+          const meta = STATUS_META[j.status];
           return (
-            <div key={j.id} className="grid grid-cols-12 px-4 py-3 border-b border-cft-line items-center hover:bg-cft-surface/50 transition">
-              <div className="col-span-4 cursor-pointer" onClick={() => onSelect(j.id)}>
-                <div className="font-display font-semibold text-cft-text">{j.name}</div>
-                <div className="text-[11px] text-cft-muted truncate">{j.address}</div>
+            <div key={j.id} className={'grid grid-cols-12 px-5 py-3.5 items-center hover:bg-white/5 transition group relative ' + (idx < jobs.length - 1 ? 'border-b hairline' : '')}>
+              <div className="col-span-4 cursor-pointer flex items-center gap-2.5" onClick={() => onSelect(j.id)}>
+                <span className={'w-1 h-8 rounded-full ' + meta.bar} />
+                <div className="min-w-0">
+                  <div className="font-display font-semibold text-[14px] text-cft-text group-hover:text-cft-orange transition">{j.name}</div>
+                  <div className="text-[11px] text-cft-muted2 truncate">{j.address}</div>
+                </div>
               </div>
-              <div className="col-span-1 text-right text-cft-muted font-mono text-xs">{j.sqft.toLocaleString()}</div>
-              <div className="col-span-2 text-right font-mono text-sm">{money(c.materials)}</div>
-              <div className="col-span-1 text-right font-mono text-sm">{money(c.labor)}</div>
-              <div className="col-span-1 text-right font-mono text-sm">{money(c.total)}</div>
-              <div className="col-span-1 text-right font-mono text-sm text-cft-text">{money(j.quotedPrice)}</div>
-              <div className={`col-span-1 text-right font-display font-bold ${marginColor}`}>{pct(c.margin)}</div>
+              <div className="col-span-1 text-right text-cft-muted2 font-mono text-xs num">{j.sqft.toLocaleString()}</div>
+              <div className="col-span-2 text-right font-mono text-sm num text-cft-text">{money(c.materials)}</div>
+              <div className="col-span-1 text-right font-mono text-sm num text-cft-text">{money(c.labor)}</div>
+              <div className="col-span-1 text-right font-mono text-sm num text-cft-text">{money(c.total)}</div>
+              <div className="col-span-1 text-right font-mono text-sm num text-cft-text">{money(j.quotedPrice)}</div>
+              <div className={`col-span-1 text-right font-display font-bold text-[15px] num ${marginColor}`}>{pct(c.margin)}</div>
               <div className="col-span-1 text-right">
                 <button
                   onClick={() => pushToast(`Invoice created in QuickBooks for ${j.name}`)}
-                  className="text-[10px] font-display font-bold tracking-widest uppercase px-2 py-1 rounded border border-cft-orange/50 text-cft-orange hover:bg-cft-orange/10"
+                  className="lift text-[10px] font-display font-bold tracking-widest uppercase px-2.5 py-1.5 rounded-md border border-cft-orange/40 text-cft-orange hover:bg-cft-orange/10 hover:border-cft-orange/70"
                 >
-                  Push to QBO
+                  Push QBO
                 </button>
               </div>
             </div>
@@ -588,12 +773,16 @@ function FinancialsView({ jobs, weekStart, onSelect, pushToast }) {
   );
 }
 
-function StatCard({ label, value, accent = 'text-cft-text', sub }) {
+function StatCard({ label, value, accent = 'text-cft-text', sub, glow = 'from-white/5', badge }) {
   return (
-    <div className="rounded-lg border border-cft-line bg-cft-surface/40 p-4">
-      <div className="text-[10px] font-display font-bold tracking-widest uppercase text-cft-muted">{label}</div>
-      <div className={`font-display font-black text-3xl mt-1 ${accent}`}>{value}</div>
-      {sub && <div className="text-[11px] text-cft-muted mt-0.5">{sub}</div>}
+    <div className="relative rounded-2xl glass card overflow-hidden p-5 lift">
+      <div className={'absolute inset-x-0 -top-12 h-24 bg-gradient-to-b ' + glow + ' to-transparent pointer-events-none'} />
+      <div className="relative flex items-center justify-between">
+        <div className="text-[10px] font-display font-bold tracking-[0.25em] uppercase text-cft-muted">{label}</div>
+        {badge && <div className={'text-[10px] font-display font-bold px-2 py-0.5 rounded-full bg-white/5 ' + accent}>{badge}</div>}
+      </div>
+      <div className={`relative font-display font-black text-4xl mt-2 num ${accent}`}>{value}</div>
+      {sub && <div className="relative text-[11px] text-cft-muted2 mt-1">{sub}</div>}
     </div>
   );
 }
@@ -605,37 +794,44 @@ function StatCard({ label, value, accent = 'text-cft-text', sub }) {
 function JobDetailModal({ job, onClose, onUpdate, onPushQBO }) {
   const crew = CREWS.find((c) => c.id === job.crewId);
   const c = jobCosts(job);
+  const meta = STATUS_META[job.status];
 
   return (
     <Modal onClose={onClose} maxWidth="max-w-2xl">
-      <div className="flex items-start justify-between gap-4 mb-4">
-        <div>
-          <div className="text-[10px] font-display font-bold tracking-widest uppercase text-cft-muted">{job.id}</div>
-          <div className="font-display font-bold text-2xl tracking-wide">{job.name}</div>
-          <div className="text-cft-muted text-sm">{job.address}</div>
+      <div className="flex items-start justify-between gap-4 mb-5">
+        <div className="min-w-0">
+          <div className="flex items-center gap-2 mb-1">
+            <span className={'inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-white/5 border hairline text-[10px] font-display font-bold tracking-widest uppercase ' + meta.text}>
+              <span className={'w-1.5 h-1.5 rounded-full ' + meta.dot} />
+              {job.status}
+            </span>
+            <div className="text-[10px] font-display font-bold tracking-widest uppercase text-cft-muted font-mono">{job.id}</div>
+          </div>
+          <div className="font-display font-black text-2xl tracking-tight leading-tight">{job.name}</div>
+          <div className="text-cft-muted2 text-sm flex items-center gap-1.5 mt-1"><Icon name="map" className="w-3.5 h-3.5" />{job.address}</div>
         </div>
         <select
           value={job.status}
           onChange={(e) => onUpdate({ status: e.target.value })}
-          className={`bg-cft-bg border ${STATUS_META[job.status].border} ${STATUS_META[job.status].text} font-display font-bold text-xs tracking-widest uppercase px-3 py-1.5 rounded`}
+          className={'bg-white/5 border hairline text-cft-text font-display font-bold text-xs tracking-widest uppercase px-3 py-2 rounded-lg cursor-pointer focus:outline-none focus:border-cft-orange/60'}
         >
-          {Object.keys(STATUS_META).map((s) => <option key={s} value={s} className="bg-cft-bg text-cft-text">{s}</option>)}
+          {Object.keys(STATUS_META).map((s) => <option key={s} value={s} className="bg-cft-surface text-cft-text">{s}</option>)}
         </select>
       </div>
 
-      <div className="grid grid-cols-2 gap-3 mb-4">
+      <div className="grid grid-cols-2 gap-2.5 mb-4">
         <Field label="Crew">{crew?.name} — {crew?.members}</Field>
         <Field label="Scheduled">{fmtLong(job.date)}</Field>
         <Field label="Product">{job.productType}</Field>
-        <Field label="Square Feet">{job.sqft.toLocaleString()} sf</Field>
+        <Field label="Square Feet"><span className="num">{job.sqft.toLocaleString()}</span> sf</Field>
       </div>
 
-      <div className="rounded border border-cft-line p-3 mb-4">
-        <div className="font-display font-bold text-xs tracking-widest uppercase text-cft-muted mb-2">Scope / Notes</div>
-        <div className="text-sm text-cft-text">{job.scope}</div>
+      <div className="rounded-xl border hairline bg-white/5 p-3.5 mb-4">
+        <div className="font-display font-bold text-[10px] tracking-[0.25em] uppercase text-cft-muted mb-1.5">Scope / Notes</div>
+        <div className="text-sm text-cft-text leading-relaxed">{job.scope}</div>
       </div>
 
-      <div className="grid grid-cols-5 gap-2 mb-4">
+      <div className="grid grid-cols-5 gap-2 mb-5">
         <Stat small label="Materials" value={money(c.materials)} />
         <Stat small label="Labor"     value={money(c.labor)} />
         <Stat small label="Equipment" value={money(c.equipment)} />
@@ -644,10 +840,11 @@ function JobDetailModal({ job, onClose, onUpdate, onPushQBO }) {
       </div>
 
       <div className="flex items-center justify-end gap-2">
-        <button onClick={onPushQBO} className="px-3 py-2 rounded border border-cft-orange/50 text-cft-orange font-display font-bold text-xs tracking-widest uppercase hover:bg-cft-orange/10">
+        <button onClick={onPushQBO} className="lift px-3.5 py-2 rounded-lg border border-cft-orange/40 text-cft-orange font-display font-bold text-xs tracking-widest uppercase hover:bg-cft-orange/10 hover:border-cft-orange/70 flex items-center gap-1.5">
+          <Icon name="book" className="w-3.5 h-3.5" />
           Push to QuickBooks
         </button>
-        <button onClick={onClose} className="px-3 py-2 rounded bg-cft-orange text-white font-display font-bold text-xs tracking-widest uppercase hover:brightness-110">
+        <button onClick={onClose} className="ai-button lift px-4 py-2 rounded-lg text-white font-display font-bold text-xs tracking-widest uppercase">
           Done
         </button>
       </div>
@@ -657,17 +854,17 @@ function JobDetailModal({ job, onClose, onUpdate, onPushQBO }) {
 
 function Field({ label, children }) {
   return (
-    <div className="rounded border border-cft-line p-3">
-      <div className="text-[10px] font-display font-bold tracking-widest uppercase text-cft-muted">{label}</div>
+    <div className="rounded-xl border hairline bg-white/5 p-3">
+      <div className="text-[10px] font-display font-bold tracking-[0.25em] uppercase text-cft-muted">{label}</div>
       <div className="text-sm text-cft-text mt-0.5">{children}</div>
     </div>
   );
 }
 function Stat({ label, value, accent = 'text-cft-text', small }) {
   return (
-    <div className="rounded border border-cft-line p-2.5">
-      <div className="text-[9px] font-display font-bold tracking-widest uppercase text-cft-muted">{label}</div>
-      <div className={`font-display font-bold ${small ? 'text-base' : 'text-xl'} ${accent} mt-0.5`}>{value}</div>
+    <div className="rounded-xl border hairline bg-white/5 p-2.5 text-center">
+      <div className="text-[9px] font-display font-bold tracking-[0.2em] uppercase text-cft-muted">{label}</div>
+      <div className={`font-display font-bold ${small ? 'text-base' : 'text-xl'} num ${accent} mt-0.5`}>{value}</div>
     </div>
   );
 }
@@ -702,9 +899,13 @@ function AddJobModal({ weekDays, onClose, onCreate }) {
 
   return (
     <Modal onClose={onClose} maxWidth="max-w-xl">
-      <div className="mb-4">
-        <div className="font-display font-bold text-2xl tracking-wide">Add Job</div>
-        <div className="text-cft-muted text-sm">Schedule a new pour</div>
+      <div className="mb-5">
+        <div className="flex items-center gap-2 text-[10px] font-display font-bold tracking-[0.3em] uppercase text-cft-orange mb-1">
+          <Icon name="plus" className="w-3.5 h-3.5" />
+          <span>New Pour</span>
+        </div>
+        <div className="font-display font-black text-2xl tracking-tight">Add Job</div>
+        <div className="text-cft-muted2 text-sm">Schedule a new pour and sync to Calendar + QuickBooks</div>
       </div>
 
       <form onSubmit={submit} className="space-y-3">
@@ -724,36 +925,36 @@ function AddJobModal({ weekDays, onClose, onCreate }) {
           <Input label="Quoted Price ($)" type="number" value={form.quotedPrice} onChange={(v) => update('quotedPrice', v)} />
           <Input label="Equipment ($)" type="number" value={form.equipment} onChange={(v) => update('equipment', v)} />
         </div>
-        <Textarea label="Scope / Notes" value={form.scope} onChange={(v) => update('scope', v)} placeholder="e.g. 4 units, 1.5&quot; pour, prep included" />
+        <Textarea label="Scope / Notes" value={form.scope} onChange={(v) => update('scope', v)} placeholder='e.g. 4 units, 1.5" pour, prep included' />
 
-        <div className="flex items-center justify-end gap-2 pt-2">
-          <button type="button" onClick={onClose} className="px-3 py-2 rounded border border-cft-line text-cft-muted font-display font-bold text-xs tracking-widest uppercase hover:text-cft-text">Cancel</button>
-          <button type="submit" className="px-3 py-2 rounded bg-cft-orange text-white font-display font-bold text-xs tracking-widest uppercase hover:brightness-110">Create Job</button>
+        <div className="flex items-center justify-end gap-2 pt-3">
+          <button type="button" onClick={onClose} className="lift px-3.5 py-2 rounded-lg border hairline text-cft-muted2 font-display font-bold text-xs tracking-widest uppercase hover:text-cft-text hover:border-white/20">Cancel</button>
+          <button type="submit" className="ai-button lift px-4 py-2 rounded-lg text-white font-display font-bold text-xs tracking-widest uppercase flex items-center gap-1.5">
+            <Icon name="plus" className="w-3.5 h-3.5" />
+            Create Job
+          </button>
         </div>
       </form>
     </Modal>
   );
 }
 
+const inputBase = "w-full bg-white/5 border hairline rounded-lg px-3 py-2.5 text-sm text-cft-text placeholder-cft-muted/60 focus:outline-none focus:border-cft-orange/60 focus:bg-white/10 transition";
+const labelBase = "text-[10px] font-display font-bold tracking-[0.25em] uppercase text-cft-muted mb-1.5";
+
 function Input({ label, value, onChange, type = 'text', placeholder }) {
   return (
     <label className="block">
-      <div className="text-[10px] font-display font-bold tracking-widest uppercase text-cft-muted mb-1">{label}</div>
-      <input
-        type={type}
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        placeholder={placeholder}
-        className="w-full bg-cft-bg border border-cft-line rounded px-3 py-2 text-sm text-cft-text focus:outline-none focus:border-cft-orange"
-      />
+      <div className={labelBase}>{label}</div>
+      <input type={type} value={value} onChange={(e) => onChange(e.target.value)} placeholder={placeholder} className={inputBase} />
     </label>
   );
 }
 function Select({ label, value, onChange, children }) {
   return (
     <label className="block">
-      <div className="text-[10px] font-display font-bold tracking-widest uppercase text-cft-muted mb-1">{label}</div>
-      <select value={value} onChange={(e) => onChange(e.target.value)} className="w-full bg-cft-bg border border-cft-line rounded px-3 py-2 text-sm text-cft-text focus:outline-none focus:border-cft-orange">
+      <div className={labelBase}>{label}</div>
+      <select value={value} onChange={(e) => onChange(e.target.value)} className={inputBase + ' cursor-pointer'}>
         {children}
       </select>
     </label>
@@ -762,14 +963,8 @@ function Select({ label, value, onChange, children }) {
 function Textarea({ label, value, onChange, placeholder }) {
   return (
     <label className="block">
-      <div className="text-[10px] font-display font-bold tracking-widest uppercase text-cft-muted mb-1">{label}</div>
-      <textarea
-        rows={3}
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        placeholder={placeholder}
-        className="w-full bg-cft-bg border border-cft-line rounded px-3 py-2 text-sm text-cft-text focus:outline-none focus:border-cft-orange"
-      />
+      <div className={labelBase}>{label}</div>
+      <textarea rows={3} value={value} onChange={(e) => onChange(e.target.value)} placeholder={placeholder} className={inputBase} />
     </label>
   );
 }
@@ -920,42 +1115,62 @@ function ChatPanel({ open, setOpen, jobs, crews, apiKey, weekStart, dispatch, ad
     return (
       <button
         onClick={() => setOpen(true)}
-        className="fixed bottom-16 right-4 z-10 px-4 py-2.5 rounded-full bg-cft-orange text-white font-display font-bold text-xs tracking-widest uppercase shadow-lg shadow-cft-orange/30 hover:brightness-110"
+        className="ai-button fixed bottom-20 right-5 z-30 px-5 py-3 rounded-full text-white font-display font-bold text-xs tracking-[0.2em] uppercase flex items-center gap-2 lift"
       >
-        AI Agent ●
+        <Icon name="sparkle" className="w-4 h-4" />
+        <span>Ask the Agent</span>
       </button>
     );
   }
 
   return (
-    <aside className="w-96 shrink-0 border-l border-cft-line bg-cft-surface/50 flex flex-col">
-      <div className="px-4 py-3 border-b border-cft-line flex items-center justify-between">
-        <div>
-          <div className="font-display font-bold text-sm tracking-widest uppercase text-cft-text">Operations Agent</div>
-          <div className="text-[10px] text-cft-muted font-display tracking-widest uppercase">
-            {apiKey ? `Claude • ${ANTHROPIC_MODEL}` : <span className="text-cft-warning cursor-pointer hover:underline" onClick={onOpenSettings}>Local mode — add API key</span>}
+    <aside className="w-[400px] shrink-0 border-l hairline glass flex flex-col relative">
+      {/* Header */}
+      <div className="px-4 py-3 border-b hairline flex items-center justify-between">
+        <div className="flex items-center gap-2.5">
+          <div className="relative w-9 h-9 rounded-lg ai-button grid place-items-center">
+            <Icon name="sparkle" className="w-4 h-4 text-white" />
+          </div>
+          <div className="leading-tight">
+            <div className="font-display font-bold text-[13px] tracking-widest uppercase text-cft-text">Operations Agent</div>
+            <div className="text-[9px] text-cft-muted font-display tracking-[0.2em] uppercase">
+              {apiKey ? (
+                <span className="text-cft-success">● Claude · {ANTHROPIC_MODEL}</span>
+              ) : (
+                <span className="text-cft-warning cursor-pointer hover:underline" onClick={onOpenSettings}>● Local mode — add API key</span>
+              )}
+            </div>
           </div>
         </div>
-        <button onClick={() => setOpen(false)} className="text-cft-muted hover:text-cft-text text-lg leading-none">×</button>
+        <button onClick={() => setOpen(false)} className="w-7 h-7 grid place-items-center rounded-md hover:bg-white/5 text-cft-muted hover:text-cft-text" title="Close">
+          <Icon name="close" className="w-4 h-4" />
+        </button>
       </div>
 
-      <div className="flex-1 overflow-auto scrollbar-thin p-3 space-y-3">
+      {/* Messages */}
+      <div className="flex-1 overflow-auto scrollbar-thin p-4 space-y-3">
         {messages.map((m, i) => (
-          <div key={i} className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-            <div className={`max-w-[85%] rounded-lg px-3 py-2 text-sm whitespace-pre-wrap fade-in ${
+          <div key={i} className={`flex gap-2 ${m.role === 'user' ? 'flex-row-reverse' : ''}`}>
+            <div className={'shrink-0 w-7 h-7 rounded-md grid place-items-center mt-0.5 ' + (m.role === 'user' ? 'bg-cft-orange/20 text-cft-orange' : 'bg-white/5 text-cft-muted2 border hairline')}>
+              {m.role === 'user' ? <span className="font-display font-black text-[10px]">RS</span> : <Icon name="sparkle" className="w-3.5 h-3.5" />}
+            </div>
+            <div className={`max-w-[82%] rounded-2xl px-3.5 py-2.5 text-[13px] leading-relaxed whitespace-pre-wrap fade-in ${
               m.role === 'user'
-                ? 'bg-cft-orange text-white'
-                : 'bg-cft-bg border border-cft-line text-cft-text'
+                ? 'bg-gradient-to-br from-cft-orange to-cft-orange2 text-white rounded-tr-sm shadow-glow-orange'
+                : 'bg-white/5 border hairline text-cft-text rounded-tl-sm'
             }`}>
               {m.text}
             </div>
           </div>
         ))}
         {busy && (
-          <div className="flex justify-start">
-            <div className="bg-cft-bg border border-cft-line rounded-lg px-3 py-2 text-sm text-cft-muted">
-              <span className="inline-block w-1.5 h-1.5 rounded-full bg-cft-orange pulse-dot mr-1" />
-              <span className="inline-block w-1.5 h-1.5 rounded-full bg-cft-orange pulse-dot mr-1" style={{ animationDelay: '0.2s' }} />
+          <div className="flex gap-2">
+            <div className="shrink-0 w-7 h-7 rounded-md grid place-items-center mt-0.5 bg-white/5 text-cft-muted2 border hairline">
+              <Icon name="sparkle" className="w-3.5 h-3.5" />
+            </div>
+            <div className="bg-white/5 border hairline rounded-2xl rounded-tl-sm px-3.5 py-3 text-sm text-cft-muted flex items-center gap-1">
+              <span className="inline-block w-1.5 h-1.5 rounded-full bg-cft-orange pulse-dot" />
+              <span className="inline-block w-1.5 h-1.5 rounded-full bg-cft-orange pulse-dot" style={{ animationDelay: '0.2s' }} />
               <span className="inline-block w-1.5 h-1.5 rounded-full bg-cft-orange pulse-dot" style={{ animationDelay: '0.4s' }} />
             </div>
           </div>
@@ -963,27 +1178,31 @@ function ChatPanel({ open, setOpen, jobs, crews, apiKey, weekStart, dispatch, ad
         <div ref={endRef} />
       </div>
 
-      <div className="px-3 pt-2 border-t border-cft-line">
-        <div className="flex flex-wrap gap-1.5 mb-2">
+      {/* Suggestions + input */}
+      <div className="px-3 pt-2 border-t hairline bg-white/5">
+        <div className="text-[9px] font-display font-bold tracking-[0.25em] uppercase text-cft-muted mb-2">Try</div>
+        <div className="flex flex-wrap gap-1.5 mb-3">
           {suggestions.map((s) => (
             <button
               key={s}
               onClick={() => send(s)}
-              className="text-[10px] font-display font-semibold tracking-widest uppercase px-2 py-1 rounded border border-cft-line text-cft-muted hover:text-cft-orange hover:border-cft-orange/60"
+              className="lift text-[10px] font-display font-semibold tracking-wider px-2.5 py-1.5 rounded-full border hairline text-cft-muted2 hover:text-cft-orange hover:border-cft-orange/50 hover:bg-cft-orange/5"
             >
               {s}
             </button>
           ))}
         </div>
-        <form onSubmit={(e) => { e.preventDefault(); send(); }} className="flex gap-2 pb-3">
-          <input
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            placeholder="Ask the agent…"
-            className="flex-1 bg-cft-bg border border-cft-line rounded px-3 py-2 text-sm text-cft-text focus:outline-none focus:border-cft-orange"
-          />
-          <button type="submit" disabled={busy} className="px-3 py-2 rounded bg-cft-orange text-white font-display font-bold text-xs tracking-widest uppercase hover:brightness-110 disabled:opacity-50">
-            Send
+        <form onSubmit={(e) => { e.preventDefault(); send(); }} className="flex gap-2 pb-3 items-center">
+          <div className="flex-1 relative">
+            <input
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              placeholder="Ask the agent…"
+              className="w-full bg-white/5 border hairline rounded-lg pl-3.5 pr-3 py-2.5 text-[13px] text-cft-text placeholder-cft-muted/70 focus:outline-none focus:border-cft-orange/60 focus:bg-white/5 transition"
+            />
+          </div>
+          <button type="submit" disabled={busy} className="ai-button w-10 h-10 rounded-lg grid place-items-center text-white hover:brightness-110 disabled:opacity-50 lift">
+            <Icon name="send" className="w-4 h-4" />
           </button>
         </form>
       </div>
@@ -1106,18 +1325,22 @@ function SettingsModal({ apiKey, setApiKey, onClose }) {
   const [draft, setDraft] = useState(apiKey);
   return (
     <Modal onClose={onClose} maxWidth="max-w-md">
-      <div className="font-display font-bold text-2xl tracking-wide">Settings</div>
-      <div className="text-cft-muted text-sm mb-4">Connect the AI agent to Claude.</div>
+      <div className="flex items-center gap-2 text-[10px] font-display font-bold tracking-[0.3em] uppercase text-cft-orange mb-1">
+        <Icon name="settings" className="w-3.5 h-3.5" />
+        <span>Settings</span>
+      </div>
+      <div className="font-display font-black text-2xl tracking-tight">AI Connection</div>
+      <div className="text-cft-muted2 text-sm mb-5">Connect the agent to Claude for live answers.</div>
 
       <Input label="Anthropic API Key" value={draft} onChange={setDraft} placeholder="sk-ant-..." />
-      <div className="text-[11px] text-cft-muted mt-2 leading-relaxed">
-        Stored locally in your browser for this demo only. Without a key, the agent runs in local mode
-        and still handles the standard demo queries.
+      <div className="text-[11px] text-cft-muted2 mt-2.5 leading-relaxed flex items-start gap-1.5">
+        <span className="text-cft-warning">⚠</span>
+        <span>Stored locally in your browser for this demo only. Without a key, the agent runs in local mode and still handles every demo query.</span>
       </div>
 
-      <div className="flex items-center justify-end gap-2 mt-4">
-        <button onClick={onClose} className="px-3 py-2 rounded border border-cft-line text-cft-muted font-display font-bold text-xs tracking-widest uppercase hover:text-cft-text">Cancel</button>
-        <button onClick={() => { setApiKey(draft); onClose(); }} className="px-3 py-2 rounded bg-cft-orange text-white font-display font-bold text-xs tracking-widest uppercase hover:brightness-110">Save</button>
+      <div className="flex items-center justify-end gap-2 mt-5">
+        <button onClick={onClose} className="lift px-3.5 py-2 rounded-lg border hairline text-cft-muted2 font-display font-bold text-xs tracking-widest uppercase hover:text-cft-text">Cancel</button>
+        <button onClick={() => { setApiKey(draft); onClose(); }} className="ai-button lift px-4 py-2 rounded-lg text-white font-display font-bold text-xs tracking-widest uppercase">Save</button>
       </div>
     </Modal>
   );
@@ -1135,8 +1358,11 @@ function Modal({ onClose, maxWidth = 'max-w-lg', children }) {
   }, [onClose]);
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm fade-in" onClick={onClose}>
-      <div onClick={(e) => e.stopPropagation()} className={`w-full ${maxWidth} bg-cft-surface border border-cft-line rounded-lg shadow-2xl p-6`}>
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-md fade-in" onClick={onClose}>
+      <div onClick={(e) => e.stopPropagation()} className={`w-full ${maxWidth} relative glass rounded-2xl card p-7`}>
+        <button onClick={onClose} className="absolute top-4 right-4 w-7 h-7 grid place-items-center rounded-md hover:bg-white/5 text-cft-muted hover:text-cft-text" title="Close">
+          <Icon name="close" className="w-4 h-4" />
+        </button>
         {children}
       </div>
     </div>
@@ -1145,10 +1371,11 @@ function Modal({ onClose, maxWidth = 'max-w-lg', children }) {
 
 function Toaster({ toasts }) {
   return (
-    <div className="fixed top-16 right-4 z-50 space-y-2">
+    <div className="fixed top-20 right-5 z-50 space-y-2">
       {toasts.map((t) => (
-        <div key={t.id} className="px-3 py-2 rounded border border-cft-success/50 bg-cft-success/10 text-cft-success text-sm font-display font-semibold tracking-wide fade-in shadow-lg">
-          ✓ {t.msg}
+        <div key={t.id} className="flex items-center gap-2 pl-3 pr-4 py-2.5 rounded-lg border border-cft-success/40 bg-cft-success/10 text-cft-success text-sm font-display font-semibold tracking-wide fade-in shadow-glow-soft backdrop-blur">
+          <span className="w-5 h-5 rounded-full bg-cft-success/20 grid place-items-center"><Icon name="check" className="w-3 h-3" /></span>
+          <span>{t.msg}</span>
         </div>
       ))}
     </div>

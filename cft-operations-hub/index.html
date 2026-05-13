@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
     rel="stylesheet"
   />
 
@@ -22,19 +22,30 @@
             cft: {
               navy:    '#1B2A4A',
               orange:  '#E8712B',
-              success: '#2ECC71',
-              warning: '#F39C12',
-              danger:  '#E74C3C',
-              bg:      '#0F1923',
-              surface: '#1A2736',
-              line:    '#243447',
+              orange2: '#FF8C42',
+              success: '#22C55E',
+              warning: '#F59E0B',
+              danger:  '#EF4444',
+              bg:      '#0A1018',
+              bg2:     '#0F1923',
+              surface: '#141F2E',
+              surface2:'#1A2736',
+              line:    '#1F2D40',
+              line2:   '#2A3B52',
               text:    '#E8ECF1',
               muted:   '#7B8FA3',
+              muted2:  '#94A8BC',
             },
           },
           fontFamily: {
             display: ['"Barlow Condensed"', 'sans-serif'],
             body:    ['"IBM Plex Sans"', 'sans-serif'],
+            mono:    ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+          },
+          boxShadow: {
+            'glow-orange': '0 0 40px -10px rgba(232,113,43,0.45)',
+            'glow-soft':   '0 8px 32px -8px rgba(0,0,0,0.5)',
+            'card':        '0 1px 0 rgba(255,255,255,0.04) inset, 0 12px 32px -12px rgba(0,0,0,0.6)',
           },
         },
       },
@@ -44,30 +55,109 @@
   <style>
     html, body, #root { height: 100%; }
     body {
-      background: #0F1923;
+      background:
+        radial-gradient(ellipse 80% 50% at 50% -10%, rgba(232,113,43,0.10), transparent 60%),
+        radial-gradient(ellipse 60% 40% at 100% 100%, rgba(27,42,74,0.45), transparent 60%),
+        linear-gradient(180deg, #0A1018 0%, #0B131C 100%);
+      background-attachment: fixed;
       color: #E8ECF1;
       font-family: 'IBM Plex Sans', sans-serif;
       -webkit-font-smoothing: antialiased;
+      font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
     }
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: radial-gradient(ellipse 70% 70% at 50% 30%, #000 30%, transparent 75%);
+      -webkit-mask-image: radial-gradient(ellipse 70% 70% at 50% 30%, #000 30%, transparent 75%);
+      z-index: 0;
+    }
+    #root { position: relative; z-index: 1; }
+
     .font-display { font-family: 'Barlow Condensed', sans-serif; letter-spacing: 0.02em; }
-    .scrollbar-thin::-webkit-scrollbar { width: 6px; height: 6px; }
-    .scrollbar-thin::-webkit-scrollbar-thumb { background: #243447; border-radius: 999px; }
+    .font-mono    { font-family: 'JetBrains Mono', ui-monospace, monospace; font-variant-numeric: tabular-nums; }
+    .num          { font-variant-numeric: tabular-nums; }
+
+    .glass {
+      background: linear-gradient(180deg, rgba(26,39,54,0.72) 0%, rgba(20,31,46,0.72) 100%);
+      backdrop-filter: blur(14px) saturate(140%);
+      -webkit-backdrop-filter: blur(14px) saturate(140%);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .glass-soft {
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+    .hairline { border-color: rgba(255,255,255,0.06); }
+
+    /* Scrollbars */
+    .scrollbar-thin::-webkit-scrollbar       { width: 8px; height: 8px; }
+    .scrollbar-thin::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); border-radius: 999px; }
+    .scrollbar-thin::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.16); }
     .scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
-    .fade-in { animation: fadeIn 0.25s ease-out; }
+
+    /* Animations */
+    .fade-in { animation: fadeIn 0.28s ease-out both; }
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(4px); }
-      to { opacity: 1; transform: translateY(0); }
+      to   { opacity: 1; transform: translateY(0); }
     }
     .pulse-dot { animation: pulseDot 1.8s ease-in-out infinite; }
     @keyframes pulseDot {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.4; }
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%      { opacity: 0.5; transform: scale(0.85); }
     }
+    .lift { transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease; }
+    .lift:hover { transform: translateY(-1px); }
+
+    .shimmer {
+      background: linear-gradient(110deg, transparent 30%, rgba(255,255,255,0.06) 50%, transparent 70%);
+      background-size: 200% 100%;
+      animation: shimmer 2.4s linear infinite;
+    }
+    @keyframes shimmer {
+      0%   { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+
+    /* Drag affordances */
     .drag-over {
-      background: rgba(232,113,43,0.10) !important;
-      box-shadow: inset 0 0 0 2px #E8712B;
+      background: linear-gradient(180deg, rgba(232,113,43,0.10), rgba(232,113,43,0.04)) !important;
+      box-shadow: inset 0 0 0 1.5px #E8712B, 0 0 0 4px rgba(232,113,43,0.10);
+      border-radius: 8px;
     }
-    .dragging { opacity: 0.45; }
+    .dragging { opacity: 0.4; transform: scale(0.98); }
+
+    /* Job card hover lift */
+    .job-card { transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease, background .15s ease; }
+    .job-card:hover { transform: translateY(-2px); }
+
+    /* Soft top hairline on cards */
+    .card { box-shadow: 0 1px 0 rgba(255,255,255,0.04) inset, 0 12px 32px -12px rgba(0,0,0,0.5); }
+
+    /* Animated gradient border (for AI button) */
+    .ai-button {
+      background: linear-gradient(135deg, #E8712B 0%, #FF8C42 50%, #E8712B 100%);
+      background-size: 200% 200%;
+      animation: gradMove 3.6s ease-in-out infinite;
+      box-shadow: 0 8px 24px -6px rgba(232,113,43,0.55), inset 0 1px 0 rgba(255,255,255,0.25);
+    }
+    @keyframes gradMove {
+      0%, 100% { background-position: 0% 50%; }
+      50%      { background-position: 100% 50%; }
+    }
+
+    /* Status accent bars */
+    .accent-bar { position: absolute; left: 0; top: 8px; bottom: 8px; width: 3px; border-radius: 999px; }
+
+    /* Selection */
+    ::selection { background: rgba(232,113,43,0.35); color: #fff; }
   </style>
 
   <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
