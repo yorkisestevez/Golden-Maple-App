@@ -778,7 +778,7 @@ function Textarea({ label, value, onChange, placeholder }) {
 // AI chat panel
 // =====================================================================
 
-const ANTHROPIC_MODEL = 'claude-sonnet-4-5';
+const ANTHROPIC_MODEL = 'claude-opus-4-6';
 
 function ChatPanel({ open, setOpen, jobs, crews, apiKey, weekStart, dispatch, addJob, moveJob, updateJob, pushToast, onOpenSettings }) {
   const [messages, setMessages] = useState([
