@@ -1,0 +1,854 @@
+page,format,group,name,variant,description,item_code,dimensions,unit,skid_size,price,trade_price,unit_price,splitting_fee,delivery,raw
+5,bulk,BULK AGGREGATE,3/4 Crusher Run,,,,,Tonne,,$27.60,$23.00,,,,3/4 Crusher Run Tonne $27.60 $23.00
+5,bulk,BULK AGGREGATE,3/4 Clear Stone,,,,,Tonne,,$37.80,$31.50,,,,3/4 Clear Stone Tonne $37.80 $31.50
+5,bulk,BULK AGGREGATE,"2"" Crusher Run (50mm)",,,,,Tonne,,$27.60,$23.00,,,,"2"" Crusher Run (50mm) Tonne $27.60 $23.00"
+5,bulk,BULK AGGREGATE,50mm Clear,,,,,Tonne,,$37.80,$31.50,,,,50mm Clear Tonne $37.80 $31.50
+5,bulk,BULK AGGREGATE,A-Gravel,,,,,Tonne,,$28.50,$23.75,,,,A-Gravel Tonne $28.50 $23.75
+5,bulk,BULK AGGREGATE,HPB (High Performance Bedding),,,,,Tonne,,$34.68,$28.90,,,,HPB (High Performance Bedding) Tonne $34.68 $28.90
+5,bulk,BULK AGGREGATE,Limestone Screenings,,,,,Tonne,,$24.00,$20.00,,,,Limestone Screenings Tonne $24.00 $20.00
+5,bulk,BULK AGGREGATE,Sand Fill,,,,,Tonne,,$18.78,$15.65,,,,Sand Fill Tonne $18.78 $15.65
+5,bulk,BULK AGGREGATE,Screened Sand,,,,,Tonne,,$19.50,$16.25,,,,Screened Sand Tonne $19.50 $16.25
+5,bulk,BULK AGGREGATE,Brick Sand,,,,,Tonne,,$21.75,$19.75,,,,Brick Sand Tonne $21.75 $19.75
+5,bulk,BULK AGGREGATE,"White Dolomite Marble - 1""-1-1/2""",,,,,Tonne,,$160.19,$145.63,,,,"White Dolomite Marble - 1""-1-1/2"" Tonne $160.19 $145.63"
+5,bulk,BULK GRANITE AGGREGATE,1/2 Clear Stone Granite,,,,,Tonne,,$92.19,$83.81,,,,1/2 Clear Stone Granite Tonne $92.19 $83.81
+5,bulk,BULK GRANITE AGGREGATE,"Black Granite 7/8""-2""",,,,,Tonne,,$93.62,$85.11,,,,"Black Granite 7/8""-2"" Tonne $93.62 $85.11"
+5,bulk,BULK GRANITE AGGREGATE,Granite Screening,,,,,Tonne,,$50.40,$42.00,,,,Granite Screening Tonne $50.40 $42.00
+5,bulk,BULK GRANITE AGGREGATE,Pea Stone,,,,,Tonne,,$70.80,$59.00,,,,Pea Stone Tonne $70.80 $59.00
+5,bulk,BULK GRANITE AGGREGATE,"1"" Riverstone",,,,,Tonne,,$70.36,$58.64,,,,"1"" Riverstone Tonne $70.36 $58.64"
+5,bulk,BULK GRANITE AGGREGATE,"2"" Riverstone",,,,,Tonne,,$84.60,$70.50,,,,"2"" Riverstone Tonne $84.60 $70.50"
+5,bulk,BULK GRANITE AGGREGATE,"4"" Riverstone",,,,,Tonne,,$82.50,$68.75,,,,"4"" Riverstone Tonne $82.50 $68.75"
+5,bulk,MULCH,Black Mulch,,,,,Yard,,$60.50,$55.00,,,,Black Mulch Yard $60.50 $55.00
+5,bulk,MULCH,Brown Mulch,,,,,Yard,,$60.50,$55.00,,,,Brown Mulch Yard $60.50 $55.00
+5,bulk,MULCH,Cedar Mulch,,,,,Yard,,$73.70,$67.00,,,,Cedar Mulch Yard $73.70 $67.00
+5,bulk,MULCH,Shredded Pine Mulch,,,,,Yard,,$66.00,$60.00,,,,Shredded Pine Mulch Yard $66.00 $60.00
+5,bulk,SOILS,Screened Topsoil,,,,,Yard,,$18.00,$15.00,,,,Screened Topsoil Yard $18.00 $15.00
+5,bulk,SOILS,Triple Mix ( 50% Topsoil/50% Compost),,,,,Yard,,$57.00,$47.00,,,,Triple Mix ( 50% Topsoil/50% Compost) Yard $57.00 $47.00
+5,bulk,SOILS,Planting Mix (75% Topsoil/25% Compost),,,,,Yard,,$46.00,$36.00,,,,Planting Mix (75% Topsoil/25% Compost) Yard $46.00 $36.00
+5,bulk,SOILS,"Contractor Blend Soil (2"" Screened)",,,,,Yard,,$10.00,$8.00,,,,"Contractor Blend Soil (2"" Screened) Yard $10.00 $8.00"
+5,bulk,SOILS,Compost (Premium Compost),,,,,Yard,,$57.00,$56.00,,,,Compost (Premium Compost) Yard $57.00 $56.00
+5,bulk,"SEED, SOD & FERTILIZER",No 1 Premium Lawn Mix-25KG(55.13LB),,,,,Each,,$155.04,$144.84,,,,No 1 Premium Lawn Mix-25KG(55.13LB) Each $155.04 $144.84
+5,bulk,"SEED, SOD & FERTILIZER",No 1 Premium Lawn Mix-4.54KG(10LB),,,,,Each,,$29.64,$27.69,,,,No 1 Premium Lawn Mix-4.54KG(10LB) Each $29.64 $27.69
+5,bulk,"SEED, SOD & FERTILIZER",Sun & Shade Mixture-25KG(55.13LB),,,,,Each,,$176.01,$164.43,,,,Sun & Shade Mixture-25KG(55.13LB) Each $176.01 $164.43
+5,bulk,"SEED, SOD & FERTILIZER",Sun & Shade Mixture-4.54KG(10LB),,,,,Each,,$33.40,$31.24,,,,Sun & Shade Mixture-4.54KG(10LB) Each $33.40 $31.24
+5,bulk,"SEED, SOD & FERTILIZER",Thicker Lawn Mixtyure-25KG(55.13LB),,,,,Each,,$155.04,$144.84,,,,Thicker Lawn Mixtyure-25KG(55.13LB) Each $155.04 $144.84
+5,bulk,"SEED, SOD & FERTILIZER",Thicker Lawn Mixture-4.54KG(10LB),,,,,Each,,$29.64,$27.69,,,,Thicker Lawn Mixture-4.54KG(10LB) Each $29.64 $27.69
+5,bulk,"SEED, SOD & FERTILIZER",Turf Starter - 10-25-10 (7.5KG),,,,,Each,,$23.48,$21.93,,,,Turf Starter - 10-25-10 (7.5KG) Each $23.48 $21.93
+5,bulk,"SEED, SOD & FERTILIZER",Spring Green Up -18-3-6 (7.5KG),,,,,Each,,$17.78,$16.61,,,,Spring Green Up -18-3-6 (7.5KG) Each $17.78 $16.61
+5,bulk,"SEED, SOD & FERTILIZER",Spring Green Up -18-3-6 (15KG),,,,,Each,,$31.38,$29.32,,,,Spring Green Up -18-3-6 (15KG) Each $31.38 $29.32
+5,bulk,"SEED, SOD & FERTILIZER",All Season - 20-0-5 (7.5KG),,,,,Each,,$18.46,$17.25,,,,All Season - 20-0-5 (7.5KG) Each $18.46 $17.25
+5,bulk,LANDSCAPE ACCESSORIES,Snap Edge Paver Restraint (8 FT),,,,,Each,,$16.28,$14.80,,,,Snap Edge Paver Restraint (8 FT) Each $16.28 $14.80
+5,bulk,LANDSCAPE ACCESSORIES,Evolution Polymeric Sand 50 lb - Beige,,,,,Each,,$33.50,$30.32,,,,Evolution Polymeric Sand 50 lb - Beige Each $33.50 $30.32
+5,bulk,LANDSCAPE ACCESSORIES,Evolution Polymeric Sand 50 lb - Black,,,,,Each,,$43.00,$40.31,,,,Evolution Polymeric Sand 50 lb - Black Each $43.00 $40.31
+5,bulk,LANDSCAPE ACCESSORIES,Evolution Polymeric Sand 50 lb - Grey,,,,,Each,,$39.30,$35.73,,,,Evolution Polymeric Sand 50 lb - Grey Each $39.30 $35.73
+6,bulk,SOILS F.O.B BARRIE DELIVERED,Screened Topsoil,,,,,Yard,,$144.00,$169.00,,,,Screened Topsoil Yard $144.00 $169.00
+6,bulk,SOILS F.O.B BARRIE DELIVERED,Triple Mix,,,,,Yard,,$164.00,$189.00,,,,Triple Mix Yard $164.00 $189.00
+6,bulk,SOILS F.O.B BARRIE DELIVERED,Compost,,,,,Yard,,$164.00,$189.00,,,,Compost Yard $164.00 $189.00
+6,bulk,AGGREGATES,Limestone Screenings,,,,,Tonne,,$164.00,$189.00,,,,Limestone Screenings Tonne $164.00 $189.00
+6,bulk,AGGREGATES,3/4 Clear Stone,,,,,Tonne,,$170.00,$195.00,,,,3/4 Clear Stone Tonne $170.00 $195.00
+6,bulk,AGGREGATES,3/4 Crusher Run,,,,,Tonne,,$164.00,$189.00,,,,3/4 Crusher Run Tonne $164.00 $189.00
+6,bulk,AGGREGATES,Brick Sand,,,,,Tonne,,$164.00,$189.00,,,,Brick Sand Tonne $164.00 $189.00
+6,bulk,AGGREGATES,A-Gravel,,,,,Tonne,,$164.00,$189.00,,,,A-Gravel Tonne $164.00 $189.00
+6,bulk,AGGREGATES,HPB,,,,,Tonne,,$174.00,$199.00,,,,HPB Tonne $174.00 $199.00
+6,bulk,MULCH,Black Mulch,,,,,Yard,,$184.00,$209.00,,,,Black Mulch Yard $184.00 $209.00
+6,bulk,MULCH,Brown Mulch,,,,,Yard,,$154.00,$179.00,,,,Brown Mulch Yard $154.00 $179.00
+6,bulk,MULCH,Classic Cedar Mulch,,,,,Yard,,$184.00,$209.00,,,,Classic Cedar Mulch Yard $184.00 $209.00
+6,bulk,MULCH,Shredded Pine Mulch,,,,,Yard,,$184.00,$209.00,,,,Shredded Pine Mulch Yard $184.00 $209.00
+6,bulk,GRANITE PRODUCTS,Screenings,,,,,Tonne,,$155.00,$180.00,,,,Screenings Tonne $155.00 $180.00
+6,bulk,GRANITE PRODUCTS,3/4 Clear Stone,,,,,Tonne,,$155.00,$180.00,,,,3/4 Clear Stone Tonne $155.00 $180.00
+6,bulk,GRANITE PRODUCTS,"2"" River Stone",,,,,Tonne,,$224.00,$249.00,,,,"2"" River Stone Tonne $224.00 $249.00"
+6,bulk,GRANITE PRODUCTS,"4"" River Stone",,,,,Tonne,,$224.00,$249.00,,,,"4"" River Stone Tonne $224.00 $249.00"
+6,bulk,GRANITE PRODUCTS,Pea Stone,,,,,Tonne,,$180.00,$205.00,,,,Pea Stone Tonne $180.00 $205.00
+7,paver_slab,Cassara Slabs,Cassara Slabs — Prestige Colours,Prestige Colours,,,,SqFt,,$6.49,,,54¢,30¢,Prestige Colours SqFt $6.49 54¢ 30¢
+7,paver_slab,Cassara Slabs,Cassara Slabs — Standard Colours,Standard Colours,,,,SqFt,,$5.78,,,54¢,30¢,Standard Colours SqFt $5.78 54¢ 30¢
+7,paver_slab,City,City — Standard Colours,Standard Colours,,,,SqFt,,$11.57,,,54¢,30¢,Standard Colours SqFt $11.57 54¢ 30¢
+7,paver_slab,Esbelto Slab,DuraFusion,,,,,SqFt,,$5.89,,,54¢,30¢,DuraFusion SqFt $5.89 54¢ 30¢
+7,paver_slab,Esbelto Slab,Prestige,,,,,SqFt,,$5.86,,,54¢,30¢,Prestige SqFt $5.86 54¢ 30¢
+7,paver_slab,Mega Melville,Mega Melville — Prestige Colours,Prestige Colours,,,,SqFt,,$6.98,,,54¢,30¢,Prestige Colours SqFt $6.98 54¢ 30¢
+7,paver_slab,Mega Melville,Mega Melville — Standard Colours,Standard Colours,,,,SqFt,,$6.26,,,54¢,30¢,Standard Colours SqFt $6.26 54¢ 30¢
+7,paver_slab,Melia Durafusion Slabs,Melia Durafusion Slabs — 18 x 36,18 x 36,,,,SqFt,,$6.65,,,54¢,30¢,18 x 36 SqFt $6.65 54¢ 30¢
+7,paver_slab,Melia Durafusion Slabs,Melia Durafusion Slabs — Mix,Mix,,,,SqFt,,$5.84,,,54¢,30¢,Mix SqFt $5.84 54¢ 30¢
+7,paver_slab,Melville 24x24 Slabs,Melville 24x24 Slabs — Prestige Colours,Prestige Colours,,,,SqFt,,$6.55,,,45¢,30¢,Prestige Colours SqFt $6.55 45¢ 30¢
+7,paver_slab,Melville 24x24 Slabs,Melville 24x24 Slabs — Standard Colours,Standard Colours,,,,SqFt,,$6.36,,,45¢,30¢,Standard Colours SqFt $6.36 45¢ 30¢
+7,paver_slab,Melville 24x24 Slabs,Melville 24x24 Slabs — Prestige Colours,Prestige Colours,,,,SqFt,,$5.65,,,54¢,30¢,Prestige Colours SqFt $5.65 54¢ 30¢
+7,paver_slab,Melville 24x24 Slabs,Melville 24x24 Slabs — Standard Colours,Standard Colours,,,,SqFt,,$5.22,,,54¢,30¢,Standard Colours SqFt $5.22 54¢ 30¢
+7,paver_slab,Melville DuraFusion,Melville DuraFusion — 18 x 36,18 x 36,,,,SqFt,,$6.65,,,54¢,30¢,18 x 36 SqFt $6.65 54¢ 30¢
+7,paver_slab,Melville DuraFusion,Melville DuraFusion — Combo,Combo,,,,SqFt,,$5.89,,,54¢,30¢,Combo SqFt $5.89 54¢ 30¢
+7,paver_slab,Melville DuraFusion,Melville 60 DuraFusion,,,,,SqFt,,$5.89,,,54¢,30¢,Melville 60 DuraFusion SqFt $5.89 54¢ 30¢
+7,paver_slab,Melville DuraFusion,Metrik Slab,,,,,SqFt,,$6.04,,,54¢,30¢,Metrik Slab SqFt $6.04 54¢ 30¢
+7,paver_slab,Melville DuraFusion,Melville DuraFusion — Prestige Colours,Prestige Colours,,,,SqFt,,$5.65,,,54¢,30¢,Prestige Colours SqFt $5.65 54¢ 30¢
+7,paver_slab,and Colour,and Colour — Standard Colours,Standard Colours,,,,SqFt,,$5.22,,,54¢,30¢,Standard Colours SqFt $5.22 54¢ 30¢
+7,paver_slab,Rosebel,Rosebel — Prestige Colours,Prestige Colours,,,,SqFt,,$7.40,,,54¢,30¢,Prestige Colours SqFt $7.40 54¢ 30¢
+7,paver_slab,Rosebel,Rosebel — Standard Colours,Standard Colours,,,,SqFt,,$6.78,,,54¢,30¢,Standard Colours SqFt $6.78 54¢ 30¢
+7,paver_slab,Rosebel,Versailles Slab **,,,,,SqFt,,$31.45,,,N/A,27¢,Versailles Slab ** SqFt $31.45 N/A 27¢
+7,paver_slab,Rosebel,Vertex Slab,,,,,SqFt,,$6.62,,,54¢,30¢,Vertex Slab SqFt $6.62 54¢ 30¢
+7,paver_slab,Wilfrid Slab,Wilfrid Slab — Prestige Colours,Prestige Colours,,,,SqFt,,$7.12,,,54¢,30¢,Prestige Colours SqFt $7.12 54¢ 30¢
+7,paver_slab,Wilfrid Slab,Wilfrid Slab — Standard Colours,Standard Colours,,,,SqFt,,$6.84,,,54¢,30¢,Standard Colours SqFt $6.84 54¢ 30¢
+7,paver_slab,Wilfrid Slab,Brooklyn Paver,,,,,SqFt,,$10.98,,,54¢,30¢,Brooklyn Paver SqFt $10.98 54¢ 30¢
+7,paver_slab,Capio Paver,Capio Paver — Premium Colours,Premium Colours,,,,SqFt,,$5.12,,,54¢,30¢,Premium Colours SqFt $5.12 54¢ 30¢
+7,paver_slab,Capio Paver,Capio Paver — Standard Colours,Standard Colours,,,,SqFt,,$4.12,,,54¢,30¢,Standard Colours SqFt $4.12 54¢ 30¢
+7,paver_slab,Cassara,Cassara — Prestige Colours,Prestige Colours,,,,SqFt,,$10.41,,,90¢,49¢,Prestige Colours SqFt $10.41 90¢ 49¢
+7,paver_slab,Cassara,Cassara — Standard Colours,Standard Colours,,,,SqFt,,$8.98,,,90¢,49¢,Standard Colours SqFt $8.98 90¢ 49¢
+7,paver_slab,Cassara,Cassara Verde,,,,,SqFt,,$6.87,,,90¢,49¢,Cassara Verde SqFt $6.87 90¢ 49¢
+7,paver_slab,Cassara,Eko Paver,,,,,SqFt,,$4.71,,,64¢,35¢,Eko Paver SqFt $4.71 64¢ 35¢
+7,paver_slab,Cassara,Esbelto Paver DuraFusion,,,,,SqFt,,$7.65,,,73¢,39¢,Esbelto Paver DuraFusion SqFt $7.65 73¢ 39¢
+7,paver_slab,Cassara,Kensington,,,,,SqFt,,$4.87,,,73¢,39¢,Kensington SqFt $4.87 73¢ 39¢
+7,paver_slab,Cassara,Kensington Smooth,,,,,SqFt,,$4.87,,,73¢,39¢,Kensington Smooth SqFt $4.87 73¢ 39¢
+7,paver_slab,Cassara,Laguna Capping,,,,,Piece,,$54.17,,,$1.11,77¢,Laguna Capping Piece $54.17 $1.11 77¢
+7,paver_slab,Cassara,Marina,,,,,Piece,,$4.61,,,23¢,17¢,Marina Piece $4.61 23¢ 17¢
+7,paver_slab,Mega Melville,Mega Melville — Prestige Colours,Prestige Colours,,,,SqFt,,$9.18,,,73¢,39¢,Prestige Colours SqFt $9.18 73¢ 39¢
+7,paver_slab,Mega Melville,Mega Melville — Standard Colours,Standard Colours,,,,SqFt,,$8.58,,,73¢,39¢,Standard Colours SqFt $8.58 73¢ 39¢
+7,paver_slab,Mega Melville,Melia Durafusion Paver 6x6,,,,,SqFt,,$6.73,,,73¢,39¢,Melia Durafusion Paver 6x6 SqFt $6.73 73¢ 39¢
+8,paver_slab,,Prestige Colours,,,,,SqFt,,$7.51,,,73¢,39¢,Prestige Colours SqFt $7.51 73¢ 39¢
+8,paver_slab,,Standard Colours,,,,,SqFt,,$6.91,,,73¢,39¢,Standard Colours SqFt $6.91 73¢ 39¢
+8,paver_slab,,Melville 80 DuraFusion,,,,,SqFt,,$7.65,,,73¢,39¢,Melville 80 DuraFusion SqFt $7.65 73¢ 39¢
+8,paver_slab,Melville Plank,Melville Plank — Prestige Colours,Prestige Colours,,,,SqFt,,$7.51,,,73¢,39¢,Prestige Colours SqFt $7.51 73¢ 39¢
+8,paver_slab,Melville Plank,Melville Plank — Standard Colours,Standard Colours,,,,SqFt,,$7.51,,,73¢,39¢,Standard Colours SqFt $7.51 73¢ 39¢
+8,paver_slab,Melville Plank,Melville Plank — Standard Colours,Standard Colours,,,,SqFt,,$6.91,,,73¢,39¢,Standard Colours SqFt $6.91 73¢ 39¢
+8,paver_slab,Melville Plank,Niagara - Natural,,,,,SqFt,,$3.13,,,54¢,30¢,Niagara - Natural SqFt $3.13 54¢ 30¢
+8,paver_slab,Melville Plank,Trafalgar,,,,,SqFt,,$5.12,,,54¢,30¢,Trafalgar SqFt $5.12 54¢ 30¢
+8,paver_slab,Melville Plank,Melville Plank — Prestige Colours,Prestige Colours,,,,SqFt,,$6.24,,,54¢,30¢,Prestige Colours SqFt $6.24 54¢ 30¢
+8,paver_slab,Melville Plank,Melville Plank — Standard Colours,Standard Colours,,,,SqFt,,$5.64,,,54¢,30¢,Standard Colours SqFt $5.64 54¢ 30¢
+8,paver_slab,Melville Plank,Melville Plank — Prestige Colours,Prestige Colours,,,,SqFt,,$8.23,,,73¢,39¢,Prestige Colours SqFt $8.23 73¢ 39¢
+8,paver_slab,Melville Plank,Melville Plank — Standard Colours,Standard Colours,,,,SqFt,,$7.30,,,73¢,39¢,Standard Colours SqFt $7.30 73¢ 39¢
+8,paver_slab,Melville Plank,Virage,,,,,SqFt,,$6.42,,,73¢,39¢,Virage SqFt $6.42 73¢ 39¢
+8,paver_slab,Melville Plank,Zen,,,,,SqFt,,$7.54,,,73¢,39¢,Zen SqFt $7.54 73¢ 39¢
+8,paver_slab,Artex Panel System,Artex Panel System — 18 x 36,18 x 36,,,,Piece,,$42.10,,,$2.32,$1.60,18 x 36 Piece $42.10 $2.32 $1.60
+8,paver_slab,Artex Panel System,Artex Panel System — 6 x 36,6 x 36,,,,Piece,,$15.82,,,80¢,55¢,6 x 36 Piece $15.82 80¢ 55¢
+8,paver_slab,Artex Panel System,Anchor Slide,,,,,Piece,,$2.48,,,N/A,05¢,Anchor Slide Piece $2.48 N/A 05¢
+8,paver_slab,Artex Panel System,Inner Corner,,,,,Piece,,$13.32,,,N/A,05¢,Inner Corner Piece $13.32 N/A 05¢
+8,paver_slab,Artex Panel System,Jointing Plate,,,,,Piece,,$8.52,,,N/A,05¢,Jointing Plate Piece $8.52 N/A 05¢
+8,paver_slab,and Colour,Outer Corner,,,,,Piece,,$10.03,,,N/A,05¢,Outer Corner Piece $10.03 N/A 05¢
+8,paver_slab,and Colour,Stretcher Bar,,,,,Piece,,$18.91,,,N/A,05¢,Stretcher Bar Piece $18.91 N/A 05¢
+8,paver_slab,GRANDE Wall,GRANDE Wall — Coping - Colours,Coping - Colours,,,,Piece,,$57.57,,,$5.97,$4.11,Coping - Colours Piece $57.57 $5.97 $4.11
+8,paver_slab,GRANDE Wall,GRANDE Wall — Step Unit - Colours,Step Unit - Colours,,,,Piece,,$52.33,,,$6.06,$4.17,Step Unit - Colours Piece $52.33 $6.06 $4.17
+8,paver_slab,GRANDE Wall Smooth Face,375-Newport,,,,,Piece,,$45.28,,,$5.54,$3.82,375-Newport Piece $45.28 $5.54 $3.82
+8,paver_slab,GRANDE Wall Split or Smooth Face,1125,,,,,Piece,,$123.77,,,$16.63,$11.44,1125 Piece $123.77 $16.63 $11.44
+8,paver_slab,GRANDE Wall Split or Smooth Face,375,,,,,Piece,,$41.25,,,$5.54,$3.82,375 Piece $41.25 $5.54 $3.82
+8,paver_slab,GRANDE Wall Split or Smooth Face,750,,,,,Piece,,$82.54,,,$11.11,$7.64,750 Piece $82.54 $11.11 $7.64
+8,paver_slab,GRANDE Wall Split or Smooth Face,Coping - Natural,,,,,Piece,,$51.42,,,$5.97,$4.11,Coping - Natural Piece $51.42 $5.97 $4.11
+8,paver_slab,GRANDE Wall Split or Smooth Face,Corner,,,,,Piece,,$63.97,,,$7.35,$5.05,Corner Piece $63.97 $7.35 $5.05
+8,paver_slab,GRANDE Wall Split or Smooth Face,Step Unit - Natural,,,,,Piece,,$45.87,,,$6.06,$4.17,Step Unit - Natural Piece $45.87 $6.06 $4.17
+8,paver_slab,Grande Wedge,Coping,,,,,Piece,,$7.81,,,73¢,50¢,Coping Piece $7.81 73¢ 50¢
+8,paver_slab,Grande Wedge,Standard,,,,,Piece,,$13.56,,,$1.28,87¢,Standard Piece $13.56 $1.28 87¢
+8,paver_slab,Lafitt Tandem Wall,Plus Step Unit,,,,,Piece,,$18.70,,,$1.23,84¢,Plus Step Unit Piece $18.70 $1.23 84¢
+8,paver_slab,Lafitt Tandem Wall,Step Unit,,,,,Piece,,$18.70,,,$1.21,84¢,Step Unit Piece $18.70 $1.21 84¢
+8,paver_slab,Lafitt Tandem Wall,Straight Cap,,,,,Piece,,$16.68,,,92¢,64¢,Straight Cap Piece $16.68 92¢ 64¢
+8,paver_slab,Leno Capping,Bullnose,,,,,Piece,,$20.31,,,88¢,61¢,Bullnose Piece $20.31 88¢ 61¢
+8,paver_slab,Leno Capping,Lafitt,,,,,Piece,,$20.31,,,88¢,61¢,Lafitt Piece $20.31 88¢ 61¢
+8,paver_slab,Leno Capping,Straight,,,,,Piece,,$20.31,,,88¢,61¢,Straight Piece $20.31 88¢ 61¢
+9,paver_slab,Melville Tandem Wall,Plus Straight Cap 60,,,,,Piece,,$15.47,,,88¢,61¢,Plus Straight Cap 60 Piece $15.47 88¢ 61¢
+9,paver_slab,Melville Tandem Wall,Plus Straight Cap 90,,,,,Piece,,$20.97,,,$1.73,$1.18,Plus Straight Cap 90 Piece $20.97 $1.73 $1.18
+9,paver_slab,Melville Tandem Wall,Step Unit 60mm,,,,,Piece,,$20.06,,,$1.16,80¢,Step Unit 60mm Piece $20.06 $1.16 80¢
+9,paver_slab,Melville Tandem Wall,Step Unit 90mm,,,,,Piece,,$27.19,,,$1.73,$1.18,Step Unit 90mm Piece $27.19 $1.73 $1.18
+9,paver_slab,Melville Tandem Wall,Orion Firepit,,,,,Each,,$659.97,,,N/A,$8.47,Orion Firepit Each $659.97 N/A $8.47
+9,paver_slab,RB Wall,RB Wall — Coping - Colours,Coping - Colours,,,,Piece,,$11.12,,,$1.01,70¢,Coping - Colours Piece $11.12 $1.01 70¢
+9,paver_slab,RB Wall,Coping - Natural,,,,,Piece,,$10.55,,,$1.01,70¢,Coping - Natural Piece $10.55 $1.01 70¢
+9,paver_slab,RB Wall,RB Wall — Corner - Colours,Corner - Colours,,,,Piece,,$11.84,,,72¢,50¢,Corner - Colours Piece $11.84 72¢ 50¢
+9,paver_slab,RB Wall,Corner - Natural,,,,,Piece,,$10.58,,,72¢,50¢,Corner - Natural Piece $10.58 72¢ 50¢
+9,paver_slab,RB Wall,RB Wall — Standard - Colours,Standard - Colours,,,,Piece,,$5.25,,,69¢,48¢,Standard - Colours Piece $5.25 69¢ 48¢
+9,paver_slab,RB Wall,Standard - Natural,,,,,Piece,,$4.79,,,69¢,48¢,Standard - Natural Piece $4.79 69¢ 48¢
+9,paver_slab,Tandem Wall Acessories,Connector - Corner,,,,,Bag,,$65.55,,,N/A,11¢,Connector - Corner Bag $65.55 N/A 11¢
+9,paver_slab,Tandem Wall Acessories,Connector - Double-sided,,,,,Bag,,$65.55,,,N/A,11¢,Connector - Double-sided Bag $65.55 N/A 11¢
+9,paver_slab,Tandem Wall Acessories,Grid Kit,,,,,Piece,,$72.66,,,N/A,24¢,Grid Kit Piece $72.66 N/A 24¢
+9,paver_slab,Tandem Wall Acessories,Pillar Grid,,,,,Piece,,$248.88,,,N/A,53¢,Pillar Grid Piece $248.88 N/A 53¢
+9,paver_slab,Tandem Wall Acessories,Spark Arrestor,,,,,Each,,$177.41,,,N/A,24¢,Spark Arrestor Each $177.41 N/A 24¢
+9,paver_slab,Tandem Wall Acessories,Starter Unit,,,,,Piece,,$5.77,,,81¢,55¢,Starter Unit Piece $5.77 81¢ 55¢
+9,paver_slab,Wallstone,12 inch Coping - Colour,,,,,Piece,,$3.90,,,45¢,31¢,12 inch Coping - Colour Piece $3.90 45¢ 31¢
+9,paver_slab,Wallstone,Corner - Colour,,,,,Piece,,$6.13,,,45¢,31¢,Corner - Colour Piece $6.13 45¢ 31¢
+9,paver_slab,Wallstone,Standard - Colour,,,,,Piece,,$4.05,,,46¢,31¢,Standard - Colour Piece $4.05 46¢ 31¢
+9,paver_slab,Wedgestone,Standard & Coping,,,,,Piece,,$3.05,,,29¢,20¢,Standard & Coping Piece $3.05 29¢ 20¢
+9,paver_slab,Porcelain Tiles,Mirage Noon,,,,,SqFt,,$22.26,,,N/A,11¢,Mirage Noon SqFt $22.26 N/A 11¢
+9,paver_slab,Porcelain Tiles,Mirage November,,,,,SqFt,,$8.16,,,17¢,,Mirage November SqFt $8.16 17¢
+9,paver_slab,Porcelain Tiles,Large Rectangle,,,,,SqFt,,$19.43,,,N/A,11¢,Large Rectangle SqFt $19.43 N/A 11¢
+9,paver_slab,Porcelain Tiles,Large Square,,,,,SqFt,,$14.98,,,N/A,17¢,Large Square SqFt $14.98 N/A 17¢
+9,paver_slab,Porcelain Tiles,Pool Coping,,,,,Piece,,$85.45,,,N/A,11¢,Pool Coping Piece $85.45 N/A 11¢
+10,paver_slab,Pavers Sold Bundle ISplittingl,Bonaire,,,,,SqFt,,$6.88,,,54¢,30¢,Bonaire SqFt $6.88 54¢ 30¢
+10,paver_slab,Cassina,12in Dover,,,,,Each,,$7.13,,,34¢,25¢,12in Dover Each $7.13 34¢ 25¢
+10,paver_slab,Cassina,12in Onyx,,,,,Each,,$7.39,,,34¢,25¢,12in Onyx Each $7.39 34¢ 25¢
+10,paver_slab,Cassina,8 in Dover-Limited Availability,,,,,Each,,34¢,,,25¢,,8 in Dover-Limited Availability Each 34¢ 25¢
+10,paver_slab,Cassina,Colonnade,,,,,SqFt,,$5.09,,,54¢,30¢,Colonnade SqFt $5.09 54¢ 30¢
+10,paver_slab,Cassina,Eterna,,,,,SqFt,,$8.98,,,90¢,49¢,Eterna SqFt $8.98 90¢ 49¢
+10,paver_slab,Cassina,Everton,,,,,SqFt,,$3.90,,,54¢,30¢,Everton SqFt $3.90 54¢ 30¢
+10,paver_slab,Cassina,Hydr'Eau Pave-Custom Order,,,,,SqFt,,73¢,,,39¢,,Hydr'Eau Pave-Custom Order SqFt 73¢ 39¢
+10,paver_slab,Market Paver,60mm,,,,,SqFt,,$5.48,,,64¢,32¢,60mm SqFt $5.48 64¢ 32¢
+10,paver_slab,Market Paver,80mm,,,,,SqFt,,$7.12,,,73¢,39¢,80mm SqFt $7.12 73¢ 39¢
+10,paver_slab,Molina,60mm,,,,,SqFt,,$6.09,,,54¢,30¢,60mm SqFt $6.09 54¢ 30¢
+10,paver_slab,Molina,60mm -24x24,,,,,SqFt,,$7.21,,,54¢,30¢,60mm -24x24 SqFt $7.21 54¢ 30¢
+10,paver_slab,Molina,60mm -Ferro Finish,,,,,SqFt,,$7.86,,,54¢,30¢,60mm -Ferro Finish SqFt $7.86 54¢ 30¢
+10,paver_slab,Molina,80mm,,,,,SqFt,,$7.46,,,73¢,39¢,80mm SqFt $7.46 73¢ 39¢
+10,paver_slab,Molina,80mm -Ferro Finish,,,,,SqFt,,$9.78,,,73¢,39¢,80mm -Ferro Finish SqFt $9.78 73¢ 39¢
+10,paver_slab,Molina,Montebello,,,,,SqFt,,$5.18,,,64¢,35¢,Montebello SqFt $5.18 64¢ 35¢
+10,paver_slab,Nueva,60mm,,,,,SqFt,,$5.31,,,54¢,30¢,60mm SqFt $5.31 54¢ 30¢
+10,paver_slab,Nueva,60mm -16 x 32,,,,,SqFt,,$5.86,,,54¢,30¢,60mm -16 x 32 SqFt $5.86 54¢ 30¢
+10,paver_slab,Nueva,60mm XL,,,,,SqFt,,$6.16,,,54¢,30¢,60mm XL SqFt $6.16 54¢ 30¢
+10,paver_slab,Nueva,"80mm-Combo, Small",,,,,SqFt,,$6.37,,,73¢,39¢,"80mm-Combo, Small SqFt $6.37 73¢ 39¢"
+10,paver_slab,Rectangle,80mm-Large Rectangle,,,,,SqFt,,$7.10,,,73¢,39¢,80mm-Large Rectangle SqFt $7.10 73¢ 39¢
+10,paver_slab,Rialto,60 mm,,,,,SqFt,,$5.31,,,54¢,30¢,60 mm SqFt $5.31 54¢ 30¢
+10,paver_slab,Rialto,80mm,,,,,SqFt,,$6.37,,,73¢,39¢,80mm SqFt $6.37 73¢ 39¢
+10,paver_slab,Rialto,Ridgefield Plus,,,,,SqFt,,$4.55,,,64¢,35¢,Ridgefield Plus SqFt $4.55 64¢ 35¢
+10,paver_slab,Rialto,Ridgefield Smooth,,,,,SqFt,,$4.55,,,64¢,35¢,Ridgefield Smooth SqFt $4.55 64¢ 35¢
+10,paver_slab,IY 1•A&UttOM lll(R,Strassa,,,,,SqFt,,$6.88,,,54¢,32¢,Strassa SqFt $6.88 54¢ 32¢
+10,paver_slab,IY 1•A&UttOM lll(R,Turf Slab - Custom Order **,,,,,SqFt,,$3.39,,,73¢,39¢,Turf Slab - Custom Order ** SqFt $3.39 73¢ 39¢
+10,paver_slab,IY 1•A&UttOM lll(R,Villanova-Limited Availability,,,,,SqFt,,$7.06,,,73¢,39¢,Villanova-Limited Availability SqFt $7.06 73¢ 39¢
+10,paver_slab,Yorkville,60 mm,,,,,SqFt,,$5.86,,,54¢,30¢,60 mm SqFt $5.86 54¢ 30¢
+10,paver_slab,Yorkville,80 mm,,,,,SqFt,,$7.12,,,73¢,39¢,80 mm SqFt $7.12 73¢ 39¢
+10,paver_slab,Gardenia,Corner - Colour,,,,,Each,,$8.83,,,69¢,49¢,Corner - Colour Each $8.83 69¢ 49¢
+10,paver_slab,Gardenia,Gardenia Linear,,,,,Each,,$14.27,,,$1.38,94¢,Gardenia Linear Each $14.27 $1.38 94¢
+10,paver_slab,Laredo,Laredo — Standard Colours,Standard Colours,,,,Each,,$4.92,,,48¢,33¢,Standard Colours Each $4.92 48¢ 33¢
+10,paver_slab,Laredo,Standard Onyx,,,,,Each,,$5.52,,,48¢,33¢,Standard Onyx Each $5.52 48¢ 33¢
+10,paver_slab,Laredo,Laredo — Tapered Colours,Tapered Colours,,,,Each,,$3.20,,,48¢,33¢,Tapered Colours Each $3.20 48¢ 33¢
+10,paver_slab,Laredo,Tapered Onyx,,,,,Each,,$3.44,,,48¢,33¢,Tapered Onyx Each $3.44 48¢ 33¢
+10,paver_slab,Modan Wall,Coping,,,,,Piece,,$13.00,,,83¢,,Coping Piece $13.00 83¢
+10,paver_slab,Modan Wall,Linear,,,,,Each,,$8.49,,,83¢,57¢,Linear Each $8.49 83¢ 57¢
+10,paver_slab,Modan Wall,Modeco One,,,,,Each,,$2.77,,,22¢,17¢,Modeco One Each $2.77 22¢ 17¢
+10,paver_slab,Modan Wall,Nueva Pillar Cap,,,,,Piece,,$87.80,,,$1.06,72¢,Nueva Pillar Cap Piece $87.80 $1.06 72¢
+10,paver_slab,Nueva Wall,150 Corner,,,,,Piece,,$10.53,,,92¢,64¢,150 Corner Piece $10.53 92¢ 64¢
+10,paver_slab,Nueva Wall,Coping,,,,,Piece,,$13.59,,,$1.21,83¢,Coping Piece $13.59 $1.21 83¢
+12,paver_slab,I Sold Bundle Splitting,Arcana,,,,,SqFt,,$23.49,,,37¢,26¢,Arcana SqFt $23.49 37¢ 26¢
+12,paver_slab,Beacon Hill Flagstone,Beacon Hill Flagstone — 6 cm -Colours,6 cm -Colours,,,,SqFt,,$6.93,,,54¢,30¢,6 cm -Colours SqFt $6.93 54¢ 30¢
+12,paver_slab,Beacon Hill Flagstone,Beacon Hill Flagstone — 8 cm -Colours,8 cm -Colours,,,,SqFt,,$8.52,,,73¢,39¢,8 cm -Colours SqFt $8.52 73¢ 39¢
+12,paver_slab,Beacon Hill Smooth,Beacon Hill Smooth — 6cm,6cm,,,,SqFt,,$8.52,,,54¢,30¢,6cm SqFt $8.52 54¢ 30¢
+12,paver_slab,Beacon Hill Smooth,Beacon Hill Smooth — 6 cm -XL 22 x 37,6 cm -XL 22 x 37,,,,SqFt,,$7.58,,,54¢,30¢,6 cm -XL 22 x 37 SqFt $7.58 54¢ 30¢
+12,paver_slab,Beacon Hill Smooth,Beacon Hill Smooth — 8cm,8cm,,,,SqFt,,$8.52,,,73¢,39¢,8cm SqFt $8.52 73¢ 39¢
+12,paver_slab,Brussels Block,Brussels Block — Colours,Colours,,,,SqFt,,$6.38,,,64¢,35¢,Colours SqFt $6.38 64¢ 35¢
+12,paver_slab,Brussels Block,Brussels Block — Midnight,Midnight,,,,SqFt,,$7.49,,,64¢,35¢,Midnight SqFt $7.49 64¢ 35¢
+12,paver_slab,Brussels Fullnose,Brussels Fullnose — Colours,Colours,,,,LnFt,,$9.01,,,64¢,35¢,Colours LnFt $9.01 64¢ 35¢
+12,paver_slab,Brussels Fullnose,Brussels Fullnose — Midnight,Midnight,,,,LnFt,,$10.15,,,64¢,35¢,Midnight LnFt $10.15 64¢ 35¢
+12,paver_slab,Brussels Fullnose,Copthorne,,,,,SqFt,,$13.45,,,54¢,30¢,Copthorne SqFt $13.45 54¢ 30¢
+12,paver_slab,TM,Courtstone,,,,,SqFt,,$13.41,,,54¢,30¢,Courtstone SqFt $13.41 54¢ 30¢
+12,paver_slab,Eco-Promenade,EcoTerra,,,,,SqFt,,$11.68,,,54¢,30¢,EcoTerra SqFt $11.68 54¢ 30¢
+12,paver_slab,Eco-Promenade,Hollandstone 6 cm Premier,,,,,SqFt,,$5.65,,,54¢,30¢,Hollandstone 6 cm Premier SqFt $5.65 54¢ 30¢
+12,paver_slab,TM,Mattoni,,,,,SqFt,,$7.75,,,64¢,35¢,Mattoni SqFt $7.75 64¢ 35¢
+12,paver_slab,TM,Nordic Cobble,,,,,SqFt,,$6.85,,,54¢,30¢,Nordic Cobble SqFt $6.85 54¢ 30¢
+12,paver_slab,TM,Northshore,,,,,SqFt,,$8.59,,,64¢,35¢,Northshore SqFt $8.59 64¢ 35¢
+12,paver_slab,TM,Richcliff,,,,,SqFt,,$13.41,,,54¢,30¢,Richcliff SqFt $13.41 54¢ 30¢
+12,paver_slab,TM,Soreno Slab,,,,,SqFt,,$22.00,,,54¢,30¢,Soreno Slab SqFt $22.00 54¢ 30¢
+12,paver_slab,TM,Town Hall,,,,,SqFt,,$15.45,,,64¢,35¢,Town Hall SqFt $15.45 64¢ 35¢
+12,paver_slab,TM,Treo Smooth,,,,,SqFt,,$5.43,,,73¢,39¢,Treo Smooth SqFt $5.43 73¢ 39¢
+12,paver_slab,Trevia,Trevia — 6cm,6cm,,,,SqFt,,$5.85,,,54¢,30¢,6cm SqFt $5.85 54¢ 30¢
+12,paver_slab,Trevia,Trevia — 8cm,8cm,,,,SqFt,,$7.89,,,54¢,30¢,8cm SqFt $7.89 54¢ 30¢
+12,paver_slab,Tribeca Cobble,Tribeca Cobble Premier**,,,,,SqFt,,$8.52,,,64¢,35¢,Tribeca Cobble Premier** .... SqFt $8.52 64¢ 35¢
+12,paver_slab,TM,TM — 10 cm,10 cm,,,,SqFt,,$14.88,,,90¢,49¢,10 cm SqFt $14.88 90¢ 49¢
+12,paver_slab,TM,TM — 6cm,6cm,,,,SqFt,,$8.61,,,64¢,35¢,6cm SqFt $8.61 64¢ 35¢
+12,paver_slab,TM,TM — 7cm,7cm,,,,SqFt,,$11.89,,,64¢,35¢,7cm SqFt $11.89 64¢ 35¢
+12,paver_slab,TM,TM — 8cm,8cm,,,,SqFt,,$12.72,,,30¢,,8cm SqFt $12.72 30¢
+12,paver_slab,TM,Unigranite,,,,,SqFt,,$11.44,,,64¢,35¢,Unigranite SqFt $11.44 64¢ 35¢
+12,paver_slab,Urban,Urban — 10 cm,10 cm,,,,SqFt,,$11.07,,,90¢,49¢,10 cm SqFt $11.07 90¢ 49¢
+12,paver_slab,Urban,Urban — 6cm,6cm,,,,SqFt,,$6.36,,,54¢,30¢,6cm SqFt $6.36 54¢ 30¢
+12,paver_slab,Urban,Urban — 6 cm -18 x 36,6 cm -18 x 36,,,,SqFt,,$7.78,,,54¢,30¢,6 cm -18 x 36 SqFt $7.78 54¢ 30¢
+12,paver_slab,Urban,"Urban — 6 cm -18x36 Linen Buff,","6 cm -18x36 Linen Buff,",,,,SqFt,,$8.64,,,54¢,30¢,"6 cm -18x36 Linen Buff, SqFt $8.64 54¢ 30¢"
+12,paver_slab,Grey,Urban Eco Terra,,,,,SqFt,,$9.44,,,54¢,30¢,Urban Eco Terra SqFt $9.44 54¢ 30¢
+12,paver_slab,TM,Windermere Flagstone,,,,,SqFt,,$5.38,,,64¢,35¢,Windermere Flagstone SqFt $5.38 64¢ 35¢
+12,paver_slab,TM,TM — 10 cm,10 cm,,,,SqFt,,$8.42,,,90¢,,10 cm - SqFt $8.42 90¢
+12,paver_slab,TM,TM — 6cm,6cm,,,,SqFt,,$4.85,,,54¢,30¢,6cm SqFt $4.85 54¢ 30¢
+12,paver_slab,TM,TM — 7cm,7cm,,,,SqFt,,$5.38,,,64¢,35¢,7cm SqFt $5.38 64¢ 35¢
+12,paver_slab,Brussels Dimensional Stone,Brussels Dimensional Stone — Colours,Colours,,,,Piece,,$5.78,,,47¢,32¢,Colours Piece $5.78 47¢ 32¢
+12,paver_slab,Brussels Dimensional Stone,Brussels Dimensional Stone — Midnight,Midnight,,,,Piece,,$6.76,,,47¢,32¢,Midnight Piece $6.76 47¢ 32¢
+12,paver_slab,Endura Coping,14 24,,,,,Piece,,$48.09,,,98¢,68¢,14 24 Piece $48.09 98¢ 68¢
+12,paver_slab,Endura Coping,"Endura Coping — 14 x 24 -Linen Buff,Grey","14 x 24 -Linen Buff,Grey",,,,Piece,,$45.70,,,98¢,68¢,"14 x 24 -Linen Buff,Grey Piece $45.70 98¢ 68¢"
+12,paver_slab,Endura Coping,Endura Coping — 19 X 36,19 X 36,,,,Piece,,$98.02,,,98¢,68¢,19 X 36 Piece $98.02 98¢ 68¢
+12,paver_slab,Endura Coping,"Endura Coping — 19 x 36 -Linen Buff,Grey","19 x 36 -Linen Buff,Grey",,,,Piece,,$93.02,,,98¢,68¢,"19 x 36 -Linen Buff,Grey Piece $93.02 98¢ 68¢"
+12,paver_slab,Endura Coping,IE _nd_u_ra_ P_il _la _r C_ a...;..p ___ __.l,,,,,Piece,,$129.221,,,86¢,83¢,IE _nd_u_ra_ P_il _la _r C_ a...;..p ___ __.l Piece I $129.221 86¢ I 83¢
+13,paver_slab,Aberdeen HD² Klean-Bloc,"Combo, 30x10, 30x20",,,,,SqFt,,$13.37,,,40¢,30¢,"Combo, 30x10, 30x20 SqFt $13.37 40¢ 30¢"
+13,paver_slab,Aberdeen HD² Klean-Bloc,Aberdeen HD² Klean-Bloc — 30 x 30,30 x 30,,,,SqFt,,$15.55,,,39¢,30¢,30 x 30 SqFt $15.55 39¢ 30¢
+13,paver_slab,Blu Grande,"Smooth-Onyx,Nickel, Cream",,,,,SqFt,,$7.39,,,54¢,30¢,"Smooth-Onyx,Nickel, Cream SqFt $7.39 54¢ 30¢"
+13,paver_slab,Blu Grande,Smooth,,,,,SqFt,,$6.19,,,54¢,30¢,Smooth SqFt $6.19 54¢ 30¢
+13,paver_slab,Blu Grande,Slate,,,,,SqFt,,$6.19,,,54¢,30¢,Slate SqFt $6.19 54¢ 30¢
+13,paver_slab,Blu Grande,"HD² - Nickel,Beige,Caffè",,,,,SqFt,,$7.39,,,54¢,30¢,"HD² - Nickel,Beige,Caffè SqFt $7.39 54¢ 30¢"
+13,paver_slab,Blu Grande,HD²,,,,,SqFt,,$6.63,,,54¢,30¢,HD² SqFt $6.63 54¢ 30¢
+13,paver_slab,Blu Grande Polished - Custom Order,"Shale, Chestnut **",,,,,SqFt,,$10.74,,,54¢,30¢,"Shale, Chestnut ** SqFt $10.74 54¢ 30¢"
+13,paver_slab,Blu Grande Polished - Custom Order,Blu Grande Polished - Custom Order — Colours **,Colours **,,,,SqFt,,$11.89,,,54¢,30¢,Colours ** SqFt $11.89 54¢ 30¢
+13,paver_slab,Blu Polished-Custom Order,"Shale, Chestnut **",,,,,SqFt,,$8.11,,,54¢,30¢,"Shale, Chestnut ** SqFt $8.11 54¢ 30¢"
+13,paver_slab,Blu Polished-Custom Order,Blu Polished-Custom Order — Colours **,Colours **,,,,SqFt,,$8.73,,,54¢,30¢,Colours ** SqFt $8.73 54¢ 30¢
+13,paver_slab,Blu Slate,"Onyx, Chocolate",,,,,SqFt,,$5.92,,,54¢,30¢,"Onyx, Chocolate SqFt $5.92 54¢ 30¢"
+13,paver_slab,Blu Slate,Blu Slate — Colours,Colours,,,,SqFt,,$5.07,,,54¢,30¢,Colours SqFt $5.07 54¢ 30¢
+13,paver_slab,Blu Smooth,"Onyx, Chocolate, Nickel,",,,,,SqFt,,$5.92,,,54¢,30¢,"Onyx, Chocolate, Nickel, SqFt $5.92 54¢ 30¢"
+13,paver_slab,Cream,"HD²-Onyx,Caffè",,,,,SqFt,,$5.98,,,54¢,30¢,"HD²-Onyx,Caffè SqFt $5.98 54¢ 30¢"
+13,paver_slab,"Nickel,Cream",HD²,,,,,SqFt,,$5.58,,,54¢,30¢,HD² SqFt $5.58 54¢ 30¢
+13,paver_slab,"Nickel,Cream","Nickel,Cream — Colours",Colours,,,,SqFt,,$5.07,,,54¢,30¢,Colours SqFt $5.07 54¢ 30¢
+13,paver_slab,Borealis HD2 Klean-Bloc,Borealis HD2 Klean-Bloc — 5 x 30,5 x 30,,,,SqFt,,$15.64,,,54¢,30¢,5 x 30 SqFt $15.64 54¢ 30¢
+13,paver_slab,Borealis HD2 Klean-Bloc,Borealis HD2 Klean-Bloc — 10 x 30,10 x 30,,,,SqFt,,$14.65,,,54¢,30¢,10 x 30 SqFt $14.65 54¢ 30¢
+13,paver_slab,Product Size and Colour,Borealis Stepping Stone,,,,,Each,,$45.08,,,$1.21,93¢,Borealis Stepping Stone Each $45.08 $1.21 93¢
+13,paver_slab,Everest HD2,"Other Sizes - Nickel, Caffe",,,,,SqFt,,$12.92,,,54¢,30¢,"Other Sizes - Nickel, Caffe SqFt $12.92 54¢ 30¢"
+13,paver_slab,Everest HD2,Other Sizes - Nickel,,,,,SqFt,,$12.92,,,54¢,30¢,Other Sizes - Nickel SqFt $12.92 54¢ 30¢
+13,paver_slab,Everest HD2,Everest HD2 — Other Sizes - Colours,Other Sizes - Colours,,,,SqFt,,$12.31,,,54¢,30¢,Other Sizes - Colours SqFt $12.31 54¢ 30¢
+13,paver_slab,Everest HD2,"Everest HD2 — 500 x 500 - Nickel, Caffe","500 x 500 - Nickel, Caffe",,,,SqFt,,$15.68,,,54¢,30¢,"500 x 500 - Nickel, Caffe SqFt $15.68 54¢ 30¢"
+13,paver_slab,Everest HD2,Everest HD2 — 500 x 500 - Colours,500 x 500 - Colours,,,,SqFt,,$14.93,,,54¢,30¢,500 x 500 - Colours SqFt $14.93 54¢ 30¢
+13,paver_slab,Hexa HD² Slab,"Nickel, Beige, Onyx, Caffe",,,,,SqFt,,$9.01,,,54¢,30¢,"Nickel, Beige, Onyx, Caffe SqFt $9.01 54¢ 30¢"
+13,paver_slab,Hexa HD² Slab,Hexa HD² Slab — Colours,Colours,,,,SqFt,,$8.58,,,54¢,30¢,Colours SqFt $8.58 54¢ 30¢
+13,paver_slab,Hexa HD² Slab,Inca HD²,,,,,SqFt,,$10.75,,,39¢,30¢,Inca HD² SqFt $10.75 39¢ 30¢
+13,paver_slab,Hexa HD² Slab,Industria Flora,,,,,SqFt,,$13.53,,,54¢,30¢,Industria Flora SqFt $13.53 54¢ 30¢
+13,paver_slab,Industria Slab,Smooth-Silver Granite **,,,,,SqFt,,$8.89,,,54¢,30¢,Smooth-Silver Granite ** SqFt $8.89 54¢ 30¢
+13,paver_slab,Industria Slab,"Smooth-Beige,Nickel,Caffè,O",,,,,SqFt,,$8.08,,,54¢,30¢,"Smooth-Beige,Nickel,Caffè,O SqFt $8.08 54¢ 30¢"
+13,paver_slab,nyx **,"Smooth-Beige,Nickel,Caffè **",,,,,SqFt,,$8.42,,,54¢,30¢,"Smooth-Beige,Nickel,Caffè ** SqFt $8.42 54¢ 30¢"
+13,paver_slab,nyx **,Smooth **,,,,,SqFt,,$8.58,,,54¢,30¢,Smooth ** SqFt $8.58 54¢ 30¢
+13,paver_slab,nyx **,"Polished - Shale, Chestnut **",,,,,SqFt,,$13.14,,,54¢,30¢,"Polished - Shale, Chestnut ** SqFt $13.14 54¢ 30¢"
+13,paver_slab,nyx **,nyx ** — Polished - Colours **,Polished - Colours **,,,,SqFt,,$13.56,,,54¢,30¢,Polished - Colours ** SqFt $13.56 54¢ 30¢
+13,paver_slab,nyx **,Granitex **,,,,,SqFt,,$12.14,,,54¢,30¢,Granitex ** SqFt $12.14 54¢ 30¢
+13,paver_slab,nyx **,Ocean Grande HD²,,,,,SqFt,,$10.89,,,54¢,30¢,Ocean Grande HD² SqFt $10.89 54¢ 30¢
+13,paver_slab,Para Smooth HD²,Other Sizes - Silver Granite **,,,,,SqFt,,$8.89,,,54¢,30¢,Other Sizes - Silver Granite ** SqFt $8.89 54¢ 30¢
+13,paver_slab,Para Smooth HD²,Para Smooth HD² — Other Sizes - Colours **,Other Sizes - Colours **,,,,SqFt,,$8.42,,,54¢,30¢,Other Sizes - Colours ** SqFt $8.42 54¢ 30¢
+13,paver_slab,Para Smooth HD²,Para Smooth HD² — 500x750 - Silver Granite **,500x750 - Silver Granite **,,,,SqFt,,$9.95,,,54¢,30¢,500x750 - Silver Granite ** SqFt $9.95 54¢ 30¢
+13,paver_slab,Para Smooth HD²,Para Smooth HD² — 500x750 - Colours **,500x750 - Colours **,,,,SqFt,,$9.48,,,54¢,30¢,500x750 - Colours ** SqFt $9.48 54¢ 30¢
+14,paver_slab,Terrazzo,Terrazzo — 600x600,600x600,,,,SqFt,,$19.00,,,54¢,30¢,600x600 SqFt $19.00 54¢ 30¢
+14,paver_slab,Terrazzo,Terrazzo — 600x300,600x300,,,,SqFt,,$16.38,,,54¢,30¢,600x300 SqFt $16.38 54¢ 30¢
+14,paver_slab,Terrazzo,Terrazzo — 600x150,600x150,,,,SqFt,,$16.38,,,54¢,30¢,600x150 SqFt $16.38 54¢ 30¢
+14,paver_slab,Travertina Raw HD² Klean-Bloc,Travertina 30 x 30,,,,,SqFt,,$17.22,,,40¢,30¢,Travertina 30 x 30 SqFt $17.22 40¢ 30¢
+14,paver_slab,Travertina Raw HD² Klean-Bloc,Other Sizes,,,,,SqFt,,$14.56,,,41¢,31¢,Other Sizes SqFt $14.56 41¢ 31¢
+14,paver_slab,SYSTEMS By Fee,Blu 45 Slate,,,,,SqFt,,$5.27,,,32¢,26¢,Blu 45 Slate SqFt $5.27 32¢ 26¢
+14,paver_slab,Blu Smooth,"Onyx, Nickel, Cream",,,,,SqFt,,$5.95,,,32¢,26¢,"Onyx, Nickel, Cream SqFt $5.95 32¢ 26¢"
+14,paver_slab,Blu Smooth,Blu Smooth — Colours,Colours,,,,SqFt,,$5.27,,,32¢,26¢,Colours SqFt $5.27 32¢ 26¢
+14,paver_slab,Pacific,Slab,,,,,SqFt,,$5.53,,,22¢,17¢,Slab SqFt $5.53 22¢ 17¢
+14,paver_slab,Pacific,Cap,,,,,Piece,,$2.96,,,08¢,25¢,Cap Piece $2.96 08¢ 25¢
+14,paver_slab,Antika,Onyx & Chocolate,,,,,SqFt,,$7.93,,,54¢,30¢,Onyx & Chocolate SqFt $7.93 54¢ 30¢
+14,paver_slab,Antika,Antika — Colours,Colours,,,,SqFt,,$7.38,,,54¢,30¢,Colours SqFt $7.38 54¢ 30¢
+14,paver_slab,Antika,Aquastorm,,,,,SqFt,,$7.68,,,90¢,49¢,Aquastorm SqFt $7.68 90¢ 49¢
+14,paver_slab,Blu Polished-Custom Order,"Shale, Chestnut **",,,,,SqFt,,$11.42,,,73¢,39¢,"Shale, Chestnut ** SqFt $11.42 73¢ 39¢"
+14,paver_slab,Blu Polished-Custom Order,Blu Polished-Custom Order — Colours **,Colours **,,,,SqFt,,$12.48,,,73¢,39¢,Colours ** SqFt $12.48 73¢ 39¢
+14,paver_slab,Blu Slate,"Onyx, Chocolate",,,,,SqFt,,$7.77,,,73¢,39¢,"Onyx, Chocolate SqFt $7.77 73¢ 39¢"
+14,paver_slab,Product Size and Colour,Product Size and Colour — Colours,Colours,,,,SqFt,,$6.68,,,73¢,39¢,Colours SqFt $6.68 73¢ 39¢
+14,paver_slab,Blu Smooth,"Onyx, Chocolate, Greyed,",,,,,SqFt,,$7.77,,,73¢,39¢,"Onyx, Chocolate, Greyed, SqFt $7.77 73¢ 39¢"
+14,paver_slab,Beige,"HD² - Onyx, Nickel, Caffe",,,,,SqFt,,$8.00,,,73¢,39¢,"HD² - Onyx, Nickel, Caffe SqFt $8.00 73¢ 39¢"
+14,paver_slab,Beige,HD²,,,,,SqFt,,$7.61,,,73¢,39¢,HD² SqFt $7.61 73¢ 39¢
+14,paver_slab,Beige,Beige — Colours,Colours,,,,SqFt,,$6.68,,,73¢,39¢,Colours SqFt $6.68 73¢ 39¢
+14,paver_slab,Diamond HD²,"Smooth-Nickel,Beige, Onyx",,,,,SqFt,,$10.38,,,90¢,49¢,"Smooth-Nickel,Beige, Onyx SqFt $10.38 90¢ 49¢"
+14,paver_slab,Diamond HD²,"Smooth-Chestnut, Shale **",,,,,SqFt,,$9.97,,,90¢,49¢,"Smooth-Chestnut, Shale ** SqFt $9.97 90¢ 49¢"
+14,paver_slab,Diamond HD²,Granitex **,,,,,SqFt,,$13.47,,,90¢,49¢,Granitex ** SqFt $13.47 90¢ 49¢
+14,paver_slab,Diamond HD²,Eva Slate,,,,,SqFt,,$4.54,,,54¢,30¢,Eva Slate SqFt $4.54 54¢ 30¢
+14,paver_slab,Eva Smooth,Onyx Black,,,,,SqFt,,$5.19,,,54¢,30¢,Onyx Black SqFt $5.19 54¢ 30¢
+14,paver_slab,Eva Smooth,Eva Smooth — Colours,Colours,,,,SqFt,,$4.49,,,54¢,30¢,Colours SqFt $4.49 54¢ 30¢
+14,paver_slab,Hexa HD² Paver,"Nickel, Beige, Onyx **",,,,,SqFt,,$11.78,,,90¢,49¢,"Nickel, Beige, Onyx ** SqFt $11.78 90¢ 49¢"
+14,paver_slab,Hexa HD² Paver,Hexa HD² Paver — Colours **,Colours **,,,,SqFt,,$11.22,,,90¢,49¢,Colours ** SqFt $11.22 90¢ 49¢
+14,paver_slab,Hexa HD² Paver,Hydra,,,,,SqFt,,$9.37,,,90¢,49¢,Hydra SqFt $9.37 90¢ 49¢
+14,paver_slab,Linea,Onyx,,,,,SqFt,,$7.21,,,90¢,49¢,Onyx SqFt $7.21 90¢ 49¢
+14,paver_slab,Linea,Linea — Colours,Colours,,,,SqFt,,$6.18,,,90¢,49¢,Colours SqFt $6.18 90¢ 49¢
+14,paver_slab,Linea,Mika HD² Klean-Bloc,,,,,SqFt,,$15.15,,,64¢,35¢,Mika HD² Klean-Bloc SqFt $15.15 64¢ 35¢
+14,paver_slab,Linea,Mista,,,,,SqFt,,$5.16,,,64¢,35¢,Mista SqFt $5.16 64¢ 35¢
+14,paver_slab,Linea,Oxford,,,,,SqFt,,$15.15,,,N/A,30¢,Oxford SqFt $15.15 N/A 30¢
+14,paver_slab,Linea,Pure,,,,,SqFt,,$8.74,,,73¢,39¢,Pure SqFt $8.74 73¢ 39¢
+15,paver_slab,Sleek HD²,Silver Granite,,,,,SqFt,,$11.12,,,65¢,50¢,Silver Granite SqFt $11.12 65¢ 50¢
+15,paver_slab,Sleek HD²,"Nickel, Onyx, Beige, Caffe",,,,,SqFt,,$10.64,,,65¢,50¢,"Nickel, Onyx, Beige, Caffe SqFt $10.64 65¢ 50¢"
+15,paver_slab,Sleek HD²,Sleek HD² — Colours,Colours,,,,SqFt,,$10.06,,,65¢,50¢,Colours SqFt $10.06 65¢ 50¢
+15,paver_slab,Squadra - Slate,Onyx Black,,,,,SqFt,,$9.44,,,54¢,30¢,Onyx Black SqFt $9.44 54¢ 30¢
+15,paver_slab,Squadra - Slate,Squadra - Slate — Colours,Colours,,,,SqFt,,$9.08,,,54¢,30¢,Colours SqFt $9.08 54¢ 30¢
+15,paver_slab,Squadra - Slate,Terrazzo,,,,,SqFt,,$14.91,,,54¢,30¢,Terrazzo SqFt $14.91 54¢ 30¢
+15,paver_slab,Squadra - Slate,Travertina Raw Paver HD²,,,,,SqFt,,$14.88,,,64¢,35¢,Travertina Raw Paver HD² SqFt $14.88 64¢ 35¢
+15,paver_slab,Valet,Onyx Black,,,,,SqFt,,$8.37,,,54¢,30¢,Onyx Black SqFt $8.37 54¢ 30¢
+15,paver_slab,Valet,Valet — Colours,Colours,,,,SqFt,,$8.06,,,54¢,30¢,Colours SqFt $8.06 54¢ 30¢
+15,paver_slab,Victorien mm,Shale,,,,,SqFt,,$5.85,,,54¢,30¢,Shale SqFt $5.85 54¢ 30¢
+15,paver_slab,Victorien mm,"Onyx, Chocolate",,,,,SqFt,,$6.15,,,54¢,30¢,"Onyx, Chocolate SqFt $6.15 54¢ 30¢"
+15,paver_slab,Villagio,Onyx & Chocolate,,,,,SqFt,,$7.39,,,54¢,30¢,Onyx & Chocolate SqFt $7.39 54¢ 30¢
+15,paver_slab,Villagio,Villagio — Colours,Colours,,,,SqFt,,$6.51,,,54¢,30¢,Colours SqFt $6.51 54¢ 30¢
+15,paver_slab,Westmount HD²,Onyx Black,,,,,SqFt,,$7.89,,,73¢,39¢,Onyx Black SqFt $7.89 73¢ 39¢
+15,paver_slab,Westmount HD²,Westmount HD² — Colours,Colours,,,,SqFt,,$7.51,,,73¢,39¢,Colours SqFt $7.51 73¢ 39¢
+15,paver_slab,Fascia,Base,,,,,Piece,,$11.53,,,87¢,66¢,Base Piece $11.53 87¢ 66¢
+15,paver_slab,Fascia Iconic Klean-Bloc,Iconic Corner Panel,,,,,Piece,,$25.64,,,45¢,35¢,Iconic Corner Panel Piece $25.64 45¢ 35¢
+15,paver_slab,Fascia Rosemont Klean-Bloc,Rosemont Corner Panel,,,,,Piece,,$25.64,,,43¢,35¢,Rosemont Corner Panel Piece $25.64 43¢ 35¢
+15,paver_slab,G-Force Wall,Corner,,,,,Piece,,$21.97,,,$1.60,$1.21,Corner Piece $21.97 $1.60 $1.21
+16,paver_slab,Raffinato,Smooth Corner & Pillar,,,,,Piece,,$11.96,,,51¢,38¢,Smooth Corner & Pillar Piece $11.96 51¢ 38¢
+16,paver_slab,90mm,Smooth Corner & Pillar,,,,,Piece,,$23.99,,,99¢,75¢,Smooth Corner & Pillar Piece $23.99 99¢ 75¢
+16,paver_slab,180mm,Polished Corner & Pillar,,,,,Piece,,$15.82,,,61¢,47¢,Polished Corner & Pillar Piece $15.82 61¢ 47¢
+16,paver_slab,90mm - Custom Order,Polished Corner & Pillar,,,,,Piece,,$31.84,,,$1.20,92¢,Polished Corner & Pillar Piece $31.84 $1.20 92¢
+16,paver_slab,Sandstone Thin Set Vaneer Wall,Grey **,,,,,SqFt,,$21.44,,,91¢,70¢,Grey ** SqFt $21.44 91¢ 70¢
+16,paver_slab,Sandstone Thin Set Vaneer Wall,Beige **,,,,,SqFt,,$19.97,,,91¢,70¢,Beige ** SqFt $19.97 91¢ 70¢
+16,paver_slab,Product Size and Colour,Extender,,,,,Piece,,$105.68,,,$6.93,$5.31,Extender Piece $105.68 $6.93 $5.31
+16,paver_slab,Product Size and Colour,Corner,,,,,Piece,,$121.15,,,$9.47,$7.24,Corner Piece $121.15 $9.47 $7.24
+16,paver_slab,Travertina Raw Wall,Corner,,,,,Piece,,$25.67,,,$1.01,79¢,Corner Piece $25.67 $1.01 79¢
+16,paver_slab,Brandon Wall Cap,"Onyx, Caffe",,,,,Piece,,$28.25,,,$1.05,80¢,"Onyx, Caffe Piece $28.25 $1.05 80¢"
+16,paver_slab,Brandon Wall Cap,Brandon Wall Cap — Colours,Colours,,,,Piece,,$27.46,,,$1.05,80¢,Colours Piece $27.46 $1.05 80¢
+16,paver_slab,Bullnose Coping,Graphix Wall Cap,,,,,Piece,,$27.58,,,$1.08,83¢,Graphix Wall Cap Piece $27.58 $1.08 83¢
+17,paver_slab,Raffinato,3.56 x 14 x 28 Cap,,,,,Piece,,$34.05,,,$1.79,$1.37,3.56 x 14 x 28 Cap Piece $34.05 $1.79 $1.37
+17,paver_slab,Raffinato,2.37 x 14 x 32 Cap HD2,,,,,Piece,,$38.46,,,$1.19,90¢,2.37 x 14 x 32 Cap HD2 - Piece $38.46 $1.19 90¢
+17,paver_slab,Silver Granite,2.37 x 14 x 32 Cap HD2,,,,,Piece,,$37.78,,,$1.19,90¢,2.37 x 14 x 32 Cap HD2 Piece $37.78 $1.19 90¢
+17,paver_slab,Silver Granite,2.37 x 14 x 28 Cap,,,,,Piece,,$29.67,,,$1.19,90¢,2.37 x 14 x 28 Cap Piece $29.67 $1.19 90¢
+17,paver_slab,STEPS,Raffinato Step,,,,,Piece,,$92.01,,,$5.54,$4.24,Raffinato Step Piece $92.01 $5.54 $4.24
+17,paver_slab,Rocka Step,Systema Step,,,,,Piece,,$109.96,,,$5.54,$4.24,Systema Step Piece $109.96 $5.54 $4.24
+17,paver_slab,Product Size and Colour,Terrazzo Step,,,,,Piece,,$256.44,,,$5.54,$4.24,Terrazzo Step Piece $256.44 $5.54 $4.24
+17,paver_slab,Fire Pit Accessories,Round Sleeve,,,,,Piece,,$522.09,,,N/A,$5.50,Round Sleeve Piece $522.09 N/A $5.50
+18,paver_slab,Zentro Smokless Insert,24in Square,,,,,Piece,,"$1,469.58",,,N/A,$5.50,"24in Square Piece$1,469.58 N/A $5.50"
+18,paver_slab,Zentro Smokless Insert,24in Round,,,,,Piece,,"$1,220.27",,,N/A,$5.50,"24in Round Piece$1,220.27 N/A $5.50"
+19,paver_slab,TM,Closed End Coping,,,,,Piece,,$48.05,,,$1.02,69¢,Closed End Coping Piece $48.05 $1.02 69¢
+19,paver_slab,TM,TM — Corner - Colours,Corner - Colours,,,,Each,,$8.22,,,63¢,44¢,Corner - Colours Each $8.22 63¢ 44¢
+19,paver_slab,TM,Corner - Midnight,,,,,Each,,$9.47,,,63¢,44¢,Corner - Midnight Each $9.47 63¢ 44¢
+19,paver_slab,TM,Corner/Piller 12 inch,,,,,Each,,$8.22,,,63¢,44¢,Corner/Piller 12 inch Each $8.22 63¢ 44¢
+19,paver_slab,TM,Corner/Piller 12 inch,,,,,Each,,$9.47,,,63¢,44¢,Corner/Piller 12 inch - Each $9.47 63¢ 44¢
+19,paver_slab,Pisa,Coping - Colour,,,,,LnFt,,$7.22,,,56¢,39¢,Coping - Colour LnFt $7.22 56¢ 39¢
+19,paver_slab,Pisa,Coping - Natural,,,,,LnFt,,$5.72,,,56¢,39¢,Coping - Natural LnFt $5.72 56¢ 39¢
+19,paver_slab,Pisa Smooth,Pillar,,,,,Piece,,$14.54,,,92¢,64¢,Pillar Piece $14.54 92¢ 64¢
+19,paver_slab,Quarry Smooth Wall,Coping,,,,,LnFt,,$7.87,,,56¢,39¢,Coping LnFt $7.87 56¢ 39¢
+19,paver_slab,Quarry Smooth Wall,Corner,,,,,Piece,,$13.89,,,63¢,44¢,Corner Piece $13.89 63¢ 44¢
+19,paver_slab,Siena Stone,Closed End Coping Colour,,,,,Piece,,$79.44,,,$8.78,$6.04,Closed End Coping Colour Piece $79.44 $8.78 $6.04
+19,paver_slab,Rock Faced,1------------... Closed End Coping Natural,,,,,Piece,,$78.75,,,$8.78,$6.04,1------------... Closed End Coping Natural Piece $78.75 $8.78 $6.04
+19,paver_slab,Rock Faced,Closed End Coping Naural,,,,,Piece,,$101.11,,,$8.78,$6.04,Closed End Coping Naural Piece $101.11 $8.78 $6.04
+19,paver_slab,Rock Faced,Coping Open End Natural,,,,,Piece,,$72.97,,,$8.78,$6.04,Coping Open End Natural Piece $72.97 $8.78 $6.04
+19,paver_slab,Rock Faced,Corner Natural,,,,,Piece,,$175.24,,,$8.78,$6.04,Corner Natural Piece $175.24 $8.78 $6.04
+19,paver_slab,Rock Faced,Standard Natural,,,,,Piece,,$72.97,,,$8.78,$6.04,Standard Natural Piece $72.97 $8.78 $6.04
+19,paver_slab,Siena Stone Smooth,Coping,,,,,Piece,,$61.44,,,$6.08,$4.20,Coping Piece $61.44 $6.08 $4.20
+19,paver_slab,Siena Stone Smooth,Corner,,,,,Piece,,$157.74,,,$4.99,$3.44,Corner Piece $157.74 $4.99 $3.44
+19,paver_slab,Siena Stone Smooth,Standard,,,,,Piece,,$58.72,,,$6.07,$4.18,Standard Piece $58.72 $6.07 $4.18
+19,paver_slab,Siena Stone Smooth Step,"Step 48""",,,,,Piece,,$81.25,,,$8.33,$5.72,"Step 48"" Piece $81.25 $8.33 $5.72"
+19,paver_slab,Siena Stone Smooth Step,"Step 72""",,,,,Piece,,$200.42,,,$12.30,$8.45,"Step 72"" Piece $200.42 $12.30 $8.45"
+19,paver_slab,U-Cara,Large Backer,,,,,Piece,,$6.95,,,56¢,38¢,Large Backer Piece $6.95 56¢ 38¢
+19,paver_slab,"Subway, Levano - Corner",Umbriano Coping,,,,,Piece,,$47.82,,,98¢,68¢,Umbriano Coping Piece $47.82 98¢ 68¢
+19,paver_slab,"Subway, Levano - Corner",Umbriano Pillar Cap,,,,,Piece,,$165.07,,,86¢,83¢,Umbriano Pillar Cap Piece $165.07 86¢ 83¢
+22,paver_slab,Lyra,Lyra — 12 X,12 X,,,,SqFt,,$6.31,,,37¢,30¢,12 X SqFt $6.31 37¢ 30¢
+22,paver_slab,Lyra,Lyra — 12 x 24 Sandstone Taupe,12 x 24 Sandstone Taupe,,,,SqFt,,$6.68,,,37¢,30¢,12 x 24 Sandstone Taupe SqFt $6.68 37¢ 30¢
+22,paver_slab,Lyra,Lyra — 12x36 and 24x24 and 24x36,12x36 and 24x24 and 24x36,,,,SqFt,,$6.85,,,37¢,30¢,12x36 and 24x24 and 24x36 SqFt $6.85 37¢ 30¢
+22,paver_slab,Lyra,Lyra Nanoblast,,,,,SqFt,,$11.30,,,37¢,30¢,Lyra Nanoblast SqFt $11.30 37¢ 30¢
+22,paver_slab,Lyra,Lyra — Colours,Colours,,,,SqFt,,$4.89,,,37¢,26¢,Colours SqFt $4.89 37¢ 26¢
+22,paver_slab,Lyra,"Glacier Creek, Ultra Black",,,,,SqFt,,$5.29,,,37¢,26¢,"Glacier Creek, Ultra Black SqFt $5.29 37¢ 26¢"
+22,paver_slab,Lyra,Riverton,,,,,SqFt,,$5.67,,,54¢,30¢,Riverton SqFt $5.67 54¢ 30¢
+22,paver_slab,Smooth,Smooth — 4 cm - Grey,4 cm - Grey,,,,Piece,,$8.99,,,$1.30,90¢,4 cm - Grey Piece $8.99 $1.30 90¢
+22,paver_slab,Smooth,Smooth — 4 cm -White,4 cm -White,,,,Piece,,$9.89,,,$1.30,90¢,4 cm -White Piece $9.89 $1.30 90¢
+22,paver_slab,Smooth,Smooth — 5 cm - Grey,5 cm - Grey,,,,Piece,,$10.49,,,$1.30,90¢,5 cm - Grey Piece $10.49 $1.30 90¢
+22,paver_slab,Smooth,Smooth — 5 cm -White,5 cm -White,,,,Piece,,$11.54,,,$1.30,90¢,5 cm -White Piece $11.54 $1.30 90¢
+22,paver_slab,Smooth,Spectra,,,,,SqFt,,$18.65,,,37¢,26¢,Spectra SqFt $18.65 37¢ 26¢
+22,paver_slab,Smooth,Splash Pads,,,,,Piece,,$11.52,,,86¢,60¢,Splash Pads Piece $11.52 86¢ 60¢
+22,paver_slab,Standard Press,Standard Press — 24x24 - Colour,24x24 - Colour,,,,Piece,,$10.89,,,$1.30,90¢,24x24 - Colour Piece $10.89 $1.30 90¢
+22,paver_slab,Standard Press,Standard Press — 24x24 - Grey,24x24 - Grey,,,,Piece,,$8.99,,,$1.30,90¢,24x24 - Grey Piece $8.99 $1.30 90¢
+22,paver_slab,Standard Press,Standard Press — 24x30 - Grey,24x30 - Grey,,,,Piece,,$11.02,,,$1.63,$1.12,24x30 - Grey Piece $11.02 $1.63 $1.12
+22,paver_slab,Trevista Smooth,Trevista Smooth — Colours,Colours,,,,SqFt,,$5.15,,,37¢,26¢,Colours SqFt $5.15 37¢ 26¢
+22,paver_slab,Trevista Smooth,"Glacier Creek, Carrara,",,,,,SqFt,,$5.57,,,37¢,26¢,"Glacier Creek, Carrara, SqFt $5.57 37¢ 26¢"
+22,paver_slab,Trevista Textured,Trevista Textured — Colours,Colours,,,,SqFt,,$5.15,,,37¢,26¢,Colours SqFt $5.15 37¢ 26¢
+22,paver_slab,Arlington,Coping,,,,,Piece,,$10.07,,,58¢,38¢,Coping - Piece $10.07 58¢ 38¢
+22,paver_slab,Winterborn,Coping-Grey Mix,,,,,Piece,,$9.41,,,58¢,,Coping-Grey Mix Piece $9.41 58¢
+22,paver_slab,Winterborn,Corner,,,,,Piece,,$11.33,,,69¢,,Corner - Piece $11.33 69¢ ! ¢
+22,paver_slab,Winterborn,Corner-Grey Mix,,,,,Piece,,$10.59,,,69¢,,Corner-Grey Mix Piece $10.59 69¢
+22,paver_slab,Winterborn,Regular,,,,,Piece,,$10.50,,,85¢,,"Regular - Piece $10.50 85¢ "" ¢"
+22,paver_slab,Winterborn,Regular-Grey Mix,,,,,Piece,,$9.81,,,85¢,58¢,Regular-Grey Mix Piece $9.81 85¢ 58¢
+25,tile,TILE / PORCELAIN,ALGONQUIN 60X90X2CM (24X36),,,,,SqF,288.0,$7.99,,,N/A,22¢,ALGONQUIN 60X90X2CM (24X36) SqF 288.0 $7.99 N/A 22¢
+25,tile,TILE / PORCELAIN,ALMOND 40X80X3CM (16X32),,,,,SqF,186.0,$11.19,,,38¢,22¢,ALMOND 40X80X3CM (16X32) SqF 186.0 $11.19 38¢ 22¢
+25,tile,TILE / PORCELAIN,AMALFI 60X90X2CM (24X36),,,,,SqF,279.0,$7.99,,,38¢,22¢,AMALFI 60X90X2CM (24X36) SqF 279.0 $7.99 38¢ 22¢
+25,tile,TILE / PORCELAIN,ASH TIMBER 40X120X2CM (16X48),,,,,SqF,256.0,$7.99,,,38¢,22¢,ASH TIMBER 40X120X2CM (16X48) SqF 256.0 $7.99 38¢ 22¢
+25,tile,TILE / PORCELAIN,AURA WHITE 60X60X2CM (24X24),,,,,SqF,232.5,$7.70,,,38¢,22¢,AURA WHITE 60X60X2CM (24X24) SqF 232.5 $7.70 38¢ 22¢
+25,tile,TILE / PORCELAIN,BIRCH TIMBER 40X120X2CM (16X48),,,,,SqF,248.0,$7.99,,,38¢,22¢,BIRCH TIMBER 40X120X2CM (16X48) SqF 248.0 $7.99 38¢ 22¢
+25,tile,TILE / PORCELAIN,BLACK OPAL 60X60X2CM (24X24),,,,,SqF,232.5,$7.57,,,38¢,22¢,BLACK OPAL 60X60X2CM (24X24) SqF 232.5 $7.57 38¢ 22¢
+25,tile,TILE / PORCELAIN,BLANCO 60X60X3CM (24X24),,,,,SqF,170.5,N/A,,,38¢,22¢,BLANCO 60X60X3CM (24X24) SqF 170.5 N/A 38¢ 22¢
+25,tile,TILE / PORCELAIN,CASABLANCA 60X120X2CM (24X48),,,,,SqF,271.3,$9.66,,,38¢,22¢,CASABLANCA 60X120X2CM (24X48) SqF 271.3 $9.66 38¢ 22¢
+25,tile,TILE / PORCELAIN,COAST/SAND 60X90X2CM (24X36),,,,,SqF,279.0,$7.99,,,38¢,22¢,COAST/SAND 60X90X2CM (24X36) SqF 279.0 $7.99 38¢ 22¢
+25,tile,TILE / PORCELAIN,CREMA ANTICO 90X90X2CM (36X36),,,,,SqF,279.0,$8.69,,,38¢,22¢,CREMA ANTICO 90X90X2CM (36X36) SqF 279.0 $8.69 38¢ 22¢
+25,tile,TILE / PORCELAIN,ERAMOSA 30X60X2CM (12X24),,,,,SqF,232.5,$8.27,,,38¢,22¢,ERAMOSA 30X60X2CM (12X24) SqF 232.5 $8.27 38¢ 22¢
+25,tile,TILE / PORCELAIN,ERAMOSA 60X60X2CM (24X24),,,,,SqF,232.5,$8.27,,,38¢,22¢,ERAMOSA 60X60X2CM (24X24) SqF 232.5 $8.27 38¢ 22¢
+25,tile,TILE / PORCELAIN,ERAMOSA 60X90X2CM (24X36),,,,,SqF,279.0,$8.27,,,38¢,22¢,ERAMOSA 60X90X2CM (24X36) SqF 279.0 $8.27 38¢ 22¢
+25,tile,TILE / PORCELAIN,GREIGE 40X120X2CM (16X48),,,,,SqF,248.0,$7.99,,,38¢,22¢,GREIGE 40X120X2CM (16X48) SqF 248.0 $7.99 38¢ 22¢
+25,tile,TILE / PORCELAIN,GRIS 45X90X2CM (18X36),,,,,SqF,235.4,$8.69,,,38¢,22¢,GRIS 45X90X2CM (18X36) SqF 235.4 $8.69 38¢ 22¢
+25,tile,TILE / PORCELAIN,ICE GREY 30X60X2CM (12X24),,,,,SqF,232.5,$5.91,,,38¢,22¢,ICE GREY 30X60X2CM (12X24) SqF 232.5 $5.91 38¢ 22¢
+25,tile,TILE / PORCELAIN,ICE GREY 60X60X2CM (24X24),,,,,SqF,248.0,$6.46,,,38¢,22¢,ICE GREY 60X60X2CM (24X24) SqF 248.0 $6.46 38¢ 22¢
+25,tile,TILE / PORCELAIN,ICE GREY 60X90X2CM (24X36),,,,,SqF,232.5,$5.91,,,38¢,22¢,ICE GREY 60X90X2CM (24X36) SqF 232.5 $5.91 38¢ 22¢
+25,tile,TILE / PORCELAIN,IMPERIAL 30X60X2CM (12X24),,,,,SqF,232.5,$6.60,,,38¢,22¢,IMPERIAL 30X60X2CM (12X24) SqF 232.5 $6.60 38¢ 22¢
+25,tile,TILE / PORCELAIN,IMPERIAL 60X60X2CM (24X24),,,,,SqF,248.0,$5.91,,,38¢,22¢,IMPERIAL 60X60X2CM (24X24) SqF 248.0 $5.91 38¢ 22¢
+25,tile,TILE / PORCELAIN,IMPERIAL 60X90X2CM (24X36),,,,,SqF,232.5,$5.91,,,38¢,22¢,IMPERIAL 60X90X2CM (24X36) SqF 232.5 $5.91 38¢ 22¢
+25,tile,TILE / PORCELAIN,INDUS 60X90X2CM (24X36),,,,,SqF,279.0,$7.99,,,38¢,22¢,INDUS 60X90X2CM (24X36) SqF 279.0 $7.99 38¢ 22¢
+25,tile,TILE / PORCELAIN,INDUS WHITE60X90X2CM (24X36),,,,,SqF,279.0,$7.99,,,38¢,22¢,INDUS WHITE60X90X2CM (24X36) SqF 279.0 $7.99 38¢ 22¢
+25,tile,TILE / PORCELAIN,LIGHT TIMBER 40X120X2CM (16X48),,,,,SqF,248.0,$7.99,,,38¢,22¢,LIGHT TIMBER 40X120X2CM (16X48) SqF 248.0 $7.99 38¢ 22¢
+25,tile,TILE / PORCELAIN,MOONGREY 60X90X2CM (24X36),,,,,SqF,279.0,$7.99,,,38¢,22¢,MOONGREY 60X90X2CM (24X36) SqF 279.0 $7.99 38¢ 22¢
+25,tile,TILE / PORCELAIN,NERO 40X80X3CM (16X32),,,,,SqF,186.0,$11.19,,,38¢,22¢,NERO 40X80X3CM (16X32) SqF 186.0 $11.19 38¢ 22¢
+25,tile,TILE / PORCELAIN,NERO 60X60X5CM (24X24) - INACTIVE,,,,,SqF,112.0,$18.68,,,38¢,22¢,NERO 60X60X5CM (24X24) - INACTIVE SqF 112.0 $18.68 38¢ 22¢
+25,tile,TILE / PORCELAIN,RIO BLACK 40X120X2CM (16X48),,,,,SqF,248.0,$7.99,,,38¢,22¢,RIO BLACK 40X120X2CM (16X48) SqF 248.0 $7.99 38¢ 22¢
+25,tile,TILE / PORCELAIN,RIO BLACK 60X60X2CM (24X24),,,,,SqF,248.0,$6.46,,,38¢,22¢,RIO BLACK 60X60X2CM (24X24) SqF 248.0 $6.46 38¢ 22¢
+25,tile,TILE / PORCELAIN,SEASHELL 60X60X2CM (24X24),,,,,SqF,232.5,$7.57,,,38¢,22¢,SEASHELL 60X60X2CM (24X24) SqF 232.5 $7.57 38¢ 22¢
+25,tile,TILE / PORCELAIN,SILVER 40X80X3CM (16X32),,,,,SqF,186.0,$11.19,,,38¢,22¢,SILVER 40X80X3CM (16X32) SqF 186.0 $11.19 38¢ 22¢
+25,tile,TILE / PORCELAIN,SILVER VALLEY 60X90X2CM (24X36),,,,,SqF,279.0,$7.99,,,38¢,22¢,SILVER VALLEY 60X90X2CM (24X36) SqF 279.0 $7.99 38¢ 22¢
+25,tile,TILE / PORCELAIN,SLATE GREY 30X60X2CM (12X24),,,,,SqF,232.5,$6.60,,,38¢,22¢,SLATE GREY 30X60X2CM (12X24) SqF 232.5 $6.60 38¢ 22¢
+25,tile,TILE / PORCELAIN,SLATE GREY 60X60X2CM (24X24),,,,,SqF,248.0,$5.91,,,38¢,22¢,SLATE GREY 60X60X2CM (24X24) SqF 248.0 $5.91 38¢ 22¢
+25,tile,TILE / PORCELAIN,SLATE GREY 60X90X2CM (24X36),,,,,SqF,232.5,$5.91,,,38¢,22¢,SLATE GREY 60X90X2CM (24X36) SqF 232.5 $5.91 38¢ 22¢
+26,tile,TILE / PORCELAIN,TRAVERTINO 60X90X2CM (24X36),,,,,SqF,288.0,$8.69,,,N/A,22¢,TRAVERTINO 60X90X2CM (24X36) SqF 288.0 $8.69 N/A 22¢
+26,tile,TILE / PORCELAIN,TUNDRA 60X120X2CM (24X48),,,,,SqF,248.0,$8.69,,,38¢,22¢,TUNDRA 60X120X2CM (24X48) SqF 248.0 $8.69 38¢ 22¢
+26,tile,TILE / PORCELAIN,TUNDRA 60X60X2CM (24X24),,,,,SqF,248.0,$6.46,,,38¢,22¢,TUNDRA 60X60X2CM (24X24) SqF 248.0 $6.46 38¢ 22¢
+27,natural_stone,ARMOUR STONE,,YARD - BULK,YARD - BULK,NS-ASBA,,Pound,,.063¢,,$126.00 per Ton,N/A,2.0¢,- YARD - BULK NS-ASBA .063¢ N/A 2.0¢
+27,natural_stone,CANADA MOCHA SWIRL,,"GUILLOTINED DRYWALL 8""X6"" - UPPER","GUILLOTINED DRYWALL 8""X6"" - UPPER",NS-ASUCD86MS,,Pound,,.163¢,,$326.00 per Ton,N/A,2.0¢,"- GUILLOTINED DRYWALL 8""X6"" - UPPER NS-ASUCD86MS .163¢ N/A 2.0¢"
+27,natural_stone,CANADA CHOCOLATE,,"GUILLOTINED DRYWALL 8""X8"" - UPPER","GUILLOTINED DRYWALL 8""X8"" - UPPER",NS-ASUCD88C,,Pound,,16.6¢,,$326.00 per Ton,N/A,2.0¢,"- GUILLOTINED DRYWALL 8""X8"" - UPPER NS-ASUCD88C 16.6¢ N/A 2.0¢"
+27,natural_stone,CANADA SWIRL,,"GUILLOTINED DRYWALL 8""X8"" - UPPER","GUILLOTINED DRYWALL 8""X8"" - UPPER",NS-ASUCD88CS,,Pound,,16.6¢,,$326.00 per Ton,N/A,2.0¢,"- GUILLOTINED DRYWALL 8""X8"" - UPPER NS-ASUCD88CS 16.6¢ N/A 2.0¢"
+27,natural_stone,DARK GREY,,"GUILLOTINED WALLSTONE 12"" - KAWARTHA","GUILLOTINED WALLSTONE 12"" - KAWARTHA",NS-ASDMGDB12,,Pound,,.153¢,,$306.00 per Ton,N/A,2.0¢,"- GUILLOTINED WALLSTONE 12"" - KAWARTHA NS-ASDMGDB12 .153¢ N/A 2.0¢"
+27,natural_stone,SKIDDED,,"GUILLOTINED WALLSTONE 12"" - GREY","GUILLOTINED WALLSTONE 12"" - GREY",NS-ASDMGW12,,Pound,,.153¢,,$306.00 per Ton,N/A,2.0¢,"- GUILLOTINED WALLSTONE 12"" - GREY NS-ASDMGW12 .153¢ N/A 2.0¢"
+27,natural_stone,SKIDDED,,"GUILLOTINED WALLSTONE 14"" - GREY","GUILLOTINED WALLSTONE 14"" - GREY",NS-ASDMGW14,,Pound,,.153¢,,$306.00 per Ton,N/A,2.0¢,"- GUILLOTINED WALLSTONE 14"" - GREY NS-ASDMGW14 .153¢ N/A 2.0¢"
+27,natural_stone,SKIDDED,,"GUILLOTINED WALLSTONE 16"" - GREY","GUILLOTINED WALLSTONE 16"" - GREY",NS-ASDMGW16,,Pound,,.153¢,,$306.00 per Ton,N/A,2.0¢,"- GUILLOTINED WALLSTONE 16"" - GREY NS-ASDMGW16 .153¢ N/A 2.0¢"
+27,natural_stone,SKIDDED,,"GUILLOTINED WALLSTONE 18"" - GREY","GUILLOTINED WALLSTONE 18"" - GREY",NS-ASDMGW18,,Pound,,.153¢,,$306.00 per Ton,N/A,2.0¢,"- GUILLOTINED WALLSTONE 18"" - GREY NS-ASDMGW18 .153¢ N/A 2.0¢"
+27,natural_stone,OWEN SOUND BROWN-BUFF,"Flagstone Random - Natural top and bottom, irregular shapes and sizes","OWEN SOUND BROWN-BUFF 3/4"" - 1""","OWEN SOUND BROWN-BUFF 3/4"" - 1""",NS-FRDOSBB075,,Pound,,.21¢,,$420.00 per Ton,2.2¢,2.0¢,"OWEN SOUND BROWN-BUFF 3/4"" - 1"" NS-FRDOSBB075 .21¢ 2.2¢ 2.0¢"
+27,natural_stone,OWEN SOUND BROWN-BUFF,"Flagstone Random - Natural top and bottom, irregular shapes and sizes","OWEN SOUND BROWN-BUFF 1"" - 1 1/4""","OWEN SOUND BROWN-BUFF 1"" - 1 1/4""",NS-FRDOSBB100,,Pound,,.20¢,,$400.00 per Ton,2.2¢,2.0¢,"OWEN SOUND BROWN-BUFF 1"" - 1 1/4"" NS-FRDOSBB100 .20¢ 2.2¢ 2.0¢"
+27,natural_stone,OWEN SOUND BROWN-BUFF,"Flagstone Random - Natural top and bottom, irregular shapes and sizes","OWEN SOUND BROWN-BUFF 1 1/2"" - 1 3/4""","OWEN SOUND BROWN-BUFF 1 1/2"" - 1 3/4""",NS-FRDOSBB150,,Pound,,.20¢,,$400.00 per Ton,2.2¢,2.0¢,"OWEN SOUND BROWN-BUFF 1 1/2"" - 1 3/4"" NS-FRDOSBB150 .20¢ 2.2¢ 2.0¢"
+27,natural_stone,OWEN SOUND BROWN-BUFF,"Flagstone Random - Natural top and bottom, irregular shapes and sizes","OWEN SOUND BROWN-BUFF 2"" - 2 1/4""","OWEN SOUND BROWN-BUFF 2"" - 2 1/4""",NS-FRDOSBB200,,Pound,,.20¢,,$400.00 per Ton,2.2¢,2.0¢,"OWEN SOUND BROWN-BUFF 2"" - 2 1/4"" NS-FRDOSBB200 .20¢ 2.2¢ 2.0¢"
+28,natural_stone,ANTIQUE LIMESTONE,"Flagstone Square Cut - Antiqued Top, Sawn Bottom, 4 sides sawn",NS-FSQSVAL1001224+size,,NS-FSQSVAL1001224+size,1 in,Square Foot,,$10.18,,,38.8¢,22¢,NS-FSQSVAL1001224+size
+28,natural_stone,ANTIQUE LIMESTONE,"Flagstone Square Cut - Antiqued Top, Sawn Bottom, 4 sides sawn",NS-FSQSVAL1001824+size,,NS-FSQSVAL1001824+size,1 in,Square Foot,,$10.18,,,38.8¢,22¢,NS-FSQSVAL1001824+size
+28,natural_stone,ANTIQUE LIMESTONE,"Flagstone Square Cut - Antiqued Top, Sawn Bottom, 4 sides sawn",NS-FSQSVAL1002424+size,,NS-FSQSVAL1002424+size,1 in,Square Foot,,$10.18,,,38.8¢,22¢,NS-FSQSVAL1002424+size
+28,natural_stone,ANTIQUE LIMESTONE,"Flagstone Square Cut - Antiqued Top, Sawn Bottom, 4 sides sawn",NS-FSQSVAL1002436+size,,NS-FSQSVAL1002436+size,1 in,Square Foot,,$10.18,,,38.8¢,22¢,NS-FSQSVAL1002436+size
+28,natural_stone,ANTIQUE LIMESTONE,"Flagstone Square Cut - Antiqued Top, Sawn Bottom, 4 sides sawn",NS-FSQSVAL1251212+size,,NS-FSQSVAL1251212+size,1.25 in,Square Foot,,$10.45,,,48.8¢,27¢,NS-FSQSVAL1251212+size
+28,natural_stone,ANTIQUE LIMESTONE,"Coping - Antique Top, 1 long side ROCK FACED (1LSRF), other 3 sides sawn, 2"" REBATED to 1""",NS-CSVALRR2001248+Length,,NS-CSVALRR2001248+Length,"12 in, 2 in",Linear Foot,,$21.12,,,70.0¢,41¢,NS-CSVALRR2001248+Length 12 in 2 in $ 21.12 70.0¢ 41¢
+28,natural_stone,ANTIQUE LIMESTONE,"Coping - Antique Top, Sawn Bottom, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CSVALR2001248+Length,,NS-CSVALR2001248+Length,"12 in, 2 in",Linear Foot,,$19.84,,,70.0¢,41¢,NS-CSVALR2001248+Length 12 in 2 in $ 19.84 70.0¢ 41¢
+28,natural_stone,ANTIQUE LIMESTONE,"Coping - Antique Top, Sawn Bottom, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CSVALR2001272+Length,,NS-CSVALR2001272+Length,"12 in, 2 in",Linear Foot,,$19.84,,,70.0¢,41¢,NS-CSVALR2001272+Length 12 in 2 in $ 19.84 70.0¢ 41¢
+28,natural_stone,ANTIQUE LIMESTONE,"Coping - Antique Top, Sawn Bottom, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CSVALR2001448+Length,,NS-CSVALR2001448+Length,"14 in, 2 in",Linear Foot,,$23.15,,,93.3¢,54¢,NS-CSVALR2001448+Length 14 in 2 in $ 23.15 93.3¢ 54¢
+28,natural_stone,ANTIQUE LIMESTONE,"Coping - Antique Top, Sawn Bottom, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CSVALR2001472+Length,,NS-CSVALR2001472+Length,"14 in, 2 in",Linear Foot,,$23.15,,,93.3¢,54¢,NS-CSVALR2001472+Length 14 in 2 in $ 23.15 93.3¢ 54¢
+28,natural_stone,ANTIQUE LIMESTONE,"Coping - Antique Top, Sawn Bottom, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CSVALR2001648+Length,,NS-CSVALR2001648+Length,"16 in, 2 in",Linear Foot,,$26.45,,,93.3¢,54¢,NS-CSVALR2001648+Length 16 in 2 in $ 26.45 93.3¢ 54¢
+28,natural_stone,ANTIQUE LIMESTONE,"Coping - Antique Top, Sawn Bottom, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CSVALR2001672+Length,,NS-CSVALR2001672+Length,"16 in, 2 in",Linear Foot,,$26.45,,,93.3¢,54¢,NS-CSVALR2001672+Length 16 in 2 in $ 26.45 93.3¢ 54¢
+28,natural_stone,ANTIQUE LIMESTONE,"Coping - Antique Top, Sawn Bottom, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CSVALA2001272+Length,,NS-CSVALA2001272+Length,"12 in, 6 in",Linear Foot,,$23.15,,,70.0¢,41¢,NS-CSVALA2001272+Length 12 in 6 in $ 23.15 70.0¢ 41¢
+28,natural_stone,ANTIQUE LIMESTONE,"Coping - Antique Top, Sawn Bottom, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CSVALB2001248+Length,,NS-CSVALB2001248+Length,"12 in, 2 in",Linear Foot,,$24.96,,,70.0¢,41¢,NS-CSVALB2001248+Length 12 in 2 in $ 24.96 70.0¢ 41¢
+28,natural_stone,ANTIQUE LIMESTONE,"Coping - Antique Top, Sawn Bottom, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CSVALB2001272+Length,,NS-CSVALB2001272+Length,"12 in, 2 in",Linear Foot,,$24.96,,,70.0¢,41¢,NS-CSVALB2001272+Length 12 in 2 in $ 24.96 70.0¢ 41¢
+29,natural_stone,ANTIQUE LIMESTONE,"Steps - Antiqued Top, Sawn Bottom, 3 sides rockfaced",NS-SGTSVAL1673,,NS-SGTSVAL1673,"36 in, 16 in, 7 in",,,$284.00,,,$6.00,$5.61,NS-SGTSVAL1673 36 in 16 in 7 in $ 284.00 $6.00 $5.61
+29,natural_stone,ANTIQUE LIMESTONE,"Steps - Antiqued Top, Sawn Bottom, 3 sides rockfaced",NS-SGTSVAL1674,,NS-SGTSVAL1674,"48 in, 16 in, 7 in",,,$379.00,,,$8.00,$7.47,NS-SGTSVAL1674 48 in 16 in 7 in $ 379.00 $8.00 $7.47
+29,natural_stone,ANTIQUE LIMESTONE,"Steps - Antiqued Top, Sawn Bottom, 3 sides rockfaced",NS-SGTSVAL1675,,NS-SGTSVAL1675,"60 in, 16 in, 7 in",,,$474.00,,,$10.00,$9.35,NS-SGTSVAL1675 60 in 16 in 7 in $ 474.00 $10.00 $9.35
+29,natural_stone,ANTIQUE LIMESTONE,"Steps - Antiqued Top, Sawn Bottom, 3 sides rockfaced",NS-SGTSVAL1676,,NS-SGTSVAL1676,"72 in, 16 in, 7 in",,,$568.00,,,$12.00,$10.81,NS-SGTSVAL1676 72 in 16 in 7 in $ 568.00 $12.00 $10.81
+29,natural_stone,ANTIQUE LIMESTONE,"Steps - Antiqued Top, Sawn Bottom, 3 sides rockfaced",NS-SGTSVAL1678,,NS-SGTSVAL1678,"96 in, 16 in, 7 in",,,$947.00,,,$16.00,$14.41,NS-SGTSVAL1678 96 in 16 in 7 in $ 947.00 $16.00 $14.41
+29,natural_stone,BLACK LIMESTONE,Flagstone Square Cut - Top Natural bottom calibrated 4 sides sawn,NS-FSQBLN100+size,,NS-FSQBLN100+size,1 in,Square Foot,,$7.50,,,38.8¢,22¢,NS-FSQBLN100+size
+29,natural_stone,BLACK LIMESTONE,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides saw cut",NS-FSQBLN1001212+size,,NS-FSQBLN1001212+size,1 in,Square Foot,,$6.27,,,38.8¢,22¢,NS-FSQBLN1001212+size
+29,natural_stone,BLACK LIMESTONE,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides saw cut",NS-FSQBLN1001224+size,,NS-FSQBLN1001224+size,1 in,Square Foot,,$6.27,,,38.8¢,22¢,NS-FSQBLN1001224+size
+29,natural_stone,BLACK LIMESTONE,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides saw cut",NS-FSQBLN1001824+size,,NS-FSQBLN1001824+size,1 in,Square Foot,,$6.27,,,38.8¢,22¢,NS-FSQBLN1001824+size
+29,natural_stone,BLACK LIMESTONE,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides saw cut",NS-FSQBLN1002424+size,,NS-FSQBLN1002424+size,1 in,Square Foot,,$6.27,,,38.8¢,22¢,NS-FSQBLN1002424+size
+29,natural_stone,BLACK LIMESTONE,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides saw cut",NS-FSQBLN100CC+size,,NS-FSQBLN100CC+size,1 in,Square Foot,,$6.27,,,38.8¢,22¢,NS-FSQBLN100CC+size
+29,natural_stone,BLACK LIMESTONE,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides saw cut",NS-FSQBLN1252436+size,,NS-FSQBLN1252436+size,1.25 in,Square Foot,,$8.50,,,48.8¢,27¢,NS-FSQBLN1252436+size
+29,natural_stone,BLACK LIMESTONE,"Coping - Top Natural, 1 long side ROCK FACED (1LSRF), other 3 sides sawn, 2"" REBATED TO 1""",NS-CBLNRR2001248+Length,,NS-CBLNRR2001248+Length,"12 in, 2 in",Linear Foot,,$16.31,,,70.0¢,41¢,NS-CBLNRR2001248+Length 12 in 2 in $ 16.31 70.0¢ 41¢
+29,natural_stone,BLACK LIMESTONE,"Coping - Top Natural, bottom calibrated, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CBLNR20012+Length,,NS-CBLNR20012+Length,"12 in, 2 in",Linear Foot,,$14.48,,,70.0¢,41¢,NS-CBLNR20012+Length 12 in 2 in $ 14.48 70.0¢ 41¢
+29,natural_stone,BLACK LIMESTONE,"Coping - Top Natural, bottom calibrated, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CBLNR20014+Length,,NS-CBLNR20014+Length,"14 in, 2 in",Linear Foot,,$16.89,,,93.3¢,54¢,NS-CBLNR20014+Length 14 in 2 in $ 16.89 93.3¢ 54¢
+29,natural_stone,BLACK LIMESTONE,"Coping - Top Natural, bottom calibrated, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CBLNR20016+Length,,NS-CBLNR20016+Length,"16 in, 2 in",Linear Foot,,$19.30,,,93.3¢,54¢,NS-CBLNR20016+Length 16 in 2 in $ 19.30 93.3¢ 54¢
+30,natural_stone,BLACK LIMESTONE,,NS-CBLNB20012+Length,,NS-CBLNB20012+Length,"12 in, 2 in",Linear Foot,,$24.89,,,70.0¢,41¢,NS-CBLNB20012+Length 12 in 2 in $ 24.89 70.0¢ 41¢
+30,natural_stone,BLACK LIMESTONE,"Coping - Double Sided 14"" - Top Natural, bottom calibrated,2 long side ROCK FACED (2LSRF), other 2 sides sawn",NS-CBLNDSR20014+Length,,NS-CBLNDSR20014+Length,"14 in, 2 in",Linear Foot,,$18.19,,,82.2¢,48¢,NS-CBLNDSR20014+Length 14 in 2 in $ 18.19 82.2¢ 48¢
+30,natural_stone,BLACK LIMESTONE,"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGNTBKI1664,,NS-SGNTBKI1664,"48 in, 16 in, 6 in",Piece,,$227.00,,,$8.00,$6.42,NS-SGNTBKI1664 48 in 16 in 6 in $ 227.00 $8.00 $6.42
+30,natural_stone,BLACK LIMESTONE,"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGNTBKI1665,,NS-SGNTBKI1665,"60 in, 16 in, 6 in",Piece,,$284.00,,,$10.00,$8.01,NS-SGNTBKI1665 60 in 16 in 6 in $ 284.00 $10.00 $8.01
+30,natural_stone,BLACK LIMESTONE,"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGNTBKI1666,,NS-SGNTBKI1666,"72 in, 16 in, 6 in",Piece,,$340.00,,,$12.00,$9.61,NS-SGNTBKI1666 72 in 16 in 6 in $ 340.00 $12.00 $9.61
+30,natural_stone,BLACK LIMESTONE,"Curbs / Step Fillers - Top Natural, bottom calibrated, 1 side rockfaced",NS-SGNTBKSF,,NS-SGNTBKSF,"46 in, 6 in, 6 in",Piece,,$113.25,,,$3.00,$2.95,NS-SGNTBKSF 46 in 6 in 6 in $ 113.25 $3.00 $2.95
+30,natural_stone,BLACK LIMESTONE,"Pier Caps - Flamed or Natural Top, Sawn / Calibrated Bottom, 4 sides rockfaced",NS-PCKBK24X24,,NS-PCKBK24X24,"24 in, 24 in, 3 in",Piece,,$124.00,,,$4.00,$2.40,NS-PCKBK24X24 24 in 24 in 3 in $ 124.00 $4.00 $2.40
+30,natural_stone,BLACK LIMESTONE,"Pier Caps - Flamed or Natural Top, Sawn / Calibrated Bottom, 4 sides rockfaced",NS-PCKBK28X28,,NS-PCKBK28X28,"28 in, 28 in, 3 in",Piece,,$168.78,,,$4.67,$3.27,NS-PCKBK28X28 28 in 28 in 3 in $ 168.78 $4.67 $3.27
+30,natural_stone,BLACK PEARL GRANITE,"Flagstone Square Cut - Flamed Top, Sawn Bottom, 4 sides saw cut",NS-FSQBPGF100+size,,NS-FSQBPGF100+size,1 in,Square Foot,,$14.67,,,38.8¢,22¢,NS-FSQBPGF100+size
+30,natural_stone,BLACK PEARL GRANITE,Coping - Coping/Edge Pavers 1in x 12 in x 4 ft,NS-CBPGFR10012+Length,,NS-CBPGFR10012+Length,"12 in, 1 in",Square Foot,,$19.94,,,70.0¢,41¢,NS-CBPGFR10012+Length 12 in 1 in $ 19.94 70.0¢ 41¢
+31,natural_stone,BLACK PEARL GRANITE,"Coping - Flamed Top, 1 long side ROCK FACED (1LSRF), other 3 sides sawn, 2"" REBATED to 1""",NS-CBPGFR20012+Length,,NS-CBPGFR20012+Length,"12 in, 2 in",Linear Foot,,$33.73,,,70.0¢,41¢,NS-CBPGFR20012+Length 12 in 2 in $ 33.73 70.0¢ 41¢
+31,natural_stone,BLACK PEARL GRANITE,"Coping - Flamed Top, Sawn Bottom, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CBPGFR20012+Length,,NS-CBPGFR20012+Length,"12 in, 2 in",Linear Foot,,$30.87,,,70.0¢,41¢,NS-CBPGFR20012+Length 12 in 2 in $ 30.87 70.0¢ 41¢
+31,natural_stone,BLACK PEARL GRANITE,"Coping - Flamed Top, Sawn Bottom, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CBPGFR20014+Length,,NS-CBPGFR20014+Length,"14 in, 2 in",Linear Foot,,$36.01,,,70.0¢,41¢,NS-CBPGFR20014+Length 14 in 2 in $ 36.01 70.0¢ 41¢
+31,natural_stone,BLACK PEARL GRANITE,"Coping - Flamed Top, Sawn Bottom, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CBPGFR20016+Length,,NS-CBPGFR20016+Length,"16 in, 2 in",Linear Foot,,$41.16,,,93.3¢,54¢,NS-CBPGFR20016+Length 16 in 2 in $ 41.16 93.3¢ 54¢
+31,natural_stone,BLACK PEARL GRANITE,"Coping - Flamed Top, Sawn Bottom, 4 sides sawn",NS-CBPGFSE20016+Length,,NS-CBPGFSE20016+Length,"16 in, 2 in",Linear Foot,,$45.46,,,93.3¢,54¢,NS-CBPGFSE20016+Length 16 in 2 in $ 45.46 93.3¢ 54¢
+31,natural_stone,BLACK PEARL GRANITE,"Coping - Flamed Top, Sawn Bottom, 1 long side BULLNOSED (1LSBN), other 3 sides sawn",NS-CBPGFB20016+Length,,NS-CBPGFB20016+Length,"16 in, 2 in",Linear Foot,,$47.61,,,93.3¢,54¢,NS-CBPGFB20016+Length 16 in 2 in $ 47.61 93.3¢ 54¢
+31,natural_stone,BLACK PEARL GRANITE,"Coping - Flamed Top, Sawn Bottom, 1 long side BULLNOSED (1LSBN), other 3 sides sawn",NS-CBPGFB20012+Length,,NS-CBPGFB20012+Length,"12 in, 2 in",Linear Foot,,$35.71,,,70.0¢,41¢,NS-CBPGFB20012+Length 12 in 2 in $ 35.71 70.0¢ 41¢
+31,natural_stone,BLACK PEARL GRANITE,"Coping - Flamed Top, Sawn Bottom, 1 long side BULLNOSED (1LSBN), other 3 sides sawn",NS-CMBGFB20016+Length,,NS-CMBGFB20016+Length,"16 in, 2 in",Linear Foot,,$47.61,,,93.3¢,54¢,NS-CMBGFB20016+Length 16 in 2 in $ 47.61 93.3¢ 54¢
+31,natural_stone,BLACK PEARL GRANITE,"Curbs / Step Fillers - Flamed Top, Sawn Bottom, 3 side rockfaced",NS-SGTBPGSF6,,NS-SGTBPGSF6,"48 in, 7 in, 6 in",Piece,,$180.18,,,$3.00,$2.95,NS-SGTBPGSF6 48 in 7 in 6 in $ 180.18 $3.00 $2.95
+31,natural_stone,BLACK PEARL GRANITE,"Curbs / Step Fillers - Flamed Top, Sawn Bottom, 3 side rockfaced",NS-SGTBPGSF7,,NS-SGTBPGSF7,"48 in, 7 in, 7 in",Piece,,$205.92,,,$3.00,$2.95,NS-SGTBPGSF7 48 in 7 in 7 in $ 205.92 $3.00 $2.95
+32,natural_stone,BLACK PEARL GRANITE,"Steps - Flamed Top, Sawn Bottom, 3 side rockfaced",NS-SGTBPG1666,,NS-SGTBPG1666,"72 in, 16 in, 6 in",Piece,,$720.00,,,$8.00,$6.42,NS-SGTBPG1666 72 in 16 in 6 in $ 720.00 $8.00 $6.42
+32,natural_stone,BLACK PEARL GRANITE,"Steps - Flamed Top, Sawn Bottom, 3 side rockfaced",NS-SGTBPG1668,,NS-SGTBPG1668,"96 in, 16 in, 6 in",Piece,,$1200.00,,,$16.00,$12.82,NS-SGTBPG1668 96 in 16 in 6 in $ 1200.00 $16.00 $12.82
+32,natural_stone,BLACK PEARL GRANITE,"Steps - Flamed Top, Sawn Bottom, 3 side rockfaced",NS-SGTBPG1674,,NS-SGTBPG1674,"48 in, 16 in, 7 in",Piece,,$547.00,,,$8.00,$6.42,NS-SGTBPG1674 48 in 16 in 7 in $ 547.00 $8.00 $6.42
+32,natural_stone,BLACK PEARL GRANITE,"Steps - Flamed Top, Sawn Bottom, 3 side rockfaced",NS-SGTBPG1675,,NS-SGTBPG1675,"60 in, 16 in, 7 in",Piece,,$684.00,,,$10.00,$8.01,NS-SGTBPG1675 60 in 16 in 7 in $ 684.00 $10.00 $8.01
+32,natural_stone,BLACK PEARL GRANITE,"Steps - Flamed Top, Sawn Bottom, 3 side rockfaced",NS-SGTBPG1676,,NS-SGTBPG1676,"72 in, 16 in, 7 in",Piece,,$820.00,,,$8.00,$6.42,NS-SGTBPG1676 72 in 16 in 7 in $ 820.00 $8.00 $6.42
+32,natural_stone,BLACK PEARL GRANITE,"Steps - Flamed Top, Sawn Bottom, 3 side rockfaced",NS-SGTBPG1678,,NS-SGTBPG1678,"96 in, 16 in, 7 in",Piece,,$1367.00,,,$16.00,$12.82,NS-SGTBPG1678 96 in 16 in 7 in $ 1367.00 $16.00 $12.82
+32,natural_stone,BLACK PEARL GRANITE,"Pier Caps - Flamed or Natural Top, Sawn / Calibrated Bottom, 4 sides rockfaced",NS-PCBPGF24X24,,NS-PCBPGF24X24,"24 in, 24 in, 3 in",Piece,,$212.00,,,$4.00,$2.40,NS-PCBPGF24X24 24 in 24 in 3 in $ 212.00 $4.00 $2.40
+32,natural_stone,BLACK PEARL GRANITE,"Pier Caps - Flamed or Natural Top, Sawn / Calibrated Bottom, 4 sides rockfaced",NS-PCBPGF30x30,,NS-PCBPGF30x30,"30 in, 30 in, 3 in",Piece,,$331.25,,,$5.00,$3.76,NS-PCBPGF30x30 30 in 30 in 3 in $ 331.25 $5.00 $3.76
+32,natural_stone,BLACK PEARL GRANITE,"Pier Caps - Flamed or Natural Top, Sawn / Calibrated Bottom, 4 sides rockfaced",NS-JSBPGF2472,,NS-JSBPGF2472,"72 in, 24 in, 3 in",Piece,,$498.00,,,$12.00,$9.01,NS-JSBPGF2472 72 in 24 in 3 in $ 498.00 $12.00 $9.01
+32,natural_stone,BLACK PEARL GRANITE,"Pier Caps - Flamed or Natural Top, Sawn / Calibrated Bottom, 4 sides rockfaced",NS-JSBPGF3672,,NS-JSBPGF3672,"72 in, 36 in, 3 in",Piece,,$747.00,,,$12.00,$10.81,NS-JSBPGF3672 72 in 36 in 3 in $ 747.00 $12.00 $10.81
+32,natural_stone,BLACK PEARL GRANITE,"Pier Caps - Flamed or Natural Top, Sawn / Calibrated Bottom, 4 sides rockfaced",NS-JSBPGF4872,,NS-JSBPGF4872,"96 in, 36 in, 3 in",Piece,,$1056.00,,,$16.00,$14.41,NS-JSBPGF4872 96 in 36 in 3 in $ 1056.00 $16.00 $14.41
+32,natural_stone,BLUE ICE,"Pier Caps - Flamed or Natural Top, Sawn / Calibrated Bottom, 4 sides rockfaced",NS-FSQBIN1001818+size,,NS-FSQBIN1001818+size,1 in,Square Foot,,$7.83,,,38.8¢,22¢,NS-FSQBIN1001818+size
+32,natural_stone,BLUE ICE,Flagstone Square Cut - Top Natural bottom calibrated 4 sides sawn,NS-FSQBIN100+size,,NS-FSQBIN100+size,1 in,Square Foot,,$6.18,,,38.8¢,20¢,NS-FSQBIN100+size
+32,natural_stone,BLUE ICE,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQBIN1000748+size,,NS-FSQBIN1000748+size,1 in,Square Foot,,$9.14,,,38.8¢,22¢,NS-FSQBIN1000748+size
+33,natural_stone,BLUE ICE,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQBIN1001212+size,,NS-FSQBIN1001212+size,1 in,Square Foot,,$7.83,,,38.8¢,22¢,NS-FSQBIN1001212+size
+33,natural_stone,BLUE ICE,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQBIN1001224+size,,NS-FSQBIN1001224+size,1 in,Square Foot,,$7.83,,,38.8¢,22¢,NS-FSQBIN1001224+size
+33,natural_stone,BLUE ICE,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQBIN1001824+size,,NS-FSQBIN1001824+size,1 in,Square Foot,,$7.83,,,38.8¢,22¢,NS-FSQBIN1001824+size
+33,natural_stone,BLUE ICE,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQBIN1002424+size,,NS-FSQBIN1002424+size,1 in,Square Foot,,$7.83,,,38.8¢,22¢,NS-FSQBIN1002424+size
+33,natural_stone,BLUE ICE,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQBIN1002436+size,,NS-FSQBIN1002436+size,1 in,Square Foot,,$7.83,,,38.8¢,22¢,NS-FSQBIN1002436+size
+33,natural_stone,BLUE ICE,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQBIN100CC+size,,NS-FSQBIN100CC+size,1 in,Square Foot,,$7.83,,,38.8¢,22¢,NS-FSQBIN100CC+size
+33,natural_stone,BLUE ICE,"Coping - Top Natural, bottom calibrated, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CBINR20012+Length,,NS-CBINR20012+Length,"12 in, 2 in",Linear Foot,,$17.91,,,70.0¢,41¢,NS-CBINR20012+Length 12 in 2 in $ 17.91 70.0¢ 41¢
+33,natural_stone,BLUE ICE,"Coping - Top Natural, bottom calibrated, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CBINR20014+Length,,NS-CBINR20014+Length,"14 in, 2 in",Linear Foot,,$20.90,,,70.0¢,41¢,NS-CBINR20014+Length 14 in 2 in $ 20.90 70.0¢ 41¢
+33,natural_stone,BLUE ICE,"Coping - Top Natural, bottom calibrated, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CBINR20016+Length,,NS-CBINR20016+Length,"16 in, 2 in",Linear Foot,,$23.88,,,93.3¢,54¢,NS-CBINR20016+Length 16 in 2 in $ 23.88 93.3¢ 54¢
+33,natural_stone,BLUE ICE,"Coping - Top Natural, bottom calibrated, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CDONR20016+Length,,NS-CDONR20016+Length,"16 in, 2 in",Linear Foot,,$23.88,,,93.3¢,54¢,NS-CDONR20016+Length 16 in 2 in $ 23.88 93.3¢ 54¢
+33,natural_stone,BLUE ICE,"Coping - Top Natural,1 long side ROCK FACED (1LSRF), other 3 sides sawn, 2"" REBATED TO 1""",NS-CBINRR20012+Length,,NS-CBINRR20012+Length,"12 in, 2 in",Linear Foot,,$20.52,,,70.0¢,41¢,NS-CBINRR20012+Length 12 in 2 in $ 20.52 70.0¢ 41¢
+33,natural_stone,BLUE ICE,"Coping - Top Natural,1 long side ROCK FACED (1LSRF), other 3 sides sawn, 2"" REBATED TO 1""",NS-CBINTE20012+Length,,NS-CBINTE20012+Length,"12 in, 2 in",Linear Foot,,$27.48,,,70.0¢,41¢,NS-CBINTE20012+Length 12 in 2 in $ 27.48 70.0¢ 41¢
+33,natural_stone,BLUE ICE,"Coping - Top Natural,1 long side ROCK FACED (1LSRF), other 3 sides sawn, 2"" REBATED TO 1""",NS-CBINB20012+Length,,NS-CBINB20012+Length,"12 in, 2 in",Linear Foot,,$30.74,,,70.0¢,41¢,NS-CBINB20012+Length 12 in 2 in $ 30.74 70.0¢ 41¢
+33,natural_stone,BLUE ICE,"Coping - Double Sided 14"" - Top Natural, bottom calibrated,2 long side ROCK FACED (2LSRF), other 2 sides sawn",NS-CBINDSR20014+Length,,NS-CBINDSR20014+Length,"14 in, 2 in",Linear Foot,,$22.20,,,82.2¢,48¢,NS-CBINDSR20014+Length 14 in 2 in $ 22.20 82.2¢ 48¢
+34,natural_stone,BLUE ICE,"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGNTBICE1664,,NS-SGNTBICE1664,"48 in, 16 in, 6 in",Piece,,$278.00,,,$8.00,$6.42,NS-SGNTBICE1664 48 in 16 in 6 in $ 278.00 $8.00 $6.42
+34,natural_stone,BLUE ICE,"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGNTBICE1666,,NS-SGNTBICE1666,"72 in, 16 in, 6 in",Piece,,$416.00,,,$12.00,$9.61,NS-SGNTBICE1666 72 in 16 in 6 in $ 416.00 $12.00 $9.61
+34,natural_stone,BLUE ICE,"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGNTBICE1673,,NS-SGNTBICE1673,"36 in, 16 in, 7 in",Piece,,$236.00,,,$6.00,$4.81,NS-SGNTBICE1673 36 in 16 in 7 in $ 236.00 $6.00 $4.81
+34,natural_stone,BLUE ICE,"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGNTBICE1674,,NS-SGNTBICE1674,"48 in, 16 in, 7 in",Piece,,$315.00,,,$8.00,$6.42,NS-SGNTBICE1674 48 in 16 in 7 in $ 315.00 $8.00 $6.42
+34,natural_stone,BLUE ICE,"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGNTBICE1675,,NS-SGNTBICE1675,"60 in, 16 in, 7 in",Piece,,$394.00,,,$10.00,$8.01,NS-SGNTBICE1675 60 in 16 in 7 in $ 394.00 $10.00 $8.01
+34,natural_stone,BLUE ICE,"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGNTBICE1676,,NS-SGNTBICE1676,"72 in, 16 in, 7 in",Piece,,$472.00,,,$12.00,$9.61,NS-SGNTBICE1676 72 in 16 in 7 in $ 472.00 $12.00 $9.61
+34,natural_stone,BLUE ICE,"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGNTBICE1678,,NS-SGNTBICE1678,"96 in, 16 in, 7 in",Piece,,$768.00,,,$16.00,$12.82,NS-SGNTBICE1678 96 in 16 in 7 in $ 768.00 $16.00 $12.82
+34,natural_stone,BLUE ICE,"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF) - Hollow Step",NS-HSGNTBICE1674,,NS-HSGNTBICE1674,"48 in, 16 in, 7 in",Piece,,$560.00,,,$8.00,$6.42,NS-HSGNTBICE1674 48 in 16 in 7 in $ 560.00 $8.00 $6.42
+34,natural_stone,BLUE ICE,"Curbs / Step Fillers - Top Natural, bottom calibrated, 1 side rockfaced",NS-SGNTBICESF731,,NS-SGNTBICESF731,"31 in, 6 in, 7 in",Piece,,$98.33,,,$3.00,$2.95,NS-SGNTBICESF731 31 in 6 in 7 in $ 98.33 $3.00 $2.95
+34,natural_stone,BLUE ICE,"Pier Caps - Flamed or Natural Top, Sawn / Calibrated Bottom, 4 sides rockfaced",NS-PCKBI24X24,,NS-PCKBI24X24,"24 in, 24 in, 3 in",Piece,,$124.00,,,$4.00,$2.40,NS-PCKBI24X24 24 in 24 in 3 in $ 124.00 $4.00 $2.40
+34,natural_stone,BLUE ICE,"Pier Caps - Flamed or Natural Top, Sawn / Calibrated Bottom, 4 sides rockfaced",NS-PCKBI28X28,,NS-PCKBI28X28,"28 in, 28 in, 3 in",Piece,,$168.78,,,$4.67,$3.27,NS-PCKBI28X28 28 in 28 in 3 in $ 168.78 $4.67 $3.27
+34,natural_stone,BLUE ICE,"Pier Caps - Flamed or Natural Top, Sawn / Calibrated Bottom, 4 sides rockfaced",NS-JSBI3696,,NS-JSBI3696,"96 in, 36 in, 3 in",Piece,,$960.00,,,$16.00,$14.41,NS-JSBI3696 96 in 36 in 3 in $ 960.00 $16.00 $14.41
+34,natural_stone,CARBON BLACK GRANITE,"Flagstone Square Cut - Flamed Top, Sawn Bottom, 4 sides saw cut",NS-FSQCBGF125+size,,NS-FSQCBGF125+size,1.25 in,Square Foot,,$20.00,,,48.8¢,27¢,NS-FSQCBGF125+size
+34,natural_stone,CARBON BLACK GRANITE,"Flagstone Square Cut - Flamed Top, Sawn Bottom, 4 sides saw cut",NS-FSQCBGF1252424+size,,NS-FSQCBGF1252424+size,1.25 in,Square Foot,,$20.00,,,48.8¢,27¢,NS-FSQCBGF1252424+size
+35,natural_stone,CASPER,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQCASS100+size,,NS-FSQCASS100+size,1 in,Square Foot,,$14.03,,,38.8¢,22¢,NS-FSQCASS100+size
+35,natural_stone,CASPER,"Coping - Top Natural, 1 long side ROCK FACED (1LSRF), other 3 sides sawn, 2"" REBATED TO 1""",NS-CCASSRR20012+Length,,NS-CCASSRR20012+Length,"12 in, 2 in",Linear Foot,,$38.97,,,70.0¢,41¢,NS-CCASSRR20012+Length 12 in 2 in $ 38.97 70.0¢ 41¢
+35,natural_stone,CASPER,"Coping - Top Natural, bottom calibrated, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CCASSR20012+Length,,NS-CCASSR20012+Length,"12 in, 2 in",Linear Foot,,$30.69,,,70.0¢,41¢,NS-CCASSR20012+Length 12 in 2 in $ 30.69 70.0¢ 41¢
+35,natural_stone,CASPER,"Coping - Top Natural, bottom calibrated, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CCASSR20014+Length,,NS-CCASSR20014+Length,"14 in, 2 in",Linear Foot,,$35.80,,,70.0¢,41¢,NS-CCASSR20014+Length 14 in 2 in $ 35.80 70.0¢ 41¢
+35,natural_stone,CASPER,"Coping - Top Natural, bottom calibrated, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CCASSR20016+Length,,NS-CCASSR20016+Length,"16 in, 2 in",Linear Foot,,$40.91,,,93.3¢,54¢,NS-CCASSR20016+Length 16 in 2 in $ 40.91 93.3¢ 54¢
+35,natural_stone,CASPER,"Coping - Top Natural, bottom calibrated, 1 long side SMOOTH FACED (1LSRF), other 3 sides sawn",NS-CCASSS20012+Length,,NS-CCASSS20012+Length,"12 in, 2 in",Linear Foot,,$30.69,,,70.0¢,41¢,NS-CCASSS20012+Length 12 in 2 in $ 30.69 70.0¢ 41¢
+35,natural_stone,CASPER,"Coping - Top Natural, bottom calibrated, 1 long side SMOOTH FACED (1LSRF), other 3 sides sawn",NS-CCASSS20014+Length,,NS-CCASSS20014+Length,"14 in, 2 in",Linear Foot,,$35.80,,,93.3¢,54¢,NS-CCASSS20014+Length 14 in 2 in $ 35.80 93.3¢ 54¢
+35,natural_stone,CASPER,"Coping - Top Natural, bottom calibrated, 1 long side SMOOTH FACED (1LSRF), other 3 sides sawn",NS-CCASSS20016+Length,,NS-CCASSS20016+Length,"16 in, 2 in",Linear Foot,,$40.91,,,93.3¢,54¢,NS-CCASSS20016+Length 16 in 2 in $ 40.91 93.3¢ 54¢
+35,natural_stone,CASPER,"Coping - Top Natural, bottom calibrated, 1 long side SMOOTH FACED (1LSRF), other 3 sides sawn",NS-CCASSB20012+Length,,NS-CCASSB20012+Length,"12 in, 2 in",Linear Foot,,$35.30,,,70.0¢,41¢,NS-CCASSB20012+Length 12 in 2 in $ 35.30 70.0¢ 41¢
+35,natural_stone,CASPER,"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGTCASR1664,,NS-SGTCASR1664,"48 in, 16 in, 6 in",Piece,,$475.00,,,$8.00,$6.42,NS-SGTCASR1664 48 in 16 in 6 in $ 475.00 $8.00 $6.42
+35,natural_stone,CASPER,"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGTCASR1665,,NS-SGTCASR1665,"60 in, 16 in, 6 in",Piece,,$594.00,,,$10.00,$8.01,NS-SGTCASR1665 60 in 16 in 6 in $ 594.00 $10.00 $8.01
+35,natural_stone,CASPER,"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGTCASR1666,,NS-SGTCASR1666,"72 in, 16 in, 6 in",Piece,,$712.00,,,$12.00,$9.61,NS-SGTCASR1666 72 in 16 in 6 in $ 712.00 $12.00 $9.61
+35,natural_stone,CASPER,"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGTCASR1674,,NS-SGTCASR1674,"48 in, 16 in, 7 in",Piece,,$560.00,,,$8.00,$6.42,NS-SGTCASR1674 48 in 16 in 7 in $ 560.00 $8.00 $6.42
+35,natural_stone,CASPER,"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGTCASR1675,,NS-SGTCASR1675,"60 in, 16 in, 7 in",Piece,,$700.00,,,$10.00,$8.01,NS-SGTCASR1675 60 in 16 in 7 in $ 700.00 $10.00 $8.01
+35,natural_stone,CASPER,"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGTCASR1676,,NS-SGTCASR1676,"72 in, 16 in, 7 in",Piece,,$840.00,,,$12.00,$9.61,NS-SGTCASR1676 72 in 16 in 7 in $ 840.00 $12.00 $9.61
+36,natural_stone,CASPER,"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGTCASS1674,,NS-SGTCASS1674,"48 in, 16 in, 7 in",Piece,,$560.00,,,$8.00,$6.42,NS-SGTCASS1674 48 in 16 in 7 in $ 560.00 $8.00 $6.42
+36,natural_stone,CASPER,"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGTCASS1675,,NS-SGTCASS1675,"60 in, 16 in, 7 in",Piece,,$700.00,,,$10.00,$8.01,NS-SGTCASS1675 60 in 16 in 7 in $ 700.00 $10.00 $8.01
+36,natural_stone,CASPER,"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGTCASS1676,,NS-SGTCASS1676,"72 in, 16 in, 7 in",Piece,,$840.00,,,$12.00,$9.61,NS-SGTCASS1676 72 in 16 in 7 in $ 840.00 $12.00 $9.61
+36,natural_stone,CASPER,"Curbs / Step Fillers - Top Natural, bottom calibrated, 1 side rockfaced",NS-SGTCASRSF648,,NS-SGTCASRSF648,"48 in, 6 in, 6 in",Piece,,$206.39,,,$3.00,$2.95,NS-SGTCASRSF648 48 in 6 in 6 in $ 206.39 $3.00 $2.95
+36,natural_stone,CASPER,"Curbs / Step Fillers - Top Natural, bottom calibrated, 1 side rockfaced",NS-SGTCASRSF748,,NS-SGTCASRSF748,"48 in, 6 in, 7 in",Piece,,$235.88,,,$3.00,$2.95,NS-SGTCASRSF748 48 in 6 in 7 in $ 235.88 $3.00 $2.95
+36,natural_stone,CASPER,"Curbs / Step Fillers - Top Natural, bottom calibrated, 1 side rockfaced",NS-SGTCASSSF748,,NS-SGTCASSSF748,"48 in, 6 in, 7 in",Piece,,$235.88,,,$3.00,$2.95,NS-SGTCASSSF748 48 in 6 in 7 in $ 235.88 $3.00 $2.95
+36,natural_stone,CASPER,"Pier Caps - Natural Top, Calibrated Bottom, 4 sides rockfaced",NS-PCKCASS24X24,,NS-PCKCASS24X24,"24 in, 24 in, 3 in",Piece,,$220.00,,,$4.00,$2.40,NS-PCKCASS24X24 24 in 24 in 3 in $ 220.00 $4.00 $2.40
+36,natural_stone,DOVE GREY,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQDON1001224+size,,NS-FSQDON1001224+size,1 in,Square Foot,,$7.47,,,38.8¢,22¢,NS-FSQDON1001224+size
+36,natural_stone,DOVE GREY,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQDON1001824+size,,NS-FSQDON1001824+size,1 in,Square Foot,,$7.47,,,38.8¢,22¢,NS-FSQDON1001824+size
+36,natural_stone,DOVE GREY,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQDON1002424+size,,NS-FSQDON1002424+size,1 in,Square Foot,,$7.47,,,38.8¢,22¢,NS-FSQDON1002424+size
+36,natural_stone,DOVE GREY,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQDON1002436+size,,NS-FSQDON1002436+size,1 in,Square Foot,,$7.47,,,38.8¢,22¢,NS-FSQDON1002436+size
+36,natural_stone,DOVE GREY,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQDON100CC+size,,NS-FSQDON100CC+size,1 in,Square Foot,,$7.47,,,38.8¢,22¢,NS-FSQDON100CC+size
+36,natural_stone,DOVE GREY,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQDON1251224+size,,NS-FSQDON1251224+size,1.25 in,Square Foot,,$9.50,,,48.8¢,27¢,NS-FSQDON1251224+size
+36,natural_stone,DOVE GREY,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQDON1251824+size,,NS-FSQDON1251824+size,1.25 in,Square Foot,,$9.50,,,48.8¢,27¢,NS-FSQDON1251824+size
+36,natural_stone,DOVE GREY,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQDON1252424+size,,NS-FSQDON1252424+size,1.25 in,Square Foot,,$9.50,,,48.8¢,27¢,NS-FSQDON1252424+size
+36,natural_stone,DOVE GREY,"Coping - Top Natural, 1 long side ROCK FACED (1LSRF), other 3 sides sawn, 2"" REBATED TO 1""",NS-CDONRR20012+Length,,NS-CDONRR20012+Length,"12 in, 2 in",Linear Foot,,$18.78,,,70.0¢,41¢,NS-CDONRR20012+Length 12 in 2 in $ 18.78 70.0¢ 41¢
+37,natural_stone,DOVE GREY,"Coping - Top Natural, bottom calibrated, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CDONR20012+Length,,NS-CDONR20012+Length,"12 in, 2 in",Linear Foot,,$17.49,,,70.0¢,41¢,NS-CDONR20012+Length 12 in 2 in $ 17.49 70.0¢ 41¢
+37,natural_stone,DOVE GREY,"Coping - Top Natural, bottom calibrated, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CDONR20016+Length,,NS-CDONR20016+Length,"16 in, 2 in",Linear Foot,,$23.32,,,93.3¢,54¢,NS-CDONR20016+Length 16 in 2 in $ 23.32 93.3¢ 54¢
+37,natural_stone,DOVE GREY,"Coping - Double Sided 14"" - Top Natural, bottom calibrated,2 long side ROCK FACED (2LSRF), other 2 sides sawn",NS-CDONDSR20014+Length,,NS-CDONDSR20014+Length,"14 in, 2 in",Linear Foot,,$21.71,,,82.2¢,48¢,NS-CDONDSR20014+Length 14 in 2 in $ 21.71 82.2¢ 48¢
+37,natural_stone,DOVE GREY,"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGNTGI1666,,NS-SGNTGI1666,"72 in, 16 in, 6 in",Piece,,$392.00,,,$12.00,$9.61,NS-SGNTGI1666 72 in 16 in 6 in $ 392.00 $12.00 $9.61
+37,natural_stone,DOVE GREY,"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGNTGI1668,,NS-SGNTGI1668,"96 in, 16 in, 6 in",Piece,,$651.00,,,$16.00,$12.82,NS-SGNTGI1668 96 in 16 in 6 in $ 651.00 $16.00 $12.82
+37,natural_stone,DOVE GREY,"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGNTGI1674,,NS-SGNTGI1674,"48 in, 16 in, 7 in",Piece,,$296.00,,,$8.00,$6.42,NS-SGNTGI1674 48 in 16 in 7 in $ 296.00 $8.00 $6.42
+37,natural_stone,DOVE GREY,"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGNTGI1675,,NS-SGNTGI1675,"60 in, 16 in, 7 in",Piece,,$370.00,,,$10.00,$8.01,NS-SGNTGI1675 60 in 16 in 7 in $ 370.00 $10.00 $8.01
+37,natural_stone,DOVE GREY,"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGNTGI1676,,NS-SGNTGI1676,"72 in, 16 in, 7 in",Piece,,$444.00,,,$12.00,$9.61,NS-SGNTGI1676 72 in 16 in 7 in $ 444.00 $12.00 $9.61
+37,natural_stone,DOVE GREY,"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGNTGI1678,,NS-SGNTGI1678,"96 in, 16 in, 7 in",Piece,,$740.00,,,$16.00,$12.82,NS-SGNTGI1678 96 in 16 in 7 in $ 740.00 $16.00 $12.82
+37,natural_stone,DOVE GREY,"Curbs / Step Fillers - Top Natural, bottom calibrated, 1 side rockfaced",NS-SGNTGISF,,NS-SGNTGISF,"46 in, 6 in, 6 in",Piece,,$113.25,,,$3.00,$2.95,NS-SGNTGISF 46 in 6 in 6 in $ 113.25 $3.00 $2.95
+37,natural_stone,DOVE GREY,"Curbs / Step Fillers - Top Natural, bottom calibrated, 1 side rockfaced",NS-JSD3672,,NS-JSD3672,"72 in, 36 in, 3 in",Piece,,$576.00,,,$12.00,$10.81,NS-JSD3672 72 in 36 in 3 in $ 576.00 $12.00 $10.81
+37,natural_stone,ERAMOSA,"Steps - Flamed Top, Sawn Bottom, 3 sides rockfaced",NS-SGTBER1675,,NS-SGTBER1675,"60 in, 16 in, 7 in",Piece,,$574.00,,,$10.00,$8.01,NS-SGTBER1675 60 in 16 in 7 in $ 574.00 $10.00 $8.01
+37,natural_stone,ERAMOSA,"Steps - Flamed Top, Sawn Bottom, 3 sides rockfaced",NS-SGTBER1676,,NS-SGTBER1676,"72 in, 16 in, 7 in",Piece,,$680.00,,,$12.00,$9.61,NS-SGTBER1676 72 in 16 in 7 in $ 680.00 $12.00 $9.61
+37,natural_stone,ERAMOSA,"Steps - Flamed Top, Sawn Bottom, 3 sides rockfaced",NS-SGTFER1673,,NS-SGTFER1673,"36 in, 16 in, 7 in",Piece,,$352.00,,,$6.00,$4.81,NS-SGTFER1673 36 in 16 in 7 in $ 352.00 $6.00 $4.81
+38,natural_stone,FLINT,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQFLN1001224+size,,NS-FSQFLN1001224+size,1 in,Square Foot,,$7.02,,,38.8¢,22¢,NS-FSQFLN1001224+size
+38,natural_stone,FLINT,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQFLN1001824+size,,NS-FSQFLN1001824+size,1 in,Square Foot,,$7.02,,,38.8¢,22¢,NS-FSQFLN1001824+size
+38,natural_stone,FLINT,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQFLN1002424+size,,NS-FSQFLN1002424+size,1 in,Square Foot,,$7.02,,,38.8¢,22¢,NS-FSQFLN1002424+size
+38,natural_stone,FLINT,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQFLN1002436+size,,NS-FSQFLN1002436+size,1 in,Square Foot,,$7.02,,,38.8¢,22¢,NS-FSQFLN1002436+size
+38,natural_stone,FLINT,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQFLN1251224+size,,NS-FSQFLN1251224+size,1.25 in,Square Foot,,$9.50,,,48.8¢,27¢,NS-FSQFLN1251224+size
+38,natural_stone,FLINT,"Coping - Top Natural, bottom calibrated, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CFLNR20012+Length,,NS-CFLNR20012+Length,"12 in, 2 in",Linear Foot,,$16.82,,,70.0¢,41¢,NS-CFLNR20012+Length 12 in 2 in $ 16.82 70.0¢ 41¢
+38,natural_stone,FLINT,"Coping - Top Natural, bottom calibrated, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CFLNR20016+Length,,NS-CFLNR20016+Length,"16 in, 2 in",Linear Foot,,$22.43,,,93.3¢,54¢,NS-CFLNR20016+Length 16 in 2 in $ 22.43 93.3¢ 54¢
+38,natural_stone,FLINT,"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGNTFL1674,,NS-SGNTFL1674,"48 in, 16 in, 7 in",Piece,,$288.00,,,$8.00,$6.42,NS-SGNTFL1674 48 in 16 in 7 in $ 288.00 $8.00 $6.42
+38,natural_stone,FLINT,"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGNTFL1676,,NS-SGNTFL1676,"72 in, 16 in, 7 in",Piece,,$432.00,,,$12.00,$9.61,NS-SGNTFL1676 72 in 16 in 7 in $ 432.00 $12.00 $9.61
+38,natural_stone,FLINT,"Curbs / Step Fillers - Top Natural, bottom calibrated, 1 side rockfaced",NS-SGNTFLSF7,,NS-SGNTFLSF7,"46 in, 6 in, 7 in",Piece,,$133.85,,,$3.00,$2.95,NS-SGNTFLSF7 46 in 6 in 7 in $ 133.85 $3.00 $2.95
+38,natural_stone,HAMPTON LIMESTONE,"Flagstone Square Cut - Flamed Top, Sawn Bottom, 4 sides sawn",NS-FSQHLF1000748+size,,NS-FSQHLF1000748+size,1 in,Square Foot,,$11.38,,,38.8¢,22¢,NS-FSQHLF1000748+size
+38,natural_stone,HAMPTON LIMESTONE,"Flagstone Square Cut - Flamed Top, Sawn Bottom, 4 sides sawn",NS-FSQHLF1001212+size,,NS-FSQHLF1001212+size,1 in,Square Foot,,$9.94,,,38.8¢,22¢,NS-FSQHLF1001212+size
+38,natural_stone,HAMPTON LIMESTONE,"Flagstone Square Cut - Flamed Top, Sawn Bottom, 4 sides sawn",NS-FSQHLF1001224+size,,NS-FSQHLF1001224+size,1 in,Square Foot,,$9.94,,,38.8¢,22¢,NS-FSQHLF1001224+size
+38,natural_stone,HAMPTON LIMESTONE,"Flagstone Square Cut - Flamed Top, Sawn Bottom, 4 sides sawn",NS-FSQHLF1001824+size,,NS-FSQHLF1001824+size,1 in,Square Foot,,$9.94,,,38.8¢,22¢,NS-FSQHLF1001824+size
+38,natural_stone,HAMPTON LIMESTONE,"Flagstone Square Cut - Flamed Top, Sawn Bottom, 4 sides sawn",NS-FSQHLF1002424+size,,NS-FSQHLF1002424+size,1 in,Square Foot,,$9.94,,,38.8¢,22¢,NS-FSQHLF1002424+size
+38,natural_stone,HAMPTON LIMESTONE,"Flagstone Square Cut - Flamed Top, Sawn Bottom, 4 sides sawn",NS-FSQHLF1002436+size,,NS-FSQHLF1002436+size,1 in,Square Foot,,$9.94,,,38.8¢,22¢,NS-FSQHLF1002436+size
+39,natural_stone,HAMPTON LIMESTONE,"Coping - Flamed Top, 1 long side ROCK FACED (1LSRF), other 3 sides sawn, 2"" REBATED TO 1""",NS-CHLFRR20012+Length,,NS-CHLFRR20012+Length,"12 in, 2 in",Linear Foot,,$20.23,,,70.0¢,41¢,NS-CHLFRR20012+Length 12 in 2 in $ 20.23 70.0¢ 41¢
+39,natural_stone,HAMPTON LIMESTONE,"Coping - Flamed Top, Sawn Bottom, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CHLFR20012+Length,,NS-CHLFR20012+Length,"12 in, 2 in",Linear Foot,,$19.14,,,70.0¢,41¢,NS-CHLFR20012+Length 12 in 2 in $ 19.14 70.0¢ 41¢
+39,natural_stone,HAMPTON LIMESTONE,"Coping - Flamed Top, Sawn Bottom, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CHLFR20014+Length,,NS-CHLFR20014+Length,"14 in, 2 in",Linear Foot,,$22.33,,,93.3¢,54¢,NS-CHLFR20014+Length 14 in 2 in $ 22.33 93.3¢ 54¢
+39,natural_stone,HAMPTON LIMESTONE,"Coping - Flamed Top, Sawn Bottom, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CHLFR20016+Length,,NS-CHLFR20016+Length,"16 in, 2 in",Linear Foot,,$25.52,,,93.3¢,54¢,NS-CHLFR20016+Length 16 in 2 in $ 25.52 93.3¢ 54¢
+39,natural_stone,HAMPTON LIMESTONE,"Coping - Flamed Top, Sawn Bottom, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CHLFA20012+Length,,NS-CHLFA20012+Length,"12 in, 2 in",Linear Foot,,$24.51,,,70.0¢,41¢,NS-CHLFA20012+Length 12 in 2 in $ 24.51 70.0¢ 41¢
+39,natural_stone,HAMPTON LIMESTONE,"Coping - Flamed Top, Sawn Bottom, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CHLFB20012+Length,,NS-CHLFB20012+Length,"12 in, 2 in",Linear Foot,,$24.65,,,70.0¢,41¢,NS-CHLFB20012+Length 12 in 2 in $ 24.65 70.0¢ 41¢
+39,natural_stone,HAMPTON LIMESTONE,"Coping - Double Sided 14"" - Antique Top, Sawn Bottom, 2 long side ROCK FACED (2LSRF), other 2 sides sawn",NS-CHLFDSR20014+Length,,NS-CHLFDSR20014+Length,"14 in, 2 in",Linear Foot,,$23.78,,,82.2¢,48¢,NS-CHLFDSR20014+Length 14 in 2 in $ 23.78 82.2¢ 48¢
+39,natural_stone,HAMPTON LIMESTONE,"Steps - Flamed Top, Sawn Bottom, 3 sides rockfaced",NS-SGTHLFB1673,,NS-SGTHLFB1673,"36 in, 16 in, 7 in",Piece,,$276.00,,,$6.00,$5.61,NS-SGTHLFB1673 36 in 16 in 7 in $ 276.00 $6.00 $5.61
+39,natural_stone,HAMPTON LIMESTONE,"Steps - Flamed Top, Sawn Bottom, 3 sides rockfaced",NS-SGTHLFB1674,,NS-SGTHLFB1674,"48 in, 16 in, 7 in",Piece,,$368.00,,,$8.00,$7.47,NS-SGTHLFB1674 48 in 16 in 7 in $ 368.00 $8.00 $7.47
+39,natural_stone,HAMPTON LIMESTONE,"Steps - Flamed Top, Sawn Bottom, 3 sides rockfaced",NS-SGTHLFB1675,,NS-SGTHLFB1675,"60 in, 16 in, 7 in",Piece,,$460.00,,,$10.00,$9.35,NS-SGTHLFB1675 60 in 16 in 7 in $ 460.00 $10.00 $9.35
+39,natural_stone,HAMPTON LIMESTONE,"Steps - Flamed Top, Sawn Bottom, 3 sides rockfaced",NS-SGTHLFB1676,,NS-SGTHLFB1676,"72 in, 16 in, 7 in",Piece,,$552.00,,,$12.00,$10.81,NS-SGTHLFB1676 72 in 16 in 7 in $ 552.00 $12.00 $10.81
+39,natural_stone,HAMPTON LIMESTONE,"Steps - Flamed Top, Sawn Bottom, 3 sides rockfaced",NS-SGTHLFB1678,,NS-SGTHLFB1678,"96 in, 16 in, 7 in",Piece,,$864.00,,,$16.00,$14.41,NS-SGTHLFB1678 96 in 16 in 7 in $ 864.00 $16.00 $14.41
+40,natural_stone,HAMPTON LIMESTONE,"Pier Caps - Flamed Top, Sawn Bottom, 4 sides rockfaced",NS-PCHLF24X24,,NS-PCHLF24X24,"24 in, 24 in, 2.75 in",Piece,,$140.00,,,$4.00,$2.40,NS-PCHLF24X24 24 in 24 in 2.75 in $ 140.00 $4.00 $2.40
+40,natural_stone,HAMPTON LIMESTONE,"Pier Caps - Flamed Top, Sawn Bottom, 4 sides rockfaced",NS-PCHLF28X28,,NS-PCHLF28X28,"28 in, 28 in, 2.75 in",Piece,,$190.56,,,$4.67,$3.27,NS-PCHLF28X28 28 in 28 in 2.75 in $ 190.56 $4.67 $3.27
+40,natural_stone,HIGHLAND BLACK GRANITE,"Coping - Flamed Top, Sawn Bottom, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CHBGFDSR2001448+Length,,NS-CHBGFDSR2001448+Length,"14 in, 2 in",Linear Foot,,$36.11,,,93.3¢,54¢,NS-CHBGFDSR2001448+Length 14 in 2 in $ 36.11 93.3¢ 54¢
+40,natural_stone,HIGHLAND BLACK GRANITE,"Coping - Flamed Top, Sawn Bottom, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CHBGFR20012+Length,,NS-CHBGFR20012+Length,"12 in, 2 in",Linear Foot,,$28.13,,,70.0¢,41¢,NS-CHBGFR20012+Length 12 in 2 in $ 28.13 70.0¢ 41¢
+40,natural_stone,HIGHLAND BLACK GRANITE,"Coping - Flamed Top, Sawn Bottom, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CHBGFR20014+Length,,NS-CHBGFR20014+Length,"14 in, 2 in",Linear Foot,,$32.82,,,93.3¢,54¢,NS-CHBGFR20014+Length 14 in 2 in $ 32.82 93.3¢ 54¢
+40,natural_stone,HIGHLAND BLACK GRANITE,"Coping - Flamed Top, Sawn Bottom, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CHBGFR20016+Length,,NS-CHBGFR20016+Length,"16 in, 2 in",Linear Foot,,$37.51,,,93.3¢,54¢,NS-CHBGFR20016+Length 16 in 2 in $ 37.51 93.3¢ 54¢
+40,natural_stone,HIGHLAND BLACK GRANITE,"Coping - Flamed Top, Sawn Bottom, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CHBGFTE20012+Length,,NS-CHBGFTE20012+Length,"12 in, 2 in",Linear Foot,,$30.95,,,70.0¢,41¢,NS-CHBGFTE20012+Length 12 in 2 in $ 30.95 70.0¢ 41¢
+40,natural_stone,HIGHLAND BLACK GRANITE,"Coping - Flamed Top, Sawn Bottom, 1 long side BULLNOSED (1LSBN), other 3 sides sawn",NS-CHBGFB20012+Length,,NS-CHBGFB20012+Length,"12 in, 2 in",Linear Foot,,$30.95,,,70.0¢,41¢,NS-CHBGFB20012+Length 12 in 2 in $ 30.95 70.0¢ 41¢
+40,natural_stone,HIGHLAND BLACK GRANITE,"Steps - Flamed Top, Sawn Bottom, 3 side rockfaced",NS-SGTMIDBG1674,,NS-SGTMIDBG1674,"48 in, 16 in, 7 in",Piece,,$528.00,,,$8.00,$6.42,NS-SGTMIDBG1674 48 in 16 in 7 in $ 528.00 $8.00 $6.42
+40,natural_stone,HIGHLAND BLACK GRANITE,"Steps - Flamed Top, Sawn Bottom, 3 side rockfaced",NS-SGTMIDBG1675,,NS-SGTMIDBG1675,"60 in, 16 in, 7 in",Piece,,$660.00,,,$10.00,$8.01,NS-SGTMIDBG1675 60 in 16 in 7 in $ 660.00 $10.00 $8.01
+40,natural_stone,HIGHLAND BLACK GRANITE,"Steps - Flamed Top, Sawn Bottom, 3 side rockfaced",NS-SGTMIDBG1676,,NS-SGTMIDBG1676,"72 in, 16 in, 7 in",Piece,,$792.00,,,$12.00,$9.61,NS-SGTMIDBG1676 72 in 16 in 7 in $ 792.00 $12.00 $9.61
+40,natural_stone,HIGHLAND BLACK GRANITE,"Steps - Flamed Top, Sawn Bottom, 3 side rockfaced",NS-SGTMIDBG1678,,NS-SGTMIDBG1678,"96 in, 16 in, 7 in",Piece,,$1163.00,,,$16.00,$12.82,NS-SGTMIDBG1678 96 in 16 in 7 in $ 1163.00 $16.00 $12.82
+41,natural_stone,HIGHLAND BLACK GRANITE,"Curbs / Step Fillers - Flamed Top, Sawn Bottom, 1 side rockfaced",NS-SGTMIDBGSF7,,NS-SGTMIDBGSF7,"31 in, 8 in, 7 in",Piece,,$135.00,,,$3.00,$2.95,NS-SGTMIDBGSF7 31 in 8 in 7 in $ 135.00 $3.00 $2.95
+41,natural_stone,INDUS,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQINDS1251824+size,,NS-FSQINDS1251824+size,1.25 in,Square Foot,,$15.88,,,38.8¢,22¢,NS-FSQINDS1251824+size
+41,natural_stone,INDUS,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQINDS1252424+size,,NS-FSQINDS1252424+size,1.25 in,Square Foot,,$15.88,,,38.8¢,22¢,NS-FSQINDS1252424+size
+41,natural_stone,INDUS,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQINDS1252436+size,,NS-FSQINDS1252436+size,1.25 in,Square Foot,,$15.88,,,38.8¢,22¢,NS-FSQINDS1252436+size
+41,natural_stone,INDUS,Coping - Top Natural bottom calibrated 1 long side ROCK FACED (1LSRF) other 3 sides sawn,NS-CINDSS200+Length,,NS-CINDSS200+Length,"14 in, 2 in",Linear Foot,,$33.75,,,70.0¢,41¢,NS-CINDSS200+Length 14 in 2 in $ 33.75 70.0¢ 41¢
+41,natural_stone,INDUS,"Coping - Top Natural, bottom calibrated, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CINDSR20012+Length,,NS-CINDSR20012+Length,"12 in, 2 in",Linear Foot,,$28.93,,,70.0¢,41¢,NS-CINDSR20012+Length 12 in 2 in $ 28.93 70.0¢ 41¢
+41,natural_stone,INDUS,"Coping - Top Natural, bottom calibrated, 1 long side SMOOTH FACED, other 3 sides sawn",NS-CINDSS20012+Length,,NS-CINDSS20012+Length,"12 in, 2 in",Linear Foot,,$28.93,,,70.0¢,41¢,NS-CINDSS20012+Length 12 in 2 in $ 28.93 70.0¢ 41¢
+41,natural_stone,INDUS,"Coping - Top Natural, bottom calibrated, 1 long side SMOOTH FACED, other 3 sides sawn",NS-CINDSS20014+Length,,NS-CINDSS20014+Length,"14 in, 2 in",Linear Foot,,$33.75,,,70.0¢,41¢,NS-CINDSS20014+Length 14 in 2 in $ 33.75 70.0¢ 41¢
+41,natural_stone,INDUS,"Coping - Top Natural, bottom calibrated, 1 long side SMOOTH FACED, other 3 sides sawn",NS-CINDSS2001648+Length,,NS-CINDSS2001648+Length,"16 in, 2 in",Linear Foot,,$38.57,,,93.3¢,54¢,NS-CINDSS2001648+Length 16 in 2 in $ 38.57 93.3¢ 54¢
+41,natural_stone,INDUS,"Coping - Top Natural, bottom calibrated, 1 long side SMOOTH FACED, other 3 sides sawn",NS-CINDSS2001672+Length,,NS-CINDSS2001672+Length,"16 in, 2 in",Linear Foot,,$38.57,,,93.3¢,54¢,NS-CINDSS2001672+Length 16 in 2 in $ 38.57 93.3¢ 54¢
+41,natural_stone,INDUS,"Coping - Top Natural, bottom calibrated, 1 long side SMOOTH FACED, other 3 sides sawn",NS-CINDSB20012+Length,,NS-CINDSB20012+Length,"12 in, 2 in",Linear Foot,,$33.28,,,70.0¢,41¢,NS-CINDSB20012+Length 12 in 2 in $ 33.28 70.0¢ 41¢
+42,natural_stone,INDUS,"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGTINDS1664,,NS-SGTINDS1664,"48 in, 16 in, 6 in",Piece,,$480.00,,,$8.00,$6.42,NS-SGTINDS1664 48 in 16 in 6 in $ 480.00 $8.00 $6.42
+42,natural_stone,INDUS,"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGTINDS1665,,NS-SGTINDS1665,"60 in, 16 in, 6 in",Piece,,$600.00,,,$10.00,$8.01,NS-SGTINDS1665 60 in 16 in 6 in $ 600.00 $10.00 $8.01
+42,natural_stone,INDUS,"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGTINDS1666,,NS-SGTINDS1666,"72 in, 16 in, 6 in",Piece,,$720.00,,,$12.00,$9.61,NS-SGTINDS1666 72 in 16 in 6 in $ 720.00 $12.00 $9.61
+42,natural_stone,IVORY COAST,"Flagstone Square Cut - Sandblasted Top, Sawn Bottom, 4 sides sawn",NS-FSQICS1000748+size,,NS-FSQICS1000748+size,1 in,Square Foot,,$13.83,,,38.8¢,22¢,NS-FSQICS1000748+size
+42,natural_stone,IVORY COAST,"Flagstone Square Cut - Sandblasted Top, Sawn Bottom, 4 sides sawn",NS-FSQICS1001212+size,,NS-FSQICS1001212+size,1 in,Square Foot,,$12.46,,,38.8¢,22¢,NS-FSQICS1001212+size
+42,natural_stone,IVORY COAST,"Flagstone Square Cut - Sandblasted Top, Sawn Bottom, 4 sides sawn",NS-FSQICS1001224+size,,NS-FSQICS1001224+size,1 in,Square Foot,,$12.46,,,38.8¢,22¢,NS-FSQICS1001224+size
+42,natural_stone,IVORY COAST,"Flagstone Square Cut - Sandblasted Top, Sawn Bottom, 4 sides sawn",NS-FSQICS1001824+size,,NS-FSQICS1001824+size,1 in,Square Foot,,$12.46,,,38.8¢,22¢,NS-FSQICS1001824+size
+42,natural_stone,IVORY COAST,"Flagstone Square Cut - Sandblasted Top, Sawn Bottom, 4 sides sawn",NS-FSQICS1002424+size,,NS-FSQICS1002424+size,1 in,Square Foot,,$12.46,,,38.8¢,22¢,NS-FSQICS1002424+size
+42,natural_stone,IVORY COAST,"Flagstone Square Cut - Sandblasted Top, Sawn Bottom, 4 sides sawn",NS-FSQICS1002436+size,,NS-FSQICS1002436+size,1 in,Square Foot,,$12.46,,,38.8¢,22¢,NS-FSQICS1002436+size
+42,natural_stone,IVORY COAST,Flagstone Square Cut - Top Natural bottom calibrated 4 sides sawn,NS-FSQIMS125+size,,NS-FSQIMS125+size,1.25 in,Square Foot,,$11.10,,,38.8¢,22¢,NS-FSQIMS125+size
+42,natural_stone,IVORY COAST,"Coping - Sandblasted Top, Sawn Bottom, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CICSR20012+Length,,NS-CICSR20012+Length,"12 in, 2 in",Linear Foot,,$24.15,,,70.0¢,41¢,NS-CICSR20012+Length 12 in 2 in $ 24.15 70.0¢ 41¢
+42,natural_stone,IVORY COAST,"Coping - Sandblasted Top, Sawn Bottom, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CICSR20016+Length,,NS-CICSR20016+Length,"16 in, 2 in",Linear Foot,,$32.19,,,93.3¢,54¢,NS-CICSR20016+Length 16 in 2 in $ 32.19 93.3¢ 54¢
+42,natural_stone,IVORY COAST,"Coping - Sandblasted Top, Sawn Bottom, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CICSA20012+Length,,NS-CICSA20012+Length,"12 in, 2 in",Linear Foot,,$33.28,,,70.0¢,41¢,NS-CICSA20012+Length 12 in 2 in $ 33.28 70.0¢ 41¢
+43,natural_stone,IVORY COAST,,NS-CICSB20012+Length,,NS-CICSB20012+Length,"12 in, 2 in",Linear Foot,,$38.36,,,70.0¢,41¢,NS-CICSB20012+Length 12 in 2 in $ 38.36 70.0¢ 41¢
+43,natural_stone,IVORY COAST,"Coping - Double Sided 14"" - Sandblasted Top, Sawn Bottom, 2 long side ROCK FACED (2LSRF), other 2 sides sawn",NS-CICSDSR20014+Length,,NS-CICSDSR20014+Length,"14 in, 2 in",Linear Foot,,$24.53,,,82.2¢,48¢,NS-CICSDSR20014+Length 14 in 2 in $ 24.53 82.2¢ 48¢
+43,natural_stone,IVORY COAST,"Steps - Sandblasted Top, Sawn Bottom, 3 sides rockfaced",NS-SGTICS1674,,NS-SGTICS1674,"48 in, 16 in, 7 in",Piece,,$374.00,,,$8.00,$7.47,NS-SGTICS1674 48 in 16 in 7 in $ 374.00 $8.00 $7.47
+43,natural_stone,IVORY COAST,"Steps - Sandblasted Top, Sawn Bottom, 3 sides rockfaced",NS-SGTICS1675,,NS-SGTICS1675,"60 in, 16 in, 7 in",Piece,,$467.00,,,$10.00,$9.35,NS-SGTICS1675 60 in 16 in 7 in $ 467.00 $10.00 $9.35
+43,natural_stone,IVORY COAST,"Steps - Sandblasted Top, Sawn Bottom, 3 sides rockfaced",NS-SGTICS1676,,NS-SGTICS1676,"72 in, 16 in, 7 in",Piece,,$560.00,,,$12.00,$10.81,NS-SGTICS1676 72 in 16 in 7 in $ 560.00 $12.00 $10.81
+43,natural_stone,IVORY COAST,"Curbs / Step Fillers - Sandblasted Top, Sawn Bottom, 1 side rockfaced",NS-SGTICSSF7,,NS-SGTICSSF7,"31 in, 7 in, 7 in",Piece,,$112.13,,,$3.00,$2.95,NS-SGTICSSF7 31 in 7 in 7 in $ 112.13 $3.00 $2.95
+43,natural_stone,IVORY COAST,"Pier Caps - Flamed or Natural Top, Sawn / Calibrated Bottom, 4 sides rockfaced",NS-PCIC24X24,,NS-PCIC24X24,"24 in, 24 in, 3 in",Piece,,$148.00,,,$4.00,$2.40,NS-PCIC24X24 24 in 24 in 3 in $ 148.00 $4.00 $2.40
+43,natural_stone,LAVENDER (SAGEBRUSH),"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQLAN1001212+size,,NS-FSQLAN1001212+size,1 in,Square Foot,,$7.02,,,38.8¢,22¢,NS-FSQLAN1001212+size
+43,natural_stone,LAVENDER (SAGEBRUSH),"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQLAN1001224+size,,NS-FSQLAN1001224+size,1 in,Square Foot,,$7.02,,,38.8¢,22¢,NS-FSQLAN1001224+size
+43,natural_stone,LAVENDER (SAGEBRUSH),"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQLAN1001824+size,,NS-FSQLAN1001824+size,1 in,Square Foot,,$7.02,,,38.8¢,22¢,NS-FSQLAN1001824+size
+43,natural_stone,LAVENDER (SAGEBRUSH),"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQLAN1002424+size,,NS-FSQLAN1002424+size,1 in,Square Foot,,$7.02,,,38.8¢,22¢,NS-FSQLAN1002424+size
+43,natural_stone,LAVENDER (SAGEBRUSH),"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQLAN1002436+size,,NS-FSQLAN1002436+size,1 in,Square Foot,,$7.02,,,38.8¢,22¢,NS-FSQLAN1002436+size
+43,natural_stone,LAVENDER (SAGEBRUSH),"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQLAN100CC+size,,NS-FSQLAN100CC+size,1 in,Square Foot,,$7.02,,,38.8¢,22¢,NS-FSQLAN100CC+size
+44,natural_stone,LAVENDER (SAGEBRUSH),"Coping - Top Natural, 1 long side ROCK FACED (1LSRF), other 3 sides sawn, 2"" REBATED TO 1""",NS-CLANRR2001248+Length,,NS-CLANRR2001248+Length,"12 in, 2 in",Linear Foot,,$19.80,,,70.0¢,41¢,NS-CLANRR2001248+Length 12 in 2 in $ 19.80 70.0¢ 41¢
+44,natural_stone,LAVENDER (SAGEBRUSH),"Coping - Top Natural, bottom calibrated, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CLANR2001248+Length,,NS-CLANR2001248+Length,"12 in, 2 in",Linear Foot,,$16.45,,,70.0¢,41¢,NS-CLANR2001248+Length 12 in 2 in $ 16.45 70.0¢ 41¢
+44,natural_stone,LAVENDER (SAGEBRUSH),"Coping - Top Natural, bottom calibrated, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CLANR2001260+Length,,NS-CLANR2001260+Length,"12 in, 2 in",Linear Foot,,$16.45,,,70.0¢,41¢,NS-CLANR2001260+Length 12 in 2 in $ 16.45 70.0¢ 41¢
+44,natural_stone,LAVENDER (SAGEBRUSH),"Coping - Top Natural, bottom calibrated, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CLANR2001272+Length,,NS-CLANR2001272+Length,"12 in, 2 in",Linear Foot,,$16.45,,,70.0¢,41¢,NS-CLANR2001272+Length 12 in 2 in $ 16.45 70.0¢ 41¢
+44,natural_stone,LAVENDER (SAGEBRUSH),"Coping - Top Natural, bottom calibrated, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CLANR2001448+Length,,NS-CLANR2001448+Length,"14 in, 2 in",Linear Foot,,$19.19,,,93.3¢,54¢,NS-CLANR2001448+Length 14 in 2 in $ 19.19 93.3¢ 54¢
+44,natural_stone,LAVENDER (SAGEBRUSH),"Coping - Top Natural, bottom calibrated, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CLANR2001472+Length,,NS-CLANR2001472+Length,"14 in, 2 in",Linear Foot,,$19.19,,,93.3¢,54¢,NS-CLANR2001472+Length 14 in 2 in $ 19.19 93.3¢ 54¢
+44,natural_stone,LAVENDER (SAGEBRUSH),"Coping - Top Natural, bottom calibrated, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CLANR2001672+Length,,NS-CLANR2001672+Length,"16 in, 2 in",Linear Foot,,$21.93,,,93.3¢,54¢,NS-CLANR2001672+Length 16 in 2 in $ 21.93 93.3¢ 54¢
+44,natural_stone,LAVENDER (SAGEBRUSH),"Coping - Top Natural, bottom calibrated, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CLANB2001248+Length,,NS-CLANB2001248+Length,"12 in, 2 in",Linear Foot,,$24.89,,,70.0¢,41¢,NS-CLANB2001248+Length 12 in 2 in $ 24.89 70.0¢ 41¢
+44,natural_stone,LAVENDER (SAGEBRUSH),"Coping - Double Sided 14"" - Top Natural, bottom calibrated,2 long side ROCK FACED (2LSRF), other 2 sides sawn",NS-CLANDSR2001448+Length,,NS-CLANDSR2001448+Length,"14 in, 2 in",Linear Foot,,$20.49,,,82.2¢,48¢,NS-CLANDSR2001448+Length 14 in 2 in $ 20.49 82.2¢ 48¢
+44,natural_stone,LAVENDER (SAGEBRUSH),"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGNTLV1673,,NS-SGNTLV1673,"36 in, 16 in, 7 in",Piece,,$216.00,,,$6.00,$4.81,NS-SGNTLV1673 36 in 16 in 7 in $ 216.00 $6.00 $4.81
+44,natural_stone,LAVENDER (SAGEBRUSH),"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGNTLV1674,,NS-SGNTLV1674,"48 in, 16 in, 7 in",Piece,,$288.00,,,$8.00,$6.42,NS-SGNTLV1674 48 in 16 in 7 in $ 288.00 $8.00 $6.42
+44,natural_stone,LAVENDER (SAGEBRUSH),"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGNTLV1675,,NS-SGNTLV1675,"60 in, 16 in, 7 in",Piece,,$360.00,,,$10.00,$8.01,NS-SGNTLV1675 60 in 16 in 7 in $ 360.00 $10.00 $8.01
+44,natural_stone,LAVENDER (SAGEBRUSH),"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGNTLV1676,,NS-SGNTLV1676,"72 in, 16 in, 7 in",Piece,,$432.00,,,$12.00,$9.61,NS-SGNTLV1676 72 in 16 in 7 in $ 432.00 $12.00 $9.61
+44,natural_stone,LAVENDER (SAGEBRUSH),"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGNTLV1678,,NS-SGNTLV1678,"96 in, 16 in, 7 in",Piece,,$720.00,,,$16.00,$12.82,NS-SGNTLV1678 96 in 16 in 7 in $ 720.00 $16.00 $12.82
+45,natural_stone,LAVENDER (SAGEBRUSH),"Curbs / Step Fillers - Top Natural, bottom calibrated, 1 side rockfaced",NS-SGNTLVSF731,,NS-SGNTLVSF731,"31 in, 6 in, 7 in",Piece,,$94.77,,,$3.00,$2.95,NS-SGNTLVSF731 31 in 6 in 7 in $ 94.77 $3.00 $2.95
+45,natural_stone,LAVENDER (SAGEBRUSH),"Pier Caps - Natural Top, Calibrated Bottom, 4 sides rockfaced",NS-PCKLV24X24,,NS-PCKLV24X24,"24 in, 24 in, 3 in",Piece,,$124.00,,,$4.00,$2.40,NS-PCKLV24X24 24 in 24 in 3 in $ 124.00 $4.00 $2.40
+45,natural_stone,MODERNO BEIGE,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQMBS125+size,,NS-FSQMBS125+size,1.25 in,Square Foot,,$18.50,,,38.8¢,22¢,NS-FSQMBS125+size
+45,natural_stone,MODERNO BEIGE,Coping - Top Natural bottom calibrated 4 sides sawn,NS-CMBSSE200+Length,,NS-CMBSSE200+Length,"16 in, 2 in",Linear Foot,,$49.55,,,93.3¢,54¢,NS-CMBSSE200+Length 16 in 2 in $ 49.55 93.3¢ 54¢
+45,natural_stone,MODERNO BEIGE,"Coping - Top Natural, bottom calibrated, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CMBSSE200+Length,,NS-CMBSSE200+Length,"12 in, 2 in",Linear Foot,,$36.18,,,70.0¢,41¢,NS-CMBSSE200+Length 12 in 2 in $ 36.18 70.0¢ 41¢
+45,natural_stone,ONYX BLACK GRANITE,"Flagstone Square Cut - Flamed Top, Sawn Bottom, 4 sides saw cut",NS-FSQOBGF1001224+size,,NS-FSQOBGF1001224+size,1 in,Square Foot,,$15.66,,,48.8¢,27¢,NS-FSQOBGF1001224+size
+45,natural_stone,ONYX BLACK GRANITE,"Flagstone Square Cut - Flamed Top, Sawn Bottom, 4 sides saw cut",NS-FSQOBGF1001824+size,,NS-FSQOBGF1001824+size,1 in,Square Foot,,$15.66,,,48.8¢,27¢,NS-FSQOBGF1001824+size
+45,natural_stone,ONYX BLACK GRANITE,"Flagstone Square Cut - Flamed Top, Sawn Bottom, 4 sides saw cut",NS-FSQOBGF1001836+size,,NS-FSQOBGF1001836+size,1 in,Square Foot,,$15.66,,,38.8¢,22¢,NS-FSQOBGF1001836+size
+45,natural_stone,ONYX BLACK GRANITE,"Flagstone Square Cut - Flamed Top, Sawn Bottom, 4 sides saw cut",NS-FSQOBGF1002424+size,,NS-FSQOBGF1002424+size,1 in,Square Foot,,$15.66,,,48.8¢,27¢,NS-FSQOBGF1002424+size
+45,natural_stone,ONYX BLACK GRANITE,"Flagstone Square Cut - Flamed Top, Sawn Bottom, 4 sides saw cut",NS-FSQOBGF1002436+size,,NS-FSQOBGF1002436+size,1 in,Square Foot,,$15.66,,,48.8¢,27¢,NS-FSQOBGF1002436+size
+45,natural_stone,ONYX BLACK GRANITE,"Flagstone Square Cut - Flamed Top, Sawn Bottom, 4 sides saw cut",NS-FSQOBGF100CC+size,,NS-FSQOBGF100CC+size,1 in,Square Foot,,$15.66,,,48.8¢,27¢,NS-FSQOBGF100CC+size
+46,natural_stone,ONYX BLACK GRANITE,"Coping - Flamed Top, Sawn Bottom, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-COBGFR2001248+Length,,NS-COBGFR2001248+Length,"12 in, 2 in",Linear Foot,,$32.36,,,70.0¢,41¢,NS-COBGFR2001248+Length 12 in 2 in $ 32.36 70.0¢ 41¢
+46,natural_stone,ONYX BLACK GRANITE,"Coping - Flamed Top, Sawn Bottom, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-COBGFR2001272+Length,,NS-COBGFR2001272+Length,"12 in, 2 in",Linear Foot,,$32.36,,,70.0¢,41¢,NS-COBGFR2001272+Length 12 in 2 in $ 32.36 70.0¢ 41¢
+46,natural_stone,ONYX BLACK GRANITE,"Coping - Flamed Top, Sawn Bottom, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-COBGFR2001648+Length,,NS-COBGFR2001648+Length,"16 in, 2 in",Linear Foot,,$43.15,,,93.3¢,54¢,NS-COBGFR2001648+Length 16 in 2 in $ 43.15 93.3¢ 54¢
+46,natural_stone,ONYX BLACK GRANITE,"Coping - Flamed Top, Sawn Bottom, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-COBGFR2001672+Length,,NS-COBGFR2001672+Length,"16 in, 2 in",Linear Foot,,$43.15,,,93.3¢,54¢,NS-COBGFR2001672+Length 16 in 2 in $ 43.15 93.3¢ 54¢
+46,natural_stone,ONYX BLACK GRANITE,"Coping - Flamed Top, Sawn Bottom, 2 long sides ROCK FACED (2LSRF), other 2 sides sawn",NS-COBGFDSR2001472+Lengt,,NS-COBGFDSR2001472+Lengt,"14 in, 2 in",Linear Foot,,$37.76,,,93.3¢,54¢,NS-COBGFDSR2001472+Lengt 14 in 2 in $ 37.76 93.3¢ 54¢
+46,natural_stone,ONYX BLACK GRANITE,"Coping - Double Sided 14"" - Flamed Top, Sawn Bottom, 2 long sides ROCK FACED (2LSRF), other 2 sides sawn",NS-COBGFDSR2001448+Lengt,,NS-COBGFDSR2001448+Lengt,"14 in, 2 in",Linear Foot,,$37.76,,,82.2¢,48¢,NS-COBGFDSR2001448+Lengt 14 in 2 in $ 37.76 82.2¢ 48¢
+46,natural_stone,ONYX BLACK GRANITE,"Steps - Flamed Top, Sawn Bottom, 3 side rockfaced",NS-SGTOBG1474,,NS-SGTOBG1474,"48 in, 16 in, 7 in",Piece,,$571.00,,,$8.00,$6.42,NS-SGTOBG1474 48 in 16 in 7 in $ 571.00 $8.00 $6.42
+46,natural_stone,ONYX BLACK GRANITE,"Steps - Flamed Top, Sawn Bottom, 3 side rockfaced",NS-SGTOBG1475,,NS-SGTOBG1475,"60 in, 16 in, 7 in",Piece,,$714.00,,,$10.00,$8.01,NS-SGTOBG1475 60 in 16 in 7 in $ 714.00 $10.00 $8.01
+46,natural_stone,ONYX BLACK GRANITE,"Steps - Flamed Top, Sawn Bottom, 3 side rockfaced",NS-SGTOBG1476,,NS-SGTOBG1476,"72 in, 16 in, 7 in",Piece,,$856.00,,,$12.00,$9.61,NS-SGTOBG1476 72 in 16 in 7 in $ 856.00 $12.00 $9.61
+46,natural_stone,ONYX BLACK GRANITE,"Steps - Flamed Top, Sawn Bottom, 3 side rockfaced",NS-SGTOBG1478,,NS-SGTOBG1478,"96 in, 16 in, 7 in",Piece,,$1366.00,,,$16.00,$12.82,NS-SGTOBG1478 96 in 16 in 7 in $ 1366.00 $16.00 $12.82
+46,natural_stone,ONYX BLACK GRANITE,"Steps - Flamed Top, Sawn Bottom, 3 side rockfaced",NS-SGTOBG1664,,NS-SGTOBG1664,"48 in, 16 in, 6 in",Piece,,$523.00,,,$8.00,$6.42,NS-SGTOBG1664 48 in 16 in 6 in $ 523.00 $8.00 $6.42
+46,natural_stone,ONYX BLACK GRANITE,"Steps - Flamed Top, Sawn Bottom, 3 side rockfaced",NS-SGTOBG1665,,NS-SGTOBG1665,"60 in, 16 in, 6 in",Piece,,$654.00,,,$10.00,$8.01,NS-SGTOBG1665 60 in 16 in 6 in $ 654.00 $10.00 $8.01
+46,natural_stone,ONYX BLACK GRANITE,"Steps - Flamed Top, Sawn Bottom, 3 side rockfaced",NS-SGTOBG1666,,NS-SGTOBG1666,"72 in, 16 in, 6 in",Piece,,$784.00,,,$12.00,$9.61,NS-SGTOBG1666 72 in 16 in 6 in $ 784.00 $12.00 $9.61
+46,natural_stone,ONYX BLACK GRANITE,"Steps - Flamed Top, Sawn Bottom, 3 side rockfaced",NS-SGTOBG1668,,NS-SGTOBG1668,"96 in, 16 in, 6 in",Piece,,$1248.00,,,$16.00,$12.82,NS-SGTOBG1668 96 in 16 in 6 in $ 1248.00 $16.00 $12.82
+46,natural_stone,ONYX BLACK GRANITE,Curbs / Step Fillers - Top Natural bottom calibrated 1 side rockfaced,NS-OBNTFLSF7,,NS-OBNTFLSF7,"48 in, 6 in, 7 in",Piece,,$208.60,,,$3.00,$2.95,NS-OBNTFLSF7 48 in 6 in 7 in $ 208.60 $3.00 $2.95
+47,natural_stone,ONYX BLACK GRANITE,"Pier Caps - Flamed or Natural Top, Sawn / Calibrated Bottom, 4 sides rockfaced",NS-PCJBF24X24,,NS-PCJBF24X24,"24 in, 24 in, 3 in",Piece,,$180.00,,,$4.00,$2.40,NS-PCJBF24X24 24 in 24 in 3 in $ 180.00 $4.00 $2.40
+47,natural_stone,ONYX BLACK GRANITE,"Pier Caps - Flamed or Natural Top, Sawn / Calibrated Bottom, 4 sides rockfaced",NS-JSBG2448,,NS-JSBG2448,"48 in, 24 in, 2 in",Piece,,$320.00,,,$12.00,$6.01,NS-JSBG2448 48 in 24 in 2 in $ 320.00 $12.00 $6.01
+47,natural_stone,ONYX BLACK GRANITE,"Pier Caps - Flamed or Natural Top, Sawn / Calibrated Bottom, 4 sides rockfaced",NS-JSBG2472,,NS-JSBG2472,"72 in, 24 in, 2 in",Piece,,$480.00,,,$12.00,$6.01,NS-JSBG2472 72 in 24 in 2 in $ 480.00 $12.00 $6.01
+47,natural_stone,ONYX BLACK GRANITE,"Pier Caps - Flamed or Natural Top, Sawn / Calibrated Bottom, 4 sides rockfaced",NS-JSBG3672,,NS-JSBG3672,"72 in, 36 in, 2 in",Piece,,$810.00,,,$12.00,$10.81,NS-JSBG3672 72 in 36 in 2 in $ 810.00 $12.00 $10.81
+47,natural_stone,ONYX BLACK GRANITE,"Pier Caps - Flamed or Natural Top, Sawn / Calibrated Bottom, 4 sides rockfaced",NS-JSBG3696,,NS-JSBG3696,"96 in, 36 in, 2 in",Piece,,$1200.00,,,$16.00,$14.41,NS-JSBG3696 96 in 36 in 2 in $ 1200.00 $16.00 $14.41
+47,natural_stone,ONYX BLACK GRANITE,"Pier Caps - Flamed or Natural Top, Sawn / Calibrated Bottom, 4 sides rockfaced",NS-JSBG4872,,NS-JSBG4872,"72 in, 48 in, 2 in",Piece,,$1080.00,,,$16.00,$14.41,NS-JSBG4872 72 in 48 in 2 in $ 1080.00 $16.00 $14.41
+47,natural_stone,ONYX BLACK GRANITE,"Pier Caps - Flamed or Natural Top, Sawn / Calibrated Bottom, 4 sides rockfaced",NS-JSBG4896,,NS-JSBG4896,"96 in, 48 in, 2 in",Piece,,$1600.00,,,$16.00,$19.21,NS-JSBG4896 96 in 48 in 2 in $ 1600.00 $16.00 $19.21
+47,natural_stone,ONYX BLACK GRANITE,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQSAN1001212+size,,NS-FSQSAN1001212+size,1 in,Square Foot,,$9.57,,,38.8¢,22¢,NS-FSQSAN1001212+size
+47,natural_stone,ONYX BLACK GRANITE,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQSAN1001224+size,,NS-FSQSAN1001224+size,1 in,Square Foot,,$9.57,,,38.8¢,22¢,NS-FSQSAN1001224+size
+47,natural_stone,ONYX BLACK GRANITE,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQSAN1001824+size,,NS-FSQSAN1001824+size,1 in,Square Foot,,$9.57,,,38.8¢,22¢,NS-FSQSAN1001824+size
+47,natural_stone,ONYX BLACK GRANITE,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQSAN1002424+size,,NS-FSQSAN1002424+size,1 in,Square Foot,,$9.57,,,38.8¢,22¢,NS-FSQSAN1002424+size
+47,natural_stone,ONYX BLACK GRANITE,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQSAN1002436+size,,NS-FSQSAN1002436+size,1 in,Square Foot,,$9.57,,,38.8¢,22¢,NS-FSQSAN1002436+size
+47,natural_stone,ONYX BLACK GRANITE,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQSAN100CC+size,,NS-FSQSAN100CC+size,1 in,Square Foot,,$9.57,,,38.8¢,27¢,NS-FSQSAN100CC+size
+47,natural_stone,ONYX BLACK GRANITE,"Coping - Top Natural, bottom calibrated, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CSANR2001248+Length,,NS-CSANR2001248+Length,"12 in, 2 in",Linear Foot,,$21.49,,,70.0¢,41¢,NS-CSANR2001248+Length 12 in 2 in $ 21.49 70.0¢ 41¢
+47,natural_stone,ONYX BLACK GRANITE,"Coping - Top Natural, bottom calibrated, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CSANR2001648+Length,,NS-CSANR2001648+Length,"16 in, 2 in",Linear Foot,,$28.66,,,93.3¢,54¢,NS-CSANR2001648+Length 16 in 2 in $ 28.66 93.3¢ 54¢
+47,natural_stone,ONYX BLACK GRANITE,"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGNTSA1674,,NS-SGNTSA1674,"48 in, 16 in, 7 in",Piece,,$342.00,,,$8.00,$6.42,NS-SGNTSA1674 48 in 16 in 7 in $ 342.00 $8.00 $6.42
+48,natural_stone,SIBERIAN GREY,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQSIBS1251212+size,,NS-FSQSIBS1251212+size,1.25 in,Square Foot,,$13.95,,,38.8¢,31¢,NS-FSQSIBS1251212+size
+48,natural_stone,SIBERIAN GREY,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQSIBS1251224+size,,NS-FSQSIBS1251224+size,1.25 in,Square Foot,,$13.95,,,38.8¢,31¢,NS-FSQSIBS1251224+size
+48,natural_stone,SIBERIAN GREY,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQSIBS1251824+size,,NS-FSQSIBS1251824+size,1.25 in,Square Foot,,$13.95,,,38.8¢,31¢,NS-FSQSIBS1251824+size
+48,natural_stone,SIBERIAN GREY,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQSIBS1252424+size,,NS-FSQSIBS1252424+size,1.25 in,Square Foot,,$13.95,,,38.8¢,31¢,NS-FSQSIBS1252424+size
+48,natural_stone,SIBERIAN GREY,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQSIBS1252436+size,,NS-FSQSIBS1252436+size,1.25 in,Square Foot,,$13.95,,,38.8¢,31¢,NS-FSQSIBS1252436+size
+48,natural_stone,SIBERIAN GREY,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQSIBS125CC+size,,NS-FSQSIBS125CC+size,1.25 in,Square Foot,,$13.95,,,38.8¢,31¢,NS-FSQSIBS125CC+size
+48,natural_stone,SIBERIAN GREY,Coping - Flamed Top bottom calibrated 4 sides sawn,NS-CSBSFR200+Length,,NS-CSBSFR200+Length,"12 in, 2 in",Linear Foot,,$35.80,,,70.0¢,41¢,NS-CSBSFR200+Length 12 in 2 in $ 35.80 70.0¢ 41¢
+48,natural_stone,SIBERIAN GREY,"Coping - Top Natural, bottom calibrated, 1 long side SMOOTH FACED, other 3 sides sawn",NS-CSIBSS2001248+Length,,NS-CSIBSS2001248+Length,"12 in, 2 in",Linear Foot,,$29.87,,,70.0¢,41¢,NS-CSIBSS2001248+Length 12 in 2 in $ 29.87 70.0¢ 41¢
+48,natural_stone,SIBERIAN GREY,"Coping - Top Natural, bottom calibrated, 1 long side SMOOTH FACED, other 3 sides sawn",NS-CSIBSS2001648+Length,,NS-CSIBSS2001648+Length,"16 in, 2 in",Linear Foot,,$39.83,,,93.3¢,54¢,NS-CSIBSS2001648+Length 16 in 2 in $ 39.83 93.3¢ 54¢
+48,natural_stone,SIBERIAN GREY,"Coping - Top Natural, bottom calibrated, 1 long side SMOOTH FACED, other 3 sides sawn",NS-CSIBSB2001248+Length,,NS-CSIBSB2001248+Length,"12 in, 2 in",Linear Foot,,$33.64,,,70.0¢,41¢,NS-CSIBSB2001248+Length 12 in 2 in $ 33.64 70.0¢ 41¢
+48,natural_stone,SIBERIAN GREY,"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGTSIBS1674,,NS-SGTSIBS1674,"48 in, 16 in, 7 in",Piece,,$534.00,,,$8.00,$6.42,NS-SGTSIBS1674 48 in 16 in 7 in $ 534.00 $8.00 $6.42
+48,natural_stone,SIBERIAN GREY,"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGTSIBS1675,,NS-SGTSIBS1675,"60 in, 16 in, 7 in",Piece,,$667.00,,,$10.00,$8.01,NS-SGTSIBS1675 60 in 16 in 7 in $ 667.00 $10.00 $8.01
+48,natural_stone,SIBERIAN GREY,"Curbs / Step Fillers - Top Natural, bottom calibrated, 1 side rockfaced",NS-SGTSIBSSF731,,NS-SGTSIBSSF731,"31 in, 6 in, 7 in",Piece,,$122.25,,,$3.00,$2.95,NS-SGTSIBSSF731 31 in 6 in 7 in $ 122.25 $3.00 $2.95
+49,natural_stone,SIBERIAN GREY,Pier Caps - Flamed or Natural Top Sawn / Calibrated Bottom 4 sides rockfaced,NS-PCSG28X28,,NS-PCSG28X28,"28 in, 28 in, 3 in",Piece,,$238.40,,,$4.67,$3.27,NS-PCSG28X28 28 in 28 in 3 in $ 238.40 $4.67 $3.27
+49,natural_stone,SIBERIAN GREY,Flagstone Square Cut - Flamed Top Sawn Bottom 4 sides sawn,NS-FSQSBF100+size,,NS-FSQSBF100+size,1 in,Square Foot,,$11.08,,,38.8¢,22¢,NS-FSQSBF100+size
+49,natural_stone,SIBERIAN GREY,Coping - Flamed Top Sawn Bottom 1 long side ROCK FACED (1LSRF) other 3 sides sawn,NS-CSBFRR200+Length,,NS-CSBFRR200+Length,"12 in, 2 in",Linear Foot,,$22.15,,,70.0¢,41¢,NS-CSBFRR200+Length 12 in 2 in $ 22.15 70.0¢ 41¢
+49,natural_stone,SIBERIAN GREY,Flagstone Square Cut - Antiqued Top Sawn Bottom 4 sides sawn,NS-FSQSVA100+size,,NS-FSQSVA100+size,1 in,Square Foot,,$9.61,,,38.8¢,22¢,NS-FSQSVA100+size
+49,natural_stone,SIBERIAN GREY,"Flagstone Square Cut - Flamed Top, Sawn Bottom, 4 sides sawn",NS-FSQSVF1001212+size,,NS-FSQSVF1001212+size,1 in,Square Foot,,$10.18,,,38.8¢,22¢,NS-FSQSVF1001212+size
+49,natural_stone,SIBERIAN GREY,"Flagstone Square Cut - Flamed Top, Sawn Bottom, 4 sides sawn",NS-FSQSVF1001224+size,,NS-FSQSVF1001224+size,1 in,Square Foot,,$10.18,,,38.8¢,22¢,NS-FSQSVF1001224+size
+49,natural_stone,SIBERIAN GREY,"Flagstone Square Cut - Flamed Top, Sawn Bottom, 4 sides sawn",NS-FSQSVF1001824+size,,NS-FSQSVF1001824+size,1 in,Square Foot,,$10.18,,,38.8¢,22¢,NS-FSQSVF1001824+size
+49,natural_stone,SIBERIAN GREY,"Flagstone Square Cut - Flamed Top, Sawn Bottom, 4 sides sawn",NS-FSQSVF1002424+size,,NS-FSQSVF1002424+size,1 in,Square Foot,,$10.18,,,38.8¢,22¢,NS-FSQSVF1002424+size
+49,natural_stone,SIBERIAN GREY,"Flagstone Square Cut - Flamed Top, Sawn Bottom, 4 sides sawn",NS-FSQSVF1002436+size,,NS-FSQSVF1002436+size,1 in,Square Foot,,$10.18,,,38.8¢,22¢,NS-FSQSVF1002436+size
+49,natural_stone,SIBERIAN GREY,"Flagstone Square Cut - Flamed Top, Sawn Bottom, 4 sides sawn",NS-FSQSVF1251212+size,,NS-FSQSVF1251212+size,1.25 in,Square Foot,,$11.46,,,48.8¢,27¢,NS-FSQSVF1251212+size
+49,natural_stone,SIBERIAN GREY,"Flagstone Square Cut - Flamed Top, Sawn Bottom, 4 sides sawn",NS-FSQSVF1251224+size,,NS-FSQSVF1251224+size,1.25 in,Square Foot,,$11.46,,,48.8¢,27¢,NS-FSQSVF1251224+size
+49,natural_stone,SIBERIAN GREY,"Flagstone Square Cut - Flamed Top, Sawn Bottom, 4 sides sawn",NS-FSQSVF1251824+size,,NS-FSQSVF1251824+size,1.25 in,Square Foot,,$11.46,,,48.8¢,27¢,NS-FSQSVF1251824+size
+49,natural_stone,SIBERIAN GREY,"Flagstone Square Cut - Flamed Top, Sawn Bottom, 4 sides sawn",NS-FSQSVF1252424+size,,NS-FSQSVF1252424+size,1.25 in,Square Foot,,$11.46,,,48.8¢,27¢,NS-FSQSVF1252424+size
+49,natural_stone,SIBERIAN GREY,"Flagstone Square Cut - Flamed Top, Sawn Bottom, 4 sides sawn",NS-FSQSVF1252436+size,,NS-FSQSVF1252436+size,1.25 in,Square Foot,,$11.46,,,48.8¢,27¢,NS-FSQSVF1252436+size
+49,natural_stone,SIBERIAN GREY,"Flagstone Square Cut - Flamed Top, Sawn Bottom, 4 sides sawn",NS-FSQSVF125CC+size,,NS-FSQSVF125CC+size,1.25 in,Square Foot,,$11.46,,,48.8¢,27¢,NS-FSQSVF125CC+size
+50,natural_stone,NATURAL STONE,"Coping - Flamed Top, 1 long side ROCK FACED (1LSRF), other 3 sides sawn, 2"" REBATED to 1""",NS-CSVFRR2001248+Length,,NS-CSVFRR2001248+Length,"12 in, 2 in",Linear Foot,,$21.12,,,70.0¢,41¢,NS-CSVFRR2001248+Length 12 in 2 in $ 21.12 70.0¢ 41¢
+50,natural_stone,NATURAL STONE,"Coping - Flamed Top, Sawn Bottom, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CSVFR2001248+Length,,NS-CSVFR2001248+Length,"12 in, 2 in",Linear Foot,,$19.84,,,70.0¢,41¢,NS-CSVFR2001248+Length 12 in 2 in $ 19.84 70.0¢ 41¢
+50,natural_stone,NATURAL STONE,"Coping - Flamed Top, Sawn Bottom, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CSVFR2001260+Length,,NS-CSVFR2001260+Length,"12 in, 2 in",Linear Foot,,$19.84,,,70.0¢,41¢,NS-CSVFR2001260+Length 12 in 2 in $ 19.84 70.0¢ 41¢
+50,natural_stone,NATURAL STONE,"Coping - Flamed Top, Sawn Bottom, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CSVFR2001272+Length,,NS-CSVFR2001272+Length,"12 in, 2 in",Linear Foot,,$19.84,,,70.0¢,41¢,NS-CSVFR2001272+Length 12 in 2 in $ 19.84 70.0¢ 41¢
+50,natural_stone,NATURAL STONE,"Coping - Flamed Top, Sawn Bottom, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CSVFR2001448+Length,,NS-CSVFR2001448+Length,"14 in, 2 in",Linear Foot,,$23.15,,,70.0¢,41¢,NS-CSVFR2001448+Length 14 in 2 in $ 23.15 70.0¢ 41¢
+50,natural_stone,NATURAL STONE,"Coping - Flamed Top, Sawn Bottom, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CSVFR2001648+Length,,NS-CSVFR2001648+Length,"16 in, 2 in",Linear Foot,,$26.45,,,93.3¢,54¢,NS-CSVFR2001648+Length 16 in 2 in $ 26.45 93.3¢ 54¢
+50,natural_stone,NATURAL STONE,"Coping - Flamed Top, Sawn Bottom, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CSVFR2001672+Length,,NS-CSVFR2001672+Length,"16 in, 2 in",Linear Foot,,$26.45,,,93.3¢,54¢,NS-CSVFR2001672+Length 16 in 2 in $ 26.45 93.3¢ 54¢
+50,natural_stone,NATURAL STONE,"Coping - Flamed Top, Sawn Bottom, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CSVFB2001248+Length,,NS-CSVFB2001248+Length,"12 in, 2 in",Linear Foot,,$24.96,,,70.0¢,41¢,NS-CSVFB2001248+Length 12 in 2 in $ 24.96 70.0¢ 41¢
+50,natural_stone,NATURAL STONE,"Coping - Flamed Top, Sawn Bottom, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CSVFB2001272+Length,,NS-CSVFB2001272+Length,"12 in, 2 in",Linear Foot,,$24.96,,,70.0¢,41¢,NS-CSVFB2001272+Length 12 in 2 in $ 24.96 70.0¢ 41¢
+50,natural_stone,NATURAL STONE,"Coping - Flamed Top, Sawn Bottom, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CSVFB2001648+Length,,NS-CSVFB2001648+Length,"16 in, 2 in",Linear Foot,,$33.28,,,93.3¢,54¢,NS-CSVFB2001648+Length 16 in 2 in $ 33.28 93.3¢ 54¢
+50,natural_stone,NATURAL STONE,"Steps - Antiqued Top, Sawn Bottom, 3 sides rockfaced",NS-SGTSVG1675,,NS-SGTSVG1675,"60 in, 16 in, 7 in",Piece,,$474.00,,,$10.00,$9.35,NS-SGTSVG1675 60 in 16 in 7 in $ 474.00 $10.00 $9.35
+50,natural_stone,NATURAL STONE,"Steps - Flamed Top, Sawn Bottom, 3 sides rockfaced",NS-SGTSVG1674,,NS-SGTSVG1674,"48 in, 16 in, 7 in",Piece,,$379.00,,,$8.00,$7.47,NS-SGTSVG1674 48 in 16 in 7 in $ 379.00 $8.00 $7.47
+50,natural_stone,NATURAL STONE,"Steps - Flamed Top, Sawn Bottom, 3 sides rockfaced",NS-SGTSVG1676,,NS-SGTSVG1676,"72 in, 16 in, 7 in",Piece,,$568.00,,,$12.00,$10.81,NS-SGTSVG1676 72 in 16 in 7 in $ 568.00 $12.00 $10.81
+50,natural_stone,NATURAL STONE,"Steps - Flamed Top, Sawn Bottom, 3 sides rockfaced",NS-SGTSVG1678,,NS-SGTSVG1678,"96 in, 16 in, 7 in",Piece,,$947.00,,,$16.00,$14.41,NS-SGTSVG1678 96 in 16 in 7 in $ 947.00 $16.00 $14.41
+50,natural_stone,NATURAL STONE,"Steps - Flamed Top, Sawn Bottom, 3 sides rockfaced",NS-SGTSVG8156,,NS-SGTSVG8156,"96 in, 16 in, 6 in",Piece,,$787.00,,,$16.00,$12.82,NS-SGTSVG8156 96 in 16 in 6 in $ 787.00 $16.00 $12.82
+51,natural_stone,NATURAL STONE,"Pier Caps - Flamed Top, Sawn Bottom, 4 sides rockfaced",NS-PCKSVF24X24,,NS-PCKSVF24X24,"24 in, 24 in, 2.75 in",Piece,,$144.00,,,$4.00,$2.40,NS-PCKSVF24X24 24 in 24 in 2.75 in $ 144.00 $4.00 $2.40
+51,natural_stone,NATURAL STONE,"Pier Caps - Flamed Top, Sawn Bottom, 4 sides rockfaced",NS-PCKSVF28X28,,NS-PCKSVF28X28,"30 in, 30 in, 2.75 in",Piece,,$196.00,,,$4.67,$3.27,NS-PCKSVF28X28 30 in 30 in 2.75 in $ 196.00 $4.67 $3.27
+51,natural_stone,NATURAL STONE,"Pier Caps - Flamed Top, Sawn Bottom, 4 sides rockfaced",NS-PCKSVF30X30,,NS-PCKSVF30X30,"30 in, 30 in, 2.75 in",Piece,,$225.00,,,$5.00,$3.76,NS-PCKSVF30X30 30 in 30 in 2.75 in $ 225.00 $5.00 $3.76
+51,natural_stone,NATURAL STONE,"Pier Caps - Flamed Top, Sawn Bottom, 4 sides rockfaced",NS-JSSVA2002448,,NS-JSSVA2002448,"48 in, 24 in, 2 in",Piece,,$272.00,,,$12.00,$6.01,NS-JSSVA2002448 48 in 24 in 2 in $ 272.00 $12.00 $6.01
+51,natural_stone,NATURAL STONE,"Pier Caps - Flamed Top, Sawn Bottom, 4 sides rockfaced",NS-JSSVA2002472,,NS-JSSVA2002472,"72 in, 24 in, 2 in",Piece,,$408.00,,,$12.00,$9.01,NS-JSSVA2002472 72 in 24 in 2 in $ 408.00 $12.00 $9.01
+51,natural_stone,NATURAL STONE,"Pier Caps - Flamed Top, Sawn Bottom, 4 sides rockfaced",NS-JSSVA2003672,,NS-JSSVA2003672,"72 in, 36 in, 3 in",Piece,,$630.00,,,$12.00,$10.81,NS-JSSVA2003672 72 in 36 in 3 in $ 630.00 $12.00 $10.81
+51,natural_stone,NATURAL STONE,"Pier Caps - Flamed Top, Sawn Bottom, 4 sides rockfaced",NS-JSSVL2004872,,NS-JSSVL2004872,"72 in, 48 in, 2 in",Piece,,$888.00,,,$16.00,$14.41,NS-JSSVL2004872 72 in 48 in 2 in $ 888.00 $16.00 $14.41
+51,natural_stone,NATURAL STONE,"Pier Caps - Flamed Top, Sawn Bottom, 4 sides rockfaced",NS-JSSVL3696,,NS-JSSVL3696,"96 in, 36 in, 2 in",Piece,,$1056.00,,,$16.00,$14.41,NS-JSSVL3696 96 in 36 in 2 in $ 1056.00 $16.00 $14.41
+51,natural_stone,NATURAL STONE,"Pier Caps - Flamed Top, Sawn Bottom, 4 sides rockfaced",NS-JSSVL4896,,NS-JSSVL4896,"96 in, 48 in, 2 in",Piece,,$1472.00,,,$16.00,$19.21,NS-JSSVL4896 96 in 48 in 2 in $ 1472.00 $16.00 $19.21
+51,natural_stone,SLATE GREY,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQSGN1000748+size,,NS-FSQSGN1000748+size,1 in,Square Foot,,$9.25,,,38.8¢,22¢,NS-FSQSGN1000748+size
+51,natural_stone,SLATE GREY,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQSGN1001212+size,,NS-FSQSGN1001212+size,1 in,Square Foot,,$7.62,,,38.8¢,22¢,NS-FSQSGN1001212+size
+51,natural_stone,SLATE GREY,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQSGN1001224+size,,NS-FSQSGN1001224+size,1 in,Square Foot,,$7.62,,,38.8¢,22¢,NS-FSQSGN1001224+size
+51,natural_stone,SLATE GREY,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQSGN1001824+size,,NS-FSQSGN1001824+size,1 in,Square Foot,,$7.62,,,38.8¢,22¢,NS-FSQSGN1001824+size
+51,natural_stone,SLATE GREY,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQSGN1002424+size,,NS-FSQSGN1002424+size,1 in,Square Foot,,$7.62,,,38.8¢,22¢,NS-FSQSGN1002424+size
+51,natural_stone,SLATE GREY,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQSGN1002436+size,,NS-FSQSGN1002436+size,1 in,Square Foot,,$7.62,,,38.8¢,22¢,NS-FSQSGN1002436+size
+51,natural_stone,SLATE GREY,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQSGN100CC+size,,NS-FSQSGN100CC+size,1 in,Square Foot,,$7.62,,,38.8¢,22¢,NS-FSQSGN100CC+size
+51,natural_stone,SLATE GREY,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQSGN1251224+size,,NS-FSQSGN1251224+size,1.25 in,Square Foot,,$9.50,,,48.8¢,27¢,NS-FSQSGN1251224+size
+51,natural_stone,SLATE GREY,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQSGN1251824+size,,NS-FSQSGN1251824+size,1.25 in,Square Foot,,$9.50,,,48.8¢,27¢,NS-FSQSGN1251824+size
+51,natural_stone,SLATE GREY,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQSGN1252424+size,,NS-FSQSGN1252424+size,1.25 in,Square Foot,,$9.50,,,48.8¢,27¢,NS-FSQSGN1252424+size
+51,natural_stone,SLATE GREY,"Flagstone Square Cut - Top Natural, bottom calibrated, 4 sides sawn",NS-FSQSGN1252436+size,,NS-FSQSGN1252436+size,1.25 in,Square Foot,,$9.50,,,48.8¢,27¢,NS-FSQSGN1252436+size
+52,natural_stone,SLATE GREY,"Coping - Flamed Top, bottom calibrated, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CSGSFR2001248+Length,,NS-CSGSFR2001248+Length,"12 in, 2 in",Linear Foot,,$18.50,,,70.0¢,41¢,NS-CSGSFR2001248+Length 12 in 2 in $ 18.50 70.0¢ 41¢
+52,natural_stone,SLATE GREY,"Coping - Flamed Top, bottom calibrated, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CSGSFR2001672+Length,,NS-CSGSFR2001672+Length,"16 in, 2 in",Linear Foot,,$24.67,,,93.3¢,54¢,NS-CSGSFR2001672+Length 16 in 2 in $ 24.67 93.3¢ 54¢
+52,natural_stone,SLATE GREY,"Coping - Top Natural, 1 long side ROCK FACED (1LSRF), other 3 sides sawn, 2"" REBATED TO 1""",NS-CSGNRR2001248+Length,,NS-CSGNRR2001248+Length,"12 in, 2 in",Linear Foot,,$18.48,,,70.0¢,41¢,NS-CSGNRR2001248+Length 12 in 2 in $ 18.48 70.0¢ 41¢
+52,natural_stone,SLATE GREY,"Coping - Top Natural, bottom calibrated, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CSGNR2001248+Length,,NS-CSGNR2001248+Length,"12 in, 2 in",Linear Foot,,$17.20,,,70.0¢,41¢,NS-CSGNR2001248+Length 12 in 2 in $ 17.20 70.0¢ 41¢
+52,natural_stone,SLATE GREY,"Coping - Top Natural, bottom calibrated, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CSGNR2001260+Length,,NS-CSGNR2001260+Length,"12 in, 2 in",Linear Foot,,$17.20,,,70.0¢,41¢,NS-CSGNR2001260+Length 12 in 2 in $ 17.20 70.0¢ 41¢
+52,natural_stone,SLATE GREY,"Coping - Top Natural, bottom calibrated, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CSGNR2001272+Length,,NS-CSGNR2001272+Length,"12 in, 2 in",Linear Foot,,$17.20,,,70.0¢,41¢,NS-CSGNR2001272+Length 12 in 2 in $ 17.20 70.0¢ 41¢
+52,natural_stone,SLATE GREY,"Coping - Top Natural, bottom calibrated, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CSGNR2001448+Length,,NS-CSGNR2001448+Length,"14 in, 2 in",Linear Foot,,$20.07,,,70.0¢,41¢,NS-CSGNR2001448+Length 14 in 2 in $ 20.07 70.0¢ 41¢
+52,natural_stone,SLATE GREY,"Coping - Top Natural, bottom calibrated, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CSGNR2001472+Length,,NS-CSGNR2001472+Length,"14 in, 2 in",Linear Foot,,$20.07,,,70.0¢,41¢,NS-CSGNR2001472+Length 14 in 2 in $ 20.07 70.0¢ 41¢
+52,natural_stone,SLATE GREY,"Coping - Top Natural, bottom calibrated, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CSGNTE2001248+Length,,NS-CSGNTE2001248+Length,"12 in, 2 in",Linear Foot,,$22.04,,,70.0¢,41¢,NS-CSGNTE2001248+Length 12 in 2 in $ 22.04 70.0¢ 41¢
+52,natural_stone,SLATE GREY,"Coping - Top Natural, bottom calibrated, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CSGNB2001248+Length,,NS-CSGNB2001248+Length,"12 in, 2 in",Linear Foot,,$24.89,,,70.0¢,41¢,NS-CSGNB2001248+Length 12 in 2 in $ 24.89 70.0¢ 41¢
+52,natural_stone,SLATE GREY,"Coping - Top Natural, bottom calibrated, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CSGNB2001648+Length,,NS-CSGNB2001648+Length,"16 in, 2 in",Linear Foot,,$33.18,,,93.3¢,54¢,NS-CSGNB2001648+Length 16 in 2 in $ 33.18 93.3¢ 54¢
+52,natural_stone,SLATE GREY,"Coping - Double Sided 14"" - Top Natural, bottom calibrated,2 long side ROCK FACED (2LSRF), other 2 sides sawn",NS-CSGNDSR2001448+Length,,NS-CSGNDSR2001448+Length,"14 in, 2 in",Linear Foot,,$21.37,,,82.2¢,48¢,NS-CSGNDSR2001448+Length 14 in 2 in $ 21.37 82.2¢ 48¢
+53,natural_stone,SLATE GREY,"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGNTSG1664,,NS-SGNTSG1664,"48 in, 16 in, 6 in",Piece,,$267.00,,,$8.00,$6.42,NS-SGNTSG1664 48 in 16 in 6 in $ 267.00 $8.00 $6.42
+53,natural_stone,SLATE GREY,"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGNTSG1666,,NS-SGNTSG1666,"72 in, 16 in, 6 in",Piece,,$400.00,,,$12.00,$9.61,NS-SGNTSG1666 72 in 16 in 6 in $ 400.00 $12.00 $9.61
+53,natural_stone,SLATE GREY,"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGNTSG1668,,NS-SGNTSG1668,"96 in, 16 in, 6 in",Piece,,$667.00,,,$16.00,$12.82,NS-SGNTSG1668 96 in 16 in 6 in $ 667.00 $16.00 $12.82
+53,natural_stone,SLATE GREY,"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGNTSG1673,,NS-SGNTSG1673,"36 in, 16 in, 7 in",Piece,,$226.00,,,$6.00,$4.81,NS-SGNTSG1673 36 in 16 in 7 in $ 226.00 $6.00 $4.81
+53,natural_stone,SLATE GREY,"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGNTSG1674,,NS-SGNTSG1674,"48 in, 16 in, 7 in",Piece,,$302.00,,,$8.00,$6.42,NS-SGNTSG1674 48 in 16 in 7 in $ 302.00 $8.00 $6.42
+53,natural_stone,SLATE GREY,"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGNTSG1675,,NS-SGNTSG1675,"60 in, 16 in, 7 in",Piece,,$377.00,,,$10.00,$8.01,NS-SGNTSG1675 60 in 16 in 7 in $ 377.00 $10.00 $8.01
+53,natural_stone,SLATE GREY,"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGNTSG1676,,NS-SGNTSG1676,"72 in, 16 in, 7 in",Piece,,$452.00,,,$12.00,$9.61,NS-SGNTSG1676 72 in 16 in 7 in $ 452.00 $12.00 $9.61
+53,natural_stone,SLATE GREY,"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGNTSG1678,,NS-SGNTSG1678,"96 in, 16 in, 7 in",Piece,,$754.00,,,$16.00,$12.82,NS-SGNTSG1678 96 in 16 in 7 in $ 754.00 $16.00 $12.82
+53,natural_stone,SLATE GREY,"Steps - Top Natural, bottom calibrated, 3 sides rockfaced (3SRF), Hollow Step",NS-HSGNTSG1674,,NS-HSGNTSG1674,"48 in, 16 in, 7 in",Piece,,$560.00,,,$8.00,$6.42,NS-HSGNTSG1674 48 in 16 in 7 in $ 560.00 $8.00 $6.42
+53,natural_stone,SLATE GREY,"Curbs / Step Fillers - Top Natural, bottom calibrated, 1 side rockfaced",NS-SGNTSGSF,,NS-SGNTSGSF,"46 in, 6 in, 6 in",Piece,,$113.25,,,$3.00,$2.95,NS-SGNTSGSF 46 in 6 in 6 in $ 113.25 $3.00 $2.95
+53,natural_stone,SLATE GREY,"Curbs / Step Fillers - Top Natural, bottom calibrated, 1 side rockfaced",NS-SGNTSGSF7,,NS-SGNTSGSF7,"46 in, 6 in, 7 in",Piece,,$133.85,,,$3.00,$2.95,NS-SGNTSGSF7 46 in 6 in 7 in $ 133.85 $3.00 $2.95
+53,natural_stone,SLATE GREY,"Curbs / Step Fillers - Top Natural, bottom calibrated, 1 side rockfaced",NS-SGNTSGSF731,,NS-SGNTSGSF731,"31 in, 6 in, 7 in",Piece,,$91.62,,,$3.00,$2.95,NS-SGNTSGSF731 31 in 6 in 7 in $ 91.62 $3.00 $2.95
+53,natural_stone,SLATE GREY,"Pier Caps - Natural Top, Calibrated Bottom, 4 sides rockfaced",NS-PCKSG24X24,,NS-PCKSG24X24,"24 in, 24 in, 3 in",Piece,,$124.00,,,$4.00,$2.40,NS-PCKSG24X24 24 in 24 in 3 in $ 124.00 $4.00 $2.40
+53,natural_stone,SLATE GREY,"Pier Caps - Natural Top, Calibrated Bottom, 4 sides rockfaced",NS-PCKSG28X28,,NS-PCKSG28X28,"28 in, 28 in, 3 in",Piece,,$168.78,,,$4.67,$3.27,NS-PCKSG28X28 28 in 28 in 3 in $ 168.78 $4.67 $3.27
+53,natural_stone,SLATE GREY,"Pier Caps - Natural Top, Calibrated Bottom, 4 sides rockfaced",NS-JSSG2002448,,NS-JSSG2002448,"48 in, 24 in, 2 in",Piece,,$248.00,,,$12.00,$6.01,NS-JSSG2002448 48 in 24 in 2 in $ 248.00 $12.00 $6.01
+53,natural_stone,SLATE GREY,"Pier Caps - Natural Top, Calibrated Bottom, 4 sides rockfaced",NS-JSSG2472,,NS-JSSG2472,"72 in, 24 in, 3 in",Piece,,$372.00,,,$12.00,$9.01,NS-JSSG2472 72 in 24 in 3 in $ 372.00 $12.00 $9.01
+53,natural_stone,SLATE GREY,"Pier Caps - Natural Top, Calibrated Bottom, 4 sides rockfaced",NS-JSSG3672,,NS-JSSG3672,"72 in, 36 in, 3 in",Piece,,$576.00,,,$12.00,$10.81,NS-JSSG3672 72 in 36 in 3 in $ 576.00 $12.00 $10.81
+53,natural_stone,SLATE GREY,"Pier Caps - Natural Top, Calibrated Bottom, 4 sides rockfaced",NS-JSSG3696,,NS-JSSG3696,"96 in, 36 in, 3 in",Piece,,$960.00,,,$16.00,$14.41,NS-JSSG3696 96 in 36 in 3 in $ 960.00 $16.00 $14.41
+54,natural_stone,VENETIAN CREMA,"Flagstone Square Cut - Shotblasted top, bottom calibrated, 4 sides sawn",NS-FSQVCS100+size,,NS-FSQVCS100+size,1 in,Square Foot,,$9.81,,,38.8¢,22¢,NS-FSQVCS100+size
+54,natural_stone,VENETIAN CREMA,"Coping - Shotblased Top, bottom calibrated, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CVCSR20012+Length,,NS-CVCSR20012+Length,"12 in, 2 in",Linear Foot,,$19.16,,,70.0¢,41¢,NS-CVCSR20012+Length 12 in 2 in $ 19.16 70.0¢ 41¢
+54,natural_stone,VENETIAN CREMA,"Coping - Shotblased Top, bottom calibrated, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CVCSR20014+Length,,NS-CVCSR20014+Length,"14 in, 2 in",Linear Foot,,$22.35,,,70.0¢,41¢,NS-CVCSR20014+Length 14 in 2 in $ 22.35 70.0¢ 41¢
+54,natural_stone,VENETIAN CREMA,"Coping - Shotblased Top, bottom calibrated, 1 long side ROCK FACED (1LSRF), other 3 sides sawn",NS-CVCSR20016+Length,,NS-CVCSR20016+Length,"16 in, 2 in",Linear Foot,,$25.54,,,93.3¢,54¢,NS-CVCSR20016+Length 16 in 2 in $ 25.54 93.3¢ 54¢
+54,natural_stone,VENETIAN CREMA,"Coping - Shotblasted top, bottom calibrated, 1 long side Shotblased (1LSRF), other 3 sides sawn",NS-CVCSTE20012+Length,,NS-CVCSTE20012+Length,"12 in, 2 in",Linear Foot,,$22.48,,,70.0¢,41¢,NS-CVCSTE20012+Length 12 in 2 in $ 22.48 70.0¢ 41¢
+54,natural_stone,VENETIAN CREMA,"Coping - Shotblasted top, bottom calibrated, 1 long side Shotblased (1LSRF), other 3 sides sawn",NS-CVCSTE20014+Length,,NS-CVCSTE20014+Length,"14 in, 2 in",Linear Foot,,$26.23,,,70.0¢,41¢,NS-CVCSTE20014+Length 14 in 2 in $ 26.23 70.0¢ 41¢
+54,natural_stone,VENETIAN CREMA,"Coping - Shotblasted top, bottom calibrated, 1 long side Shotblased (1LSRF), other 3 sides sawn",NS-CVCSTE20016+Length,,NS-CVCSTE20016+Length,"16 in, 2 in",Linear Foot,,$29.97,,,93.3¢,54¢,NS-CVCSTE20016+Length 16 in 2 in $ 29.97 93.3¢ 54¢
+54,natural_stone,VENETIAN CREMA,"Coping - Shotblasted top, bottom calibrated, 1 long side Shotblased (1LSRF), other 3 sides sawn",NS-CVCSB20012+Length,,NS-CVCSB20012+Length,"12 in, 2 in",Linear Foot,,$28.21,,,70.0¢,41¢,NS-CVCSB20012+Length 12 in 2 in $ 28.21 70.0¢ 41¢
+54,natural_stone,VENETIAN CREMA,"Coping - Shotblasted top, bottom calibrated, 1 long side Shotblased (1LSRF), other 3 sides sawn",NS-CVCSB20016+Length,,NS-CVCSB20016+Length,"16 in, 2 in",Linear Foot,,$37.61,,,93.3¢,54¢,NS-CVCSB20016+Length 16 in 2 in $ 37.61 93.3¢ 54¢
+54,natural_stone,VENETIAN CREMA,"Steps - Shotblasted top, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGTSVC1664,,NS-SGTSVC1664,"48 in, 16 in, 6 in",Piece,,$299.00,,,$8.00,$6.42,NS-SGTSVC1664 48 in 16 in 6 in $ 299.00 $8.00 $6.42
+54,natural_stone,VENETIAN CREMA,"Steps - Shotblasted top, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGTSVC1665,,NS-SGTSVC1665,"60 in, 16 in, 6 in",Piece,,$374.00,,,$10.00,$8.01,NS-SGTSVC1665 60 in 16 in 6 in $ 374.00 $10.00 $8.01
+54,natural_stone,VENETIAN CREMA,"Steps - Shotblasted top, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGTSVC1666,,NS-SGTSVC1666,"72 in, 16 in, 6 in",Piece,,$448.00,,,$12.00,$9.61,NS-SGTSVC1666 72 in 16 in 6 in $ 448.00 $12.00 $9.61
+54,natural_stone,VENETIAN CREMA,"Steps - Shotblasted top, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGTSVC1668,,NS-SGTSVC1668,"96 in, 16 in, 6 in",Piece,,$747.00,,,$16.00,$12.82,NS-SGTSVC1668 96 in 16 in 6 in $ 747.00 $16.00 $12.82
+55,natural_stone,VENETIAN CREMA,"Steps - Shotblasted top, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGTSVCSM1664,,NS-SGTSVCSM1664,"48 in, 16 in, 6 in",Piece,,$299.00,,,$8.00,$6.42,NS-SGTSVCSM1664 48 in 16 in 6 in $ 299.00 $8.00 $6.42
+55,natural_stone,VENETIAN CREMA,"Steps - Shotblasted top, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGTSVCSM1665,,NS-SGTSVCSM1665,"60 in, 16 in, 6 in",Piece,,$374.00,,,$10.00,$8.01,NS-SGTSVCSM1665 60 in 16 in 6 in $ 374.00 $10.00 $8.01
+55,natural_stone,VENETIAN CREMA,"Steps - Shotblasted top, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGTSVCSM1666,,NS-SGTSVCSM1666,"72 in, 16 in, 6 in",Piece,,$448.00,,,$12.00,$9.61,NS-SGTSVCSM1666 72 in 16 in 6 in $ 448.00 $12.00 $9.61
+55,natural_stone,VENETIAN CREMA,"Steps - Shotblasted top, bottom calibrated, 3 sides rockfaced (3SRF)",NS-SGTSVCSM1668,,NS-SGTSVCSM1668,"96 in, 16 in, 6 in",Piece,,$747.00,,,$16.00,$12.82,NS-SGTSVCSM1668 96 in 16 in 6 in $ 747.00 $16.00 $12.82
+55,natural_stone,VENETIAN CREMA,"Curbs / Step Fillers - Shotblast Top, Sawn Bottom, 1 side rockfaced",NS-SGTSVCSF46,,NS-SGTSVCSF46,"46 in, 6 in, 6 in",Piece,,$140.72,,,$3.00,$2.95,NS-SGTSVCSF46 46 in 6 in 6 in $ 140.72 $3.00 $2.95
+55,natural_stone,VENETIAN CREMA,"Curbs / Step Fillers - Shotblast Top, Sawn Bottom, 1 side rockfaced",NS-SGTSVCSMSF46,,NS-SGTSVCSMSF46,"46 in, 6 in, 6 in",Piece,,$140.72,,,$3.00,$2.95,NS-SGTSVCSMSF46 46 in 6 in 6 in $ 140.72 $3.00 $2.95
+55,natural_stone,VENETIAN CREMA,"Pier Caps - Flamed Top, Sawn Bottom, 4 sides rockfaced",NS-PCKVCR24X24,,NS-PCKVCR24X24,"24 in, 24 in, 2.75 in",Piece,,$132.31,,,$4.00,$2.40,NS-PCKVCR24X24 24 in 24 in 2.75 in $ 132.31 $4.00 $2.40
