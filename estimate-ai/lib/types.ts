@@ -155,3 +155,35 @@ export interface UsageLog {
   metadata: Record<string, unknown> | null;
   created_at: string;
 }
+
+// Supplier material catalog (e.g. Carr Landscape Depot price book) used as a
+// pricing reference when building quotes. See migration 006. price_raw keeps
+// the exact printed value (incl. cents like ".063¢" or "N/A"); price_cad is
+// the parsed dollar amount, or null when the printed value is not a plain
+// dollar figure.
+export interface MaterialPrice {
+  id: string;
+  contractor_id: string;
+  supplier: string;
+  price_list_version: string | null;
+  effective_date: string | null;
+  category: string | null;
+  product_group: string | null;
+  name: string | null;
+  variant: string | null;
+  description: string | null;
+  item_code: string | null;
+  dimensions: string | null;
+  unit: string | null;
+  skid_size: string | null;
+  price_raw: string | null;
+  price_cad: number | null;
+  trade_price_raw: string | null;
+  trade_price_cad: number | null;
+  unit_price: string | null;
+  splitting_fee: string | null;
+  delivery: string | null;
+  source_page: number | null;
+  raw: string | null;
+  created_at: string;
+}

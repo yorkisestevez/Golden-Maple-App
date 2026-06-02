@@ -20,6 +20,12 @@ Structured extraction of every priced item from the **Carr Landscape Depot
 | `price-list.csv`  | Same data, flat CSV — easiest for spreadsheets / imports. |
 | `extract.py`      | The PyMuPDF parser used to generate the data. Re-run after dropping a new `price-list.pdf` here. |
 
+**Loaded into the app:** `estimate-ai/supabase/migrations/006_carr_material_prices.sql`
+creates a `material_prices` table and seeds all 853 items for the Golden Maple
+contractor, so the catalog is queryable in-app when building quotes. Re-running
+the migration replaces the existing Carr list. (See `MaterialPrice` in
+`estimate-ai/lib/types.ts`.)
+
 The source PDF itself is **not** committed (it is a large, expiring CDN link).
 To regenerate: place the PDF as `price-list.pdf` in this folder and run
 `pip install pymupdf && python extract.py`.
