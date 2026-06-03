@@ -1,0 +1,9 @@
+# Python
+__pycache__/
+*.pyc
+
+# Netlify
+.netlify/
+
+# OS
+.DS_Store
