@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 140" width="480" height="140" role="img" aria-label="Northbound Dispatch">
+  <!-- For dark / navy backgrounds. Transparent background; white wordmark, orange accents. -->
+  <!-- Mark: stylized N with upward orange arrow (matches favicon + site header) -->
+  <g transform="translate(16,30) scale(2.4)">
+    <path d="M6 26V6h4l12 14V6h4v20h-4L10 12v14z" fill="#FFFFFF"/>
+    <path d="M16 2l5 6h-3v4h-4V8H11z" fill="#FF6B35"/>
+  </g>
+  <!-- Wordmark -->
+  <text x="116" y="74" font-family="'Arial Narrow','Helvetica Neue',Arial,sans-serif" font-size="54" font-weight="700" letter-spacing="1" fill="#FFFFFF">NORTHBOUND</text>
+  <text x="118" y="108" font-family="'Arial Narrow','Helvetica Neue',Arial,sans-serif" font-size="26" font-weight="700" letter-spacing="9" fill="#FF6B35">DISPATCH</text>
+</svg>

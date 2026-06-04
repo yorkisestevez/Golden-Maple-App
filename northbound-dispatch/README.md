@@ -57,7 +57,7 @@ Pure static — no build step.
 cd website
 python3 -m http.server 8080   # then open http://localhost:8080
 ```
-**Deploy to Netlify:** point a site at the `website/` folder (publish dir `.`, no build command — see `netlify.toml`). Form submissions POST to `yorkis@goldenmaplelandscaping.ca` via FormSubmit (temporary, until a dedicated dispatch inbox/n8n webhook exists).
+**Deploy to Netlify:** point a site at the `website/` folder (publish dir `.`, no build command — see `netlify.toml`). Public contact is `dispatch@northbounddispatch.ca`. Application-form submissions currently POST to `yorkis@goldenmaplelandscaping.ca` via FormSubmit (a verified, working inbox) — switch the form `action` to `dispatch@northbounddispatch.ca` once that inbox completes FormSubmit's one-time activation (or an n8n webhook replaces it).
 
 ### PDFs (Phase 2)
 ```bash

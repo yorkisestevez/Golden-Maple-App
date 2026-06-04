@@ -68,7 +68,7 @@ def build(output_path):
         [Paragraph('<b>Northbound Dispatch</b><br/>'
                    '<font size=8 color="#5A6B7B">Independent contractor dispatcher</font><br/>'
                    'Barrie, Ontario, Canada<br/>'
-                   '<font size=8>yorkis@goldenmaplelandscaping.ca</font>', st["body_sm"]),
+                   '<font size=8>dispatch@northbounddispatch.ca</font>', st["body_sm"]),
          Paragraph('<b>The Carrier</b> (owner-operator)<br/>'
                    '<font size=8 color="#5A6B7B">Name:</font> ____________________________<br/>'
                    '<font size=8 color="#5A6B7B">MC / CVOR #:</font> _______________________<br/>'

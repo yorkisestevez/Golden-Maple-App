@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" role="img" aria-label="Northbound Dispatch">
+  <!-- Square social / profile image. 1000x1000, navy field, centered mark + wordmark. -->
+  <rect width="1000" height="1000" fill="#0D1B2A"/>
+  <!-- thin orange frame for polish -->
+  <rect x="28" y="28" width="944" height="944" rx="48" fill="none" stroke="#FF6B35" stroke-width="6" opacity="0.85"/>
+  <!-- Mark: stylized N + upward orange arrow, centered -->
+  <g transform="translate(388,235) scale(7)">
+    <path d="M6 26V6h4l12 14V6h4v20h-4L10 12v14z" fill="#FFFFFF"/>
+    <path d="M16 2l5 6h-3v4h-4V8H11z" fill="#FF6B35"/>
+  </g>
+  <!-- Wordmark, centered -->
+  <text x="500" y="615" text-anchor="middle" font-family="'Arial Narrow','Helvetica Neue',Arial,sans-serif" font-size="104" font-weight="700" letter-spacing="2" fill="#FFFFFF">NORTHBOUND</text>
+  <text x="500" y="688" text-anchor="middle" font-family="'Arial Narrow','Helvetica Neue',Arial,sans-serif" font-size="50" font-weight="700" letter-spacing="22" fill="#FF6B35">DISPATCH</text>
+  <text x="500" y="775" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="30" font-style="italic" fill="#1B998B">Your loads. Found. Confirmed. Done.</text>
+</svg>

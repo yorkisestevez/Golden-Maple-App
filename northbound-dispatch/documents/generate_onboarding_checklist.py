@@ -94,7 +94,7 @@ def build(output_path):
     # footer note box
     note = Paragraph(
         '<b>Questions?</b> Call or text us at 705-555-0000, or email '
-        'yorkis@goldenmaplelandscaping.ca. We move fast — the sooner this is complete, '
+        'dispatch@northbounddispatch.ca. We move fast — the sooner this is complete, '
         'the sooner we start finding you loads.', st["body_sm"])
     nt = Table([[note]], colWidths=[full])
     nt.setStyle(TableStyle([

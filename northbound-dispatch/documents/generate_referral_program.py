@@ -95,7 +95,7 @@ def build(output_path):
     s.append(Spacer(1, 16))
     cta = Table([[
         Paragraph('<font color="#FFFFFF"><b>Ready to refer?</b>&nbsp;&nbsp;Call or text 705-555-0000 · '
-                  'yorkis@goldenmaplelandscaping.ca · northbounddispatch.ca</font>', st["body_sm"])
+                  'dispatch@northbounddispatch.ca · northbounddispatch.ca</font>', st["body_sm"])
     ]], colWidths=[full])
     cta.setStyle(TableStyle([
         ("BACKGROUND", (0, 0), (-1, -1), NAVY),

@@ -36,7 +36,7 @@ We're an independent dispatch service for owner-operators — not a broker. You 
 
 📞 Call or text: 705-XXX-XXXX
 🌐 northbounddispatch.ca
-📧 yorkis@goldenmaplelandscaping.ca
+📧 dispatch@northbounddispatch.ca
 📍 Based in Barrie, ON — serving Ontario & cross-border
 
 Free to apply. Week-to-week. If we don't perform, you walk.

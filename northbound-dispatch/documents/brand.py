@@ -43,7 +43,7 @@ FONT_MONO = "Courier"
 BRAND_NAME = "NORTHBOUND"
 BRAND_SUB = "DISPATCH"
 TAGLINE = "Your loads. Found. Confirmed. Done."
-CONTACT_EMAIL = "yorkis@goldenmaplelandscaping.ca"
+CONTACT_EMAIL = "dispatch@northbounddispatch.ca"
 CONTACT_PHONE = "705-555-0000"
 LOCATION = "Barrie, Ontario, Canada"
 
