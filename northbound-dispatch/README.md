@@ -42,7 +42,10 @@ northbound-dispatch/
 │   ├── instagram.md              (bio + first 5 captions)
 │   └── cold-outreach-scripts.md  (truck stops / schools / dealers)
 │
-└── docs/                 # supporting docs
+└── docs/                 # strategy + supporting docs
+    ├── business-plan.md            (strategy, unit economics, financials, milestones)
+    ├── road-to-customer-1.md       (go-to-market sprint — land the first paying carrier)
+    ├── production-deployment.md    (going-live checklist — Netlify, domain, email, form)
     ├── load-board-integration.md   (Phase 3B)
     └── ai-automation-roadmap.md     (Phase 4 — Sarah, OpenClaw, n8n)
 ```
@@ -100,7 +103,12 @@ Click **"Load sample data"** in the sidebar to populate carriers/loads. Export/I
 - No setup costs, no hidden fees, week-to-week. Ontario domestic + Canada–US cross-border.
 - All amounts CAD unless a cross-border load is explicitly quoted in USD.
 
-## Roadmap (next)
+## Business plan & roadmaps
+- **Strategy & financials:** [`docs/business-plan.md`](docs/business-plan.md) — positioning, market, unit economics, cost structure, milestones, risks. Break-even is essentially Customer 1.
+- **Go to market — Road to Customer 1:** [`docs/road-to-customer-1.md`](docs/road-to-customer-1.md) — the 14-day sprint to land the first paying carrier (Pre-flight → Outreach Blitz → Convert → Repeat). No automation required.
+- **Going live:** [`docs/production-deployment.md`](docs/production-deployment.md) — Netlify + domain + email + form activation checklist.
+
+## Roadmap (automation, next)
 See `docs/ai-automation-roadmap.md`. Fastest first automation: **n8n insurance-expiry alerts** (the tracker already surfaces the 30-day list), then the onboarding flow (repoint the website form at an n8n webhook), then OpenClaw load matching against the Loadlink API.
 
 ---
