@@ -1,0 +1,83 @@
+---
+import '@fontsource-variable/fraunces';
+import '@fontsource-variable/inter';
+import '../styles/global.css';
+
+import BaseHead from '@components/BaseHead.astro';
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+import { t, type Lang } from '@i18n/ui';
+
+interface Alternate {
+  lang: Lang;
+  href: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  lang: Lang;
+  ogImage?: string;
+  ogType?: 'website' | 'article';
+  alternates?: Alternate[];
+  noindex?: boolean;
+}
+
+const {
+  title,
+  description,
+  lang,
+  ogImage,
+  ogType,
+  alternates,
+  noindex,
+} = Astro.props;
+const tr = t(lang);
+---
+
+<!doctype html>
+<html lang={lang === 'en' ? 'en' : 'es'}>
+  <head>
+    <BaseHead
+      title={title}
+      description={description}
+      lang={lang}
+      ogImage={ogImage}
+      ogType={ogType}
+      alternates={alternates}
+      noindex={noindex}
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">{tr('a11y.skip')}</a>
+    <Header lang={lang} />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer lang={lang} />
+
+    <script is:inline>
+      // Lazy-load Netlify Identity only when handling a CMS invite/recovery
+      // link, so normal page loads stay lightweight (keeps Lighthouse high).
+      if (
+        location.hash.includes('invite_token=') ||
+        location.hash.includes('recovery_token=')
+      ) {
+        var s = document.createElement('script');
+        s.src = 'https://identity.netlify.com/v1/netlify-identity-widget.js';
+        s.onload = function () {
+          if (window.netlifyIdentity) {
+            window.netlifyIdentity.on('init', function (user) {
+              if (!user) {
+                window.netlifyIdentity.on('login', function () {
+                  document.location.href = '/admin/';
+                });
+              }
+            });
+          }
+        };
+        document.head.appendChild(s);
+      }
+    </script>
+  </body>
+</html>

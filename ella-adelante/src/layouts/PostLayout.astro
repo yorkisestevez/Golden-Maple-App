@@ -1,0 +1,182 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from './BaseLayout.astro';
+import LanguageRibbon from '@components/LanguageRibbon.astro';
+import ShareButtons from '@components/ShareButtons.astro';
+import RelatedPosts from '@components/RelatedPosts.astro';
+import Newsletter from '@components/Newsletter.astro';
+import { PILLARS, t, type Lang } from '@i18n/ui';
+import {
+  readingTimeMinutes,
+  formatDate,
+  postPath,
+  getRelatedPosts,
+  type Post,
+} from '@lib/posts';
+
+interface Props {
+  post: Post;
+}
+const { post } = Astro.props;
+const { data } = post;
+
+// Article chrome follows the post's own language (bilingual → Spanish-first).
+const lang: Lang = data.language === 'en' ? 'en' : 'es';
+const tr = t(lang);
+const pillar = PILLARS[data.pillar];
+const minutes = readingTimeMinutes(post.body);
+const url = new URL(postPath(post), Astro.site).href;
+const related = await getRelatedPosts(post, lang);
+
+const alternates =
+  data.translationOf !== undefined
+    ? [
+        { lang, href: postPath(post) },
+        {
+          lang: (lang === 'en' ? 'es' : 'en') as Lang,
+          href: `/articulo/${data.translationOf}`,
+        },
+      ]
+    : undefined;
+---
+
+<BaseLayout
+  title={data.title}
+  description={data.excerpt}
+  lang={lang}
+  ogType="article"
+  ogImage={data.heroImage ? undefined : undefined}
+  alternates={alternates}
+>
+  <article class="post">
+    <header class="post__head wrap">
+      <a class="post__pillar" href={`${lang === 'en' ? '/en' : ''}${pillar.href}`}>
+        {pillar.label[lang]}
+      </a>
+      <h1 class="post__title">{data.title}</h1>
+      <p class="post__excerpt">{data.excerpt}</p>
+
+      <div class="post__meta">
+        <LanguageRibbon language={data.language} />
+        <span class="post__author">{tr('post.by')} {data.author}</span>
+        <time datetime={data.pubDate.toISOString()}>
+          {formatDate(data.pubDate, lang)}
+        </time>
+        <span class="post__rt">{minutes} {tr('post.readingTime')}</span>
+        {data.sample && <span class="post__sample">{tr('post.sample')}</span>}
+      </div>
+    </header>
+
+    {
+      data.heroImage && (
+        <figure class="post__hero wrap">
+          <Image
+            src={data.heroImage}
+            alt={data.heroAlt}
+            widths={[480, 800, 1200, 1600]}
+            sizes="(max-width: 1180px) 100vw, 1180px"
+            loading="eager"
+            fetchpriority="high"
+            class="post__hero-img"
+          />
+          {data.heroCredit && (
+            <figcaption class="post__credit">{data.heroCredit}</figcaption>
+          )}
+        </figure>
+      )
+    }
+
+    <div class="post__body article-body wrap">
+      <slot />
+    </div>
+
+    <footer class="post__foot wrap">
+      <ShareButtons url={url} title={data.title} lang={lang} />
+    </footer>
+  </article>
+
+  <RelatedPosts posts={related} lang={lang} />
+  <Newsletter lang={lang} />
+</BaseLayout>
+
+<style>
+  .post {
+    padding-top: 2.5rem;
+  }
+  .post__head {
+    max-width: 820px;
+    text-align: center;
+  }
+  .post__pillar {
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    color: var(--coral-deep);
+    text-decoration: none;
+    margin-bottom: 0.6rem;
+  }
+  .post__title {
+    margin: 0 0 0.6rem;
+  }
+  .post__excerpt {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: var(--ink-70);
+    max-width: 60ch;
+    margin: 0 auto 1.4rem;
+  }
+  .post__meta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.6rem 0.9rem;
+    font-size: 0.9rem;
+    color: var(--ink-55);
+  }
+  .post__author {
+    font-weight: 650;
+    color: var(--ink-70);
+  }
+  .post__sample {
+    background: var(--gold);
+    color: var(--ink);
+    font-weight: 700;
+    font-size: 0.68rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+  }
+  .post__hero {
+    margin: 2.5rem auto;
+  }
+  .post__hero-img {
+    width: 100%;
+    max-height: 70vh;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+  }
+  .post__credit {
+    margin-top: 0.6rem;
+    font-size: 0.8rem;
+    color: var(--ink-55);
+    text-align: right;
+  }
+  .post__body {
+    margin-inline: auto;
+  }
+  /* center the constrained prose column within the wrap */
+  .post__body > :global(*) {
+    margin-inline: auto;
+  }
+  .post__foot {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--ink-12);
+    max-width: var(--measure);
+    margin-inline: auto;
+  }
+</style>

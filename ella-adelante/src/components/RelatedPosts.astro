@@ -1,0 +1,39 @@
+---
+import PostCard from './PostCard.astro';
+import { t, type Lang } from '@i18n/ui';
+import type { Post } from '@lib/posts';
+
+interface Props {
+  posts: Post[];
+  lang: Lang;
+}
+const { posts, lang } = Astro.props;
+const tr = t(lang);
+---
+
+{
+  posts.length > 0 && (
+    <section class="related wrap" aria-labelledby="related-title">
+      <div class="section-head">
+        <h2 id="related-title">{tr('post.related')}</h2>
+        <span class="gold-rule" aria-hidden="true" />
+      </div>
+      <div class="related__grid">
+        {posts.map((p) => (
+          <PostCard post={p} lang={lang} />
+        ))}
+      </div>
+    </section>
+  )
+}
+
+<style>
+  .related {
+    margin-top: 4rem;
+  }
+  .related__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--gap);
+  }
+</style>

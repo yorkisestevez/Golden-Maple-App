@@ -1,0 +1,90 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import PostCard from '@components/PostCard.astro';
+import Newsletter from '@components/Newsletter.astro';
+import { PILLARS, SITE_NAME, type Lang, type PillarKey } from '@i18n/ui';
+import { getPostsByPillar } from '@lib/posts';
+
+interface Props {
+  pillar: PillarKey;
+  lang: Lang;
+}
+const { pillar, lang } = Astro.props;
+const info = PILLARS[pillar];
+const posts = await getPostsByPillar(pillar, lang);
+
+const altLang: Lang = lang === 'en' ? 'es' : 'en';
+const altHref = lang === 'en' ? info.href : `/en${info.href}`;
+const selfHref = lang === 'en' ? `/en${info.href}` : info.href;
+---
+
+<BaseLayout
+  title={`${info.label[lang]} · ${SITE_NAME}`}
+  description={info.mission[lang]}
+  lang={lang}
+  alternates={[
+    { lang, href: selfHref },
+    { lang: altLang, href: altHref },
+  ]}
+>
+  <header class="pillar-hero">
+    <div class="wrap">
+      <p class="eyebrow">{SITE_NAME}</p>
+      <h1>{info.label[lang]}</h1>
+      <p class="pillar-mission">{info.mission[lang]}</p>
+    </div>
+  </header>
+
+  <div class="wrap pillar-body">
+    {
+      posts.length > 0 ? (
+        <div class="pillar-grid">
+          {posts.map((post, i) => (
+            <PostCard post={post} lang={lang} eager={i < 3} />
+          ))}
+        </div>
+      ) : (
+        <p class="pillar-empty">
+          {lang === 'en'
+            ? 'New pieces are on the way. Check back soon.'
+            : 'Pronto publicamos más en esta sección. Vuelve pronto.'}
+        </p>
+      )
+    }
+  </div>
+
+  <Newsletter lang={lang} />
+</BaseLayout>
+
+<style>
+  .pillar-hero {
+    padding: 3.5rem 0 2.5rem;
+    border-bottom: 2px solid var(--ink-08);
+    background: linear-gradient(180deg, var(--sand-deep), var(--sand));
+  }
+  .pillar-hero h1 {
+    margin: 0 0 0.4rem;
+  }
+  .pillar-mission {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: clamp(1.2rem, 2.6vw, 1.6rem);
+    line-height: 1.4;
+    color: var(--teal);
+    max-width: 42ch;
+    margin: 0;
+  }
+  .pillar-body {
+    padding-top: 2.5rem;
+  }
+  .pillar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: var(--gap);
+  }
+  .pillar-empty {
+    font-size: 1.1rem;
+    color: var(--ink-55);
+    padding: 2rem 0;
+  }
+</style>

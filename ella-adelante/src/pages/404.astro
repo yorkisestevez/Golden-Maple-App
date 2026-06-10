@@ -1,0 +1,53 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import { t } from '@i18n/ui';
+
+// 404 is shown to everyone; lead in Spanish (site default) but offer both.
+const tr = t('es');
+const trEn = t('en');
+---
+
+<BaseLayout title="404" description={tr('404.body')} lang="es" noindex>
+  <section class="nf wrap">
+    <p class="nf__code">404</p>
+    <h1>{tr('404.title')}</h1>
+    <p class="nf__body">{tr('404.body')}</p>
+    <p class="nf__body nf__en">{trEn('404.body')}</p>
+    <div class="nf__actions">
+      <a class="btn btn-primary" href="/">{tr('404.cta')}</a>
+      <a class="btn btn-ghost" href="/en">{trEn('404.cta')}</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .nf {
+    text-align: center;
+    padding: 5rem 0 6rem;
+    max-width: 60ch;
+  }
+  .nf__code {
+    font-family: var(--font-display);
+    font-size: clamp(4rem, 14vw, 8rem);
+    line-height: 1;
+    color: var(--coral);
+    margin: 0;
+    font-weight: 600;
+  }
+  .nf__body {
+    color: var(--ink-70);
+    font-size: 1.1rem;
+    margin: 0.4rem 0;
+  }
+  .nf__en {
+    color: var(--ink-55);
+    font-size: 0.98rem;
+  }
+  .nf__actions {
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1.8rem;
+  }
+</style>

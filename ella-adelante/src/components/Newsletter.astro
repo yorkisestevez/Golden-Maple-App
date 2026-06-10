@@ -1,0 +1,128 @@
+---
+/**
+ * Newsletter signup — provider-swappable in ONE place.
+ * Default: Buttondown (free, privacy-friendly). To switch to ConvertKit,
+ * set PROVIDER to 'convertkit' and fill the action/data attributes below.
+ *
+ * No script needed for the basic embed — it posts straight to the provider.
+ */
+import { t, type Lang } from '@i18n/ui';
+
+interface Props {
+  lang: Lang;
+  variant?: 'band' | 'inline';
+}
+const { lang, variant = 'band' } = Astro.props;
+const tr = t(lang);
+
+// ---- Provider config (swap here) --------------------------------------
+const PROVIDER: 'buttondown' | 'convertkit' = 'buttondown';
+
+const BUTTONDOWN_USER = 'ellaadelante'; // your Buttondown username
+const CONVERTKIT_FORM_ID = '0000000'; // your ConvertKit form id
+
+const action =
+  PROVIDER === 'buttondown'
+    ? `https://buttondown.email/api/emails/embed-subscribe/${BUTTONDOWN_USER}`
+    : `https://app.convertkit.com/forms/${CONVERTKIT_FORM_ID}/subscriptions`;
+const emailField = PROVIDER === 'buttondown' ? 'email' : 'email_address';
+// -----------------------------------------------------------------------
+---
+
+<section class:list={['nl', `nl--${variant}`]} aria-labelledby="nl-title">
+  <div class="wrap nl__inner">
+    <div class="nl__copy">
+      <p class="eyebrow">Newsletter</p>
+      <h2 id="nl-title" class="nl__title">{tr('newsletter.title')}</h2>
+      <p class="nl__body">{tr('newsletter.body')}</p>
+    </div>
+
+    <form
+      class="nl__form"
+      action={action}
+      method="post"
+      target="_blank"
+      rel="noopener"
+    >
+      <div class="nl__field">
+        <label class="visually-hidden" for="nl-email">
+          {tr('newsletter.placeholder')}
+        </label>
+        <input
+          id="nl-email"
+          type="email"
+          name={emailField}
+          placeholder={tr('newsletter.placeholder')}
+          autocomplete="email"
+          required
+        />
+        <button class="btn btn-primary" type="submit">
+          {tr('newsletter.cta')}
+        </button>
+      </div>
+      <p class="nl__consent">{tr('newsletter.consent')}</p>
+    </form>
+  </div>
+</section>
+
+<style>
+  .nl {
+    background: var(--teal);
+    color: var(--sand);
+    border-radius: var(--radius-lg);
+  }
+  .nl--band {
+    margin: 4rem auto;
+    max-width: var(--wrap);
+  }
+  .nl--inline {
+    margin: 3rem 0;
+  }
+  .nl__inner {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    padding: 2.6rem clamp(1.25rem, 4vw, 3rem);
+  }
+  .nl .eyebrow {
+    color: var(--gold);
+  }
+  .nl__title {
+    color: var(--sand);
+    margin: 0 0 0.5rem;
+    font-size: clamp(1.6rem, 3.5vw, 2.3rem);
+  }
+  .nl__body {
+    margin: 0;
+    color: rgba(247, 243, 238, 0.82);
+    max-width: 38ch;
+  }
+  .nl__field {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .nl__field input {
+    flex: 1;
+    border-color: transparent;
+    min-width: 0;
+  }
+  .nl__consent {
+    margin: 0.75rem 0 0;
+    font-size: 0.8rem;
+    color: rgba(247, 243, 238, 0.62);
+  }
+
+  @media (max-width: 760px) {
+    .nl__inner {
+      grid-template-columns: 1fr;
+      gap: 1.4rem;
+    }
+    .nl__field {
+      flex-direction: column;
+    }
+    .nl__field .btn {
+      justify-content: center;
+    }
+  }
+</style>

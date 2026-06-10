@@ -1,0 +1,86 @@
+---
+/** SEO head: title, description, canonical, Open Graph, Twitter cards,
+ *  optional hreflang alternates. Meta is bilingual at the page level. */
+import { SITE_NAME, type Lang } from '@i18n/ui';
+
+interface Alternate {
+  lang: Lang;
+  href: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  lang: Lang;
+  /** Page language for <html lang>; passed up to the layout, kept here for OG. */
+  ogImage?: string;
+  ogType?: 'website' | 'article';
+  alternates?: Alternate[];
+  noindex?: boolean;
+}
+
+const {
+  title,
+  description,
+  lang,
+  ogImage = '/images/og-default.svg',
+  ogType = 'website',
+  alternates = [],
+  noindex = false,
+} = Astro.props;
+
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const resolvedOg = new URL(ogImage, Astro.site).href;
+const fullTitle =
+  title === SITE_NAME ? title : `${title} · ${SITE_NAME}`;
+const ogLocale = lang === 'en' ? 'en_US' : 'es_DO';
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="canonical" href={canonical} />
+{noindex && <meta name="robots" content="noindex, nofollow" />}
+
+<title>{fullTitle}</title>
+<meta name="description" content={description} />
+
+{
+  alternates.map((alt) => (
+    <link rel="alternate" hreflang={alt.lang} href={new URL(alt.href, Astro.site).href} />
+  ))
+}
+{
+  alternates.length > 0 && (
+    <link rel="alternate" hreflang="x-default" href={canonical} />
+  )
+}
+
+<!-- Open Graph -->
+<meta property="og:type" content={ogType} />
+<meta property="og:site_name" content={SITE_NAME} />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:image" content={resolvedOg} />
+<meta property="og:locale" content={ogLocale} />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={resolvedOg} />
+
+<link rel="sitemap" href="/sitemap-index.xml" />
+<link
+  rel="alternate"
+  type="application/rss+xml"
+  title={SITE_NAME}
+  href="/rss.xml"
+/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+<!--
+  Privacy-friendly analytics (Plausible). Uncomment and set your domain.
+  No cookies, no cross-site tracking. This is the ONLY analytics option.
+  <script defer data-domain="ellaadelante.do" src="https://plausible.io/js/script.js"></script>
+-->

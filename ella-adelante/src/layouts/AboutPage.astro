@@ -1,0 +1,186 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Newsletter from '@components/Newsletter.astro';
+import { SITE_NAME, type Lang } from '@i18n/ui';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+
+const copy = {
+  es: {
+    title: 'Sobre nosotras',
+    eyebrow: 'La plataforma',
+    mission:
+      'Ella Adelante es una publicación para la mujer dominicana y latina que está construyendo —carrera, negocio, familia, muchas veces las tres a la vez— sin manual y sin que nadie le explique las reglas.',
+    para1:
+      'No somos un blog de estilo de vida. No traducimos contenido gringo que ignora nuestra realidad. Escribimos desde aquí: con números reales, nombres reales y pasos que puedes dar el lunes en la mañana.',
+    para2:
+      'Publicamos en español y en inglés porque así vivimos: entre dos idiomas, dos países a veces, una sola ambición. Cada texto vive en su idioma natural. Tú eliges con qué voz leer.',
+    pillarsTitle: 'Cuatro secciones, una misión',
+    valuesTitle: 'En lo que creemos',
+    values: [
+      ['Específico antes que inspirador', 'Menos frases bonitas, más cómo se hace.'],
+      ['Hermana mayor, no jefa', 'Te hablamos de tú, de frente y sin paternalismo.'],
+      ['Hecho en RD', 'Nuestra realidad primero: el colmado, el cuento, el chele.'],
+      ['Para crecer juntas', 'Esto es una plataforma, no el diario de una sola persona.'],
+    ],
+    founderTitle: 'Quién está detrás',
+    founderBio:
+      'Ella Adelante nació de una conversación que se repetía: mujeres brillantes haciéndolo todo solas, sin un lugar que les hablara claro. La fundadora —periodista y emprendedora dominicana— empezó a escribir lo que le hubiera gustado leer a los 25. Hoy es el primer asiento de una mesa que sigue creciendo: contribuidoras, lectoras, y pronto una comunidad.',
+    cta: 'Las plumas y las historias son muchas. Si quieres aportar la tuya, escríbenos.',
+    ctaBtn: 'Proponer una historia',
+  },
+  en: {
+    title: 'About us',
+    eyebrow: 'The platform',
+    mission:
+      'Ella Adelante is a publication for the Dominican and Latina woman who is building —a career, a business, a family, often all three at once— with no manual and no one explaining the rules.',
+    para1:
+      'We are not a lifestyle blog. We don’t translate American content that ignores our reality. We write from here: real numbers, real names, and steps you can take on Monday morning.',
+    para2:
+      'We publish in Spanish and English because that’s how we live: between two languages, sometimes two countries, one single ambition. Every piece lives in its native language. You choose the voice you read in.',
+    pillarsTitle: 'Four sections, one mission',
+    valuesTitle: 'What we believe',
+    values: [
+      ['Specific over inspirational', 'Fewer pretty phrases, more of the how.'],
+      ['Big sister, not boss', 'We talk to you directly, no condescension.'],
+      ['Made in the DR', 'Our reality first — the colmado, the chisme, the chele.'],
+      ['Built to grow together', 'This is a platform, not one person’s diary.'],
+    ],
+    founderTitle: 'Who’s behind it',
+    founderBio:
+      'Ella Adelante grew out of a conversation that kept repeating: brilliant women doing it all alone, with nowhere that spoke to them plainly. The founder —a Dominican journalist and entrepreneur— started writing what she wished she’d read at 25. Today she’s the first seat at a table that keeps growing: contributors, readers, and soon a community.',
+    cta: 'There are many voices and many stories. If you want to add yours, write to us.',
+    ctaBtn: 'Pitch a story',
+  },
+}[lang];
+
+const base = lang === 'en' ? '/en' : '';
+---
+
+<BaseLayout
+  title={copy.title}
+  description={copy.mission}
+  lang={lang}
+  alternates={[
+    { lang: 'es', href: '/sobre-nosotras' },
+    { lang: 'en', href: '/en/sobre-nosotras' },
+  ]}
+>
+  <article class="about">
+    <header class="about__hero wrap">
+      <p class="eyebrow">{copy.eyebrow}</p>
+      <h1>{copy.title}</h1>
+      <p class="about__mission">{copy.mission}</p>
+    </header>
+
+    <div class="wrap about__cols">
+      <div class="prose about__prose">
+        <p>{copy.para1}</p>
+        <p>{copy.para2}</p>
+
+        <h2>{copy.founderTitle}</h2>
+        <p>{copy.founderBio}</p>
+      </div>
+
+      <aside class="about__values">
+        <h2 class="about__values-title">{copy.valuesTitle}</h2>
+        <ul>
+          {
+            copy.values.map(([h, d]) => (
+              <li>
+                <strong>{h}</strong>
+                <span>{d}</span>
+              </li>
+            ))
+          }
+        </ul>
+      </aside>
+    </div>
+
+    <div class="wrap about__cta">
+      <p>{copy.cta}</p>
+      <a class="btn btn-primary" href={`${base}/contacto`}>{copy.ctaBtn}</a>
+    </div>
+  </article>
+
+  <Newsletter lang={lang} />
+</BaseLayout>
+
+<style>
+  .about__hero {
+    padding: 3.5rem 0 2rem;
+    max-width: 760px;
+  }
+  .about__mission {
+    font-family: var(--font-display);
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    line-height: 1.4;
+    color: var(--teal);
+    margin: 0.6rem 0 0;
+  }
+  .about__cols {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: clamp(2rem, 5vw, 4rem);
+    padding-top: 1.5rem;
+    align-items: start;
+  }
+  .about__prose {
+    font-size: 1.1rem;
+  }
+  .about__values {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 1.6rem 1.8rem;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 88px;
+  }
+  .about__values-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  .about__values ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 1.1rem;
+  }
+  .about__values li {
+    display: grid;
+    gap: 0.2rem;
+    padding-left: 1rem;
+    border-left: 3px solid var(--gold);
+  }
+  .about__values strong {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+  }
+  .about__values span {
+    color: var(--ink-70);
+    font-size: 0.95rem;
+  }
+  .about__cta {
+    margin-top: 3.5rem;
+    text-align: center;
+    max-width: 50ch;
+  }
+  .about__cta p {
+    font-size: 1.15rem;
+    color: var(--ink-70);
+    margin-bottom: 1.2rem;
+  }
+
+  @media (max-width: 820px) {
+    .about__cols {
+      grid-template-columns: 1fr;
+    }
+    .about__values {
+      position: static;
+    }
+  }
+</style>

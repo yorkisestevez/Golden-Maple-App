@@ -1,0 +1,22 @@
+{
+  "name": "ella-adelante",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Ella Adelante — bilingual women's empowerment publication (DR).",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "seed:images": "node scripts/gen-heroes.mjs",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/rss": "^4.0.11",
+    "@astrojs/sitemap": "^3.2.1",
+    "@fontsource-variable/fraunces": "^5.1.1",
+    "@fontsource-variable/inter": "^5.1.1",
+    "astro": "^5.1.1",
+    "sharp": "^0.33.5"
+  }
+}

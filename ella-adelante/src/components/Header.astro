@@ -1,0 +1,272 @@
+---
+import { PILLARS, SITE_NAME, t, type Lang } from '@i18n/ui';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const tr = t(lang);
+
+const base = lang === 'en' ? '/en' : '';
+const homeHref = lang === 'en' ? '/en' : '/';
+
+// Toggle maps the current path to its counterpart in the other language.
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+let toggleHref: string;
+let toggleLang: Lang;
+if (lang === 'en') {
+  toggleLang = 'es';
+  toggleHref = path === '/en' ? '/' : path.replace(/^\/en/, '') || '/';
+} else {
+  toggleLang = 'en';
+  toggleHref = path === '/' ? '/en' : `/en${path}`;
+}
+
+const navPillars = Object.values(PILLARS).map((p) => ({
+  href: `${base}${p.href}`,
+  label: p.label[lang],
+}));
+
+function isActive(href: string): boolean {
+  return path === href || path.startsWith(`${href}/`);
+}
+---
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href={homeHref} aria-label={`${SITE_NAME} — ${tr('nav.home')}`}>
+      <span class="brand__mark" aria-hidden="true">EA</span>
+      <span class="brand__name">Ella<span class="brand__accent">Adelante</span></span>
+    </a>
+
+    <button
+      class="nav-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="site-nav"
+      data-nav-toggle
+    >
+      <span class="visually-hidden">{tr('nav.menu')}</span>
+      <span class="nav-toggle__bars" aria-hidden="true"></span>
+    </button>
+
+    <nav id="site-nav" class="site-nav" aria-label={tr('nav.menu')} data-nav>
+      <ul class="nav-list">
+        {
+          navPillars.map((p) => (
+            <li>
+              <a href={p.href} aria-current={isActive(p.href) ? 'page' : undefined}>
+                {p.label}
+              </a>
+            </li>
+          ))
+        }
+        <li>
+          <a
+            href={`${base}/sobre-nosotras`}
+            aria-current={isActive(`${base}/sobre-nosotras`) ? 'page' : undefined}
+          >
+            {tr('nav.about')}
+          </a>
+        </li>
+        <li>
+          <a
+            href={`${base}/contacto`}
+            aria-current={isActive(`${base}/contacto`) ? 'page' : undefined}
+          >
+            {tr('nav.contact')}
+          </a>
+        </li>
+      </ul>
+
+      <a class="lang-toggle" href={toggleHref} hreflang={toggleLang} rel="alternate">
+        <span class="lang-toggle__on">{lang.toUpperCase()}</span>
+        <span class="lang-toggle__sep" aria-hidden="true">/</span>
+        <span class="lang-toggle__off">{toggleLang.toUpperCase()}</span>
+        <span class="visually-hidden">{tr('lang.toggle')}</span>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.querySelector('[data-nav-toggle]');
+  const nav = document.querySelector('[data-nav]');
+  toggle?.addEventListener('click', () => {
+    const open = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!open));
+    nav?.classList.toggle('is-open', !open);
+    document.body.classList.toggle('nav-open', !open);
+  });
+</script>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: color-mix(in srgb, var(--sand) 88%, transparent);
+    backdrop-filter: saturate(1.4) blur(8px);
+    border-bottom: 1px solid var(--ink-08);
+  }
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    min-height: 68px;
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .brand__mark {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    background: var(--coral);
+    color: #fff;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.95rem;
+    border-radius: 50%;
+    letter-spacing: -0.02em;
+  }
+  .brand__name {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.32rem;
+    letter-spacing: -0.01em;
+  }
+  .brand__accent {
+    color: var(--teal);
+    margin-left: 0.18em;
+  }
+
+  .site-nav {
+    display: flex;
+    align-items: center;
+    gap: clamp(1rem, 2.5vw, 2rem);
+  }
+  .nav-list {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.85rem, 2vw, 1.6rem);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-list a {
+    text-decoration: none;
+    color: var(--ink);
+    font-weight: 600;
+    font-size: 0.97rem;
+    padding: 0.35rem 0;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+  }
+  .nav-list a:hover {
+    color: var(--coral-deep);
+  }
+  .nav-list a[aria-current='page'] {
+    border-bottom-color: var(--gold);
+    color: var(--ink);
+  }
+
+  .lang-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.28rem;
+    text-decoration: none;
+    border: 1.5px solid var(--ink-12);
+    border-radius: 999px;
+    padding: 0.32rem 0.7rem;
+    font-weight: 800;
+    font-size: 0.76rem;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+  }
+  .lang-toggle:hover {
+    border-color: var(--teal);
+    color: var(--teal);
+  }
+  .lang-toggle__on {
+    color: var(--coral-deep);
+  }
+  .lang-toggle__off {
+    color: var(--ink-55);
+  }
+  .lang-toggle__sep {
+    color: var(--ink-12);
+  }
+
+  .nav-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border: 1.5px solid var(--ink-12);
+    border-radius: var(--radius);
+    cursor: pointer;
+    position: relative;
+  }
+  .nav-toggle__bars,
+  .nav-toggle__bars::before,
+  .nav-toggle__bars::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 20px;
+    height: 2px;
+    background: var(--ink);
+    transform: translate(-50%, -50%);
+  }
+  .nav-toggle__bars::before {
+    transform: translate(-50%, -8px);
+  }
+  .nav-toggle__bars::after {
+    transform: translate(-50%, 6px);
+  }
+
+  @media (max-width: 860px) {
+    .nav-toggle {
+      display: block;
+    }
+    .site-nav {
+      position: fixed;
+      inset: 68px 0 auto 0;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      background: var(--sand);
+      border-bottom: 1px solid var(--ink-12);
+      padding: 0.5rem 1.25rem 1.5rem;
+      transform: translateY(-120%);
+      transition: transform 0.22s ease;
+      box-shadow: var(--shadow);
+    }
+    .site-nav.is-open {
+      transform: translateY(0);
+    }
+    .nav-list {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+    .nav-list a {
+      display: block;
+      padding: 0.85rem 0;
+      border-bottom: 1px solid var(--ink-08);
+    }
+    .lang-toggle {
+      align-self: flex-start;
+      margin-top: 1rem;
+    }
+  }
+</style>

@@ -1,0 +1,91 @@
+---
+/**
+ * LanguageRibbon — the signature bilingual cue on every article card.
+ * A folded paper ribbon (not a generic pill badge) showing ES / EN / ES+EN.
+ * The notched tail and gold seam make it read as a publication mark.
+ */
+import type { LANGUAGES } from '../content.config';
+
+interface Props {
+  language: (typeof LANGUAGES)[number];
+  size?: 'sm' | 'md';
+  class?: string;
+}
+
+const { language, size = 'md', class: className = '' } = Astro.props;
+
+const label = language === 'bilingual' ? 'ES + EN' : language.toUpperCase();
+const aria =
+  language === 'bilingual'
+    ? 'En español e inglés'
+    : language === 'en'
+      ? 'In English'
+      : 'En español';
+---
+
+<span
+  class:list={['ribbon', `ribbon--${language}`, `ribbon--${size}`, className]}
+  role="img"
+  aria-label={aria}
+  title={aria}
+>
+  <span class="ribbon__text">{label}</span>
+</span>
+
+<style>
+  .ribbon {
+    --ribbon-bg: var(--teal);
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.28rem 0.62rem 0.28rem 0.7rem;
+    background: var(--ribbon-bg);
+    color: #fff;
+    font-family: var(--font-body);
+    font-weight: 800;
+    font-size: 0.66rem;
+    letter-spacing: 0.1em;
+    line-height: 1;
+    /* Notched flag tail on the right — the folded-ribbon silhouette */
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      calc(100% - 8px) 50%,
+      100% 100%,
+      0 100%
+    );
+  }
+  .ribbon--sm {
+    font-size: 0.6rem;
+    padding: 0.22rem 0.55rem 0.22rem 0.6rem;
+  }
+  /* Gold seam at the fold */
+  .ribbon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 3px;
+    background: var(--gold);
+  }
+  .ribbon__text {
+    position: relative;
+    padding-right: 6px;
+  }
+
+  /* Language-coded so the eye learns the cue at a glance */
+  .ribbon--es {
+    --ribbon-bg: var(--teal);
+  }
+  .ribbon--en {
+    --ribbon-bg: var(--ink);
+  }
+  .ribbon--bilingual {
+    --ribbon-bg: var(--coral);
+  }
+  .ribbon--bilingual::before {
+    background: #fff;
+  }
+</style>

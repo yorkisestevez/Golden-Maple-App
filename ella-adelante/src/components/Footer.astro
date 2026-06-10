@@ -1,0 +1,163 @@
+---
+import { PILLARS, SOCIAL, SITE_NAME, TAGLINE, t, type Lang } from '@i18n/ui';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const tr = t(lang);
+const base = lang === 'en' ? '/en' : '';
+const year = new Date().getFullYear();
+
+const pillars = Object.values(PILLARS).map((p) => ({
+  href: `${base}${p.href}`,
+  label: p.label[lang],
+}));
+---
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <span class="footer-logo">Ella<span>Adelante</span></span>
+      <p class="footer-tag">{TAGLINE[lang]}</p>
+      <a
+        class="ig-link"
+        href={SOCIAL.instagram}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect x="2.5" y="2.5" width="19" height="19" rx="5" stroke="currentColor" stroke-width="1.8"/>
+          <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.8"/>
+          <circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/>
+        </svg>
+        <span>{SOCIAL.instagramHandle}</span>
+      </a>
+    </div>
+
+    <nav class="footer-col" aria-label={tr('footer.sections')}>
+      <h2 class="footer-h">{tr('footer.sections')}</h2>
+      <ul>
+        {pillars.map((p) => <li><a href={p.href}>{p.label}</a></li>)}
+      </ul>
+    </nav>
+
+    <nav class="footer-col" aria-label={tr('footer.about')}>
+      <h2 class="footer-h">{tr('footer.about')}</h2>
+      <ul>
+        <li><a href={`${base}/sobre-nosotras`}>{tr('nav.about')}</a></li>
+        <li><a href={`${base}/contacto`}>{tr('nav.contact')}</a></li>
+        <li><a href="/rss.xml">{tr('footer.rss')}</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer-col">
+      <h2 class="footer-h">{tr('footer.follow')}</h2>
+      <ul>
+        <li><a href={SOCIAL.instagram} target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href={`mailto:${SOCIAL.email}`}>{SOCIAL.email}</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap footer-base">
+    <p>© {year} {SITE_NAME}. {tr('footer.rights')}</p>
+    <p class="footer-made">{tr('footer.madeIn')}</p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--ink);
+    color: rgba(247, 243, 238, 0.82);
+    margin-top: 5rem;
+    padding: 3.5rem 0 2rem;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr 1fr;
+    gap: 2.5rem;
+  }
+  .footer-logo {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--sand);
+  }
+  .footer-logo span {
+    color: var(--coral);
+    margin-left: 0.18em;
+  }
+  .footer-tag {
+    margin: 0.8rem 0 1.2rem;
+    max-width: 32ch;
+    color: rgba(247, 243, 238, 0.66);
+    font-size: 0.96rem;
+  }
+  .ig-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--sand);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .ig-link:hover {
+    color: var(--coral);
+  }
+  .footer-h {
+    font-family: var(--font-body);
+    font-size: 0.74rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 0 0 0.9rem;
+  }
+  .footer-col ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.55rem;
+  }
+  .footer-col a {
+    color: rgba(247, 243, 238, 0.82);
+    text-decoration: none;
+    font-size: 0.96rem;
+  }
+  .footer-col a:hover {
+    color: var(--coral);
+  }
+  .footer-base {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(247, 243, 238, 0.14);
+    font-size: 0.85rem;
+    color: rgba(247, 243, 238, 0.55);
+  }
+  .footer-base p {
+    margin: 0;
+  }
+  .footer-made::before {
+    content: '🇩🇴 ';
+  }
+
+  @media (max-width: 760px) {
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    .footer-brand {
+      grid-column: 1 / -1;
+    }
+  }
+  @media (max-width: 440px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

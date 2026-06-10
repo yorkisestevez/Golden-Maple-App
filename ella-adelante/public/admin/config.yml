@@ -1,0 +1,122 @@
+# Decap CMS — Ella Adelante
+# Git-based, free. Edits commit straight to the repository via Netlify's
+# Git Gateway. See docs/PUBLISHING.md for the one-time dashboard setup.
+
+backend:
+  name: git-gateway
+  branch: main # production branch Decap commits to
+
+# Editorial workflow: draft → in review → ready → publish.
+publish_mode: editorial_workflow
+
+# Lets you run the CMS locally with `npx decap-server` (ignored in production).
+local_backend: true
+
+# Uploaded images land in src/assets so Astro's <Image> can optimize them.
+# public_folder is the path written into each post's frontmatter, resolved
+# relative to the markdown file in src/content/posts/.
+media_folder: "ella-adelante/src/assets/heroes"
+public_folder: "../../assets/heroes"
+
+# Friendlier labels in both languages for the editor UI.
+locale: "es"
+
+collections:
+  - name: "posts"
+    label: "Artículos / Posts"
+    label_singular: "Artículo / Post"
+    description: "Historias, guías y ensayos de Ella Adelante."
+    folder: "ella-adelante/src/content/posts"
+    create: true
+    slug: "{{slug}}"
+    preview_path: "articulo/{{slug}}"
+    sortable_fields: ["pubDate", "title"]
+    fields:
+      - { label: "Título / Title", name: "title", widget: "string" }
+      - label: "Idioma / Language"
+        name: "language"
+        widget: "select"
+        default: "es"
+        options:
+          - { label: "Español (ES)", value: "es" }
+          - { label: "English (EN)", value: "en" }
+          - { label: "Bilingüe (ES + EN)", value: "bilingual" }
+      - label: "Sección / Pillar"
+        name: "pillar"
+        widget: "select"
+        options:
+          - { label: "Historias / Stories", value: "historias" }
+          - { label: "Dinero y Trabajo / Money & Work", value: "dinero" }
+          - { label: "Voz / Voice", value: "voz" }
+          - { label: "Herramientas / Tools", value: "herramientas" }
+      - {
+          label: "Fecha de publicación / Publish date",
+          name: "pubDate",
+          widget: "datetime",
+          date_format: "YYYY-MM-DD",
+          time_format: false,
+          format: "YYYY-MM-DD",
+        }
+      - {
+          label: "Autora / Author",
+          name: "author",
+          widget: "string",
+          default: "Redacción Ella Adelante",
+        }
+      - {
+          label: "Resumen / Excerpt",
+          name: "excerpt",
+          widget: "text",
+          hint: "1–2 frases con gancho. Aparece en las tarjetas y en redes.",
+        }
+      - {
+          label: "Imagen principal / Hero image",
+          name: "heroImage",
+          widget: "image",
+          required: false,
+          hint: "Foto horizontal, mínimo 1200px de ancho.",
+        }
+      - {
+          label: "Texto alternativo de la imagen / Image alt text",
+          name: "heroAlt",
+          widget: "string",
+          required: false,
+          hint: "Describe la imagen para accesibilidad.",
+        }
+      - {
+          label: "Crédito de la imagen / Image credit",
+          name: "heroCredit",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Destacado en portada / Featured on home",
+          name: "featured",
+          widget: "boolean",
+          default: false,
+        }
+      - {
+          label: "Contenido de muestra / Sample content",
+          name: "sample",
+          widget: "boolean",
+          default: false,
+          hint: "Marca los placeholders. Quítalo en posts reales.",
+        }
+      - {
+          label: "Etiquetas / Tags",
+          name: "tags",
+          widget: "list",
+          required: false,
+        }
+      - {
+          label: "Traducción de (slug) / Translation of (slug)",
+          name: "translationOf",
+          widget: "string",
+          required: false,
+          hint: "Slug del mismo artículo en el otro idioma, para hreflang.",
+        }
+      - {
+          label: "Cuerpo / Body",
+          name: "body",
+          widget: "markdown",
+        }
