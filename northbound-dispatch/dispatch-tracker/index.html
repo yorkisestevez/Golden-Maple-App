@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Northbound Dispatch — Tracker</title>
+  <meta name="description" content="Lightweight dispatch CRM for Northbound Dispatch. Carriers, loads, invoices, and a live dashboard. Local-storage only." />
+  <link rel="icon" type="image/svg+xml" href="../website/assets/favicon.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- React (CDN) + Babel for in-browser JSX. No build step required. -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <link rel="stylesheet" href="tracker.css" />
+</head>
+<body>
+  <div id="root"></div>
+  <noscript>This dispatch tracker requires JavaScript.</noscript>
+  <script type="text/babel" src="app.jsx"></script>
+</body>
+</html>
