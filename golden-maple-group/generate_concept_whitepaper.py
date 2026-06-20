@@ -1,5 +1,5 @@
 """
-Estevez Intelligence — Concept & Method whitepaper (branded PDF).
+Golden Maple Group — Concept & Method whitepaper (branded PDF).
 
 Explains the core business concept (using Northbound Dispatch as the worked
 case study) and generalizes it into a repeatable method for building and
@@ -42,13 +42,13 @@ def build(output_path):
     doc = BaseDocTemplate(
         output_path, pagesize=PAGE,
         title="The AI-Leveraged Service Business — Concept & Method",
-        author="Estevez Intelligence",
+        author="Golden Maple Group",
         subject="Concept overview and scaling methodology")
 
     cover_tmpl = PageTemplate(
         id="cover", frames=[cover_frame],
         onPage=make_cover_decorator(
-            kicker="A WHITEPAPER BY ESTEVEZ INTELLIGENCE",
+            kicker="A WHITEPAPER BY GOLDEN MAPLE GROUP",
             title="The AI-Leveraged<br/>Service Business",
             subtitle="How an asset-light dispatch company became a repeatable "
                      "method for building — and scaling — AI-run businesses.",
@@ -76,13 +76,13 @@ def build(output_path):
         "Thousands of local service industries are large, fragmented, and still run on phone calls, "
         "spreadsheets, and memory. The work of <i>coordinating</i> them — matching supply to demand, "
         "negotiating, scheduling, following up, invoicing — is repetitive, rules-based, and perfectly "
-        "suited to AI. <b>Estevez Intelligence builds businesses that own the coordination layer, not "
+        "suited to AI. <b>Golden Maple Group builds businesses that own the coordination layer, not "
         "the assets</b>, and wrap it in an AI stack that lets one operator do the work of three.", st["lead"]))
     s.append(callout(
         "<b>The pattern in one line:</b> pick a fragmented, manual service industry → enter asset-light "
         "(broker the service, don't buy the trucks/equipment) → build the system of record → layer AI "
         "automation on the repetitive work → reach operator leverage of 3x → productize the AI layer as "
-        "a second revenue line.", accent=GOLD, bg="#FFF8E9"))
+        "a second revenue line.", accent=GOLD, bg="#F3E9D6"))
     s.append(Spacer(1, 10))
     s.append(stat_tiles([
         ("3x", "trucks per operator vs. a traditional dispatcher (15–20 vs. 5–7)"),
@@ -153,7 +153,7 @@ def build(output_path):
         "industry that fits the entry criteria below.", st["body"]))
 
     # ===================== 4. THE METHOD =====================
-    s.append(section_heading("The Estevez Intelligence Method", num="03"))
+    s.append(section_heading("The Golden Maple Group Method", num="03"))
     s.append(Spacer(1, 6))
     s.append(Paragraph(
         "The repeatable blueprint that turns the case study into a process. Each step is sequenced so the "
@@ -181,7 +181,7 @@ def build(output_path):
     s.append(callout(
         "<b>Sequencing rule.</b> Manual-but-working beats automated-but-fragile. Ship steps 1–4 to a paying "
         "customer first; steps 5–7 are where the leverage and the enterprise value are created.",
-        accent=CYAN, bg="#E9FBFD"))
+        accent=CYAN, bg="#F3E9D6"))
 
     # ===================== 5. THE STACK =====================
     s.append(Spacer(1, 10))
@@ -255,7 +255,7 @@ def build(output_path):
     s.append(callout(
         "<b>The compounding insight:</b> you are not building one company — you are building a method and a "
         "stack, then pointing them at one fragmented industry after another. The moat is the machine that "
-        "builds the businesses.", accent=GOLD, bg="#FFF8E9"))
+        "builds the businesses.", accent=GOLD, bg="#F3E9D6"))
 
     # ===================== 8. RISKS =====================
     s.append(section_heading("Risks & Guardrails", num="07"))
@@ -280,12 +280,12 @@ def build(output_path):
             "Northbound Dispatch is not just a dispatch company — it is a working proof of a repeatable "
             "method: <b>own the coordination, not the assets; run it on an AI stack that gives one operator "
             "the output of three; then productize that stack and point the whole machine at the next "
-            "fragmented industry.</b> That is what Estevez Intelligence builds.", st["lead"]),
+            "fragmented industry.</b> That is what Golden Maple Group builds.", st["lead"]),
         Spacer(1, 8),
         callout(
-            "<b>Estevez Intelligence</b> &nbsp;·&nbsp; Applied intelligence for real-world businesses. "
-            "&nbsp;·&nbsp; yorkis@estevezintelligence.com &nbsp;·&nbsp; Barrie, Ontario",
-            accent=GOLD, bg="#0A0E1A", textcolor="#FFFFFF"),
+            "<b>Golden Maple Group</b> &nbsp;·&nbsp; Built for longevity. Designed for life. "
+            "&nbsp;·&nbsp; yorkis@goldenmaplelandscaping.ca &nbsp;·&nbsp; Barrie, Ontario",
+            accent=GOLD, bg="#0E0E0C", textcolor="#FFFFFF"),
     ]))
 
     doc.build(s)
@@ -295,6 +295,6 @@ def build(output_path):
 if __name__ == "__main__":
     here = os.path.dirname(os.path.abspath(__file__))
     out = (sys.argv[1] if len(sys.argv) > 1
-           else os.path.join(here, "output", "Estevez-Intelligence-Concept-Whitepaper.pdf"))
+           else os.path.join(here, "output", "Golden-Maple-Group-Concept-Whitepaper.pdf"))
     os.makedirs(os.path.dirname(out), exist_ok=True)
     build(out)

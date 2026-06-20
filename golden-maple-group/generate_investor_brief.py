@@ -1,7 +1,7 @@
 """
-Estevez Intelligence — Investor Brief (bilingual EN/ES, branded PDF).
+Golden Maple Group — Investor Brief (bilingual EN/ES, branded PDF).
 
-A professional, investor-facing overview of the Estevez Intelligence thesis:
+A professional, investor-facing overview of the Golden Maple Group thesis:
 a venture studio building AI-leveraged, asset-light service businesses, with
 Northbound Dispatch as the proof point. Every section is presented in English
 and Spanish side by side.
@@ -41,9 +41,9 @@ def bilingual(pairs, st, labels=False):
     rows = []
     if labels:
         rows.append([
-            Paragraph('<font color="#6C5CE7"><b>EN&nbsp;·&nbsp;ENGLISH</b></font>', st["label"]),
+            Paragraph('<font color="#D4B06A"><b>EN&nbsp;·&nbsp;ENGLISH</b></font>', st["label"]),
             "",
-            Paragraph('<font color="#6C5CE7"><b>ES&nbsp;·&nbsp;ESPAÑOL</b></font>', st["label"]),
+            Paragraph('<font color="#D4B06A"><b>ES&nbsp;·&nbsp;ESPAÑOL</b></font>', st["label"]),
         ])
     for en, es in pairs:
         l = en if hasattr(en, "wrap") else Paragraph(en, st["body"])
@@ -64,7 +64,7 @@ def bilingual(pairs, st, labels=False):
 
 def heading_bi(en, es, num=None):
     """Section heading showing both languages: EN — ES."""
-    return section_heading(f'{en} &nbsp;<font color="#F2B441">/</font>&nbsp; {es}', num=num)
+    return section_heading(f'{en} &nbsp;<font color="#D4B06A">/</font>&nbsp; {es}', num=num)
 
 
 def build(output_path):
@@ -77,17 +77,17 @@ def build(output_path):
 
     doc = BaseDocTemplate(
         output_path, pagesize=PAGE,
-        title="Estevez Intelligence — Investor Brief / Resumen para Inversionistas",
-        author="Estevez Intelligence",
+        title="Golden Maple Group — Investor Brief / Resumen para Inversionistas",
+        author="Golden Maple Group",
         subject="Investment opportunity overview (EN/ES)")
 
     cover_tmpl = PageTemplate(
         id="cover", frames=[cover_frame],
         onPage=make_cover_decorator(
             kicker="INVESTMENT OPPORTUNITY  ·  OPORTUNIDAD DE INVERSIÓN",
-            title="Estevez<br/>Intelligence",
+            title="A Portfolio of<br/>AI-Run Businesses",
             subtitle="A venture studio building AI-leveraged, asset-light service "
-                     "businesses.<br/><font color='#8C93A8'>Un estudio de "
+                     "businesses.<br/><font color='#8C887E'>Un estudio de "
                      "negocios que construye empresas de servicios asistidas por "
                      "IA, de bajo capital.</font>",
             meta_lines=[
@@ -109,12 +109,12 @@ def build(output_path):
     s.append(heading_bi("Executive Summary", "Resumen Ejecutivo", num="01"))
     s.append(Spacer(1, 8))
     s.append(bilingual([(
-        "Estevez Intelligence builds businesses that <b>own the coordination layer "
+        "Golden Maple Group builds businesses that <b>own the coordination layer "
         "of fragmented service industries, not the assets</b> — wrapped in an AI "
         "stack that lets one operator do the work of three. Our proof point, "
         "<b>Northbound Dispatch</b>, dispatches freight for truck owner-operators "
         "with near-zero capital and is cash-flow positive at the first customer.",
-        "Estevez Intelligence construye empresas que <b>controlan la coordinación de "
+        "Golden Maple Group construye empresas que <b>controlan la coordinación de "
         "industrias de servicios fragmentadas, sin poseer los activos</b> — "
         "potenciadas por una plataforma de IA que permite a un operador hacer el "
         "trabajo de tres. Nuestro caso de éxito, <b>Northbound Dispatch</b>, gestiona "
@@ -134,7 +134,7 @@ def build(output_path):
         "fragmented industry after another.<br/>"
         "<b>La inversión:</b> no apostamos por una sola empresa — financiamos un "
         "<b>método repetible y una plataforma de IA compartida</b>, y la aplicamos a "
-        "una industria fragmentada tras otra.", accent=GOLD, bg="#FFF8E9"))
+        "una industria fragmentada tras otra.", accent=GOLD, bg="#F3E9D6"))
 
     # ===================== THE OPPORTUNITY =====================
     s.append(heading_bi("The Opportunity", "La Oportunidad", num="02"))
@@ -232,7 +232,7 @@ def build(output_path):
         [
             ["<b>Northbound Dispatch</b>", "Truck dispatch / Despacho de camiones",
              "Live · brand, site, CRM, docs, automation roadmap built / En marcha"],
-            ["<b>Golden Maple + estimate-ai</b>", "Home-services estimating / Cotización de servicios",
+            ["<b>Golden Maple Landscaping + estimate-ai</b>", "Home-services estimating / Cotización de servicios",
              "Live · AI instant-quote product deployed / En marcha"],
             ["<b>Shared AI stack</b>", "Voice agent · n8n · matching agents",
              "Reused across ventures / Reutilizada en todas las empresas"],
@@ -240,11 +240,11 @@ def build(output_path):
         col_widths=[1.85 * inch, 1.9 * inch, FULL - 1.85 * inch - 1.9 * inch]))
     s.append(Spacer(1, 8))
     s.append(callout(
-        "Two ventures, one stack, one method — the core proof that Estevez "
-        "Intelligence is a repeatable machine, not a single company.<br/>"
-        "Dos empresas, una plataforma, un método — la prueba de que Estevez "
-        "Intelligence es una máquina repetible, no una sola empresa.",
-        accent=CYAN, bg="#E9FBFD"))
+        "Two ventures, one stack, one method — the core proof that Golden Maple "
+        "Group is a repeatable machine, not a single company.<br/>"
+        "Dos empresas, una plataforma, un método — la prueba de que Golden Maple "
+        "Group es una máquina repetible, no una sola empresa.",
+        accent=CYAN, bg="#F3E9D6"))
 
     # ===================== MARKET / REPLICATION =====================
     s.append(heading_bi("Market & Replication", "Mercado y Replicación", num="06"))
@@ -322,7 +322,7 @@ def build(output_path):
         "shared stack and replication, not survival.<br/>"
         "El capital acelera un modelo que ya funciona manualmente — financia la "
         "plataforma compartida y la replicación, no la supervivencia.",
-        accent=GOLD, bg="#FFF8E9"))
+        accent=GOLD, bg="#F3E9D6"))
 
     # ===================== WHY NOW + TEAM =====================
     s.append(PageBreak())
@@ -359,9 +359,9 @@ def build(output_path):
         )], st),
         Spacer(1, 8),
         callout(
-            "<b>Estevez Intelligence</b> &nbsp;·&nbsp; Yorkis Estevez &nbsp;·&nbsp; "
-            "yorkis@estevezintelligence.com &nbsp;·&nbsp; Barrie, Ontario, Canada",
-            accent=GOLD, bg="#0A0E1A", textcolor="#FFFFFF"),
+            "<b>Golden Maple Group</b> &nbsp;·&nbsp; Yorkis Estevez &nbsp;·&nbsp; "
+            "yorkis@goldenmaplelandscaping.ca &nbsp;·&nbsp; Barrie, Ontario, Canada",
+            accent=GOLD, bg="#0E0E0C", textcolor="#FFFFFF"),
         Spacer(1, 8),
         Paragraph(
             '<font color="#646B7C" size=7><i>This document is for informational purposes only and does '
@@ -379,6 +379,6 @@ def build(output_path):
 if __name__ == "__main__":
     here = os.path.dirname(os.path.abspath(__file__))
     out = (sys.argv[1] if len(sys.argv) > 1
-           else os.path.join(here, "output", "Estevez-Intelligence-Investor-Brief-EN-ES.pdf"))
+           else os.path.join(here, "output", "Golden-Maple-Group-Investor-Brief-EN-ES.pdf"))
     os.makedirs(os.path.dirname(out), exist_ok=True)
     build(out)
